@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Trading Radars</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-void:#0A0E12; --bg-panel:#12181F; --ink:#E4E1D8; --ink-dim:#8A93A0;
+    --amber:#E8A33D; --teal:#3FA88C; --line:#232B34;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;background:var(--bg-void);color:var(--ink);font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;min-height:100vh;}
+  .wrap{max-width:820px;margin:0 auto;padding:64px 24px;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-dim);
+    text-transform:uppercase;letter-spacing:0.12em;margin-bottom:14px;}
+  h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(32px,5vw,44px);font-weight:700;
+    letter-spacing:-0.02em;margin:0 0 12px;}
+  p.lede{color:var(--ink-dim);font-size:15px;line-height:1.6;max-width:520px;margin:0 0 44px;}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  @media (max-width:640px){.grid{grid-template-columns:1fr;}}
+  a.card{display:block;background:var(--bg-panel);border:1px solid var(--line);border-radius:10px;
+    padding:26px;text-decoration:none;color:var(--ink);transition:border-color .15s ease;}
+  a.card:hover{border-color:var(--amber);}
+  .dot{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:8px;}
+  .card h2{font-family:'Space Grotesk',sans-serif;font-size:19px;margin:0 0 8px;font-weight:600;}
+  .card p{font-size:13px;color:var(--ink-dim);line-height:1.55;margin:0 0 16px;}
+  .card .go{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--amber);}
+  footer{margin-top:48px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-dim);}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">NSE research tools — free to run</div>
+  <h1>Trading Radars</h1>
+  <p class="lede">Two self-updating scanners built on free NSE data. Each refreshes on its own schedule via GitHub Actions — nothing to babysit.</p>
+  <div class="grid">
+    <a class="card" href="./dma-radar/">
+      <div><span class="dot" style="background:var(--amber)"></span>DMA Radar</div>
+      <h2>Crossover &amp; Convergence</h2>
+      <p>50/200 DMA proximity scanner layered with RSI, MACD, ADX, Bollinger, Supertrend and volume.</p>
+      <div class="go">Open dashboard →</div>
+    </a>
+    <a class="card" href="./delivery-radar/">
+      <div><span class="dot" style="background:var(--teal)"></span>Delivery Radar</div>
+      <h2>Quiet Accumulation</h2>
+      <p>Flags delivery-% outliers vs. each stock's own baseline — real shares changing hands, not just volume.</p>
+      <div class="go">Open dashboard →</div>
+    </a>
+  </div>
+  <footer>Data: NSE, via yfinance + nselib · Nothing here is investment advice.</footer>
+</div>
+</body>
+</html>

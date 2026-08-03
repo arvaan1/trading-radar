@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Delivery Radar — Quiet Accumulation Scanner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-void:#0A0E12;
+    --bg-panel:#12181F;
+    --bg-panel-raised:#161D25;
+    --ink:#E4E1D8;
+    --ink-dim:#8A93A0;
+    --amber:#E8A33D;
+    --teal:#3FA88C;
+    --rose:#C25450;
+    --violet:#8B7EC8;
+    --line:#232B34;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--bg-void);color:var(--ink);
+    font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased;}
+  ::selection{background:var(--amber);color:#12181F;}
+
+  .console{max-width:1320px;margin:0 auto;padding:32px 24px 80px;}
+
+  header.masthead{display:flex;justify-content:space-between;align-items:flex-end;
+    border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:24px;flex-wrap:wrap;gap:16px;}
+  h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:28px;letter-spacing:-0.01em;margin:0;}
+  h1 .radar-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--teal);
+    margin-right:10px;box-shadow:0 0 0 4px rgba(63,168,140,0.15);animation:pulse 2.4s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.35;}}
+  .subtitle{color:var(--ink-dim);font-size:13px;margin-top:6px;font-family:'IBM Plex Mono',monospace;}
+  .meta{text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-dim);line-height:1.6;}
+  .meta b{color:var(--ink);}
+
+  .stat-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+    border:1px solid var(--line);margin-bottom:20px;border-radius:6px;overflow:hidden;}
+  .stat{background:var(--bg-panel);padding:16px 18px;}
+  .stat .n{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:600;}
+  .stat .l{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-dim);margin-top:4px;}
+  .stat.quiet .n{color:var(--amber);}
+  .stat.confirmed .n{color:var(--teal);}
+  .stat.dist .n{color:var(--rose);}
+  .stat.churn .n{color:var(--violet);}
+
+  .legend{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:20px;font-size:12px;color:var(--ink-dim);
+    font-family:'IBM Plex Mono',monospace;background:var(--bg-panel);border:1px solid var(--line);
+    border-radius:6px;padding:12px 16px;}
+  .legend span{display:inline-flex;align-items:center;gap:6px;}
+  .legend i{width:8px;height:8px;border-radius:50%;display:inline-block;}
+
+  .controls{display:flex;gap:10px;margin-bottom:14px;align-items:center;flex-wrap:wrap;}
+  input#search{background:var(--bg-panel);border:1px solid var(--line);color:var(--ink);
+    padding:9px 12px;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:13px;width:220px;}
+  input#search:focus{outline:1px solid var(--amber);border-color:var(--amber);}
+  select#filter{background:var(--bg-panel);border:1px solid var(--line);color:var(--ink);
+    padding:9px 12px;border-radius:6px;font-family:'Inter',sans-serif;font-size:13px;}
+  label.liq{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--ink-dim);font-family:'IBM Plex Mono',monospace;}
+  .controls .hint{font-size:12px;color:var(--ink-dim);margin-left:auto;font-family:'IBM Plex Mono',monospace;}
+
+  table{width:100%;border-collapse:collapse;font-size:13px;}
+  thead th{text-align:left;padding:10px 12px;font-family:'IBM Plex Mono',monospace;
+    font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--ink-dim);
+    border-bottom:1px solid var(--line);cursor:pointer;user-select:none;white-space:nowrap;}
+  thead th:hover{color:var(--ink);}
+  thead th.sorted{color:var(--amber);}
+  tbody tr{border-bottom:1px solid var(--line);}
+  tbody tr:hover{background:var(--bg-panel);}
+  tbody tr.low-liq{opacity:0.55;}
+  tbody td{padding:11px 12px;font-family:'IBM Plex Mono',monospace;white-space:nowrap;}
+  td.sym{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;}
+  td.sym .liq-tag{display:block;font-family:'IBM Plex Mono',monospace;font-size:9px;color:var(--ink-dim);
+    text-transform:uppercase;letter-spacing:0.05em;margin-top:2px;}
+  td.num{text-align:right;font-variant-numeric:tabular-nums;}
+  .badge{display:inline-block;padding:3px 9px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:0.02em;}
+  .badge.quiet_accumulation{background:rgba(232,163,61,0.16);color:var(--amber);}
+  .badge.confirmed_accumulation{background:rgba(63,168,140,0.18);color:var(--teal);}
+  .badge.possible_distribution{background:rgba(194,84,80,0.18);color:var(--rose);}
+  .badge.speculative_churn{background:rgba(139,126,200,0.18);color:var(--violet);}
+  .badge.no_signal{background:rgba(138,147,160,0.12);color:var(--ink-dim);}
+
+  /* sparkline: signature element - last 20 sessions of delivery %,
+     today highlighted, so the outlier is visible as a shape, not just a number */
+  .spark{display:flex;align-items:flex-end;gap:1.5px;height:28px;width:110px;}
+  .spark i{flex:1;background:var(--line);border-radius:1px 1px 0 0;min-height:2px;}
+  .spark i.today{background:var(--amber);}
+
+  .score-bar{width:56px;height:6px;background:var(--bg-panel-raised);border-radius:3px;overflow:hidden;
+    display:inline-block;vertical-align:middle;margin-right:8px;}
+  .score-bar i{display:block;height:100%;background:var(--teal);}
+
+  footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);
+    font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-dim);line-height:1.7;}
+  footer code{color:var(--ink);}
+
+  .empty{padding:60px 20px;text-align:center;color:var(--ink-dim);font-family:'IBM Plex Mono',monospace;}
+  .empty b{color:var(--ink);}
+
+  @media (max-width:760px){
+    .stat-strip{grid-template-columns:repeat(2,1fr);}
+    .meta{text-align:left;}
+    header.masthead{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+<div class="console">
+
+  <header class="masthead">
+    <div>
+      <h1><span class="radar-dot"></span>Delivery Radar</h1>
+      <div class="subtitle">delivery-% &amp; volume anomaly scanner — NSE, vs. each stock's own baseline</div>
+    </div>
+    <div class="meta" id="meta">Loading scan data…</div>
+  </header>
+
+  <div class="stat-strip" id="statStrip"></div>
+
+  <div class="legend">
+    <span><i style="background:var(--amber)"></i> Quiet accumulation — delivery spike, price ~flat</span>
+    <span><i style="background:var(--teal)"></i> Confirmed accumulation — delivery spike + price up</span>
+    <span><i style="background:var(--rose)"></i> Possible distribution — delivery spike + price down</span>
+    <span><i style="background:var(--violet)"></i> Speculative churn — volume spike, delivery suppressed</span>
+  </div>
+
+  <div class="controls">
+    <input id="search" type="text" placeholder="Filter symbol…" />
+    <select id="filter">
+      <option value="all">All signals</option>
+      <option value="quiet_accumulation">Quiet accumulation</option>
+      <option value="confirmed_accumulation">Confirmed accumulation</option>
+      <option value="possible_distribution">Possible distribution</option>
+      <option value="speculative_churn">Speculative churn</option>
+      <option value="no_signal">No signal</option>
+    </select>
+    <label class="liq"><input type="checkbox" id="hideLiq" /> Hide low-liquidity flags</label>
+    <span class="hint">click a column header to sort</span>
+  </div>
+
+  <div id="tableWrap"></div>
+
+  <footer>
+    Data: NSE delivery/price-volume data via nselib. Delivery % confirms shares actually settled -
+    it does not by itself prove who was buying vs selling; price context (shown per row) is a hint, not proof.
+    Score ranks anomaly strength, not conviction. Nothing here is investment advice.<br/>
+    Regenerate with <code>python scripts/scan.py</code> or let the scheduled GitHub Action refresh it.
+  </footer>
+
+</div>
+
+<script>
+const SIGNAL_LABEL = {
+  quiet_accumulation: 'Quiet build-up',
+  confirmed_accumulation: 'Confirmed ↑',
+  possible_distribution: 'Distribution?',
+  speculative_churn: 'Churn',
+  no_signal: '—'
+};
+
+let state = { rows: [], sortKey: 'score', sortDir: -1, search: '', filter: 'all', hideLiq: false };
+
+async function load(){
+  try{
+    const res = await fetch('data/scan_results.json?_=' + Date.now());
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    state.rows = data.results || [];
+    renderMeta(data);
+    renderStats(data);
+    render();
+  }catch(err){
+    document.getElementById('meta').textContent = 'No scan data yet';
+    document.getElementById('tableWrap').innerHTML = `
+      <div class="empty">
+        <p><b>data/scan_results.json not found yet.</b></p>
+        <p>Run <code>python scripts/scan.py --demo</code> to generate sample data,<br/>
+        or <code>python scripts/scan.py</code> for a live scan, then reload this page.</p>
+      </div>`;
+  }
+}
+
+function renderMeta(data){
+  const d = new Date(data.generated_at_utc);
+  document.getElementById('meta').innerHTML =
+    `Last scan: <b>${d.toLocaleString()}</b><br/>
+     Universe: <b>${data.universe_size}</b> · z-threshold <b>${data.params.z_threshold}</b> · min delivered value <b>₹${data.params.min_delivered_value_cr}Cr</b>`;
+}
+
+function renderStats(data){
+  const rows = data.results || [];
+  const count = sig => rows.filter(r => r.signal === sig).length;
+  const stats = [
+    { l: 'Quiet accumulation', n: count('quiet_accumulation'), cls: 'quiet' },
+    { l: 'Confirmed accumulation', n: count('confirmed_accumulation'), cls: 'confirmed' },
+    { l: 'Possible distribution', n: count('possible_distribution'), cls: 'dist' },
+    { l: 'Speculative churn', n: count('speculative_churn'), cls: 'churn' },
+  ];
+  document.getElementById('statStrip').innerHTML = stats.map(s =>
+    `<div class="stat ${s.cls}"><div class="n">${s.n}</div><div class="l">${s.l}</div></div>`
+  ).join('');
+}
+
+function sparkHTML(series){
+  if(!series || series.length === 0) return '';
+  const max = Math.max(...series), min = Math.min(...series, 0);
+  const range = (max - min) || 1;
+  return '<div class="spark">' + series.map((v,i) => {
+    const h = Math.max(2, Math.round((v - min) / range * 26));
+    const isToday = i === series.length - 1;
+    return `<i class="${isToday ? 'today' : ''}" style="height:${h}px" title="${v.toFixed(1)}%"></i>`;
+  }).join('') + '</div>';
+}
+
+function scoreBar(score){
+  const pct = Math.min(100, score);
+  return `<span class="score-bar"><i style="width:${pct}%"></i></span>${score.toFixed(1)}`;
+}
+
+function render(){
+  let rows = state.rows.filter(r => {
+    if(state.filter !== 'all' && r.signal !== state.filter) return false;
+    if(state.hideLiq && r.low_liquidity) return false;
+    if(state.search && !r.symbol.toLowerCase().includes(state.search.toLowerCase())) return false;
+    return true;
+  });
+
+  rows.sort((a,b) => {
+    const va = a[state.sortKey], vb = b[state.sortKey];
+    if(va === null || va === undefined) return 1;
+    if(vb === null || vb === undefined) return -1;
+    if(typeof va === 'string') return va.localeCompare(vb) * state.sortDir;
+    return (va - vb) * state.sortDir;
+  });
+
+  const cols = [
+    ['symbol','Symbol'], ['last_close','Close'], ['price_change_pct','Chg %'],
+    ['delivery_pct','Deliv %'], ['delivery_zscore_20d','Z (20d)'], ['delivery_zscore_60d','Z (60d)'],
+    ['vol_ratio_20d','Vol vs 20d'], ['delivered_value_cr','Value (Cr)'],
+    ['signal','Signal'], ['_spark','Last 20d'], ['score','Score']
+  ];
+
+  let html = '<table><thead><tr>';
+  cols.forEach(([key,label]) => {
+    const sortable = key !== '_spark';
+    const sorted = state.sortKey === key ? 'sorted' : '';
+    html += `<th class="${sorted}" ${sortable ? `data-key="${key}"` : ''}>${label}${state.sortKey===key ? (state.sortDir===1?' ↑':' ↓') : ''}</th>`;
+  });
+  html += '</tr></thead><tbody>';
+
+  if(rows.length === 0){
+    html += `<tr><td colspan="${cols.length}"><div class="empty">No symbols match this filter.</div></td></tr>`;
+  }
+
+  rows.forEach(r => {
+    html += `<tr class="${r.low_liquidity ? 'low-liq' : ''}">`;
+    html += `<td class="sym">${r.symbol}${r.low_liquidity ? '<span class="liq-tag">thin liquidity</span>' : ''}</td>`;
+    html += `<td class="num">₹${r.last_close.toFixed(2)}</td>`;
+    html += `<td class="num" style="color:${r.price_change_pct>=0?'var(--teal)':'var(--rose)'}">${r.price_change_pct>0?'+':''}${r.price_change_pct.toFixed(2)}%</td>`;
+    html += `<td class="num">${r.delivery_pct.toFixed(1)}%</td>`;
+    html += `<td class="num">${r.delivery_zscore_20d.toFixed(2)}</td>`;
+    html += `<td class="num">${r.delivery_zscore_60d != null ? r.delivery_zscore_60d.toFixed(2) : '—'}</td>`;
+    html += `<td class="num">${r.vol_ratio_20d != null ? r.vol_ratio_20d.toFixed(2)+'×' : '—'}</td>`;
+    html += `<td class="num">${r.delivered_value_cr != null ? r.delivered_value_cr.toFixed(2) : '—'}</td>`;
+    html += `<td><span class="badge ${r.signal}">${SIGNAL_LABEL[r.signal]}</span></td>`;
+    html += `<td>${sparkHTML(r.delivery_sparkline_20d)}</td>`;
+    html += `<td class="num">${scoreBar(r.score)}</td>`;
+    html += '</tr>';
+  });
+
+  html += '</tbody></table>';
+  document.getElementById('tableWrap').innerHTML = html;
+
+  document.querySelectorAll('thead th[data-key]').forEach(th => {
+    th.addEventListener('click', () => {
+      const key = th.dataset.key;
+      if(state.sortKey === key) state.sortDir *= -1;
+      else { state.sortKey = key; state.sortDir = -1; }
+      render();
+    });
+  });
+}
+
+document.getElementById('search').addEventListener('input', e => { state.search = e.target.value; render(); });
+document.getElementById('filter').addEventListener('change', e => { state.filter = e.target.value; render(); });
+document.getElementById('hideLiq').addEventListener('change', e => { state.hideLiq = e.target.checked; render(); });
+
+load();
+</script>
+</body>
+</html>

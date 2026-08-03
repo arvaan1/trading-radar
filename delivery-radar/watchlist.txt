@@ -1,0 +1,67 @@
+# DMA Radar watchlist
+# One NSE symbol per line (the symbol exactly as it appears on nseindia.com,
+# without the .NS suffix - the scanner adds that automatically).
+# Lines starting with # are ignored.
+#
+# This is a STARTER list - verify tickers on nseindia.com before relying on
+# them, and edit freely. Symbols occasionally change (mergers, relistings),
+# and index composition drifts over time.
+
+# --- Nifty 50 core (liquid large caps, good for testing the pipeline) ---
+RELIANCE
+TCS
+HDFCBANK
+ICICIBANK
+INFY
+HINDUNILVR
+ITC
+SBIN
+BHARTIARTL
+KOTAKBANK
+LT
+AXISBANK
+BAJFINANCE
+ASIANPAINT
+MARUTI
+TITAN
+SUNPHARMA
+ULTRACEMCO
+NESTLEIND
+WIPRO
+ONGC
+NTPC
+POWERGRID
+M&M
+TATAMOTORS
+TATASTEEL
+JSWSTEEL
+ADANIENT
+ADANIPORTS
+COALINDIA
+HCLTECH
+TECHM
+BAJAJFINSV
+DRREDDY
+CIPLA
+DIVISLAB
+EICHERMOT
+GRASIM
+HEROMOTOCO
+HINDALCO
+INDUSINDBK
+BPCL
+BRITANNIA
+SBILIFE
+HDFCLIFE
+APOLLOHOSP
+TATACONSUM
+
+# --- A couple of names from your own compounder research, as a seed ---
+KAYNES
+DATAPATTNS
+
+# Add your pharma/hydrogen shortlist here once you've verified tickers, e.g.:
+# JENBURKT
+# MEDICOREM
+# INOXINDIA
+# TIMETECHNO
