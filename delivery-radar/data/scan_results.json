@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-03T12:32:10.968293+00:00",
+  "generated_at_utc": "2026-08-03T17:18:05.990580+00:00",
   "universe_size": 49,
   "success_count": 48,
   "error_count": 1,
@@ -9,7 +9,7 @@
       "reason": "no cached bhavcopy rows for this symbol"
     }
   ],
-  "cache_days_fetched_this_run": 81,
+  "cache_days_fetched_this_run": 0,
   "cache_total_days": 67,
   "params": {
     "z_threshold": 1.5,
