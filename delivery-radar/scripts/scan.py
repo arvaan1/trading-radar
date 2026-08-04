@@ -27,6 +27,9 @@ Mechanics:
       to get enough history for the 60-day baseline.
     - Weekends/holidays are skipped automatically (NSE simply doesn't
       publish a file that day - a 404 there is expected, not an error).
+    - If the watchlist has grown since the cache was last built, a full
+      re-backfill is forced so newly-added symbols get real history too,
+      instead of silently being stuck at near-zero sessions forever.
     - Signal math (z-scores, categories, scoring) is IDENTICAL to v1.
 
 Usage:
@@ -55,6 +58,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_WATCHLIST = ROOT / "watchlist.txt"
 OUTPUT_PATH = ROOT / "data" / "scan_results.json"
 CACHE_PATH = ROOT / "data" / "bhavcopy_cache.csv"
+CACHE_SYMBOLS_MARKER = ROOT / "data" / "cache_universe_marker.txt"
 
 MIN_ROWS_FOR_20D = 25
 MIN_ROWS_FOR_60D = 65
@@ -179,19 +183,51 @@ def save_cache(df: pd.DataFrame):
     df.sort_values(["symbol", "date"]).to_csv(CACHE_PATH, index=False)
 
 
+def load_cache_marker() -> set[str]:
+    """The set of symbols the cache was last built to cover. Used to detect
+    when the watchlist has grown, so new symbols get properly backfilled
+    instead of silently having near-zero history forever."""
+    if CACHE_SYMBOLS_MARKER.exists():
+        return set(s for s in CACHE_SYMBOLS_MARKER.read_text().split() if s)
+    return set()
+
+
+def save_cache_marker(symbols: set[str]):
+    CACHE_SYMBOLS_MARKER.parent.mkdir(parents=True, exist_ok=True)
+    CACHE_SYMBOLS_MARKER.write_text("\n".join(sorted(symbols)))
+
+
 def update_cache(symbols: list[str], demo: bool, sleep_s: float) -> tuple[pd.DataFrame, int, int]:
     watch_set = set(symbols)
     cache = load_cache()
-    have_dates = set(cache["date"].dt.date) if not cache.empty else set()
+    have_dates_cached = set(cache["date"].dt.date) if not cache.empty else set()
+
+    prior_watch_set = load_cache_marker()
+    new_symbols = watch_set - prior_watch_set
 
     today = datetime.now(timezone.utc).date()
+
     if cache.empty:
         lookback_days = BACKFILL_CALENDAR_DAYS
+        have_dates = set()
         log.info("No existing cache found - backfilling ~%d calendar days (first run only).", lookback_days)
+    elif new_symbols:
+        # The watchlist grew since the cache was last built. A date already
+        # being in the cache doesn't mean it covers these new symbols - it
+        # was fetched back when the watchlist was smaller. Force a full
+        # re-backfill so new symbols get real history, not just 1-2 days.
+        lookback_days = BACKFILL_CALENDAR_DAYS
+        have_dates = set()
+        log.info("Watchlist grew by %d symbol(s) since the cache was last built - forcing a "
+                  "full ~%d-day re-backfill so they get proper history too (one-time cost; "
+                  "symbols already covered are just re-fetched, which is harmless).",
+                  len(new_symbols), lookback_days)
     else:
-        most_recent = max(have_dates)
+        have_dates = have_dates_cached
+        most_recent = max(have_dates_cached)
         lookback_days = (today - most_recent).days + CATCHUP_BUFFER_DAYS
-        log.info("Existing cache found through %s - catching up %d day(s).", most_recent, lookback_days)
+        log.info("Existing cache found through %s, no new symbols - catching up %d day(s).",
+                  most_recent, lookback_days)
 
     candidate_dates = [datetime.combine(today, datetime.min.time()) - timedelta(days=i)
                         for i in range(1, lookback_days + 1)]
@@ -223,6 +259,7 @@ def update_cache(symbols: list[str], demo: bool, sleep_s: float) -> tuple[pd.Dat
     cutoff = pd.Timestamp(today - timedelta(days=CACHE_RETENTION_DAYS))
     cache = cache[cache["date"] >= cutoff]
     save_cache(cache)
+    save_cache_marker(watch_set)
 
     log.info("Cache updated: %d new day(s) fetched, %d weekend day(s) skipped, %d total rows now cached.",
               fetched, skipped_weekend, len(cache))
