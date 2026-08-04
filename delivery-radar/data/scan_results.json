@@ -1,16 +1,2840 @@
 {
-  "generated_at_utc": "2026-08-03T17:18:05.990580+00:00",
-  "universe_size": 49,
+  "generated_at_utc": "2026-08-04T06:36:24.944305+00:00",
+  "universe_size": 755,
   "success_count": 48,
-  "error_count": 1,
+  "error_count": 707,
   "errors": [
     {
-      "symbol": "TATAMOTORS",
+      "symbol": "360ONE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "3MINDIA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AADHARHFC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AARTIDRUGS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AARTIIND",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AARTIPHARM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AAVAS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ABB",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ABBOTINDIA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ABCAPITAL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ABDL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ABFRL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ABLBL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ABREL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ABSLAMC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ACC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ACE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ACI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ACMESOLAR",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ACUTAAS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ADANIENSOL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ADANIGREEN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ADANIPOWER",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ADVENZYMES",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AEGISLOG",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AEGISVOPAK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AEQUS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AETHER",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AFCONS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AFFLE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AGARWALEYE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AHLUCONT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AIAENG",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AIIL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AJANTPHARM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AKUMS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ALIVUS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ALKEM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ALKYLAMINE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ALOKINDS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AMBER",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AMBUJACEM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ANANDRATHI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ANANTRAJ",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ANGELONE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ANTHEM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ANUP",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ANURAS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "APARINDS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "APLAPOLLO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "APLLTD",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "APOLLO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "APOLLOTYRE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "APTUS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ARE&M",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ARVIND",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ARVINDFASN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ASAHIINDIA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ASHAPURMIN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ASHOKA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ASHOKLEY",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ASKAUTOLTD",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ASTERDM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ASTRAL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ASTRAMICRO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ATGL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ATHERENERG",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ATLANTAELE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ATUL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AUBANK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AURIONPRO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AUROPHARMA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AVALON",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AVANTIFEED",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AVL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AWFIS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AWL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AXISCADES",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "AZAD",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BAJAJ-AUTO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BAJAJELEC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BAJAJHFL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BAJAJHLDNG",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BALAMINES",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BALKRISIND",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BALRAMCHIN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BALUFORGE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BANCOINDIA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BANDHANBNK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BANKBARODA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BANKINDIA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BATAINDIA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BAYERCROP",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BBOX",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BBTC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BDL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BECTORFOOD",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BEL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BELRISE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BEML",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BERGEPAINT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BHARATFORG",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BHARTIHEXA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BHEL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BIKAJI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BIOCON",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BIRLACORPN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BLACKBUCK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BLS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BLUEDART",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BLUEJET",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BLUESTARCO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BLUESTONE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BORORENEW",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BOSCHLTD",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BRIGADE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BSE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "BSOFT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CAMPUS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CAMS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CANBK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CANFINHOME",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CANHLIFE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CAPILLARY",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CAPLIPOINT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CARBORUNIV",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CARTRADE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CASTROLIND",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CCAVENUE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CCL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CDSL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CEATLTD",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CELLO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CEMPRO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CENTRALBK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CENTURYPLY",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CERA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CESC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CGCL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CGPOWER",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CHALET",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CHAMBLFERT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CHENNPETRO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CHOICEIN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CHOLAFIN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CHOLAHLDNG",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CIEINDIA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CLEAN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CMSINFO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "COCHINSHIP",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "COFORGE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "COHANCE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "COLPAL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CONCOR",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CONCORDBIO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "COROMANDEL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CORONA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CPPLUS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CRAFTSMAN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CRAMC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CREDITACC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CRISIL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CRIZAC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CROMPTON",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CSBBANK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CUB",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CUMMINSIND",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CUPID",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "CYIENT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "DABUR",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "DALBHARAT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "DATAMATICS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "DBL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "DBREALTY",
       "reason": "no cached bhavcopy rows for this symbol"
+    },
+    {
+      "symbol": "DCBBANK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "DCMSHRIRAM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "DEEPAKFERT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "DEEPAKNTR",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "DELHIVERY",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "DEVYANI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "DIACABS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "DIXON",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "DLF",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "DMART",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "DOMS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "DUMMYINXGN",
+      "reason": "no cached bhavcopy rows for this symbol"
+    },
+    {
+      "symbol": "DUMMYTRVN",
+      "reason": "no cached bhavcopy rows for this symbol"
+    },
+    {
+      "symbol": "DYNAMATECH",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ECLERX",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "EDELWEISS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "EIDPARRY",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "EIEL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "EIHOTEL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ELECON",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ELECTCAST",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ELGIEQUIP",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ELLEN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "EMAMILTD",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "EMBDL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "EMCURE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "EMIL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "EMMVEE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ENDURANCE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ENGINERSIN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ENRIN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ENTERO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "EPL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "EQUITASBNK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ERIS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ESCORTS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ETERNAL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ETHOSLTD",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "EUREKAFORB",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "EXIDEIND",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "FACT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "FEDERALBNK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "FEDFINA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "FIEMIND",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "FINCABLES",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "FINPIPE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "FIRSTCRY",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "FIVESTAR",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "FLUOROCHEM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "FORCEMOT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "FORTIS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "FSL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GABRIEL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GAEL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GAIL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GALLANTT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GARFIBRES",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GESHIP",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GHCL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GICRE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GILLETTE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GLAND",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GLAXO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GLENMARK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GMDCLTD",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GMMPFAUDLR",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GMRAIRPORT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GMRP&UI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GNFC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GODFRYPHLP",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GODIGIT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GODREJAGRO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GODREJCP",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GODREJIND",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GODREJPROP",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GOKEX",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GOKULAGRO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GPIL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GPPL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GRANULES",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GRAPHITE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GRAVITA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GREAVESCOT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GRINDWELL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GROWW",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GRSE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GRWRHITECH",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GSFC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "GVT&D",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "HAL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "HAPPSTMNDS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "HAVELLS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "HBLENGINE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "HCC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "HCG",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "HDBFS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "HDFCAMC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "HEG",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "HEMIPROP",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "HERITGFOOD",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "HEXT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "HFCL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "HGINFRA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "HINDCOPPER",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "HINDPETRO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "HINDZINC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "HOMEFIRST",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "HONASA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "HONAUT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "HSCL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "HUDCO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "HYUNDAI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ICICIAMC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ICICIGI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ICICIPRULI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ICIL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "IDBI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "IDEA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "IDFCFIRSTB",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "IEX",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "IFBIND",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "IFCI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "IGIL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "IGL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "IIFL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "IIFLCAPS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "IKS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "IMFA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "INDGN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "INDHOTEL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "INDIACEM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "INDIAGLYCO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "INDIAMART",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "INDIANB",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "INDIASHLTR",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "INDIGO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "INDIGOPNTS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "INDUSTOWER",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "INOXGREEN",
+      "reason": "no cached bhavcopy rows for this symbol"
+    },
+    {
+      "symbol": "INOXINDIA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "INOXWIND",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "INTELLECT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "IOB",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "IOC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "IONEXCHANG",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "IPCALAB",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "IRB",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "IRCON",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "IRCTC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "IREDA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "IRFC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ITCHOTELS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ITI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "IXIGO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "J&KBANK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JAIBALAJI",
+      "reason": "no cached bhavcopy rows for this symbol"
+    },
+    {
+      "symbol": "JAINREC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JAMNAAUTO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JAYNECOIND",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JBMA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JINDALSAW",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JINDALSTEL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JIOFIN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JKCEMENT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JKLAKSHMI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JKPAPER",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JKTYRE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JLHL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JMFINANCIL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JPPOWER",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JSFB",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JSL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JSLL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JSWCEMENT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JSWDULUX",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JSWENERGY",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JSWINFRA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JUBLFOOD",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JUBLINGREA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JUBLPHARMA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JUSTDIAL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JWL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JYOTHYLAB",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "JYOTICNC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "KAJARIACER",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "KALYANKJIL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "KANSAINER",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "KARURVYSYA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "KEC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "KEI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "KFINTECH",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "KIMS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "KIRLOSBROS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "KIRLOSENG",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "KIRLPNU",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "KITEX",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "KNRCON",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "KPIGREEN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "KPIL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "KPITTECH",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "KPRMILL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "KRBL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "KRN",
+      "reason": "no cached bhavcopy rows for this symbol"
+    },
+    {
+      "symbol": "KSB",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "KSCL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "KTKBANK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "LALPATHLAB",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "LATENTVIEW",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "LAURUSLABS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "LEMONTREE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "LENSKART",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "LGEINDIA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "LICHSGFIN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "LICI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "LINDEINDIA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "LLOYDSENGG",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "LLOYDSENT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "LLOYDSME",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "LODHA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "LOTUSDEV",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "LTF",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "LTFOODS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "LTM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "LTTS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "LUMAXTECH",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "LUPIN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "LXCHEM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "M&MFIN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MAHABANK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MAHSCOOTER",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MAHSEAMLES",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MANAPPURAM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MANKIND",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MANORAMA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MANYAVAR",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MAPMYINDIA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MARICO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MARKSANS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MASTEK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MAXHEALTH",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MAZDOCK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MCX",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MEDANTA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MEDPLUS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MEESHO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "METROPOLIS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MFSL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MGL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MIDHANI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MINDACORP",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MMTC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MOIL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MOTHERSON",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MOTILALOFS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MPHASIS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MRF",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MRPL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MSTCLTD",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MSUMI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "MTARTECH",
+      "reason": "no cached bhavcopy rows for this symbol"
+    },
+    {
+      "symbol": "MUTHOOTFIN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NAM-INDIA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NATCOPHARM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NATIONALUM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NAUKRI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NAVA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NAVINFLUOR",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NAZARA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NBCC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NCC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NEOGEN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NESCO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NETWEB",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NETWORK18",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NEULANDLAB",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NEWGEN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NFL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NH",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NHPC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NIACL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NIVABUPA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NLCINDIA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NMDC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NSLNISP",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NTPCGREEN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NUVAMA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NUVOCO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "NYKAA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "OBEROIRLTY",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "OFSS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "OIL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "OLAELEC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "OLECTRA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ONESOURCE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "OPTIEMUS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ORIENTCEM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ORKLAINDIA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "OSWALPUMPS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PAGEIND",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PARADEEP",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PARAS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PARKHOSPS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PATANJALI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PAYTM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PCBL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PCJEWELLER",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PERSISTENT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PETRONET",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PFC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PFIZER",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PFOCUS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PGEL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PGIL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PHOENIXLTD",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PICCADIL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PIDILITIND",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PIIND",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PINELABS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PIRAMALFIN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PNB",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PNBHOUSING",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PNCINFRA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PNGJL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "POLICYBZR",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "POLYCAB",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "POLYMED",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "POONAWALLA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "POWERINDIA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "POWERMECH",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PPLPHARMA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PRAJIND",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PREMIERENE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PRESTIGE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PRICOLLTD",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PRIVISCL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PRSMJOHNSN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PRUDENT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PTC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PTCIL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PURVA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PVRINOX",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PWL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "QPOWER",
+      "reason": "no cached bhavcopy rows for this symbol"
+    },
+    {
+      "symbol": "QUESS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RADICO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RAILTEL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RAIN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RAINBOW",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RALLIS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RAMCOCEM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RATEGAIN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RATNAMANI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RAYMONDLSL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RBA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RBLBANK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RCF",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RECLTD",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "REDINGTON",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "REDTAPE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "REFEX",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RELAXO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RELIGARE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RENUKA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RHIM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RITES",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RKFORGE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ROSSTECH",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ROUTE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RPOWER",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RRKABEL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RTNINDIA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RTNPOWER",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RUBICON",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "RVNL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SAATVIKGL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SAFARI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SAGILITY",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SAIL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SAILIFE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SAMHI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SAMMAANCAP",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SANDUMA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SANOFICONR",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SANSERA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SAPPHIRE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SARDAEN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SAREGAMA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SBFC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SBICARD",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SCHAEFFLER",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SCHNEIDER",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SCI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SENCO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SFL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SHAILY",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SHAKTIPUMP",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SHARDACROP",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SHAREINDIA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SHILPAMED",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SHREECEM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SHRIPISTON",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SHRIRAMFIN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SHYAMMETL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SIEMENS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SIGMAADV",
+      "reason": "no cached bhavcopy rows for this symbol"
+    },
+    {
+      "symbol": "SIGNATURE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SJVN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SKFINDIA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SKFINDUS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SKIPPER",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SKYGOLD",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SMARTWORKS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SMLMAH",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SOBHA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SOLARINDS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SONACOMS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SONATSOFTW",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SOUTHBANK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SPARC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SPLPETRO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SRF",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "STAR",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "STARCEMENT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "STARHEALTH",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "STLTECH",
+      "reason": "no cached bhavcopy rows for this symbol"
+    },
+    {
+      "symbol": "STYL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "STYRENIX",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SUBROS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SUDARSCHEM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SUDEEPPHRM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SUMICHEM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SUNDARMFIN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SUNTECK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SUNTV",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SUPREMEIND",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SUPRIYA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SURYAROSNI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SUZLON",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SWANCORP",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SWIGGY",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SWSOLAR",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SYNGENE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "SYRMA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TANLA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TARC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TARIL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TATACAP",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TATACHEM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TATACOMM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TATAELXSI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TATAINVEST",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TATAPOWER",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TATATECH",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TBOTEK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TDPOWERSYS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TECHNOE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TEGA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TEJASNET",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TENNIND",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TEXRAIL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "THANGAMAYL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "THELEELA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "THERMAX",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "THOMASCOOK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "THYROCARE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TI",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TIINDIA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TIMETECHNO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TIMKEN",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TIPSMUSIC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TITAGARH",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TMB",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TMCV",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TMPV",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TORNTPHARM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TORNTPOWER",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TRANSRAILL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TRAVELFOOD",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TRENT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TRIDENT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TRITURBINE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TRIVENI",
+      "reason": "no cached bhavcopy rows for this symbol"
+    },
+    {
+      "symbol": "TSFINV",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TTML",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TVSMOTOR",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "TVSSCS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "UBL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "UCOBANK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "UJJIVANSFB",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "UNIONBANK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "UNITDSPR",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "UNOMINDA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "UPL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "URBANCO",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "USHAMART",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "UTIAMC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "UTLSOLAR",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "V2RETAIL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "VAIBHAVGBL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "VARROC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "VBL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "VEDL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "VGUARD",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "VIJAYA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "VIKRAMSOLR",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "VIPIND",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "VIYASH",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "VMART",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "VMM",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "VOLTAMP",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "VOLTAS",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "VTL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "WAAREEENER",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "WAAREERTL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "WABAG",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "WAKEFIT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "WEBELSOLAR",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "WELCORP",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "WELENT",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "WELSPUNLIV",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "WESTLIFE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "WEWORK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "WHIRLPOOL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "WOCKPHARMA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "YATHARTH",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "YESBANK",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ZAGGLE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ZEEL",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ZENSARTECH",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ZENTEC",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ZFCVINDIA",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ZYDUSLIFE",
+      "reason": "only 1 cached session(s), need 25+"
+    },
+    {
+      "symbol": "ZYDUSWELL",
+      "reason": "only 1 cached session(s), need 25+"
     }
   ],
-  "cache_days_fetched_this_run": 0,
-  "cache_total_days": 67,
+  "cache_days_fetched_this_run": 1,
+  "cache_total_days": 68,
   "params": {
     "z_threshold": 1.5,
     "price_move_threshold_pct": 2.0,
@@ -19,796 +2843,18 @@
   },
   "results": [
     {
-      "symbol": "HINDUNILVR",
-      "last_close": 2101.3,
-      "price_change_pct": -0.31,
-      "delivery_pct": 78.71,
-      "delivery_avg_20d": 57.61,
-      "delivery_zscore_20d": 3.33,
-      "delivery_zscore_60d": 2.79,
-      "vol_ratio_20d": 0.79,
-      "delivered_value_cr": 290.91,
-      "low_liquidity": false,
-      "signal": "quiet_accumulation",
-      "delivery_sparkline_20d": [
-        62.7,
-        65.1,
-        59.3,
-        56.3,
-        64.2,
-        57.2,
-        56.1,
-        55.7,
-        64.9,
-        36.4,
-        58.0,
-        62.5,
-        56.4,
-        55.3,
-        63.0,
-        56.7,
-        52.6,
-        51.8,
-        58.9,
-        78.7
-      ],
-      "sessions_available": 67,
-      "score": 47.96
-    },
-    {
-      "symbol": "TITAN",
-      "last_close": 4875.2,
-      "price_change_pct": 0.52,
-      "delivery_pct": 77.56,
-      "delivery_avg_20d": 60.27,
-      "delivery_zscore_20d": 2.75,
-      "delivery_zscore_60d": 2.76,
-      "vol_ratio_20d": 1.12,
-      "delivered_value_cr": 378.98,
-      "low_liquidity": false,
-      "signal": "quiet_accumulation",
-      "delivery_sparkline_20d": [
-        64.2,
-        44.7,
-        58.8,
-        58.8,
-        65.1,
-        59.4,
-        65.5,
-        66.1,
-        65.4,
-        56.3,
-        61.9,
-        46.5,
-        60.8,
-        57.5,
-        60.0,
-        63.5,
-        55.0,
-        67.7,
-        68.8,
-        77.6
-      ],
-      "sessions_available": 67,
-      "score": 41.0
-    },
-    {
-      "symbol": "INDUSINDBK",
-      "last_close": 1012.45,
-      "price_change_pct": 0.1,
-      "delivery_pct": 64.28,
-      "delivery_avg_20d": 45.81,
-      "delivery_zscore_20d": 2.69,
-      "delivery_zscore_60d": 2.21,
-      "vol_ratio_20d": 1.06,
-      "delivered_value_cr": 189.8,
-      "low_liquidity": false,
-      "signal": "quiet_accumulation",
-      "delivery_sparkline_20d": [
-        44.7,
-        59.4,
-        52.1,
-        53.8,
-        38.9,
-        41.6,
-        41.4,
-        46.0,
-        44.0,
-        54.5,
-        46.6,
-        45.1,
-        51.8,
-        35.8,
-        33.4,
-        50.8,
-        44.7,
-        52.4,
-        39.0,
-        64.3
-      ],
-      "sessions_available": 67,
-      "score": 40.28
-    },
-    {
-      "symbol": "HDFCLIFE",
-      "last_close": 548.5,
-      "price_change_pct": 0.57,
-      "delivery_pct": 68.97,
-      "delivery_avg_20d": 53.57,
-      "delivery_zscore_20d": 1.68,
-      "delivery_zscore_60d": 1.48,
-      "vol_ratio_20d": 3.25,
-      "delivered_value_cr": 431.18,
-      "low_liquidity": false,
-      "signal": "quiet_accumulation",
-      "delivery_sparkline_20d": [
-        57.6,
-        53.0,
-        56.8,
-        67.5,
-        65.4,
-        40.2,
-        62.0,
-        46.8,
-        38.1,
-        55.1,
-        49.0,
-        47.9,
-        50.5,
-        57.6,
-        41.3,
-        51.3,
-        52.7,
-        44.8,
-        70.5,
-        69.0
-      ],
-      "sessions_available": 67,
-      "score": 40.16
-    },
-    {
-      "symbol": "ADANIPORTS",
-      "last_close": 1696.5,
-      "price_change_pct": 1.95,
-      "delivery_pct": 63.15,
-      "delivery_avg_20d": 49.5,
-      "delivery_zscore_20d": 1.91,
-      "delivery_zscore_60d": 1.76,
-      "vol_ratio_20d": 2.51,
-      "delivered_value_cr": 502.27,
-      "low_liquidity": false,
-      "signal": "quiet_accumulation",
-      "delivery_sparkline_20d": [
-        57.8,
-        52.1,
-        44.2,
-        41.2,
-        42.2,
-        51.2,
-        42.6,
-        48.4,
-        50.9,
-        42.8,
-        48.6,
-        53.9,
-        49.6,
-        58.7,
-        50.8,
-        63.7,
-        62.1,
-        37.1,
-        44.5,
-        63.1
-      ],
-      "sessions_available": 67,
-      "score": 39.98
-    },
-    {
-      "symbol": "HDFCBANK",
-      "last_close": 748.15,
-      "price_change_pct": -0.77,
-      "delivery_pct": 74.76,
-      "delivery_avg_20d": 62.86,
-      "delivery_zscore_20d": 1.89,
-      "delivery_zscore_60d": 1.87,
-      "vol_ratio_20d": 0.78,
-      "delivered_value_cr": 1430.37,
-      "low_liquidity": false,
-      "signal": "quiet_accumulation",
-      "delivery_sparkline_20d": [
-        68.5,
-        66.3,
-        57.9,
-        54.9,
-        72.0,
-        54.7,
-        47.6,
-        63.5,
-        56.0,
-        62.5,
-        61.9,
-        62.7,
-        65.8,
-        65.4,
-        65.1,
-        69.7,
-        66.5,
-        67.7,
-        57.7,
-        74.8
-      ],
-      "sessions_available": 67,
-      "score": 30.68
-    },
-    {
-      "symbol": "AXISBANK",
-      "last_close": 1229.5,
-      "price_change_pct": 0.05,
-      "delivery_pct": 75.73,
-      "delivery_avg_20d": 61.53,
-      "delivery_zscore_20d": 1.73,
-      "delivery_zscore_60d": 1.78,
-      "vol_ratio_20d": 0.93,
-      "delivered_value_cr": 697.33,
-      "low_liquidity": false,
-      "signal": "quiet_accumulation",
-      "delivery_sparkline_20d": [
-        52.9,
-        67.6,
-        51.1,
-        55.4,
-        58.5,
-        59.1,
-        44.5,
-        53.8,
-        61.0,
-        61.6,
-        65.9,
-        71.6,
-        77.9,
-        70.2,
-        72.1,
-        68.2,
-        56.7,
-        60.8,
-        63.3,
-        75.7
-      ],
-      "sessions_available": 67,
-      "score": 28.76
-    },
-    {
-      "symbol": "CIPLA",
-      "last_close": 1473.2,
-      "price_change_pct": 0.46,
-      "delivery_pct": 65.7,
-      "delivery_avg_20d": 51.6,
-      "delivery_zscore_20d": 1.54,
-      "delivery_zscore_60d": 1.18,
-      "vol_ratio_20d": 0.88,
-      "delivered_value_cr": 118.38,
-      "low_liquidity": false,
-      "signal": "quiet_accumulation",
-      "delivery_sparkline_20d": [
-        66.6,
-        55.2,
-        45.4,
-        50.7,
-        50.1,
-        62.3,
-        37.0,
-        54.7,
-        63.3,
-        49.2,
-        41.7,
-        56.3,
-        58.7,
-        33.4,
-        37.9,
-        46.7,
-        50.3,
-        55.2,
-        57.4,
-        65.7
-      ],
-      "sessions_available": 67,
-      "score": 26.48
-    },
-    {
-      "symbol": "KOTAKBANK",
-      "last_close": 390.3,
-      "price_change_pct": 0.23,
-      "delivery_pct": 74.7,
-      "delivery_avg_20d": 66.0,
-      "delivery_zscore_20d": 1.49,
-      "delivery_zscore_60d": 1.83,
-      "vol_ratio_20d": 0.4,
-      "delivered_value_cr": 204.41,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        61.2,
-        73.9,
-        64.9,
-        62.6,
-        64.8,
-        66.8,
-        55.4,
-        55.8,
-        66.7,
-        57.1,
-        63.5,
-        65.9,
-        71.8,
-        70.7,
-        74.4,
-        74.3,
-        62.4,
-        71.6,
-        67.9,
-        74.7
-      ],
-      "sessions_available": 67,
-      "score": 25.88
-    },
-    {
-      "symbol": "SBIN",
-      "last_close": 1027.4,
-      "price_change_pct": 0.2,
-      "delivery_pct": 62.37,
-      "delivery_avg_20d": 50.6,
-      "delivery_zscore_20d": 1.46,
-      "delivery_zscore_60d": 1.33,
-      "vol_ratio_20d": 1.09,
-      "delivered_value_cr": 699.96,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        59.1,
-        54.6,
-        55.7,
-        26.3,
-        48.3,
-        42.6,
-        50.6,
-        49.8,
-        44.9,
-        53.0,
-        52.2,
-        53.0,
-        58.6,
-        49.3,
-        60.9,
-        56.0,
-        44.4,
-        54.1,
-        40.5,
-        62.4
-      ],
-      "sessions_available": 67,
-      "score": 25.52
-    },
-    {
-      "symbol": "EICHERMOT",
-      "last_close": 7833.5,
-      "price_change_pct": -1.0,
-      "delivery_pct": 63.56,
-      "delivery_avg_20d": 54.55,
-      "delivery_zscore_20d": 1.36,
-      "delivery_zscore_60d": 1.38,
-      "vol_ratio_20d": 1.29,
-      "delivered_value_cr": 359.21,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        48.7,
-        54.6,
-        53.6,
-        64.4,
-        58.0,
-        64.1,
-        56.5,
-        59.7,
-        56.7,
-        47.2,
-        55.3,
-        51.8,
-        55.9,
-        46.9,
-        62.2,
-        50.4,
-        57.9,
-        60.0,
-        37.1,
-        63.6
-      ],
-      "sessions_available": 67,
-      "score": 24.32
-    },
-    {
-      "symbol": "NESTLEIND",
-      "last_close": 1509.6,
-      "price_change_pct": -0.73,
-      "delivery_pct": 71.02,
-      "delivery_avg_20d": 57.92,
-      "delivery_zscore_20d": 1.34,
-      "delivery_zscore_60d": 1.31,
-      "vol_ratio_20d": 1.06,
-      "delivered_value_cr": 268.25,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        54.7,
-        58.8,
-        63.5,
-        56.6,
-        68.1,
-        70.0,
-        57.1,
-        62.2,
-        68.0,
-        58.2,
-        59.8,
-        53.1,
-        32.2,
-        36.6,
-        56.3,
-        61.3,
-        62.2,
-        62.6,
-        68.4,
-        71.0
-      ],
-      "sessions_available": 67,
-      "score": 24.08
-    },
-    {
-      "symbol": "BPCL",
-      "last_close": 319.75,
-      "price_change_pct": 1.25,
-      "delivery_pct": 58.52,
-      "delivery_avg_20d": 50.25,
-      "delivery_zscore_20d": 1.24,
-      "delivery_zscore_60d": 1.07,
-      "vol_ratio_20d": 0.71,
-      "delivered_value_cr": 95.19,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        45.2,
-        49.2,
-        53.8,
-        45.9,
-        53.0,
-        51.4,
-        54.0,
-        58.2,
-        39.5,
-        56.4,
-        50.5,
-        55.1,
-        42.7,
-        47.3,
-        47.6,
-        51.8,
-        55.3,
-        58.1,
-        57.6,
-        58.5
-      ],
-      "sessions_available": 67,
-      "score": 22.88
-    },
-    {
-      "symbol": "COALINDIA",
-      "last_close": 414.15,
-      "price_change_pct": -0.73,
-      "delivery_pct": 66.38,
-      "delivery_avg_20d": 56.26,
-      "delivery_zscore_20d": 1.23,
-      "delivery_zscore_60d": 1.34,
-      "vol_ratio_20d": 0.9,
-      "delivered_value_cr": 162.95,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        65.1,
-        56.7,
-        40.7,
-        38.6,
-        59.2,
-        58.9,
-        43.6,
-        60.7,
-        56.9,
-        53.5,
-        67.8,
-        59.6,
-        58.1,
-        61.1,
-        54.4,
-        59.1,
-        49.0,
-        64.1,
-        67.0,
-        66.4
-      ],
-      "sessions_available": 67,
-      "score": 22.76
-    },
-    {
-      "symbol": "POWERGRID",
-      "last_close": 284.25,
-      "price_change_pct": -0.51,
-      "delivery_pct": 68.6,
-      "delivery_avg_20d": 63.15,
-      "delivery_zscore_20d": 1.19,
-      "delivery_zscore_60d": 1.09,
-      "vol_ratio_20d": 0.92,
-      "delivered_value_cr": 152.12,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        63.8,
-        67.6,
-        60.1,
-        56.9,
-        64.5,
-        66.9,
-        57.3,
-        59.6,
-        66.2,
-        62.3,
-        68.1,
-        63.4,
-        62.7,
-        59.3,
-        62.0,
-        74.2,
-        54.0,
-        65.9,
-        62.9,
-        68.6
-      ],
-      "sessions_available": 67,
-      "score": 22.28
-    },
-    {
-      "symbol": "BHARTIARTL",
-      "last_close": 1972.0,
-      "price_change_pct": 0.78,
-      "delivery_pct": 73.44,
-      "delivery_avg_20d": 64.79,
-      "delivery_zscore_20d": 1.14,
-      "delivery_zscore_60d": 1.2,
-      "vol_ratio_20d": 1.1,
-      "delivered_value_cr": 942.97,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        61.0,
-        50.8,
-        61.7,
-        53.7,
-        62.4,
-        66.8,
-        51.1,
-        63.7,
-        56.2,
-        68.9,
-        67.1,
-        70.2,
-        80.8,
-        67.5,
-        66.0,
-        72.2,
-        74.5,
-        66.2,
-        69.1,
-        73.4
-      ],
-      "sessions_available": 67,
-      "score": 21.68
-    },
-    {
-      "symbol": "SBILIFE",
-      "last_close": 1882.0,
-      "price_change_pct": 0.24,
-      "delivery_pct": 68.47,
-      "delivery_avg_20d": 58.41,
-      "delivery_zscore_20d": 1.07,
-      "delivery_zscore_60d": 1.08,
-      "vol_ratio_20d": 0.77,
-      "delivered_value_cr": 93.31,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        65.4,
-        46.0,
-        60.8,
-        55.3,
-        63.3,
-        49.8,
-        61.9,
-        56.7,
-        52.0,
-        62.0,
-        60.6,
-        59.8,
-        61.6,
-        57.6,
-        30.6,
-        64.5,
-        55.4,
-        71.5,
-        75.0,
-        68.5
-      ],
-      "sessions_available": 67,
-      "score": 20.84
-    },
-    {
-      "symbol": "RELIANCE",
-      "last_close": 1307.8,
-      "price_change_pct": 1.15,
-      "delivery_pct": 65.3,
-      "delivery_avg_20d": 55.71,
-      "delivery_zscore_20d": 1.01,
-      "delivery_zscore_60d": 1.23,
-      "vol_ratio_20d": 0.73,
-      "delivered_value_cr": 733.92,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        54.0,
-        53.4,
-        57.1,
-        35.4,
-        55.7,
-        54.5,
-        36.2,
-        53.2,
-        56.0,
-        62.9,
-        46.5,
-        58.8,
-        70.3,
-        57.6,
-        58.9,
-        66.5,
-        65.9,
-        61.9,
-        43.5,
-        65.3
-      ],
-      "sessions_available": 67,
-      "score": 20.12
-    },
-    {
-      "symbol": "TCS",
-      "last_close": 2365.6,
-      "price_change_pct": -2.72,
-      "delivery_pct": 54.77,
-      "delivery_avg_20d": 43.86,
-      "delivery_zscore_20d": 1.61,
-      "delivery_zscore_60d": 0.81,
-      "vol_ratio_20d": 0.87,
-      "delivered_value_cr": 562.47,
-      "low_liquidity": false,
-      "signal": "possible_distribution",
-      "delivery_sparkline_20d": [
-        53.3,
-        39.1,
-        48.8,
-        31.2,
-        30.3,
-        37.3,
-        47.1,
-        47.0,
-        41.1,
-        40.8,
-        41.8,
-        48.5,
-        39.9,
-        40.1,
-        39.7,
-        47.3,
-        50.2,
-        55.1,
-        50.0,
-        54.8
-      ],
-      "sessions_available": 67,
-      "score": 19.32
-    },
-    {
-      "symbol": "ONGC",
-      "last_close": 242.53,
-      "price_change_pct": 0.39,
-      "delivery_pct": 62.22,
-      "delivery_avg_20d": 55.09,
-      "delivery_zscore_20d": 0.88,
-      "delivery_zscore_60d": 1.03,
-      "vol_ratio_20d": 0.79,
-      "delivered_value_cr": 151.12,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        56.9,
-        69.4,
-        43.6,
-        53.1,
-        64.3,
-        41.2,
-        54.5,
-        67.6,
-        57.1,
-        61.6,
-        46.4,
-        65.5,
-        52.5,
-        55.9,
-        43.7,
-        51.3,
-        49.9,
-        61.3,
-        49.3,
-        62.2
-      ],
-      "sessions_available": 67,
-      "score": 18.56
-    },
-    {
-      "symbol": "JSWSTEEL",
-      "last_close": 1270.0,
-      "price_change_pct": -0.06,
-      "delivery_pct": 63.52,
-      "delivery_avg_20d": 53.82,
-      "delivery_zscore_20d": 0.8,
-      "delivery_zscore_60d": 1.09,
-      "vol_ratio_20d": 0.87,
-      "delivered_value_cr": 116.93,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        61.1,
-        65.8,
-        50.4,
-        59.4,
-        53.5,
-        51.7,
-        42.3,
-        51.6,
-        70.3,
-        33.5,
-        25.4,
-        65.5,
-        74.0,
-        68.3,
-        51.4,
-        57.3,
-        53.4,
-        44.7,
-        49.6,
-        63.5
-      ],
-      "sessions_available": 67,
-      "score": 17.6
-    },
-    {
       "symbol": "TECHM",
-      "last_close": 1651.3,
-      "price_change_pct": -1.06,
-      "delivery_pct": 55.43,
-      "delivery_avg_20d": 44.16,
-      "delivery_zscore_20d": 1.29,
-      "delivery_zscore_60d": 1.0,
-      "vol_ratio_20d": 1.22,
-      "delivered_value_cr": 306.77,
+      "last_close": 1649.0,
+      "price_change_pct": -0.14,
+      "delivery_pct": 75.0,
+      "delivery_avg_20d": 45.34,
+      "delivery_zscore_20d": 3.45,
+      "delivery_zscore_60d": 3.2,
+      "vol_ratio_20d": 1.5,
+      "delivered_value_cr": 512.7,
       "low_liquidity": false,
-      "signal": "no_signal",
+      "signal": "quiet_accumulation",
       "delivery_sparkline_20d": [
-        40.9,
         43.4,
         42.9,
         48.8,
@@ -827,25 +2873,25 @@
         53.7,
         45.9,
         60.3,
-        55.4
+        55.4,
+        75.0
       ],
-      "sessions_available": 67,
-      "score": 15.48
+      "sessions_available": 68,
+      "score": 52.4
     },
     {
       "symbol": "TATACONSUM",
-      "last_close": 1083.1,
-      "price_change_pct": -1.01,
-      "delivery_pct": 62.1,
-      "delivery_avg_20d": 55.29,
-      "delivery_zscore_20d": 1.16,
-      "delivery_zscore_60d": 0.85,
-      "vol_ratio_20d": 1.06,
-      "delivered_value_cr": 99.71,
+      "last_close": 1110.0,
+      "price_change_pct": 2.48,
+      "delivery_pct": 68.74,
+      "delivery_avg_20d": 55.84,
+      "delivery_zscore_20d": 2.17,
+      "delivery_zscore_60d": 1.73,
+      "vol_ratio_20d": 0.95,
+      "delivered_value_cr": 99.47,
       "low_liquidity": false,
-      "signal": "no_signal",
+      "signal": "confirmed_accumulation",
       "delivery_sparkline_20d": [
-        54.1,
         62.8,
         51.7,
         50.3,
@@ -864,691 +2910,99 @@
         55.9,
         52.0,
         63.6,
-        62.1
+        62.1,
+        68.7
       ],
-      "sessions_available": 67,
-      "score": 13.92
+      "sessions_available": 68,
+      "score": 34.04
     },
     {
-      "symbol": "BRITANNIA",
-      "last_close": 5416.5,
-      "price_change_pct": -1.95,
-      "delivery_pct": 58.61,
-      "delivery_avg_20d": 55.48,
-      "delivery_zscore_20d": 0.63,
-      "delivery_zscore_60d": -0.09,
-      "vol_ratio_20d": 1.95,
-      "delivered_value_cr": 135.67,
+      "symbol": "POWERGRID",
+      "last_close": 287.0,
+      "price_change_pct": 0.97,
+      "delivery_pct": 72.5,
+      "delivery_avg_20d": 63.31,
+      "delivery_zscore_20d": 1.95,
+      "delivery_zscore_60d": 1.62,
+      "vol_ratio_20d": 1.05,
+      "delivered_value_cr": 180.79,
       "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        65.4,
-        53.2,
-        59.6,
-        57.2,
-        56.3,
-        64.5,
-        55.6,
-        53.9,
-        58.8,
-        50.8,
-        55.6,
-        60.6,
-        58.1,
-        51.9,
-        46.4,
-        55.1,
-        48.7,
-        51.3,
-        56.4,
-        58.6
-      ],
-      "sessions_available": 67,
-      "score": 13.26
-    },
-    {
-      "symbol": "HEROMOTOCO",
-      "last_close": 5386.0,
-      "price_change_pct": 1.15,
-      "delivery_pct": 57.44,
-      "delivery_avg_20d": 52.07,
-      "delivery_zscore_20d": 1.0,
-      "delivery_zscore_60d": 0.87,
-      "vol_ratio_20d": 1.12,
-      "delivered_value_cr": 236.99,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        52.7,
-        51.3,
-        53.7,
-        57.5,
-        57.2,
-        52.9,
-        64.7,
-        46.8,
-        48.1,
-        47.6,
-        55.6,
-        48.5,
-        45.4,
-        46.8,
-        45.8,
-        58.2,
-        59.1,
-        54.3,
-        47.6,
-        57.4
-      ],
-      "sessions_available": 67,
-      "score": 12.0
-    },
-    {
-      "symbol": "BAJFINANCE",
-      "last_close": 1141.2,
-      "price_change_pct": 8.32,
-      "delivery_pct": 58.25,
-      "delivery_avg_20d": 62.63,
-      "delivery_zscore_20d": -0.61,
-      "delivery_zscore_60d": -0.07,
-      "vol_ratio_20d": 4.88,
-      "delivered_value_cr": 2671.01,
-      "low_liquidity": false,
-      "signal": "speculative_churn",
+      "signal": "quiet_accumulation",
       "delivery_sparkline_20d": [
         67.6,
-        61.9,
-        59.6,
-        67.0,
-        66.1,
-        57.1,
-        47.2,
-        55.3,
-        72.7,
-        70.7,
-        61.0,
+        60.1,
+        56.9,
+        64.5,
         66.9,
-        72.9,
-        68.9,
-        67.2,
-        63.9,
-        56.6,
-        65.1,
-        52.5,
-        58.2
-      ],
-      "sessions_available": 67,
-      "score": 9.76
-    },
-    {
-      "symbol": "NTPC",
-      "last_close": 347.25,
-      "price_change_pct": 0.7,
-      "delivery_pct": 65.16,
-      "delivery_avg_20d": 62.27,
-      "delivery_zscore_20d": 0.68,
-      "delivery_zscore_60d": 0.62,
-      "vol_ratio_20d": 0.88,
-      "delivered_value_cr": 192.22,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        64.3,
-        67.4,
-        63.8,
-        66.6,
-        68.0,
-        57.7,
         57.3,
-        62.4,
-        64.0,
+        59.6,
+        66.2,
+        62.3,
+        68.1,
         63.4,
-        63.3,
-        53.8,
-        66.9,
-        58.0,
-        60.6,
-        62.1,
-        66.3,
-        65.9,
-        58.7,
-        65.2
-      ],
-      "sessions_available": 67,
-      "score": 8.16
-    },
-    {
-      "symbol": "LT",
-      "last_close": 3938.9,
-      "price_change_pct": 0.03,
-      "delivery_pct": 60.51,
-      "delivery_avg_20d": 56.12,
-      "delivery_zscore_20d": 0.64,
-      "delivery_zscore_60d": 0.9,
-      "vol_ratio_20d": 0.83,
-      "delivered_value_cr": 418.15,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        51.1,
-        55.9,
-        48.2,
-        71.1,
-        60.6,
-        53.5,
-        53.3,
-        71.4,
-        62.6,
-        52.9,
-        57.8,
-        54.3,
-        61.9,
-        55.8,
-        53.2,
-        54.7,
-        48.9,
-        45.8,
-        50.2,
-        60.5
-      ],
-      "sessions_available": 67,
-      "score": 7.68
-    },
-    {
-      "symbol": "APOLLOHOSP",
-      "last_close": 8957.0,
-      "price_change_pct": -0.34,
-      "delivery_pct": 64.79,
-      "delivery_avg_20d": 60.99,
-      "delivery_zscore_20d": 0.51,
-      "delivery_zscore_60d": 0.6,
-      "vol_ratio_20d": 1.0,
-      "delivered_value_cr": 155.86,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        62.5,
-        57.3,
-        52.8,
-        72.8,
-        70.5,
-        54.7,
-        66.7,
-        57.2,
-        69.6,
-        49.9,
-        64.0,
-        68.3,
-        68.6,
-        60.0,
-        65.2,
-        53.8,
-        60.4,
-        58.6,
-        62.1,
-        64.8
-      ],
-      "sessions_available": 67,
-      "score": 6.12
-    },
-    {
-      "symbol": "BAJAJFINSV",
-      "last_close": 2029.1,
-      "price_change_pct": 6.27,
-      "delivery_pct": 30.77,
-      "delivery_avg_20d": 57.64,
-      "delivery_zscore_20d": -2.92,
-      "delivery_zscore_60d": -2.52,
-      "vol_ratio_20d": 3.0,
-      "delivered_value_cr": 229.96,
-      "low_liquidity": false,
-      "signal": "speculative_churn",
-      "delivery_sparkline_20d": [
-        67.1,
-        43.2,
-        60.2,
-        65.5,
-        59.2,
-        58.5,
-        66.0,
-        48.3,
-        70.4,
-        50.4,
-        69.5,
-        61.2,
-        64.4,
-        52.7,
-        65.7,
-        46.8,
-        53.8,
-        63.1,
-        45.6,
-        30.8
-      ],
-      "sessions_available": 67,
-      "score": 6.0
-    },
-    {
-      "symbol": "ICICIBANK",
-      "last_close": 1435.4,
-      "price_change_pct": 0.1,
-      "delivery_pct": 66.97,
-      "delivery_avg_20d": 62.82,
-      "delivery_zscore_20d": 0.47,
-      "delivery_zscore_60d": 0.68,
-      "vol_ratio_20d": 0.68,
-      "delivered_value_cr": 841.07,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        71.4,
-        61.6,
-        56.0,
-        48.9,
-        63.9,
-        56.3,
-        55.9,
-        68.2,
-        54.3,
-        61.5,
-        61.3,
-        71.0,
-        73.6,
-        68.4,
-        75.8,
-        67.0,
-        52.9,
-        68.0,
-        45.4,
-        67.0
-      ],
-      "sessions_available": 67,
-      "score": 5.64
-    },
-    {
-      "symbol": "DATAPATTNS",
-      "last_close": 4281.0,
-      "price_change_pct": -4.06,
-      "delivery_pct": 19.13,
-      "delivery_avg_20d": 24.11,
-      "delivery_zscore_20d": -0.74,
-      "delivery_zscore_60d": -0.67,
-      "vol_ratio_20d": 1.91,
-      "delivered_value_cr": 156.14,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        15.4,
-        34.2,
-        21.9,
-        22.1,
-        24.8,
-        29.6,
-        32.1,
-        24.9,
-        30.5,
-        24.3,
-        37.2,
-        23.9,
-        13.5,
-        20.8,
-        14.0,
-        17.7,
-        25.3,
-        17.9,
-        21.4,
-        19.1
-      ],
-      "sessions_available": 67,
-      "score": 5.46
-    },
-    {
-      "symbol": "M&M",
-      "last_close": 3398.5,
-      "price_change_pct": 3.5,
-      "delivery_pct": 51.21,
-      "delivery_avg_20d": 55.47,
-      "delivery_zscore_20d": -0.58,
-      "delivery_zscore_60d": -0.52,
-      "vol_ratio_20d": 2.53,
-      "delivered_value_cr": 1064.9,
-      "low_liquidity": false,
-      "signal": "speculative_churn",
-      "delivery_sparkline_20d": [
-        57.9,
-        62.9,
-        57.3,
-        55.8,
-        57.6,
-        46.9,
-        49.7,
-        60.4,
-        46.8,
-        53.7,
-        64.5,
-        51.1,
-        53.1,
-        51.9,
-        63.0,
-        59.8,
-        58.5,
-        66.0,
-        34.9,
-        51.2
-      ],
-      "sessions_available": 67,
-      "score": 5.06
-    },
-    {
-      "symbol": "ULTRACEMCO",
-      "last_close": 11903.0,
-      "price_change_pct": 0.47,
-      "delivery_pct": 58.96,
-      "delivery_avg_20d": 57.43,
-      "delivery_zscore_20d": 0.25,
-      "delivery_zscore_60d": -0.04,
-      "vol_ratio_20d": 1.34,
-      "delivered_value_cr": 274.41,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        66.6,
-        55.9,
-        59.8,
-        55.9,
-        53.5,
-        60.4,
-        68.4,
-        53.3,
-        61.2,
-        56.2,
-        45.6,
-        53.6,
-        59.4,
-        59.7,
-        52.1,
-        53.9,
-        61.2,
-        67.0,
-        59.6,
-        59.0
-      ],
-      "sessions_available": 67,
-      "score": 5.04
-    },
-    {
-      "symbol": "KAYNES",
-      "last_close": 3804.6,
-      "price_change_pct": 5.06,
-      "delivery_pct": 16.88,
-      "delivery_avg_20d": 30.14,
-      "delivery_zscore_20d": -1.8,
-      "delivery_zscore_60d": -1.77,
-      "vol_ratio_20d": 2.44,
-      "delivered_value_cr": 209.05,
-      "low_liquidity": false,
-      "signal": "speculative_churn",
-      "delivery_sparkline_20d": [
-        24.5,
-        31.5,
-        33.9,
-        20.8,
-        34.0,
-        27.9,
-        34.0,
-        33.9,
-        29.8,
-        33.8,
-        39.9,
-        50.3,
-        34.4,
-        22.0,
-        23.6,
-        26.5,
-        30.1,
-        22.9,
-        18.1,
-        16.9
-      ],
-      "sessions_available": 67,
-      "score": 4.88
-    },
-    {
-      "symbol": "SUNPHARMA",
-      "last_close": 1990.5,
-      "price_change_pct": -0.53,
-      "delivery_pct": 52.21,
-      "delivery_avg_20d": 62.1,
-      "delivery_zscore_20d": -1.12,
-      "delivery_zscore_60d": -1.17,
-      "vol_ratio_20d": 2.06,
-      "delivered_value_cr": 518.33,
-      "low_liquidity": false,
-      "signal": "speculative_churn",
-      "delivery_sparkline_20d": [
-        51.6,
-        58.3,
-        55.4,
-        54.5,
-        59.5,
-        52.7,
-        63.1,
-        57.8,
-        62.1,
-        71.6,
-        70.9,
-        59.2,
-        65.0,
-        61.9,
-        70.2,
-        83.1,
-        75.4,
-        63.3,
-        60.1,
-        52.2
-      ],
-      "sessions_available": 67,
-      "score": 4.12
-    },
-    {
-      "symbol": "TATASTEEL",
-      "last_close": 189.69,
-      "price_change_pct": 1.48,
-      "delivery_pct": 49.87,
-      "delivery_avg_20d": 50.48,
-      "delivery_zscore_20d": -0.1,
-      "delivery_zscore_60d": -0.08,
-      "vol_ratio_20d": 1.66,
-      "delivered_value_cr": 323.29,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        54.3,
-        60.1,
-        49.1,
-        42.1,
-        52.0,
-        58.3,
-        42.1,
-        51.0,
-        50.1,
-        56.3,
-        50.1,
-        50.0,
-        51.5,
-        49.9,
-        57.0,
-        55.2,
-        51.6,
-        48.0,
-        35.4,
-        49.9
-      ],
-      "sessions_available": 67,
-      "score": 3.96
-    },
-    {
-      "symbol": "DIVISLAB",
-      "last_close": 8056.0,
-      "price_change_pct": 2.82,
-      "delivery_pct": 55.46,
-      "delivery_avg_20d": 55.82,
-      "delivery_zscore_20d": -0.06,
-      "delivery_zscore_60d": -0.14,
-      "vol_ratio_20d": 1.63,
-      "delivered_value_cr": 353.24,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        65.7,
-        57.4,
-        53.8,
-        53.6,
-        55.7,
-        57.7,
-        39.9,
-        47.1,
-        62.6,
-        60.9,
-        52.8,
-        50.8,
-        55.2,
-        59.6,
-        59.7,
-        52.4,
-        54.4,
-        60.0,
-        54.1,
-        55.5
-      ],
-      "sessions_available": 67,
-      "score": 3.78
-    },
-    {
-      "symbol": "HINDALCO",
-      "last_close": 974.45,
-      "price_change_pct": 0.42,
-      "delivery_pct": 58.56,
-      "delivery_avg_20d": 57.18,
-      "delivery_zscore_20d": 0.18,
-      "delivery_zscore_60d": 0.3,
-      "vol_ratio_20d": 1.22,
-      "delivered_value_cr": 320.08,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        57.7,
-        60.5,
-        51.8,
-        61.5,
-        55.9,
-        58.6,
-        45.4,
-        63.9,
-        58.8,
-        57.0,
-        57.3,
-        64.0,
-        61.1,
-        57.0,
-        71.1,
-        60.4,
-        60.4,
-        53.3,
-        55.6,
-        58.6
-      ],
-      "sessions_available": 67,
-      "score": 2.16
-    },
-    {
-      "symbol": "DRREDDY",
-      "last_close": 1148.1,
-      "price_change_pct": 0.29,
-      "delivery_pct": 52.3,
-      "delivery_avg_20d": 50.82,
-      "delivery_zscore_20d": 0.16,
-      "delivery_zscore_60d": 0.04,
-      "vol_ratio_20d": 0.39,
-      "delivered_value_cr": 65.24,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        52.5,
+        62.7,
+        59.3,
+        62.0,
+        74.2,
         54.0,
-        36.5,
-        39.1,
-        53.8,
-        51.0,
-        61.5,
-        51.9,
-        65.5,
-        53.0,
-        67.4,
-        55.0,
-        47.5,
-        35.8,
-        56.2,
-        46.6,
-        59.5,
-        41.6,
-        51.6,
-        52.3
+        65.9,
+        62.9,
+        68.6,
+        72.5
       ],
-      "sessions_available": 67,
-      "score": 1.92
+      "sessions_available": 68,
+      "score": 31.4
     },
     {
-      "symbol": "MARUTI",
-      "last_close": 14234.0,
-      "price_change_pct": 0.32,
-      "delivery_pct": 43.2,
-      "delivery_avg_20d": 50.86,
-      "delivery_zscore_20d": -0.9,
-      "delivery_zscore_60d": -0.89,
-      "vol_ratio_20d": 1.31,
-      "delivered_value_cr": 329.17,
+      "symbol": "JSWSTEEL",
+      "last_close": 1292.3,
+      "price_change_pct": 1.76,
+      "delivery_pct": 64.39,
+      "delivery_avg_20d": 54.63,
+      "delivery_zscore_20d": 0.8,
+      "delivery_zscore_60d": 1.14,
+      "vol_ratio_20d": 1.53,
+      "delivered_value_cr": 212.08,
       "low_liquidity": false,
       "signal": "no_signal",
       "delivery_sparkline_20d": [
-        44.1,
-        66.0,
-        49.7,
-        53.7,
-        52.2,
-        39.5,
-        48.7,
+        65.8,
+        50.4,
+        59.4,
         53.5,
-        48.5,
-        42.7,
-        52.7,
-        36.1,
-        50.8,
-        52.9,
-        37.5,
-        54.6,
-        64.5,
-        67.2,
-        52.4,
-        43.2
+        51.7,
+        42.3,
+        51.6,
+        70.3,
+        33.5,
+        25.4,
+        65.5,
+        74.0,
+        68.3,
+        51.4,
+        57.3,
+        53.4,
+        44.7,
+        49.6,
+        63.5,
+        64.4
       ],
-      "sessions_available": 67,
-      "score": 1.86
+      "sessions_available": 68,
+      "score": 20.78
     },
     {
       "symbol": "HCLTECH",
-      "last_close": 1346.9,
-      "price_change_pct": -0.43,
-      "delivery_pct": 48.13,
-      "delivery_avg_20d": 46.8,
-      "delivery_zscore_20d": 0.14,
-      "delivery_zscore_60d": 0.04,
-      "vol_ratio_20d": 0.72,
-      "delivered_value_cr": 217.29,
+      "last_close": 1377.0,
+      "price_change_pct": 2.23,
+      "delivery_pct": 56.39,
+      "delivery_avg_20d": 47.6,
+      "delivery_zscore_20d": 1.0,
+      "delivery_zscore_60d": 1.09,
+      "vol_ratio_20d": 0.55,
+      "delivered_value_cr": 176.93,
       "low_liquidity": false,
       "signal": "no_signal",
       "delivery_sparkline_20d": [
-        44.2,
         45.6,
         48.5,
         41.8,
@@ -1567,173 +3021,321 @@
         50.1,
         44.3,
         56.0,
-        48.1
-      ],
-      "sessions_available": 67,
-      "score": 1.68
-    },
-    {
-      "symbol": "GRASIM",
-      "last_close": 3100.8,
-      "price_change_pct": -0.13,
-      "delivery_pct": 56.98,
-      "delivery_avg_20d": 56.18,
-      "delivery_zscore_20d": 0.09,
-      "delivery_zscore_60d": 0.04,
-      "vol_ratio_20d": 0.6,
-      "delivered_value_cr": 54.83,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        53.0,
-        63.0,
-        57.4,
-        36.7,
-        53.7,
-        60.0,
-        59.7,
-        56.5,
-        60.4,
-        66.2,
-        49.5,
-        69.3,
-        58.7,
-        47.8,
-        58.1,
-        71.1,
-        56.8,
-        54.6,
-        56.7,
-        57.0
-      ],
-      "sessions_available": 67,
-      "score": 1.08
-    },
-    {
-      "symbol": "INFY",
-      "last_close": 1130.1,
-      "price_change_pct": -2.16,
-      "delivery_pct": 48.95,
-      "delivery_avg_20d": 52.3,
-      "delivery_zscore_20d": -0.61,
-      "delivery_zscore_60d": -0.64,
-      "vol_ratio_20d": 0.96,
-      "delivered_value_cr": 793.32,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        52.6,
-        48.9,
-        61.8,
-        37.2,
-        49.9,
-        52.1,
-        50.4,
-        44.2,
-        52.9,
-        48.9,
-        53.0,
-        57.1,
-        56.3,
-        51.7,
-        55.4,
-        52.5,
-        58.8,
-        58.5,
-        55.0,
-        49.0
-      ],
-      "sessions_available": 67,
-      "score": 0.0
-    },
-    {
-      "symbol": "ITC",
-      "last_close": 281.0,
-      "price_change_pct": -1.42,
-      "delivery_pct": 52.42,
-      "delivery_avg_20d": 57.42,
-      "delivery_zscore_20d": -0.66,
-      "delivery_zscore_60d": -0.76,
-      "vol_ratio_20d": 1.08,
-      "delivered_value_cr": 248.53,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        78.6,
-        55.7,
-        50.5,
-        56.7,
-        66.5,
-        67.9,
-        57.4,
-        46.9,
-        51.6,
-        57.8,
-        58.6,
         48.1,
-        57.8,
-        54.8,
-        63.1,
-        63.6,
-        50.9,
-        52.6,
-        52.8,
-        52.4
+        56.4
       ],
-      "sessions_available": 67,
-      "score": 0.0
+      "sessions_available": 68,
+      "score": 20.0
     },
     {
-      "symbol": "ASIANPAINT",
-      "last_close": 2747.3,
-      "price_change_pct": 0.04,
-      "delivery_pct": 49.73,
-      "delivery_avg_20d": 55.51,
-      "delivery_zscore_20d": -0.57,
-      "delivery_zscore_60d": -0.57,
-      "vol_ratio_20d": 0.88,
-      "delivered_value_cr": 121.95,
+      "symbol": "RELIANCE",
+      "last_close": 1319.0,
+      "price_change_pct": 0.86,
+      "delivery_pct": 64.78,
+      "delivery_avg_20d": 55.67,
+      "delivery_zscore_20d": 0.97,
+      "delivery_zscore_60d": 1.14,
+      "vol_ratio_20d": 0.63,
+      "delivered_value_cr": 637.72,
       "low_liquidity": false,
       "signal": "no_signal",
       "delivery_sparkline_20d": [
-        64.9,
+        53.4,
         57.1,
-        52.7,
-        58.6,
-        65.7,
-        65.5,
-        63.8,
-        63.9,
-        64.5,
-        50.6,
-        58.1,
+        35.4,
+        55.7,
+        54.5,
+        36.2,
+        53.2,
+        56.0,
         62.9,
-        52.9,
-        52.0,
-        61.1,
-        38.0,
-        49.8,
-        28.3,
-        41.8,
-        49.7
+        46.5,
+        58.8,
+        70.3,
+        57.6,
+        58.9,
+        66.5,
+        65.9,
+        61.9,
+        43.5,
+        65.3,
+        64.8
       ],
-      "sessions_available": 67,
-      "score": 0.0
+      "sessions_available": 68,
+      "score": 19.64
+    },
+    {
+      "symbol": "KOTAKBANK",
+      "last_close": 397.5,
+      "price_change_pct": 1.84,
+      "delivery_pct": 72.11,
+      "delivery_avg_20d": 66.32,
+      "delivery_zscore_20d": 0.94,
+      "delivery_zscore_60d": 1.31,
+      "vol_ratio_20d": 0.66,
+      "delivered_value_cr": 318.9,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        73.9,
+        64.9,
+        62.6,
+        64.8,
+        66.8,
+        55.4,
+        55.8,
+        66.7,
+        57.1,
+        63.5,
+        65.9,
+        71.8,
+        70.7,
+        74.4,
+        74.3,
+        62.4,
+        71.6,
+        67.9,
+        74.7,
+        72.1
+      ],
+      "sessions_available": 68,
+      "score": 19.28
+    },
+    {
+      "symbol": "COALINDIA",
+      "last_close": 416.0,
+      "price_change_pct": 0.45,
+      "delivery_pct": 64.71,
+      "delivery_avg_20d": 57.03,
+      "delivery_zscore_20d": 0.91,
+      "delivery_zscore_60d": 1.17,
+      "vol_ratio_20d": 0.8,
+      "delivered_value_cr": 144.07,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        56.7,
+        40.7,
+        38.6,
+        59.2,
+        58.9,
+        43.6,
+        60.7,
+        56.9,
+        53.5,
+        67.8,
+        59.6,
+        58.1,
+        61.1,
+        54.4,
+        59.1,
+        49.0,
+        64.1,
+        67.0,
+        66.4,
+        64.7
+      ],
+      "sessions_available": 68,
+      "score": 18.92
+    },
+    {
+      "symbol": "BRITANNIA",
+      "last_close": 5531.0,
+      "price_change_pct": 2.11,
+      "delivery_pct": 63.02,
+      "delivery_avg_20d": 55.91,
+      "delivery_zscore_20d": 1.48,
+      "delivery_zscore_60d": 0.52,
+      "vol_ratio_20d": 0.88,
+      "delivered_value_cr": 69.2,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        53.2,
+        59.6,
+        57.2,
+        56.3,
+        64.5,
+        55.6,
+        53.9,
+        58.8,
+        50.8,
+        55.6,
+        60.6,
+        58.1,
+        51.9,
+        46.4,
+        55.1,
+        48.7,
+        51.3,
+        56.4,
+        58.6,
+        63.0
+      ],
+      "sessions_available": 68,
+      "score": 17.76
+    },
+    {
+      "symbol": "HDFCLIFE",
+      "last_close": 553.1,
+      "price_change_pct": 0.84,
+      "delivery_pct": 63.9,
+      "delivery_avg_20d": 53.85,
+      "delivery_zscore_20d": 1.05,
+      "delivery_zscore_60d": 0.95,
+      "vol_ratio_20d": 0.64,
+      "delivered_value_cr": 88.58,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        53.0,
+        56.8,
+        67.5,
+        65.4,
+        40.2,
+        62.0,
+        46.8,
+        38.1,
+        55.1,
+        49.0,
+        47.9,
+        50.5,
+        57.6,
+        41.3,
+        51.3,
+        52.7,
+        44.8,
+        70.5,
+        69.0,
+        63.9
+      ],
+      "sessions_available": 68,
+      "score": 12.6
+    },
+    {
+      "symbol": "TITAN",
+      "last_close": 5000.0,
+      "price_change_pct": 2.56,
+      "delivery_pct": 63.65,
+      "delivery_avg_20d": 61.17,
+      "delivery_zscore_20d": 0.34,
+      "delivery_zscore_60d": 1.05,
+      "vol_ratio_20d": 0.55,
+      "delivered_value_cr": 157.56,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        44.7,
+        58.8,
+        58.8,
+        65.1,
+        59.4,
+        65.5,
+        66.1,
+        65.4,
+        56.3,
+        61.9,
+        46.5,
+        60.8,
+        57.5,
+        60.0,
+        63.5,
+        55.0,
+        67.7,
+        68.8,
+        77.6,
+        63.6
+      ],
+      "sessions_available": 68,
+      "score": 12.08
+    },
+    {
+      "symbol": "SBIN",
+      "last_close": 1045.0,
+      "price_change_pct": 1.71,
+      "delivery_pct": 58.63,
+      "delivery_avg_20d": 50.82,
+      "delivery_zscore_20d": 0.94,
+      "delivery_zscore_60d": 0.85,
+      "vol_ratio_20d": 1.05,
+      "delivered_value_cr": 641.92,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        54.6,
+        55.7,
+        26.3,
+        48.3,
+        42.6,
+        50.6,
+        49.8,
+        44.9,
+        53.0,
+        52.2,
+        53.0,
+        58.6,
+        49.3,
+        60.9,
+        56.0,
+        44.4,
+        54.1,
+        40.5,
+        62.4,
+        58.6
+      ],
+      "sessions_available": 68,
+      "score": 11.28
+    },
+    {
+      "symbol": "SBILIFE",
+      "last_close": 1915.0,
+      "price_change_pct": 1.75,
+      "delivery_pct": 67.31,
+      "delivery_avg_20d": 58.91,
+      "delivery_zscore_20d": 0.87,
+      "delivery_zscore_60d": 0.95,
+      "vol_ratio_20d": 0.94,
+      "delivered_value_cr": 113.43,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        46.0,
+        60.8,
+        55.3,
+        63.3,
+        49.8,
+        61.9,
+        56.7,
+        52.0,
+        62.0,
+        60.6,
+        59.8,
+        61.6,
+        57.6,
+        30.6,
+        64.5,
+        55.4,
+        71.5,
+        75.0,
+        68.5,
+        67.3
+      ],
+      "sessions_available": 68,
+      "score": 10.44
     },
     {
       "symbol": "WIPRO",
-      "last_close": 183.65,
-      "price_change_pct": -1.44,
-      "delivery_pct": 38.61,
-      "delivery_avg_20d": 46.78,
-      "delivery_zscore_20d": -1.29,
-      "delivery_zscore_60d": -1.15,
-      "vol_ratio_20d": 1.07,
-      "delivered_value_cr": 132.91,
+      "last_close": 188.66,
+      "price_change_pct": 2.73,
+      "delivery_pct": 51.9,
+      "delivery_avg_20d": 46.49,
+      "delivery_zscore_20d": 0.82,
+      "delivery_zscore_60d": 0.5,
+      "vol_ratio_20d": 0.94,
+      "delivered_value_cr": 153.39,
       "low_liquidity": false,
       "signal": "no_signal",
       "delivery_sparkline_20d": [
-        41.0,
         55.4,
         45.5,
         50.5,
@@ -1752,25 +3354,691 @@
         52.2,
         53.2,
         47.0,
-        38.6
+        38.6,
+        51.9
       ],
-      "sessions_available": 67,
-      "score": 0.0
+      "sessions_available": 68,
+      "score": 9.84
     },
     {
-      "symbol": "ADANIENT",
-      "last_close": 3009.5,
-      "price_change_pct": -1.3,
-      "delivery_pct": 33.2,
-      "delivery_avg_20d": 37.88,
-      "delivery_zscore_20d": -0.57,
-      "delivery_zscore_60d": 0.07,
-      "vol_ratio_20d": 0.56,
-      "delivered_value_cr": 87.0,
+      "symbol": "EICHERMOT",
+      "last_close": 8050.0,
+      "price_change_pct": 2.76,
+      "delivery_pct": 58.14,
+      "delivery_avg_20d": 55.22,
+      "delivery_zscore_20d": 0.43,
+      "delivery_zscore_60d": 0.75,
+      "vol_ratio_20d": 1.75,
+      "delivered_value_cr": 469.22,
       "low_liquidity": false,
       "signal": "no_signal",
       "delivery_sparkline_20d": [
-        38.7,
+        54.6,
+        53.6,
+        64.4,
+        58.0,
+        64.1,
+        56.5,
+        59.7,
+        56.7,
+        47.2,
+        55.3,
+        51.8,
+        55.9,
+        46.9,
+        62.2,
+        50.4,
+        57.9,
+        60.0,
+        37.1,
+        63.6,
+        58.1
+      ],
+      "sessions_available": 68,
+      "score": 9.66
+    },
+    {
+      "symbol": "SUNPHARMA",
+      "last_close": 1963.5,
+      "price_change_pct": -1.36,
+      "delivery_pct": 66.2,
+      "delivery_avg_20d": 62.41,
+      "delivery_zscore_20d": 0.46,
+      "delivery_zscore_60d": 0.61,
+      "vol_ratio_20d": 1.56,
+      "delivered_value_cr": 514.19,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        58.3,
+        55.4,
+        54.5,
+        59.5,
+        52.7,
+        63.1,
+        57.8,
+        62.1,
+        71.6,
+        70.9,
+        59.2,
+        65.0,
+        61.9,
+        70.2,
+        83.1,
+        75.4,
+        63.3,
+        60.1,
+        52.2,
+        66.2
+      ],
+      "sessions_available": 68,
+      "score": 8.88
+    },
+    {
+      "symbol": "TCS",
+      "last_close": 2473.7,
+      "price_change_pct": 4.57,
+      "delivery_pct": 49.23,
+      "delivery_avg_20d": 44.16,
+      "delivery_zscore_20d": 0.71,
+      "delivery_zscore_60d": 0.1,
+      "vol_ratio_20d": 0.61,
+      "delivered_value_cr": 363.22,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        39.1,
+        48.8,
+        31.2,
+        30.3,
+        37.3,
+        47.1,
+        47.0,
+        41.1,
+        40.8,
+        41.8,
+        48.5,
+        39.9,
+        40.1,
+        39.7,
+        47.3,
+        50.2,
+        55.1,
+        50.0,
+        54.8,
+        49.2
+      ],
+      "sessions_available": 68,
+      "score": 8.52
+    },
+    {
+      "symbol": "ICICIBANK",
+      "last_close": 1460.0,
+      "price_change_pct": 1.71,
+      "delivery_pct": 67.68,
+      "delivery_avg_20d": 62.42,
+      "delivery_zscore_20d": 0.62,
+      "delivery_zscore_60d": 0.73,
+      "vol_ratio_20d": 0.61,
+      "delivered_value_cr": 754.11,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        61.6,
+        56.0,
+        48.9,
+        63.9,
+        56.3,
+        55.9,
+        68.2,
+        54.3,
+        61.5,
+        61.3,
+        71.0,
+        73.6,
+        68.4,
+        75.8,
+        67.0,
+        52.9,
+        68.0,
+        45.4,
+        67.0,
+        67.7
+      ],
+      "sessions_available": 68,
+      "score": 7.44
+    },
+    {
+      "symbol": "DIVISLAB",
+      "last_close": 8585.0,
+      "price_change_pct": 6.57,
+      "delivery_pct": 31.92,
+      "delivery_avg_20d": 55.45,
+      "delivery_zscore_20d": -4.15,
+      "delivery_zscore_60d": -3.52,
+      "vol_ratio_20d": 3.55,
+      "delivered_value_cr": 479.07,
+      "low_liquidity": false,
+      "signal": "speculative_churn",
+      "delivery_sparkline_20d": [
+        57.4,
+        53.8,
+        53.6,
+        55.7,
+        57.7,
+        39.9,
+        47.1,
+        62.6,
+        60.9,
+        52.8,
+        50.8,
+        55.2,
+        59.6,
+        59.7,
+        52.4,
+        54.4,
+        60.0,
+        54.1,
+        55.5,
+        31.9
+      ],
+      "sessions_available": 68,
+      "score": 7.1
+    },
+    {
+      "symbol": "HINDALCO",
+      "last_close": 994.9,
+      "price_change_pct": 2.1,
+      "delivery_pct": 61.24,
+      "delivery_avg_20d": 58.49,
+      "delivery_zscore_20d": 0.53,
+      "delivery_zscore_60d": 0.66,
+      "vol_ratio_20d": 1.2,
+      "delivered_value_cr": 340.03,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        60.5,
+        51.8,
+        61.5,
+        55.9,
+        58.6,
+        45.4,
+        63.9,
+        58.8,
+        57.0,
+        57.3,
+        64.0,
+        61.1,
+        57.0,
+        71.1,
+        60.4,
+        60.4,
+        53.3,
+        55.6,
+        58.6,
+        61.2
+      ],
+      "sessions_available": 68,
+      "score": 6.36
+    },
+    {
+      "symbol": "TATASTEEL",
+      "last_close": 191.0,
+      "price_change_pct": 0.69,
+      "delivery_pct": 52.6,
+      "delivery_avg_20d": 50.7,
+      "delivery_zscore_20d": 0.33,
+      "delivery_zscore_60d": 0.26,
+      "vol_ratio_20d": 1.31,
+      "delivered_value_cr": 276.01,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        60.1,
+        49.1,
+        42.1,
+        52.0,
+        58.3,
+        42.1,
+        51.0,
+        50.1,
+        56.3,
+        50.1,
+        50.0,
+        51.5,
+        49.9,
+        57.0,
+        55.2,
+        51.6,
+        48.0,
+        35.4,
+        49.9,
+        52.6
+      ],
+      "sessions_available": 68,
+      "score": 5.82
+    },
+    {
+      "symbol": "ITC",
+      "last_close": 287.0,
+      "price_change_pct": 2.14,
+      "delivery_pct": 36.68,
+      "delivery_avg_20d": 57.21,
+      "delivery_zscore_20d": -2.68,
+      "delivery_zscore_60d": -2.83,
+      "vol_ratio_20d": 2.83,
+      "delivered_value_cr": 481.23,
+      "low_liquidity": false,
+      "signal": "speculative_churn",
+      "delivery_sparkline_20d": [
+        55.7,
+        50.5,
+        56.7,
+        66.5,
+        67.9,
+        57.4,
+        46.9,
+        51.6,
+        57.8,
+        58.6,
+        48.1,
+        57.8,
+        54.8,
+        63.1,
+        63.6,
+        50.9,
+        52.6,
+        52.8,
+        52.4,
+        36.7
+      ],
+      "sessions_available": 68,
+      "score": 5.66
+    },
+    {
+      "symbol": "HEROMOTOCO",
+      "last_close": 5460.0,
+      "price_change_pct": 1.37,
+      "delivery_pct": 55.07,
+      "delivery_avg_20d": 52.55,
+      "delivery_zscore_20d": 0.47,
+      "delivery_zscore_60d": 0.54,
+      "vol_ratio_20d": 0.86,
+      "delivered_value_cr": 180.36,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        51.3,
+        53.7,
+        57.5,
+        57.2,
+        52.9,
+        64.7,
+        46.8,
+        48.1,
+        47.6,
+        55.6,
+        48.5,
+        45.4,
+        46.8,
+        45.8,
+        58.2,
+        59.1,
+        54.3,
+        47.6,
+        57.4,
+        55.1
+      ],
+      "sessions_available": 68,
+      "score": 5.64
+    },
+    {
+      "symbol": "M&M",
+      "last_close": 3428.6,
+      "price_change_pct": 0.89,
+      "delivery_pct": 58.48,
+      "delivery_avg_20d": 55.15,
+      "delivery_zscore_20d": 0.45,
+      "delivery_zscore_60d": 0.37,
+      "vol_ratio_20d": 0.83,
+      "delivered_value_cr": 432.27,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        62.9,
+        57.3,
+        55.8,
+        57.6,
+        46.9,
+        49.7,
+        60.4,
+        46.8,
+        53.7,
+        64.5,
+        51.1,
+        53.1,
+        51.9,
+        63.0,
+        59.8,
+        58.5,
+        66.0,
+        34.9,
+        51.2,
+        58.5
+      ],
+      "sessions_available": 68,
+      "score": 5.4
+    },
+    {
+      "symbol": "ASIANPAINT",
+      "last_close": 2810.0,
+      "price_change_pct": 2.28,
+      "delivery_pct": 59.28,
+      "delivery_avg_20d": 55.1,
+      "delivery_zscore_20d": 0.41,
+      "delivery_zscore_60d": 0.39,
+      "vol_ratio_20d": 1.01,
+      "delivered_value_cr": 171.35,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        57.1,
+        52.7,
+        58.6,
+        65.7,
+        65.5,
+        63.8,
+        63.9,
+        64.5,
+        50.6,
+        58.1,
+        62.9,
+        52.9,
+        52.0,
+        61.1,
+        38.0,
+        49.8,
+        28.3,
+        41.8,
+        49.7,
+        59.3
+      ],
+      "sessions_available": 68,
+      "score": 4.92
+    },
+    {
+      "symbol": "MARUTI",
+      "last_close": 14150.0,
+      "price_change_pct": -0.59,
+      "delivery_pct": 47.79,
+      "delivery_avg_20d": 50.52,
+      "delivery_zscore_20d": -0.31,
+      "delivery_zscore_60d": -0.35,
+      "vol_ratio_20d": 2.31,
+      "delivered_value_cr": 648.4,
+      "low_liquidity": false,
+      "signal": "speculative_churn",
+      "delivery_sparkline_20d": [
+        66.0,
+        49.7,
+        53.7,
+        52.2,
+        39.5,
+        48.7,
+        53.5,
+        48.5,
+        42.7,
+        52.7,
+        36.1,
+        50.8,
+        52.9,
+        37.5,
+        54.6,
+        64.5,
+        67.2,
+        52.4,
+        43.2,
+        47.8
+      ],
+      "sessions_available": 68,
+      "score": 4.62
+    },
+    {
+      "symbol": "BAJAJFINSV",
+      "last_close": 2096.0,
+      "price_change_pct": 3.3,
+      "delivery_pct": 54.31,
+      "delivery_avg_20d": 57.12,
+      "delivery_zscore_20d": -0.27,
+      "delivery_zscore_60d": -0.03,
+      "vol_ratio_20d": 2.15,
+      "delivered_value_cr": 321.67,
+      "low_liquidity": false,
+      "signal": "speculative_churn",
+      "delivery_sparkline_20d": [
+        43.2,
+        60.2,
+        65.5,
+        59.2,
+        58.5,
+        66.0,
+        48.3,
+        70.4,
+        50.4,
+        69.5,
+        61.2,
+        64.4,
+        52.7,
+        65.7,
+        46.8,
+        53.8,
+        63.1,
+        45.6,
+        30.8,
+        54.3
+      ],
+      "sessions_available": 68,
+      "score": 4.3
+    },
+    {
+      "symbol": "LT",
+      "last_close": 4025.0,
+      "price_change_pct": 2.19,
+      "delivery_pct": 58.01,
+      "delivery_avg_20d": 56.19,
+      "delivery_zscore_20d": 0.27,
+      "delivery_zscore_60d": 0.56,
+      "vol_ratio_20d": 0.89,
+      "delivered_value_cr": 437.89,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        55.9,
+        48.2,
+        71.1,
+        60.6,
+        53.5,
+        53.3,
+        71.4,
+        62.6,
+        52.9,
+        57.8,
+        54.3,
+        61.9,
+        55.8,
+        53.2,
+        54.7,
+        48.9,
+        45.8,
+        50.2,
+        60.5,
+        58.0
+      ],
+      "sessions_available": 68,
+      "score": 3.24
+    },
+    {
+      "symbol": "ONGC",
+      "last_close": 242.0,
+      "price_change_pct": -0.22,
+      "delivery_pct": 57.58,
+      "delivery_avg_20d": 55.37,
+      "delivery_zscore_20d": 0.27,
+      "delivery_zscore_60d": 0.46,
+      "vol_ratio_20d": 0.65,
+      "delivered_value_cr": 115.0,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        69.4,
+        43.6,
+        53.1,
+        64.3,
+        41.2,
+        54.5,
+        67.6,
+        57.1,
+        61.6,
+        46.4,
+        65.5,
+        52.5,
+        55.9,
+        43.7,
+        51.3,
+        49.9,
+        61.3,
+        49.3,
+        62.2,
+        57.6
+      ],
+      "sessions_available": 68,
+      "score": 3.24
+    },
+    {
+      "symbol": "BAJFINANCE",
+      "last_close": 1153.0,
+      "price_change_pct": 1.03,
+      "delivery_pct": 59.61,
+      "delivery_avg_20d": 62.91,
+      "delivery_zscore_20d": -0.48,
+      "delivery_zscore_60d": 0.07,
+      "vol_ratio_20d": 1.38,
+      "delivered_value_cr": 950.28,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        61.9,
+        59.6,
+        67.0,
+        66.1,
+        57.1,
+        47.2,
+        55.3,
+        72.7,
+        70.7,
+        61.0,
+        66.9,
+        72.9,
+        68.9,
+        67.2,
+        63.9,
+        56.6,
+        65.1,
+        52.5,
+        58.2,
+        59.6
+      ],
+      "sessions_available": 68,
+      "score": 2.28
+    },
+    {
+      "symbol": "INDUSINDBK",
+      "last_close": 1028.9,
+      "price_change_pct": 1.62,
+      "delivery_pct": 48.5,
+      "delivery_avg_20d": 47.02,
+      "delivery_zscore_20d": 0.19,
+      "delivery_zscore_60d": 0.35,
+      "vol_ratio_20d": 0.33,
+      "delivered_value_cr": 43.9,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        59.4,
+        52.1,
+        53.8,
+        38.9,
+        41.6,
+        41.4,
+        46.0,
+        44.0,
+        54.5,
+        46.6,
+        45.1,
+        51.8,
+        35.8,
+        33.4,
+        50.8,
+        44.7,
+        52.4,
+        39.0,
+        64.3,
+        48.5
+      ],
+      "sessions_available": 68,
+      "score": 2.28
+    },
+    {
+      "symbol": "NESTLEIND",
+      "last_close": 1530.0,
+      "price_change_pct": 1.35,
+      "delivery_pct": 59.12,
+      "delivery_avg_20d": 59.03,
+      "delivery_zscore_20d": 0.01,
+      "delivery_zscore_60d": -0.09,
+      "vol_ratio_20d": 0.51,
+      "delivered_value_cr": 110.46,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        58.8,
+        63.5,
+        56.6,
+        68.1,
+        70.0,
+        57.1,
+        62.2,
+        68.0,
+        58.2,
+        59.8,
+        53.1,
+        32.2,
+        36.6,
+        56.3,
+        61.3,
+        62.2,
+        62.6,
+        68.4,
+        71.0,
+        59.1
+      ],
+      "sessions_available": 68,
+      "score": 0.12
+    },
+    {
+      "symbol": "ADANIENT",
+      "last_close": 3068.0,
+      "price_change_pct": 1.94,
+      "delivery_pct": 37.28,
+      "delivery_avg_20d": 38.26,
+      "delivery_zscore_20d": -0.13,
+      "delivery_zscore_60d": 0.5,
+      "vol_ratio_20d": 0.61,
+      "delivered_value_cr": 101.65,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
         42.3,
         37.8,
         41.9,
@@ -1789,9 +4057,565 @@
         38.5,
         20.9,
         36.9,
-        33.2
+        33.2,
+        37.3
       ],
-      "sessions_available": 67,
+      "sessions_available": 68,
+      "score": 0.0
+    },
+    {
+      "symbol": "ADANIPORTS",
+      "last_close": 1701.0,
+      "price_change_pct": 0.27,
+      "delivery_pct": 49.51,
+      "delivery_avg_20d": 50.28,
+      "delivery_zscore_20d": -0.1,
+      "delivery_zscore_60d": 0.21,
+      "vol_ratio_20d": 0.82,
+      "delivered_value_cr": 140.47,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        52.1,
+        44.2,
+        41.2,
+        42.2,
+        51.2,
+        42.6,
+        48.4,
+        50.9,
+        42.8,
+        48.6,
+        53.9,
+        49.6,
+        58.7,
+        50.8,
+        63.7,
+        62.1,
+        37.1,
+        44.5,
+        63.1,
+        49.5
+      ],
+      "sessions_available": 68,
+      "score": 0.0
+    },
+    {
+      "symbol": "APOLLOHOSP",
+      "last_close": 8820.0,
+      "price_change_pct": -1.53,
+      "delivery_pct": 57.37,
+      "delivery_avg_20d": 61.99,
+      "delivery_zscore_20d": -0.72,
+      "delivery_zscore_60d": -0.23,
+      "vol_ratio_20d": 0.96,
+      "delivered_value_cr": 127.69,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        57.3,
+        52.8,
+        72.8,
+        70.5,
+        54.7,
+        66.7,
+        57.2,
+        69.6,
+        49.9,
+        64.0,
+        68.3,
+        68.6,
+        60.0,
+        65.2,
+        53.8,
+        60.4,
+        58.6,
+        62.1,
+        64.8,
+        57.4
+      ],
+      "sessions_available": 68,
+      "score": 0.0
+    },
+    {
+      "symbol": "AXISBANK",
+      "last_close": 1272.0,
+      "price_change_pct": 3.46,
+      "delivery_pct": 62.3,
+      "delivery_avg_20d": 62.39,
+      "delivery_zscore_20d": -0.01,
+      "delivery_zscore_60d": 0.1,
+      "vol_ratio_20d": 0.82,
+      "delivered_value_cr": 522.12,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        67.6,
+        51.1,
+        55.4,
+        58.5,
+        59.1,
+        44.5,
+        53.8,
+        61.0,
+        61.6,
+        65.9,
+        71.6,
+        77.9,
+        70.2,
+        72.1,
+        68.2,
+        56.7,
+        60.8,
+        63.3,
+        75.7,
+        62.3
+      ],
+      "sessions_available": 68,
+      "score": 0.0
+    },
+    {
+      "symbol": "BHARTIARTL",
+      "last_close": 1970.5,
+      "price_change_pct": -0.08,
+      "delivery_pct": 61.57,
+      "delivery_avg_20d": 65.17,
+      "delivery_zscore_20d": -0.46,
+      "delivery_zscore_60d": -0.23,
+      "vol_ratio_20d": 0.73,
+      "delivered_value_cr": 525.53,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        50.8,
+        61.7,
+        53.7,
+        62.4,
+        66.8,
+        51.1,
+        63.7,
+        56.2,
+        68.9,
+        67.1,
+        70.2,
+        80.8,
+        67.5,
+        66.0,
+        72.2,
+        74.5,
+        66.2,
+        69.1,
+        73.4,
+        61.6
+      ],
+      "sessions_available": 68,
+      "score": 0.0
+    },
+    {
+      "symbol": "BPCL",
+      "last_close": 329.95,
+      "price_change_pct": 3.19,
+      "delivery_pct": 50.83,
+      "delivery_avg_20d": 51.55,
+      "delivery_zscore_20d": -0.13,
+      "delivery_zscore_60d": -0.11,
+      "vol_ratio_20d": 0.8,
+      "delivered_value_cr": 96.43,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        49.2,
+        53.8,
+        45.9,
+        53.0,
+        51.4,
+        54.0,
+        58.2,
+        39.5,
+        56.4,
+        50.5,
+        55.1,
+        42.7,
+        47.3,
+        47.6,
+        51.8,
+        55.3,
+        58.1,
+        57.6,
+        58.5,
+        50.8
+      ],
+      "sessions_available": 68,
+      "score": 0.0
+    },
+    {
+      "symbol": "CIPLA",
+      "last_close": 1474.4,
+      "price_change_pct": 0.08,
+      "delivery_pct": 48.61,
+      "delivery_avg_20d": 51.89,
+      "delivery_zscore_20d": -0.34,
+      "delivery_zscore_60d": -0.39,
+      "vol_ratio_20d": 0.59,
+      "delivered_value_cr": 57.88,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        55.2,
+        45.4,
+        50.7,
+        50.1,
+        62.3,
+        37.0,
+        54.7,
+        63.3,
+        49.2,
+        41.7,
+        56.3,
+        58.7,
+        33.4,
+        37.9,
+        46.7,
+        50.3,
+        55.2,
+        57.4,
+        65.7,
+        48.6
+      ],
+      "sessions_available": 68,
+      "score": 0.0
+    },
+    {
+      "symbol": "DATAPATTNS",
+      "last_close": 4428.8,
+      "price_change_pct": 3.45,
+      "delivery_pct": 19.61,
+      "delivery_avg_20d": 23.54,
+      "delivery_zscore_20d": -0.6,
+      "delivery_zscore_60d": -0.56,
+      "vol_ratio_20d": 0.97,
+      "delivered_value_cr": 89.38,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        34.2,
+        21.9,
+        22.1,
+        24.8,
+        29.6,
+        32.1,
+        24.9,
+        30.5,
+        24.3,
+        37.2,
+        23.9,
+        13.5,
+        20.8,
+        14.0,
+        17.7,
+        25.3,
+        17.9,
+        21.4,
+        19.1,
+        19.6
+      ],
+      "sessions_available": 68,
+      "score": 0.0
+    },
+    {
+      "symbol": "DRREDDY",
+      "last_close": 1180.0,
+      "price_change_pct": 2.78,
+      "delivery_pct": 51.61,
+      "delivery_avg_20d": 51.62,
+      "delivery_zscore_20d": -0.0,
+      "delivery_zscore_60d": -0.04,
+      "vol_ratio_20d": 0.78,
+      "delivered_value_cr": 129.54,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        54.0,
+        36.5,
+        39.1,
+        53.8,
+        51.0,
+        61.5,
+        51.9,
+        65.5,
+        53.0,
+        67.4,
+        55.0,
+        47.5,
+        35.8,
+        56.2,
+        46.6,
+        59.5,
+        41.6,
+        51.6,
+        52.3,
+        51.6
+      ],
+      "sessions_available": 68,
+      "score": 0.0
+    },
+    {
+      "symbol": "GRASIM",
+      "last_close": 3260.0,
+      "price_change_pct": 5.13,
+      "delivery_pct": 53.65,
+      "delivery_avg_20d": 57.3,
+      "delivery_zscore_20d": -0.48,
+      "delivery_zscore_60d": -0.33,
+      "vol_ratio_20d": 0.78,
+      "delivered_value_cr": 66.54,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        63.0,
+        57.4,
+        36.7,
+        53.7,
+        60.0,
+        59.7,
+        56.5,
+        60.4,
+        66.2,
+        49.5,
+        69.3,
+        58.7,
+        47.8,
+        58.1,
+        71.1,
+        56.8,
+        54.6,
+        56.7,
+        57.0,
+        53.6
+      ],
+      "sessions_available": 68,
+      "score": 0.0
+    },
+    {
+      "symbol": "HDFCBANK",
+      "last_close": 753.0,
+      "price_change_pct": 0.65,
+      "delivery_pct": 62.85,
+      "delivery_avg_20d": 63.06,
+      "delivery_zscore_20d": -0.03,
+      "delivery_zscore_60d": 0.47,
+      "vol_ratio_20d": 0.46,
+      "delivered_value_cr": 701.66,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        66.3,
+        57.9,
+        54.9,
+        72.0,
+        54.7,
+        47.6,
+        63.5,
+        56.0,
+        62.5,
+        61.9,
+        62.7,
+        65.8,
+        65.4,
+        65.1,
+        69.7,
+        66.5,
+        67.7,
+        57.7,
+        74.8,
+        62.9
+      ],
+      "sessions_available": 68,
+      "score": 0.0
+    },
+    {
+      "symbol": "HINDUNILVR",
+      "last_close": 2138.0,
+      "price_change_pct": 1.75,
+      "delivery_pct": 55.21,
+      "delivery_avg_20d": 58.59,
+      "delivery_zscore_20d": -0.43,
+      "delivery_zscore_60d": -0.54,
+      "vol_ratio_20d": 0.33,
+      "delivered_value_cr": 86.62,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        65.1,
+        59.3,
+        56.3,
+        64.2,
+        57.2,
+        56.1,
+        55.7,
+        64.9,
+        36.4,
+        58.0,
+        62.5,
+        56.4,
+        55.3,
+        63.0,
+        56.7,
+        52.6,
+        51.8,
+        58.9,
+        78.7,
+        55.2
+      ],
+      "sessions_available": 68,
+      "score": 0.0
+    },
+    {
+      "symbol": "INFY",
+      "last_close": 1180.0,
+      "price_change_pct": 4.42,
+      "delivery_pct": 49.2,
+      "delivery_avg_20d": 52.31,
+      "delivery_zscore_20d": -0.57,
+      "delivery_zscore_60d": -0.58,
+      "vol_ratio_20d": 0.57,
+      "delivered_value_cr": 490.22,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        48.9,
+        61.8,
+        37.2,
+        49.9,
+        52.1,
+        50.4,
+        44.2,
+        52.9,
+        48.9,
+        53.0,
+        57.1,
+        56.3,
+        51.7,
+        55.4,
+        52.5,
+        58.8,
+        58.5,
+        55.0,
+        49.0,
+        49.2
+      ],
+      "sessions_available": 68,
+      "score": 0.0
+    },
+    {
+      "symbol": "KAYNES",
+      "last_close": 3805.0,
+      "price_change_pct": 0.01,
+      "delivery_pct": 19.07,
+      "delivery_avg_20d": 29.44,
+      "delivery_zscore_20d": -1.3,
+      "delivery_zscore_60d": -1.36,
+      "vol_ratio_20d": 0.86,
+      "delivered_value_cr": 85.38,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        31.5,
+        33.9,
+        20.8,
+        34.0,
+        27.9,
+        34.0,
+        33.9,
+        29.8,
+        33.8,
+        39.9,
+        50.3,
+        34.4,
+        22.0,
+        23.6,
+        26.5,
+        30.1,
+        22.9,
+        18.1,
+        16.9,
+        19.1
+      ],
+      "sessions_available": 68,
+      "score": 0.0
+    },
+    {
+      "symbol": "NTPC",
+      "last_close": 350.9,
+      "price_change_pct": 1.05,
+      "delivery_pct": 60.27,
+      "delivery_avg_20d": 62.78,
+      "delivery_zscore_20d": -0.64,
+      "delivery_zscore_60d": -0.13,
+      "vol_ratio_20d": 0.56,
+      "delivered_value_cr": 114.27,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        67.4,
+        63.8,
+        66.6,
+        68.0,
+        57.7,
+        57.3,
+        62.4,
+        64.0,
+        63.4,
+        63.3,
+        53.8,
+        66.9,
+        58.0,
+        60.6,
+        62.1,
+        66.3,
+        65.9,
+        58.7,
+        65.2,
+        60.3
+      ],
+      "sessions_available": 68,
+      "score": 0.0
+    },
+    {
+      "symbol": "ULTRACEMCO",
+      "last_close": 12054.0,
+      "price_change_pct": 1.27,
+      "delivery_pct": 51.76,
+      "delivery_avg_20d": 58.11,
+      "delivery_zscore_20d": -1.15,
+      "delivery_zscore_60d": -1.08,
+      "vol_ratio_20d": 0.53,
+      "delivered_value_cr": 99.15,
+      "low_liquidity": false,
+      "signal": "no_signal",
+      "delivery_sparkline_20d": [
+        55.9,
+        59.8,
+        55.9,
+        53.5,
+        60.4,
+        68.4,
+        53.3,
+        61.2,
+        56.2,
+        45.6,
+        53.6,
+        59.4,
+        59.7,
+        52.1,
+        53.9,
+        61.2,
+        67.0,
+        59.6,
+        59.0,
+        51.8
+      ],
+      "sessions_available": 68,
       "score": 0.0
     }
   ]
