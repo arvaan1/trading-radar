@@ -45,6 +45,12 @@
   .stat.dead .n{color:var(--rose);}
   .stat.watch .n{color:var(--amber);}
 
+  .legend{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:20px;font-size:12px;color:var(--ink-dim);
+    font-family:'IBM Plex Mono',monospace;background:var(--bg-panel);border:1px solid var(--line);
+    border-radius:6px;padding:12px 16px;}
+  .legend span{display:inline-flex;align-items:center;gap:6px;}
+  .legend i{width:8px;height:8px;border-radius:50%;display:inline-block;}
+
   .controls{display:flex;gap:10px;margin-bottom:14px;align-items:center;flex-wrap:wrap;}
   input#search{background:var(--bg-panel);border:1px solid var(--line);color:var(--ink);
     padding:9px 12px;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:13px;width:220px;}
@@ -82,7 +88,10 @@
 
   .score-bar{width:60px;height:6px;background:var(--bg-panel-raised);border-radius:3px;overflow:hidden;
     display:inline-block;vertical-align:middle;margin-right:8px;}
-  .score-bar i{display:block;height:100%;background:var(--amber);}
+  .score-bar i{display:block;height:100%;}
+  .score-bar i.bull{background:var(--teal);}
+  .score-bar i.bear{background:var(--rose);}
+  .score-bar i.neutral{background:var(--amber);}
 
   footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);
     font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-dim);line-height:1.7;}
@@ -110,6 +119,12 @@
   </header>
 
   <div class="stat-strip" id="statStrip"></div>
+
+  <div class="legend">
+    <span><i style="background:var(--teal)"></i> Score bar green = bullish setup (golden cross / approaching up)</span>
+    <span><i style="background:var(--rose)"></i> Score bar red = bearish setup (death cross / approaching down)</span>
+    <span>Score = how strong/confirmed the setup is, not a buy/sell opinion. A high red score means a strong bearish signal, not a good buy.</span>
+  </div>
 
   <div class="controls">
     <input id="search" type="text" placeholder="Filter symbol…" />
@@ -193,9 +208,10 @@ function meterHTML(gap){
   return `<div class="meter"><div class="mid"></div><div class="fill ${cls}" style="${style}"></div></div>`;
 }
 
-function scoreBar(score){
+function scoreBar(score, signal){
   const pct = Math.min(100, score);
-  return `<span class="score-bar"><i style="width:${pct}%"></i></span>${score.toFixed(1)}`;
+  const cls = signal.includes('golden') ? 'bull' : signal.includes('death') ? 'bear' : 'neutral';
+  return `<span class="score-bar"><i class="${cls}" style="width:${pct}%"></i></span>${score.toFixed(1)}`;
 }
 
 function render(){
@@ -241,7 +257,7 @@ function render(){
     html += `<td class="num" style="color:${r.supertrend==='up'?'var(--teal)':'var(--rose)'}">${r.supertrend}</td>`;
     html += `<td class="num">${r.vol_ratio_20d != null ? r.vol_ratio_20d.toFixed(2)+'×' : '—'}</td>`;
     html += `<td class="num">${r.delivery_pct != null ? r.delivery_pct.toFixed(1)+'%' : '—'}</td>`;
-    html += `<td class="num">${scoreBar(r.score)}</td>`;
+    html += `<td class="num">${scoreBar(r.score, r.signal)}</td>`;
     html += '</tr>';
   });
 
