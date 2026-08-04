@@ -1,0 +1,25 @@
+# Hand-picked additions to the auto-fetched NSE Nifty 500 + Microcap 250
+# universe. Use this for names you specifically want tracked that might
+# not be index-eligible yet (very recent listings, SME-platform stocks).
+#
+# Verify tickers on nseindia.com before adding - a typo here just gets
+# silently skipped by the scanners later (logged under "errors"), not a
+# crash, but it's wasted watchlist space until fixed.
+
+SIGMAADV      # Sigma Advanced Systems (formerly Megasoft) - defense electronics
+ROSSTECH      # Rossell Techsys - aerospace/defense wiring & interconnects, demerged from Rossell India
+BLUEJET       # Blue Jet Healthcare - pharma intermediates, contrast media
+CONCORDBIO    # Concord Biotech - fermentation-based APIs
+PARAS         # Paras Defence and Space Technologies
+GARFIBRES     # Garware Technical Fibres
+ABB           # ABB India - power/automation equipment
+WABAG         # VA Tech Wabag - water treatment engineering
+
+# Could not confirm exact NSE ticker for these from what you provided -
+# add them here once you've verified the symbol on nseindia.com:
+# CEMPRO       (unclear which listed company this refers to)
+# KMEW         (unclear which listed company this refers to)
+# INDO-MIM     (real company, IPO'd ~July 2026 - ticker not yet confirmed,
+#               and likely too newly listed for 25+ days of history anyway)
+# "Power India" (unclear which listed company this refers to)
+# "Inox India" (unclear which listed company this refers to)
