@@ -43,7 +43,11 @@ log = logging.getLogger("universe-builder")
 
 ROOT = Path(__file__).resolve().parent
 EXTRAS_PATH = ROOT / "universe_extras.txt"
-TARGET_PATHS = [ROOT / "dma-radar" / "watchlist.txt", ROOT / "delivery-radar" / "watchlist.txt"]
+TARGET_PATHS = [
+    ROOT / "dma-radar" / "watchlist.txt",
+    ROOT / "delivery-radar" / "watchlist.txt",
+    ROOT / "smart-money" / "watchlist.txt",
+]
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
