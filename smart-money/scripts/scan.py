@@ -250,7 +250,7 @@ def main():
     parser = argparse.ArgumentParser(description="Smart Money Feed: bulk/block deals + insider trading")
     parser.add_argument("--watchlist", type=Path, default=DEFAULT_WATCHLIST)
     parser.add_argument("--demo", action="store_true")
-    parser.add_argument("--lookback-days", type=int, default=10)
+    parser.add_argument("--lookback-days", type=int, default=90)
     parser.add_argument("--out", type=Path, default=OUTPUT_PATH)
     args = parser.parse_args()
 
