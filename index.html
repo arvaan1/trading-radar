@@ -21,8 +21,7 @@
   h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(32px,5vw,44px);font-weight:700;
     letter-spacing:-0.02em;margin:0 0 12px;}
   p.lede{color:var(--ink-dim);font-size:15px;line-height:1.6;max-width:520px;margin:0 0 44px;}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
-  @media (max-width:900px){.grid{grid-template-columns:1fr 1fr;}}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
   @media (max-width:640px){.grid{grid-template-columns:1fr;}}
   a.card{display:block;background:var(--bg-panel);border:1px solid var(--line);border-radius:10px;
     padding:26px;text-decoration:none;color:var(--ink);transition:border-color .15s ease;}
@@ -55,7 +54,13 @@
     <a class="card" href="./smart-money/">
       <div><span class="dot" style="background:#8B7EC8"></span>Smart Money Feed</div>
       <h2>Bulk &amp; Block Deals</h2>
-      <p>Every disclosed large trade, aggregated by symbol — with repeat buyers flagged and a best-effort insider trading feed.</p>
+      <p>Every disclosed large trade, aggregated by symbol — with known-investor tracking, price follow-through, and short-selling context.</p>
+      <div class="go">Open dashboard →</div>
+    </a>
+    <a class="card" href="./combined/">
+      <div><span class="dot" style="background:var(--amber)"></span>Combined View</div>
+      <h2>Cross-Tool Alignment</h2>
+      <p>Reads all three tools' data directly and shows where they agree or disagree on a symbol — no separate scan needed.</p>
       <div class="go">Open dashboard →</div>
     </a>
   </div>

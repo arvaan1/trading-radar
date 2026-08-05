@@ -1,75 +1,85 @@
-# Smart Money Feed
+# Smart Money Feed (v3)
 
-Pulls NSE's daily bulk deal and block deal disclosures (large trades by
-institutions/HNIs, publicly disclosed the same evening) and aggregates
-them by symbol, so a stock getting repeated attention stands out instead
-of being buried in a long chronological list. Also includes a best-effort
-insider trading section.
+Pulls NSE's daily bulk deal, block deal, and short-selling disclosures,
+aggregates them by symbol, and layers on a known-investor watchlist with
+price follow-through tracking. Built up over three passes:
 
-**Try it immediately:** open `index.html` — ships with seeded sample data
-covering a repeat-buyer pattern so you can see what that looks like before
-connecting anything live.
+- **v1:** bulk/block deals + best-effort insider trading disclosures.
+- **v2:** + known-investor watchlist, investor-type tagging, short-selling.
+- **v3:** + persistent local cache (history accumulates across runs
+  instead of re-fetching the same window daily) + price follow-through
+  for known-investor deals (did the stock actually move afterward?).
 
-## What "bulk" and "block" deals actually are
+**Try it immediately:** open `index.html` - ships with seeded sample data
+so you can see every section before connecting anything live.
 
-- **Bulk deal:** any single client's trades in a stock on one day add up
-  to 0.5%+ of that company's total shares.
-- **Block deal:** a single trade of at least 5 lakh shares or ₹5 crore,
-  executed in a special 35-minute morning trading window, disclosed the
-  same day.
+## What's new in v3
 
-Both are legally required disclosures — this tool just collects and
-organizes what NSE already publishes, rather than you checking manually.
+**Persistent cache.** Previously every run asked NSE fresh for the last
+90 days and threw the answer away the next day. Now `data/deals_cache.csv`
+and `data/short_sell_cache.csv` accumulate real history across runs - the
+first run backfills the max 365 days NSE allows in one request, and every
+run after that only fetches the gap since the last cached day (a few days
+at most). Over time this becomes a multi-year archive (capped at ~2 years
+retention) without ever re-asking NSE for data it already has.
 
-## The honest data-source risk on this one
+One deliberate design choice: only raw facts are cached (date, symbol,
+client, qty, price). Fields like `investor_type` and `is_known_investor`
+are recomputed fresh from your *current* `known_investors.txt` every run,
+against the *full* cached history. Practical effect: add a new name to
+that file, and their entire trading history in the cache gets tagged
+retroactively - not just deals going forward.
 
-DMA Radar and Delivery Radar both ended up on plain file downloads NSE
-publishes openly — the most reliable kind of source. This tool can't do
-that: bulk/block deal history is only available through NSE's interactive
-API, the same category of endpoint that failed silently on Delivery
-Radar's first attempt (see that tool's README for the full story). This
-build uses a well-maintained library (`nse` on PyPI) that handles session
-cookies more carefully than the first attempt did, which meaningfully
-improves the odds — but it genuinely could not be tested against the live
-site from a sandboxed environment. **If the first live run comes back with
-zero deals, that's the same failure pattern as before, not a sign
-something is broken in this code specifically** — check `errors` the same
-way, and it's very fixable.
+**Price follow-through.** For known-investor BUY deals, this checks what
+the stock actually did in the 5/10/20 trading days after, via Yahoo
+Finance (same source DMA Radar uses). Aggregated per investor into a
+track record: average 20-day return, hit rate. Capped at ~40 price
+lookups per run to keep runtime bounded regardless of how large the cache
+gets - this grows in coverage over time, not all at once.
 
-## The insider trading section, honestly
+## The combined cross-tool view
 
-This is the least certain part of the product. NSE's general
-announcements feed mixes every company disclosure together (results,
-board meetings, litigation, insider trading, everything) with no clean
-"insider trading only" filter available. This tool keyword-matches
-against each announcement's own description to isolate likely insider
-trading filings — it will miss some and occasionally include a false
-positive. Treat it as a useful starting shortlist to click into, not a
-complete, authoritative feed.
+A fourth page, `../combined/index.html`, reads this tool's output plus
+DMA Radar's and Delivery Radar's directly - no new scan, no NSE calls of
+its own, just cross-referencing three already-published JSON files by
+symbol in the browser. Shows, per symbol, whether each tool reads bullish,
+bearish, or neutral, and an agreement score. Deliberately shows each
+tool's raw read side by side rather than collapsing everything into one
+opaque number - transparency over a single "smart" score.
 
 ## Running it yourself
 
 ```bash
 pip install -r requirements.txt
 
-python scripts/scan.py --demo              # synthetic data, no network
-python scripts/scan.py                     # live, last 10 calendar days
-python scripts/scan.py --lookback-days 20  # look further back
+python scripts/scan.py --demo    # synthetic data, no network
+python scripts/scan.py           # live, incremental cache update
 ```
 
-## Reading the Symbol Summary
+No `--lookback-days` flag anymore - the cache window is managed
+automatically based on what's already stored.
 
-- **Net Value (Cr):** total disclosed buying minus total disclosed
-  selling, in rupees crore. Green = net buying, red = net selling.
-- **Repeat Buyers:** any client name that shows up as a BUY on that
-  symbol 2+ times in the window — a real, deliberate build rather than a
-  single opportunistic trade.
-- Rows highlighted with an amber left edge are symbols on your watchlist.
+## The honest data-source risk, still true in v3
 
-## Where this fits with the other two
+Bulk/block/short-sell data still goes through NSE's interactive API (the
+`nse` PyPI package, session cookies cached to disk, `server=True` mode
+built for unattended use) - the same category of endpoint that failed
+silently on Delivery Radar's first attempt, mitigated but not eliminated.
+If a live run comes back with an unexpectedly small cache, check for
+warnings in the run log the same way you would have for Delivery Radar.
 
-Same shape again: fetch → compute → JSON → static dashboard. The natural
-next step once this is running for a while: a stock showing up here
-*and* on Delivery Radar's quiet-accumulation list *and* approaching a
-golden cross on DMA Radar is a meaningfully stronger shortlist than any
-one signal alone.
+## Reading the Known Investor Track Record
+
+- **Trades w/ Data:** only counts trades where 20 trading days have
+  actually elapsed since the deal - very recent trades show "pending"
+  instead of a return, since there's nothing to measure yet.
+- **Avg 20d Return / Hit Rate:** self-explanatory, but worth saying
+  plainly - a good historical hit rate is not a promise, and the sample
+  size here starts small and grows as the cache accumulates more history
+  across future runs.
+
+## Where this fits with the other tools
+
+Same shape as always: fetch -> compute -> JSON -> static dashboard, and
+now a fourth page that ties all three together without needing its own
+data pipeline at all.

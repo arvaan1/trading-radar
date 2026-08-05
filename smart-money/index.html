@@ -84,6 +84,8 @@
     padding:5px 12px;font-size:11.5px;font-family:'IBM Plex Mono',monospace;color:var(--ink-dim);}
   .type-chip b{color:var(--ink);}
 
+  .short-tag{color:var(--rose);font-size:11px;font-family:'IBM Plex Mono',monospace;}
+
   .empty{padding:50px 20px;text-align:center;color:var(--ink-dim);font-family:'IBM Plex Mono',monospace;}
   .empty b{color:var(--ink);}
 
@@ -119,6 +121,12 @@
   </section>
 
   <section>
+    <h2>Known Investor Track Record</h2>
+    <div class="section-note">For each tracked investor's BUY trades: how the stock actually moved in the 20 trading days afterward. Capped to the most recent ~40 unique trades per run to keep this fast — "Trades w/ Data" grows over time as the cache accumulates history. Past follow-through is not a promise of future follow-through.</div>
+    <div id="trackRecordWrap"></div>
+  </section>
+
+  <section>
     <h2>Symbol Summary</h2>
     <div class="section-note">Ranked by net disclosed value (buys minus sells). "Repeat buyer" = same client bought this name 2+ times in the window — a deliberate build, not a one-off.</div>
     <div class="controls">
@@ -126,6 +134,12 @@
       <label class="wl"><input type="checkbox" id="onlyWatchlist" /> Watchlist only</label>
     </div>
     <div id="summaryWrap"></div>
+  </section>
+
+  <section>
+    <h2>Short Selling Activity</h2>
+    <div class="section-note">Total shares disclosed as short-sold per symbol in the window. No client names are disclosed for short sales — this is aggregate only. Symbols also appearing in Symbol Summary show both signals side by side.</div>
+    <div id="shortWrap"></div>
   </section>
 
   <section>
@@ -165,7 +179,9 @@ async function load(){
     renderStats();
     renderTypeBreakdown();
     renderKnown();
+    renderTrackRecord();
     renderSummary();
+    renderShort();
     renderDeals();
     renderInsider();
   }catch(err){
@@ -183,13 +199,13 @@ function renderMeta(){
   const d = new Date(DATA.generated_at_utc);
   document.getElementById('meta').innerHTML =
     `Last scan: <b>${d.toLocaleString()}</b><br/>
-     Lookback: <b>${DATA.lookback_days}</b> days · Watchlist: <b>${DATA.watchlist_size}</b> symbols`;
+     Cache spans: <b>${DATA.cache_span_days}</b> days (${DATA.deal_count_total_cached} deals total, ${DATA.deal_count_recent} shown below from last ${DATA.recent_display_days}d)`;
 }
 
 function renderStats(){
   const repeatCount = DATA.symbol_summary.filter(s => s.repeat_buyers.length > 0).length;
   const stats = [
-    { l: 'Total deals', n: DATA.deal_count },
+    { l: 'Total deals cached', n: DATA.deal_count_total_cached },
     { l: 'Symbols involved', n: DATA.symbol_summary.length },
     { l: 'Known investor deals', n: DATA.known_investor_deals.length },
     { l: 'Symbols w/ repeat buyer', n: repeatCount },
@@ -208,14 +224,21 @@ function renderTypeBreakdown(){
   ).join('');
 }
 
+function fmtReturn(v){
+  if(v === null || v === undefined) return '<span style="color:var(--ink-dim)">pending</span>';
+  const color = v >= 0 ? 'var(--teal)' : 'var(--rose)';
+  return `<span style="color:${color}">${v >= 0 ? '+' : ''}${v.toFixed(1)}%</span>`;
+}
+
 function renderKnown(){
   const deals = DATA.known_investor_deals;
   if(deals.length === 0){
     document.getElementById('knownWrap').innerHTML = `<div class="empty">No known-investor matches in this window. Edit <code>known_investors.txt</code> to track different names.</div>`;
     return;
   }
-  let html = '<table><thead><tr><th>Date</th><th>Symbol</th><th>Matched Investor</th><th>Side</th><th>Type</th><th>Qty</th><th>Value (Cr)</th></tr></thead><tbody>';
+  let html = '<table><thead><tr><th>Date</th><th>Symbol</th><th>Matched Investor</th><th>Side</th><th>Type</th><th>Qty</th><th>Value (Cr)</th><th>+5d</th><th>+10d</th><th>+20d</th></tr></thead><tbody>';
   deals.slice(0, 100).forEach(d => {
+    const ft = d.followthrough;
     html += `<tr class="known-investor">
       <td>${d.date}</td>
       <td class="sym">${d.symbol}</td>
@@ -224,10 +247,32 @@ function renderKnown(){
       <td><span class="pill ${d.deal_type}">${d.deal_type}</span></td>
       <td class="num">${d.qty.toLocaleString('en-IN')}</td>
       <td class="num">₹${d.value_cr.toFixed(2)}</td>
+      <td class="num">${ft ? fmtReturn(ft.return_5d) : '—'}</td>
+      <td class="num">${ft ? fmtReturn(ft.return_10d) : '—'}</td>
+      <td class="num">${ft ? fmtReturn(ft.return_20d) : '—'}</td>
     </tr>`;
   });
   html += '</tbody></table>';
   document.getElementById('knownWrap').innerHTML = html;
+}
+
+function renderTrackRecord(){
+  const rows = DATA.followthrough_by_investor || [];
+  if(rows.length === 0){
+    document.getElementById('trackRecordWrap').innerHTML = `<div class="empty">Not enough follow-through data yet — this fills in as the cache accumulates more history across daily runs.</div>`;
+    return;
+  }
+  let html = '<table><thead><tr><th>Investor</th><th>Trades w/ Data</th><th>Avg 20d Return</th><th>Hit Rate (20d)</th></tr></thead><tbody>';
+  rows.forEach(r => {
+    html += `<tr>
+      <td class="sym"><span class="known-star">★</span>${r.investor}</td>
+      <td class="num">${r.trades_with_data}</td>
+      <td class="num">${fmtReturn(r.avg_return_20d)}</td>
+      <td class="num">${r.hit_rate_20d.toFixed(1)}%</td>
+    </tr>`;
+  });
+  html += '</tbody></table>';
+  document.getElementById('trackRecordWrap').innerHTML = html;
 }
 
 function repeatTags(names){
@@ -250,7 +295,7 @@ function renderSummary(){
   const cols = [
     ['symbol','Symbol'], ['net_value_cr','Net Value (Cr)'], ['buy_value_cr','Buy (Cr)'],
     ['sell_value_cr','Sell (Cr)'], ['deal_count','Deals'], ['distinct_clients','Clients'],
-    ['_known','Known Investors'], ['_repeat','Repeat Buyers']
+    ['short_qty_total','Short Sold'], ['_known','Known Investors'], ['_repeat','Repeat Buyers']
   ];
   let html = '<table><thead><tr>';
   cols.forEach(([key,label]) => {
@@ -268,6 +313,7 @@ function renderSummary(){
     html += `<td class="num">₹${r.sell_value_cr.toFixed(2)}</td>`;
     html += `<td class="num">${r.deal_count}</td>`;
     html += `<td class="num">${r.distinct_clients}</td>`;
+    html += `<td class="num">${r.short_qty_total > 0 ? `<span class="short-tag">${r.short_qty_total.toLocaleString('en-IN')} (${r.short_days}d)</span>` : '—'}</td>`;
     html += `<td>${r.known_investors_involved.length ? r.known_investors_involved.map(n=>`<span class="known-tag">★ ${n}</span>`).join('') : '—'}</td>`;
     html += `<td>${repeatTags(r.repeat_buyers)}</td>`;
     html += '</tr>';
@@ -356,6 +402,24 @@ function renderInsider(){
   });
   html += '</tbody></table>';
   document.getElementById('insiderWrap').innerHTML = html;
+}
+
+function renderShort(){
+  const rows = DATA.short_sell_summary || [];
+  if(rows.length === 0){
+    document.getElementById('shortWrap').innerHTML = `<div class="empty">No short-selling activity in this window.</div>`;
+    return;
+  }
+  let html = '<table><thead><tr><th>Symbol</th><th>Total Qty Shorted</th><th>Days w/ Short Activity</th></tr></thead><tbody>';
+  rows.slice(0, 100).forEach(r => {
+    html += `<tr>
+      <td class="sym">${r.symbol}</td>
+      <td class="num short-tag">${r.total_qty.toLocaleString('en-IN')}</td>
+      <td class="num">${r.days_shorted}</td>
+    </tr>`;
+  });
+  html += '</tbody></table>';
+  document.getElementById('shortWrap').innerHTML = html;
 }
 
 document.getElementById('summarySearch').addEventListener('input', e => { summaryState.search = e.target.value; renderSummary(); });

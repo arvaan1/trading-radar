@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Combined View — Cross-Tool Signal Alignment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-void:#0A0E12; --bg-panel:#12181F; --bg-panel-raised:#161D25;
+    --ink:#E4E1D8; --ink-dim:#8A93A0;
+    --amber:#E8A33D; --teal:#3FA88C; --rose:#C25450; --violet:#8B7EC8;
+    --line:#232B34;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--bg-void);color:var(--ink);
+    font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased;}
+  ::selection{background:var(--amber);color:#12181F;}
+
+  .console{max-width:1320px;margin:0 auto;padding:32px 24px 80px;}
+
+  header.masthead{display:flex;justify-content:space-between;align-items:flex-end;
+    border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:24px;flex-wrap:wrap;gap:16px;}
+  h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:28px;letter-spacing:-0.01em;margin:0;}
+  h1 .radar-dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--amber);
+    margin-right:10px;box-shadow:0 0 0 4px rgba(232,163,61,0.15);animation:pulse 2.4s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.35;}}
+  .subtitle{color:var(--ink-dim);font-size:13px;margin-top:6px;font-family:'IBM Plex Mono',monospace;}
+  .meta{text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-dim);line-height:1.6;}
+  .meta b{color:var(--ink);}
+  .meta .src-missing{color:var(--rose);}
+  .meta .src-ok{color:var(--teal);}
+
+  .legend{display:flex;gap:18px;flex-wrap:wrap;margin-bottom:20px;font-size:12px;color:var(--ink-dim);
+    font-family:'IBM Plex Mono',monospace;background:var(--bg-panel);border:1px solid var(--line);
+    border-radius:6px;padding:12px 16px;}
+  .legend span{display:inline-flex;align-items:center;gap:6px;}
+  .legend i{width:8px;height:8px;border-radius:50%;display:inline-block;}
+
+  .controls{display:flex;gap:10px;margin-bottom:14px;align-items:center;flex-wrap:wrap;}
+  input#search{background:var(--bg-panel);border:1px solid var(--line);color:var(--ink);
+    padding:9px 12px;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:13px;width:200px;}
+  input#search:focus{outline:1px solid var(--amber);border-color:var(--amber);}
+  select#filter{background:var(--bg-panel);border:1px solid var(--line);color:var(--ink);
+    padding:9px 12px;border-radius:6px;font-family:'Inter',sans-serif;font-size:13px;}
+  .controls .hint{font-size:12px;color:var(--ink-dim);margin-left:auto;font-family:'IBM Plex Mono',monospace;}
+
+  table{width:100%;border-collapse:collapse;font-size:13px;}
+  thead th{text-align:left;padding:10px 12px;font-family:'IBM Plex Mono',monospace;
+    font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--ink-dim);
+    border-bottom:1px solid var(--line);cursor:pointer;user-select:none;white-space:nowrap;}
+  thead th:hover{color:var(--ink);}
+  thead th.sorted{color:var(--amber);}
+  tbody tr{border-bottom:1px solid var(--line);}
+  tbody tr:hover{background:var(--bg-panel);}
+  tbody td{padding:11px 12px;font-family:'IBM Plex Mono',monospace;white-space:nowrap;}
+  td.sym{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;}
+  td.num{text-align:right;font-variant-numeric:tabular-nums;}
+
+  .tool-badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:10.5px;font-weight:600;
+    letter-spacing:0.02em;min-width:64px;text-align:center;}
+  .tool-badge.bull{background:rgba(63,168,140,0.18);color:var(--teal);}
+  .tool-badge.bear{background:rgba(194,84,80,0.18);color:var(--rose);}
+  .tool-badge.neutral{background:rgba(138,147,160,0.12);color:var(--ink-dim);}
+  .tool-badge.missing{background:transparent;color:var(--line);}
+
+  .agree-count{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:15px;}
+  .agree-count.strong{color:var(--teal);}
+  .agree-count.weak-neg{color:var(--rose);}
+
+  .known-star{color:var(--teal);}
+  .short-tag{color:var(--rose);font-size:11px;}
+
+  .empty{padding:60px 20px;text-align:center;color:var(--ink-dim);font-family:'IBM Plex Mono',monospace;}
+  .empty b{color:var(--ink);}
+
+  footer{margin-top:36px;padding-top:18px;border-top:1px solid var(--line);
+    font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-dim);line-height:1.7;}
+
+  @media (max-width:760px){
+    .meta{text-align:left;}
+    header.masthead{flex-direction:column;align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+<div class="console">
+
+  <header class="masthead">
+    <div>
+      <h1><span class="radar-dot"></span>Combined View</h1>
+      <div class="subtitle">cross-tool signal alignment — reads DMA Radar, Delivery Radar &amp; Smart Money Feed directly, no separate scan</div>
+    </div>
+    <div class="meta" id="meta">Loading…</div>
+  </header>
+
+  <div class="legend">
+    <span><i style="background:var(--teal)"></i> Bullish read from that tool</span>
+    <span><i style="background:var(--rose)"></i> Bearish read from that tool</span>
+    <span><i style="background:var(--ink-dim)"></i> Neutral / no signal</span>
+    <span>"Agreement" = bullish tools minus bearish tools, out of up to 3. This is a starting shortlist, not a verdict — always check the underlying numbers.</span>
+  </div>
+
+  <div class="controls">
+    <input id="search" type="text" placeholder="Filter symbol…" />
+    <select id="filter">
+      <option value="all">All symbols</option>
+      <option value="agree2plus">2+ tools agree bullish</option>
+      <option value="allthree">All 3 tools bullish</option>
+      <option value="conflict">Tools disagree</option>
+    </select>
+    <span class="hint">click a column header to sort</span>
+  </div>
+
+  <div id="tableWrap"></div>
+
+  <footer>
+    This page does no NSE fetching of its own — it just reads the JSON each of the other three tools already publishes
+    (<code>../dma-radar/data/scan_results.json</code>, <code>../delivery-radar/data/scan_results.json</code>,
+    <code>../smart-money/data/scan_results.json</code>) and cross-references by symbol, client-side, on load.
+    If a tool hasn't run yet or its data is missing, that column just shows blank for affected symbols — nothing here is investment advice.
+  </footer>
+
+</div>
+
+<script>
+let ROWS = [];
+let state = { sortKey: 'agreement', sortDir: -1, search: '', filter: 'all' };
+
+async function safeFetch(path){
+  try{
+    const res = await fetch(path + '?_=' + Date.now());
+    if(!res.ok) return null;
+    return await res.json();
+  }catch(e){ return null; }
+}
+
+function dmaRead(sig){
+  if(!sig) return 'missing';
+  if(sig.includes('golden')) return 'bull';
+  if(sig.includes('death')) return 'bear';
+  return 'neutral';
+}
+function deliveryRead(sig){
+  if(!sig) return 'missing';
+  if(sig === 'quiet_accumulation' || sig === 'confirmed_accumulation') return 'bull';
+  if(sig === 'possible_distribution') return 'bear';
+  return 'neutral'; // no_signal or speculative_churn
+}
+function smartMoneyRead(row){
+  if(!row) return 'missing';
+  if(row.net_value_cr > 5 || row.known_investors_involved.length > 0) return 'bull';
+  if(row.net_value_cr < -5) return 'bear';
+  return 'neutral';
+}
+
+async function load(){
+  const [dma, delivery, smart] = await Promise.all([
+    safeFetch('../dma-radar/data/scan_results.json'),
+    safeFetch('../delivery-radar/data/scan_results.json'),
+    safeFetch('../smart-money/data/scan_results.json'),
+  ]);
+
+  renderMeta(dma, delivery, smart);
+
+  const dmaBySymbol = {}, deliveryBySymbol = {}, smartBySymbol = {};
+  (dma?.results || []).forEach(r => dmaBySymbol[r.symbol] = r);
+  (delivery?.results || []).forEach(r => deliveryBySymbol[r.symbol] = r);
+  (smart?.symbol_summary || []).forEach(r => smartBySymbol[r.symbol] = r);
+
+  const allSymbols = new Set([...Object.keys(dmaBySymbol), ...Object.keys(deliveryBySymbol), ...Object.keys(smartBySymbol)]);
+
+  ROWS = [...allSymbols].map(sym => {
+    const d = dmaBySymbol[sym], dl = deliveryBySymbol[sym], sm = smartBySymbol[sym];
+    const dRead = d ? dmaRead(d.signal) : 'missing';
+    const dlRead = dl ? deliveryRead(dl.signal) : 'missing';
+    const smRead = sm ? smartMoneyRead(sm) : 'missing';
+    const reads = [dRead, dlRead, smRead];
+    const bulls = reads.filter(r => r === 'bull').length;
+    const bears = reads.filter(r => r === 'bear').length;
+    return {
+      symbol: sym,
+      dma: d, dmaRead: dRead,
+      delivery: dl, deliveryRead: dlRead,
+      smart: sm, smartRead: smRead,
+      agreement: bulls - bears,
+      bulls, bears,
+    };
+  });
+
+  render();
+}
+
+function renderMeta(dma, delivery, smart){
+  const src = (label, ok) => `<span class="${ok ? 'src-ok' : 'src-missing'}">${label}: ${ok ? 'loaded' : 'not found'}</span>`;
+  document.getElementById('meta').innerHTML =
+    `${src('DMA Radar', !!dma)} · ${src('Delivery Radar', !!delivery)} · ${src('Smart Money', !!smart)}`;
+}
+
+function badge(read){
+  const label = { bull: 'Bullish', bear: 'Bearish', neutral: 'Neutral', missing: '—' }[read];
+  return `<span class="tool-badge ${read}">${label}</span>`;
+}
+
+function render(){
+  let rows = ROWS.filter(r => {
+    if(state.search && !r.symbol.toLowerCase().includes(state.search.toLowerCase())) return false;
+    if(state.filter === 'agree2plus' && r.bulls < 2) return false;
+    if(state.filter === 'allthree' && r.bulls < 3) return false;
+    if(state.filter === 'conflict' && !(r.bulls > 0 && r.bears > 0)) return false;
+    return true;
+  });
+
+  rows.sort((a,b) => {
+    const va = a[state.sortKey], vb = b[state.sortKey];
+    if(typeof va === 'string') return va.localeCompare(vb) * state.sortDir;
+    return ((va ?? -Infinity) - (vb ?? -Infinity)) * state.sortDir;
+  });
+
+  const cols = [
+    ['symbol','Symbol'], ['dmaRead','DMA Radar'], ['deliveryRead','Delivery Radar'],
+    ['smartRead','Smart Money'], ['_smdetail','Smart Money Detail'], ['agreement','Agreement']
+  ];
+  let html = '<table><thead><tr>';
+  cols.forEach(([key,label]) => {
+    const sortable = !key.startsWith('_');
+    const sorted = state.sortKey === key ? 'sorted' : '';
+    html += `<th class="${sorted}" ${sortable ? `data-key="${key}"` : ''}>${label}${state.sortKey===key?(state.sortDir===1?' ↑':' ↓'):''}</th>`;
+  });
+  html += '</tr></thead><tbody>';
+
+  if(rows.length === 0) html += `<tr><td colspan="${cols.length}"><div class="empty">No symbols match this filter.</div></td></tr>`;
+
+  rows.forEach(r => {
+    const agreeClass = r.agreement >= 2 ? 'strong' : (r.agreement <= -1 ? 'weak-neg' : '');
+    let smDetail = '—';
+    if(r.smart){
+      const parts = [];
+      if(r.smart.known_investors_involved.length) parts.push(`<span class="known-star">★</span>${r.smart.known_investors_involved.join(', ')}`);
+      parts.push(`₹${r.smart.net_value_cr.toFixed(1)}Cr net`);
+      if(r.smart.short_qty_total > 0) parts.push(`<span class="short-tag">shorted ${r.smart.short_days}d</span>`);
+      smDetail = parts.join(' · ');
+    }
+    html += `<tr>
+      <td class="sym">${r.symbol}</td>
+      <td>${badge(r.dmaRead)}</td>
+      <td>${badge(r.deliveryRead)}</td>
+      <td>${badge(r.smartRead)}</td>
+      <td style="font-size:11.5px;color:var(--ink-dim);white-space:normal;">${smDetail}</td>
+      <td class="num"><span class="agree-count ${agreeClass}">${r.agreement > 0 ? '+' : ''}${r.agreement}</span></td>
+    </tr>`;
+  });
+
+  html += '</tbody></table>';
+  document.getElementById('tableWrap').innerHTML = html;
+
+  document.querySelectorAll('thead th[data-key]').forEach(th => {
+    th.addEventListener('click', () => {
+      const key = th.dataset.key;
+      if(state.sortKey === key) state.sortDir *= -1;
+      else { state.sortKey = key; state.sortDir = -1; }
+      render();
+    });
+  });
+}
+
+document.getElementById('search').addEventListener('input', e => { state.search = e.target.value; render(); });
+document.getElementById('filter').addEventListener('change', e => { state.filter = e.target.value; render(); });
+
+load();
+</script>
+</body>
+</html>
