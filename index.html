@@ -21,7 +21,8 @@
   h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(32px,5vw,44px);font-weight:700;
     letter-spacing:-0.02em;margin:0 0 12px;}
   p.lede{color:var(--ink-dim);font-size:15px;line-height:1.6;max-width:520px;margin:0 0 44px;}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  @media (max-width:900px){.grid{grid-template-columns:1fr 1fr;}}
   @media (max-width:640px){.grid{grid-template-columns:1fr;}}
   a.card{display:block;background:var(--bg-panel);border:1px solid var(--line);border-radius:10px;
     padding:26px;text-decoration:none;color:var(--ink);transition:border-color .15s ease;}
@@ -49,6 +50,12 @@
       <div><span class="dot" style="background:var(--teal)"></span>Delivery Radar</div>
       <h2>Quiet Accumulation</h2>
       <p>Flags delivery-% outliers vs. each stock's own baseline — real shares changing hands, not just volume.</p>
+      <div class="go">Open dashboard →</div>
+    </a>
+    <a class="card" href="./smart-money/">
+      <div><span class="dot" style="background:#8B7EC8"></span>Smart Money Feed</div>
+      <h2>Bulk &amp; Block Deals</h2>
+      <p>Every disclosed large trade, aggregated by symbol — with repeat buyers flagged and a best-effort insider trading feed.</p>
       <div class="go">Open dashboard →</div>
     </a>
   </div>
