@@ -4,7 +4,7 @@ on:
   schedule:
     # 12:30 UTC = 6:00 PM IST - bulk/block/short-sell disclosures are
     # typically available from NSE within an hour or two of the 3:30 PM close.
-    - cron: "30 12 * * 1-5"
+    - cron: "23 12 * * 1-5"
   workflow_dispatch: {}
 
 permissions:
