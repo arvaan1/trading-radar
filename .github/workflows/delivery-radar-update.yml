@@ -7,7 +7,7 @@ on:
     # not immediately after the 3:30 PM close. If it's not ready yet on a
     # given day, the scan just picks it up automatically on the next run -
     # nothing breaks, but a later schedule means fresher same-day data.
-    - cron: "15 15 * * 1-5"
+    - cron: "6 15 * * 1-5"
   workflow_dispatch: {}
 
 permissions:
