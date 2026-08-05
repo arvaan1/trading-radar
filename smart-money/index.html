@@ -74,6 +74,16 @@
   .repeat-tag{display:inline-block;background:rgba(232,163,61,0.14);color:var(--amber);
     padding:2px 7px;border-radius:4px;font-size:10.5px;margin:1px 3px 1px 0;}
 
+  .known-tag{display:inline-block;background:rgba(63,168,140,0.16);color:var(--teal);
+    padding:2px 8px;border-radius:4px;font-size:10.5px;margin:1px 3px 1px 0;font-weight:600;}
+  .known-star{color:var(--teal);margin-right:4px;}
+  tbody tr.known-investor{box-shadow:inset 3px 0 0 var(--teal);}
+
+  .type-breakdown{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px;}
+  .type-chip{background:var(--bg-panel);border:1px solid var(--line);border-radius:20px;
+    padding:5px 12px;font-size:11.5px;font-family:'IBM Plex Mono',monospace;color:var(--ink-dim);}
+  .type-chip b{color:var(--ink);}
+
   .empty{padding:50px 20px;text-align:center;color:var(--ink-dim);font-family:'IBM Plex Mono',monospace;}
   .empty b{color:var(--ink);}
 
@@ -99,6 +109,14 @@
   </header>
 
   <div class="stat-strip" id="statStrip"></div>
+
+  <div class="type-breakdown" id="typeBreakdown"></div>
+
+  <section>
+    <h2>Known Investor Activity</h2>
+    <div class="section-note">Deals matching names in your <code>known_investors.txt</code> watchlist — edit that file to track who you actually care about.</div>
+    <div id="knownWrap"></div>
+  </section>
 
   <section>
     <h2>Symbol Summary</h2>
@@ -145,6 +163,8 @@ async function load(){
     DATA = await res.json();
     renderMeta();
     renderStats();
+    renderTypeBreakdown();
+    renderKnown();
     renderSummary();
     renderDeals();
     renderInsider();
@@ -168,16 +188,46 @@ function renderMeta(){
 
 function renderStats(){
   const repeatCount = DATA.symbol_summary.filter(s => s.repeat_buyers.length > 0).length;
-  const totalValue = DATA.symbol_summary.reduce((a,s) => a + Math.abs(s.net_value_cr), 0);
   const stats = [
     { l: 'Total deals', n: DATA.deal_count },
     { l: 'Symbols involved', n: DATA.symbol_summary.length },
+    { l: 'Known investor deals', n: DATA.known_investor_deals.length },
     { l: 'Symbols w/ repeat buyer', n: repeatCount },
     { l: 'Insider filings (best-effort)', n: DATA.insider_trading.filings.length },
   ];
   document.getElementById('statStrip').innerHTML = stats.map(s =>
     `<div class="stat"><div class="n">${s.n}</div><div class="l">${s.l}</div></div>`
   ).join('');
+}
+
+function renderTypeBreakdown(){
+  const breakdown = DATA.investor_type_breakdown || {};
+  const entries = Object.entries(breakdown).sort((a,b) => b[1]-a[1]);
+  document.getElementById('typeBreakdown').innerHTML = entries.map(([type,count]) =>
+    `<div class="type-chip"><b>${count}</b> ${type}</div>`
+  ).join('');
+}
+
+function renderKnown(){
+  const deals = DATA.known_investor_deals;
+  if(deals.length === 0){
+    document.getElementById('knownWrap').innerHTML = `<div class="empty">No known-investor matches in this window. Edit <code>known_investors.txt</code> to track different names.</div>`;
+    return;
+  }
+  let html = '<table><thead><tr><th>Date</th><th>Symbol</th><th>Matched Investor</th><th>Side</th><th>Type</th><th>Qty</th><th>Value (Cr)</th></tr></thead><tbody>';
+  deals.slice(0, 100).forEach(d => {
+    html += `<tr class="known-investor">
+      <td>${d.date}</td>
+      <td class="sym">${d.symbol}</td>
+      <td><span class="known-star">★</span>${d.matched_investor}</td>
+      <td><span class="pill ${d.buy_sell === 'BUY' ? 'buy' : 'sell'}">${d.buy_sell}</span></td>
+      <td><span class="pill ${d.deal_type}">${d.deal_type}</span></td>
+      <td class="num">${d.qty.toLocaleString('en-IN')}</td>
+      <td class="num">₹${d.value_cr.toFixed(2)}</td>
+    </tr>`;
+  });
+  html += '</tbody></table>';
+  document.getElementById('knownWrap').innerHTML = html;
 }
 
 function repeatTags(names){
@@ -199,11 +249,12 @@ function renderSummary(){
 
   const cols = [
     ['symbol','Symbol'], ['net_value_cr','Net Value (Cr)'], ['buy_value_cr','Buy (Cr)'],
-    ['sell_value_cr','Sell (Cr)'], ['deal_count','Deals'], ['distinct_clients','Clients'], ['_repeat','Repeat Buyers']
+    ['sell_value_cr','Sell (Cr)'], ['deal_count','Deals'], ['distinct_clients','Clients'],
+    ['_known','Known Investors'], ['_repeat','Repeat Buyers']
   ];
   let html = '<table><thead><tr>';
   cols.forEach(([key,label]) => {
-    const sortable = key !== '_repeat';
+    const sortable = !key.startsWith('_');
     const sorted = summaryState.sortKey === key ? 'sorted' : '';
     html += `<th class="${sorted}" ${sortable ? `data-key="${key}"` : ''}>${label}${summaryState.sortKey===key?(summaryState.sortDir===1?' ↑':' ↓'):''}</th>`;
   });
@@ -217,6 +268,7 @@ function renderSummary(){
     html += `<td class="num">₹${r.sell_value_cr.toFixed(2)}</td>`;
     html += `<td class="num">${r.deal_count}</td>`;
     html += `<td class="num">${r.distinct_clients}</td>`;
+    html += `<td>${r.known_investors_involved.length ? r.known_investors_involved.map(n=>`<span class="known-tag">★ ${n}</span>`).join('') : '—'}</td>`;
     html += `<td>${repeatTags(r.repeat_buyers)}</td>`;
     html += '</tr>';
   });
@@ -246,8 +298,8 @@ function renderDeals(){
   });
 
   const cols = [
-    ['date','Date'], ['symbol','Symbol'], ['client_name','Client'], ['buy_sell','Side'],
-    ['deal_type','Type'], ['qty','Qty'], ['price','Price'], ['value_cr','Value (Cr)']
+    ['date','Date'], ['symbol','Symbol'], ['client_name','Client'], ['investor_type','Type'], ['buy_sell','Side'],
+    ['deal_type','Deal'], ['qty','Qty'], ['price','Price'], ['value_cr','Value (Cr)']
   ];
   let html = '<table><thead><tr>';
   cols.forEach(([key,label]) => {
@@ -257,10 +309,11 @@ function renderDeals(){
   html += '</tr></thead><tbody>';
   if(rows.length === 0) html += `<tr><td colspan="${cols.length}"><div class="empty">No deals match this filter.</div></td></tr>`;
   rows.slice(0, 300).forEach(d => {
-    html += `<tr class="${d.on_watchlist ? 'on-watchlist' : ''}">`;
+    html += `<tr class="${d.on_watchlist ? 'on-watchlist' : ''} ${d.is_known_investor ? 'known-investor' : ''}">`;
     html += `<td>${d.date}</td>`;
     html += `<td class="sym">${d.symbol}</td>`;
-    html += `<td class="client" title="${d.client_name}">${d.client_name}</td>`;
+    html += `<td class="client" title="${d.client_name}">${d.is_known_investor ? '<span class="known-star">★</span>' : ''}${d.client_name}</td>`;
+    html += `<td style="color:var(--ink-dim);font-size:11.5px;">${d.investor_type}</td>`;
     html += `<td><span class="pill ${d.buy_sell === 'BUY' ? 'buy' : 'sell'}">${d.buy_sell}</span></td>`;
     html += `<td><span class="pill ${d.deal_type}">${d.deal_type}</span></td>`;
     html += `<td class="num">${d.qty.toLocaleString('en-IN')}</td>`;

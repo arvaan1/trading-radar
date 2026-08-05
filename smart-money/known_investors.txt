@@ -1,0 +1,30 @@
+# Known Investor Watchlist
+#
+# Names or name-fragments (case-insensitive, partial match) that get
+# tagged and highlighted separately whenever they appear in a bulk/block
+# deal. NSE's client-name field is free text and formatting varies
+# ("ASHISH KACHOLIA" vs "ASHISH KACHOLIA HUF" vs "MR ASHISH KACHOLIA") -
+# partial matching handles that, at the cost of occasionally over-matching
+# (e.g. someone else who happens to share a surname). Check matches that
+# matter before acting on them.
+#
+# This is a STARTER list of investors commonly tracked in Indian markets
+# for exactly this reason (their bulk/block deals get public attention).
+# This is entirely personal to your own research interests - delete names
+# you don't care about, add ones you do. One name/fragment per line.
+
+ASHISH KACHOLIA
+VIJAY KEDIA
+MUKUL AGRAWAL
+DOLLY KHANNA
+PORINJU VELIYATH
+RADHAKISHAN DAMANI
+RAKESH JHUNJHUNWALA
+RARE ENTERPRISES
+SUNIL SINGHANIA
+ABAKKUS
+
+# Add specific mutual fund houses, FIIs, or other entities you track:
+# GOLDMAN SACHS
+# MORGAN STANLEY
+# SBI MUTUAL FUND
