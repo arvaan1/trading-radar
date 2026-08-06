@@ -1,10 +1,10 @@
 {
-  "generated_at_utc": "2026-08-05T14:40:58.272171+00:00",
-  "cache_span_days": 365,
+  "generated_at_utc": "2026-08-06T13:01:02.898569+00:00",
+  "cache_span_days": 366,
   "recent_display_days": 60,
   "watchlist_size": 8,
   "known_investors_tracked": 10,
-  "deal_count_total_cached": 262,
+  "deal_count_total_cached": 378,
   "deal_count_recent": 0,
   "deals": [],
   "symbol_summary": [
@@ -37,8 +37,8 @@
       "sell_value_cr": 869.0,
       "distinct_clients": 1,
       "repeat_buyers": [],
-      "short_qty_total": 0,
-      "short_days": 0
+      "short_qty_total": 1,
+      "short_days": 1
     },
     {
       "symbol": "CPPLUS",
@@ -56,31 +56,31 @@
       "short_days": 0
     },
     {
-      "symbol": "KOLTEPATIL",
-      "scrip_name": "Kolte - Patil Developers",
+      "symbol": "VBL",
+      "scrip_name": "Varun Beverages Limited",
       "on_watchlist": false,
-      "deal_count": 1,
+      "deal_count": 3,
       "known_investors_involved": [],
-      "net_qty": -507534,
-      "net_value_cr": -23.839,
-      "buy_value_cr": 0.0,
-      "sell_value_cr": 23.839,
-      "distinct_clients": 1,
+      "net_qty": -1894144,
+      "net_value_cr": -93.826,
+      "buy_value_cr": 78.19,
+      "sell_value_cr": 172.016,
+      "distinct_clients": 2,
       "repeat_buyers": [],
       "short_qty_total": 0,
       "short_days": 0
     },
     {
-      "symbol": "FLYSBS",
-      "scrip_name": "FlySBS Aviation Limited",
+      "symbol": "CAPINVIT",
+      "scrip_name": "Capital Infra Trust",
       "on_watchlist": false,
-      "deal_count": 6,
+      "deal_count": 1,
       "known_investors_involved": [],
-      "net_qty": -402000,
-      "net_value_cr": -22.912,
-      "buy_value_cr": 36.728,
-      "sell_value_cr": 59.64,
-      "distinct_clients": 5,
+      "net_qty": 2920000,
+      "net_value_cr": 23.199,
+      "buy_value_cr": 23.199,
+      "sell_value_cr": 0.0,
+      "distinct_clients": 1,
       "repeat_buyers": [],
       "short_qty_total": 0,
       "short_days": 0
@@ -101,16 +101,31 @@
       "short_days": 0
     },
     {
+      "symbol": "LLOYDSE-RE",
+      "scrip_name": "Lloyds Enterprises Ltd",
+      "on_watchlist": false,
+      "deal_count": 12,
+      "known_investors_involved": [],
+      "net_qty": -5418810,
+      "net_value_cr": -14.927,
+      "buy_value_cr": 56.322,
+      "sell_value_cr": 71.249,
+      "distinct_clients": 12,
+      "repeat_buyers": [],
+      "short_qty_total": 0,
+      "short_days": 0
+    },
+    {
       "symbol": "ALLTIME",
       "scrip_name": "All Time Plastics Limited",
       "on_watchlist": false,
-      "deal_count": 1,
+      "deal_count": 3,
       "known_investors_involved": [],
       "net_qty": 350000,
-      "net_value_cr": 10.049,
-      "buy_value_cr": 10.049,
-      "sell_value_cr": 0.0,
-      "distinct_clients": 1,
+      "net_value_cr": 10.043,
+      "buy_value_cr": 21.283,
+      "sell_value_cr": 11.24,
+      "distinct_clients": 2,
       "repeat_buyers": [],
       "short_qty_total": 0,
       "short_days": 0
@@ -126,6 +141,51 @@
       "buy_value_cr": 9.753,
       "sell_value_cr": 19.706,
       "distinct_clients": 6,
+      "repeat_buyers": [],
+      "short_qty_total": 0,
+      "short_days": 0
+    },
+    {
+      "symbol": "APOLLO",
+      "scrip_name": "Apollo Micro Systems Ltd",
+      "on_watchlist": false,
+      "deal_count": 8,
+      "known_investors_involved": [],
+      "net_qty": 358503,
+      "net_value_cr": 8.581,
+      "buy_value_cr": 273.257,
+      "sell_value_cr": 264.676,
+      "distinct_clients": 4,
+      "repeat_buyers": [],
+      "short_qty_total": 0,
+      "short_days": 0
+    },
+    {
+      "symbol": "FLYSBS",
+      "scrip_name": "FlySBS Aviation Limited",
+      "on_watchlist": false,
+      "deal_count": 12,
+      "known_investors_involved": [],
+      "net_qty": -186600,
+      "net_value_cr": -8.5,
+      "buy_value_cr": 69.723,
+      "sell_value_cr": 78.223,
+      "distinct_clients": 8,
+      "repeat_buyers": [],
+      "short_qty_total": 0,
+      "short_days": 0
+    },
+    {
+      "symbol": "GRMOVER",
+      "scrip_name": "GRM Overseas Limited",
+      "on_watchlist": false,
+      "deal_count": 2,
+      "known_investors_involved": [],
+      "net_qty": -213235,
+      "net_value_cr": -7.96,
+      "buy_value_cr": 4.408,
+      "sell_value_cr": 12.368,
+      "distinct_clients": 1,
       "repeat_buyers": [],
       "short_qty_total": 0,
       "short_days": 0
@@ -191,30 +251,30 @@
       "short_days": 0
     },
     {
-      "symbol": "CONNPLEX",
-      "scrip_name": "Connplex Cinemas Limited",
+      "symbol": "KROSS",
+      "scrip_name": "Kross Limited",
       "on_watchlist": false,
-      "deal_count": 3,
+      "deal_count": 20,
       "known_investors_involved": [],
-      "net_qty": 187200,
-      "net_value_cr": 3.324,
-      "buy_value_cr": 3.736,
-      "sell_value_cr": 0.412,
-      "distinct_clients": 2,
+      "net_qty": 223873,
+      "net_value_cr": 4.425,
+      "buy_value_cr": 184.799,
+      "sell_value_cr": 180.374,
+      "distinct_clients": 10,
       "repeat_buyers": [],
       "short_qty_total": 0,
       "short_days": 0
     },
     {
-      "symbol": "AMCL",
-      "scrip_name": "ANB Metal Cast Limited",
+      "symbol": "CONNPLEX",
+      "scrip_name": "Connplex Cinemas Limited",
       "on_watchlist": false,
-      "deal_count": 4,
+      "deal_count": 5,
       "known_investors_involved": [],
-      "net_qty": -200000,
-      "net_value_cr": -3.294,
-      "buy_value_cr": 3.018,
-      "sell_value_cr": 6.312,
+      "net_qty": 187200,
+      "net_value_cr": 3.325,
+      "buy_value_cr": 5.627,
+      "sell_value_cr": 2.302,
       "distinct_clients": 4,
       "repeat_buyers": [],
       "short_qty_total": 0,
@@ -236,6 +296,21 @@
       "short_days": 0
     },
     {
+      "symbol": "AMCL",
+      "scrip_name": "ANB Metal Cast Limited",
+      "on_watchlist": false,
+      "deal_count": 8,
+      "known_investors_involved": [],
+      "net_qty": 189600,
+      "net_value_cr": 3.143,
+      "buy_value_cr": 12.593,
+      "sell_value_cr": 9.45,
+      "distinct_clients": 7,
+      "repeat_buyers": [],
+      "short_qty_total": 0,
+      "short_days": 0
+    },
+    {
       "symbol": "GVPTECH",
       "scrip_name": "GVP Infotech Limited",
       "on_watchlist": false,
@@ -245,6 +320,36 @@
       "net_value_cr": -2.332,
       "buy_value_cr": 0.0,
       "sell_value_cr": 2.332,
+      "distinct_clients": 1,
+      "repeat_buyers": [],
+      "short_qty_total": 0,
+      "short_days": 0
+    },
+    {
+      "symbol": "IZMO",
+      "scrip_name": "IZMO Limited",
+      "on_watchlist": false,
+      "deal_count": 8,
+      "known_investors_involved": [],
+      "net_qty": -40462,
+      "net_value_cr": -2.317,
+      "buy_value_cr": 37.127,
+      "sell_value_cr": 39.444,
+      "distinct_clients": 4,
+      "repeat_buyers": [],
+      "short_qty_total": 0,
+      "short_days": 0
+    },
+    {
+      "symbol": "AFFORDABLE",
+      "scrip_name": "Afford Robo & Auto Ltd",
+      "on_watchlist": false,
+      "deal_count": 1,
+      "known_investors_involved": [],
+      "net_qty": -63355,
+      "net_value_cr": -2.275,
+      "buy_value_cr": 0.0,
+      "sell_value_cr": 2.275,
       "distinct_clients": 1,
       "repeat_buyers": [],
       "short_qty_total": 0,
@@ -579,8 +684,8 @@
       "sell_value_cr": 156.977,
       "distinct_clients": 2,
       "repeat_buyers": [],
-      "short_qty_total": 0,
-      "short_days": 0
+      "short_qty_total": 1682,
+      "short_days": 1
     },
     {
       "symbol": "PROSTARM",
@@ -609,8 +714,8 @@
       "sell_value_cr": 58.797,
       "distinct_clients": 1,
       "repeat_buyers": [],
-      "short_qty_total": 0,
-      "short_days": 0
+      "short_qty_total": 950,
+      "short_days": 1
     },
     {
       "symbol": "ORTINGLOBE",
@@ -637,6 +742,36 @@
       "net_value_cr": -0.064,
       "buy_value_cr": 0.868,
       "sell_value_cr": 0.932,
+      "distinct_clients": 1,
+      "repeat_buyers": [],
+      "short_qty_total": 0,
+      "short_days": 0
+    },
+    {
+      "symbol": "ACE",
+      "scrip_name": "Action Construction Equip",
+      "on_watchlist": false,
+      "deal_count": 2,
+      "known_investors_involved": [],
+      "net_qty": 0,
+      "net_value_cr": -0.054,
+      "buy_value_cr": 71.617,
+      "sell_value_cr": 71.671,
+      "distinct_clients": 1,
+      "repeat_buyers": [],
+      "short_qty_total": 0,
+      "short_days": 0
+    },
+    {
+      "symbol": "JKPAPER",
+      "scrip_name": "JK Paper Limited",
+      "on_watchlist": false,
+      "deal_count": 2,
+      "known_investors_involved": [],
+      "net_qty": 0,
+      "net_value_cr": -0.052,
+      "buy_value_cr": 54.729,
+      "sell_value_cr": 54.781,
       "distinct_clients": 1,
       "repeat_buyers": [],
       "short_qty_total": 0,
@@ -757,13 +892,13 @@
       "symbol": "AGARWALEYE",
       "scrip_name": "Dr Agarwals Health Care L",
       "on_watchlist": false,
-      "deal_count": 2,
+      "deal_count": 4,
       "known_investors_involved": [],
       "net_qty": 0,
       "net_value_cr": 0.0,
-      "buy_value_cr": 18.846,
-      "sell_value_cr": 18.846,
-      "distinct_clients": 2,
+      "buy_value_cr": 90.494,
+      "sell_value_cr": 90.494,
+      "distinct_clients": 3,
       "repeat_buyers": [],
       "short_qty_total": 0,
       "short_days": 0
@@ -772,14 +907,16 @@
       "symbol": "CGCL",
       "scrip_name": "Money Matters F S Limited",
       "on_watchlist": false,
-      "deal_count": 2,
+      "deal_count": 6,
       "known_investors_involved": [],
       "net_qty": 0,
       "net_value_cr": 0.0,
-      "buy_value_cr": 16.158,
-      "sell_value_cr": 16.158,
+      "buy_value_cr": 102.295,
+      "sell_value_cr": 102.295,
       "distinct_clients": 2,
-      "repeat_buyers": [],
+      "repeat_buyers": [
+        "GOLDMAN SACHS BANK EUROPE SE - ODI"
+      ],
       "short_qty_total": 0,
       "short_days": 0
     },
@@ -787,16 +924,169 @@
       "symbol": "CHOLAFIN",
       "scrip_name": "Cholamandalam In & Fin Co",
       "on_watchlist": false,
+      "deal_count": 4,
+      "known_investors_involved": [],
+      "net_qty": 0,
+      "net_value_cr": 0.0,
+      "buy_value_cr": 132.508,
+      "sell_value_cr": 132.508,
+      "distinct_clients": 2,
+      "repeat_buyers": [
+        "GOLDMAN SACHS BANK EUROPE SE - ODI"
+      ],
+      "short_qty_total": 0,
+      "short_days": 0
+    },
+    {
+      "symbol": "ETERNAL",
+      "scrip_name": "ETERNAL LIMITED",
+      "on_watchlist": false,
+      "deal_count": 6,
+      "known_investors_involved": [],
+      "net_qty": 0,
+      "net_value_cr": 0.0,
+      "buy_value_cr": 714.762,
+      "sell_value_cr": 714.762,
+      "distinct_clients": 2,
+      "repeat_buyers": [
+        "GOLDMAN SACHS BANK EUROPE SE - ODI"
+      ],
+      "short_qty_total": 100,
+      "short_days": 1
+    },
+    {
+      "symbol": "FIVESTAR",
+      "scrip_name": "Five-Star Bus Fin Ltd",
+      "on_watchlist": false,
+      "deal_count": 4,
+      "known_investors_involved": [],
+      "net_qty": 0,
+      "net_value_cr": 0.0,
+      "buy_value_cr": 51.288,
+      "sell_value_cr": 51.288,
+      "distinct_clients": 2,
+      "repeat_buyers": [
+        "GOLDMAN SACHS BANK EUROPE SE - ODI"
+      ],
+      "short_qty_total": 0,
+      "short_days": 0
+    },
+    {
+      "symbol": "GODREJPROP",
+      "scrip_name": "Godrej Properties Ltd",
+      "on_watchlist": false,
+      "deal_count": 6,
+      "known_investors_involved": [],
+      "net_qty": 0,
+      "net_value_cr": 0.0,
+      "buy_value_cr": 276.571,
+      "sell_value_cr": 276.571,
+      "distinct_clients": 2,
+      "repeat_buyers": [
+        "GOLDMAN SACHS BANK EUROPE SE - ODI"
+      ],
+      "short_qty_total": 0,
+      "short_days": 0
+    },
+    {
+      "symbol": "KIMS",
+      "scrip_name": "Krishna Inst of Med Sci L",
+      "on_watchlist": false,
+      "deal_count": 4,
+      "known_investors_involved": [],
+      "net_qty": 0,
+      "net_value_cr": 0.0,
+      "buy_value_cr": 55.034,
+      "sell_value_cr": 55.034,
+      "distinct_clients": 2,
+      "repeat_buyers": [
+        "GOLDMAN SACHS BANK EUROPE SE - ODI"
+      ],
+      "short_qty_total": 0,
+      "short_days": 0
+    },
+    {
+      "symbol": "LEMONTREE",
+      "scrip_name": "Lemon Tree Hotels Ltd",
+      "on_watchlist": false,
+      "deal_count": 4,
+      "known_investors_involved": [],
+      "net_qty": 0,
+      "net_value_cr": 0.0,
+      "buy_value_cr": 40.982,
+      "sell_value_cr": 40.982,
+      "distinct_clients": 2,
+      "repeat_buyers": [
+        "GOLDMAN SACHS BANK EUROPE SE - ODI"
+      ],
+      "short_qty_total": 0,
+      "short_days": 0
+    },
+    {
+      "symbol": "CARBORUNIV",
+      "scrip_name": "Carborundum Univ Ltd",
+      "on_watchlist": false,
       "deal_count": 2,
       "known_investors_involved": [],
       "net_qty": 0,
       "net_value_cr": 0.0,
-      "buy_value_cr": 34.969,
-      "sell_value_cr": 34.969,
+      "buy_value_cr": 27.45,
+      "sell_value_cr": 27.45,
       "distinct_clients": 2,
       "repeat_buyers": [],
       "short_qty_total": 0,
       "short_days": 0
+    },
+    {
+      "symbol": "KOLTEPATIL",
+      "scrip_name": "Kolte - Patil Developers",
+      "on_watchlist": false,
+      "deal_count": 4,
+      "known_investors_involved": [],
+      "net_qty": 0,
+      "net_value_cr": 0.0,
+      "buy_value_cr": 54.711,
+      "sell_value_cr": 54.711,
+      "distinct_clients": 3,
+      "repeat_buyers": [
+        "GOLDMAN SACHS BANK EUROPE SE - ODI"
+      ],
+      "short_qty_total": 0,
+      "short_days": 0
+    },
+    {
+      "symbol": "KOTAKBANK",
+      "scrip_name": "Kotak Mahindra Bank Limit",
+      "on_watchlist": false,
+      "deal_count": 4,
+      "known_investors_involved": [],
+      "net_qty": 0,
+      "net_value_cr": 0.0,
+      "buy_value_cr": 130.595,
+      "sell_value_cr": 130.595,
+      "distinct_clients": 3,
+      "repeat_buyers": [
+        "GOLDMAN SACHS BANK EUROPE SE - ODI"
+      ],
+      "short_qty_total": 0,
+      "short_days": 0
+    },
+    {
+      "symbol": "SHRIRAMFIN",
+      "scrip_name": "Shriram Finance Limited",
+      "on_watchlist": false,
+      "deal_count": 4,
+      "known_investors_involved": [],
+      "net_qty": 0,
+      "net_value_cr": 0.0,
+      "buy_value_cr": 161.384,
+      "sell_value_cr": 161.384,
+      "distinct_clients": 3,
+      "repeat_buyers": [
+        "GOLDMAN SACHS BANK EUROPE SE - ODI"
+      ],
+      "short_qty_total": 5,
+      "short_days": 1
     },
     {
       "symbol": "DHANI",
@@ -808,51 +1098,6 @@
       "net_value_cr": 0.0,
       "buy_value_cr": 23.919,
       "sell_value_cr": 23.919,
-      "distinct_clients": 2,
-      "repeat_buyers": [],
-      "short_qty_total": 0,
-      "short_days": 0
-    },
-    {
-      "symbol": "ETERNAL",
-      "scrip_name": "ETERNAL LIMITED",
-      "on_watchlist": false,
-      "deal_count": 2,
-      "known_investors_involved": [],
-      "net_qty": 0,
-      "net_value_cr": 0.0,
-      "buy_value_cr": 210.636,
-      "sell_value_cr": 210.636,
-      "distinct_clients": 2,
-      "repeat_buyers": [],
-      "short_qty_total": 0,
-      "short_days": 0
-    },
-    {
-      "symbol": "FIVESTAR",
-      "scrip_name": "Five-Star Bus Fin Ltd",
-      "on_watchlist": false,
-      "deal_count": 2,
-      "known_investors_involved": [],
-      "net_qty": 0,
-      "net_value_cr": 0.0,
-      "buy_value_cr": 28.696,
-      "sell_value_cr": 28.696,
-      "distinct_clients": 2,
-      "repeat_buyers": [],
-      "short_qty_total": 0,
-      "short_days": 0
-    },
-    {
-      "symbol": "GODREJPROP",
-      "scrip_name": "Godrej Properties Ltd",
-      "on_watchlist": false,
-      "deal_count": 2,
-      "known_investors_involved": [],
-      "net_qty": 0,
-      "net_value_cr": 0.0,
-      "buy_value_cr": 104.71,
-      "sell_value_cr": 104.71,
       "distinct_clients": 2,
       "repeat_buyers": [],
       "short_qty_total": 0,
@@ -874,15 +1119,45 @@
       "short_days": 0
     },
     {
-      "symbol": "KIMS",
-      "scrip_name": "Krishna Inst of Med Sci L",
+      "symbol": "MANAPPURAM",
+      "scrip_name": "Manappuram Finance Ltd",
       "on_watchlist": false,
       "deal_count": 2,
       "known_investors_involved": [],
       "net_qty": 0,
       "net_value_cr": 0.0,
-      "buy_value_cr": 18.553,
-      "sell_value_cr": 18.553,
+      "buy_value_cr": 32.903,
+      "sell_value_cr": 32.903,
+      "distinct_clients": 2,
+      "repeat_buyers": [],
+      "short_qty_total": 0,
+      "short_days": 0
+    },
+    {
+      "symbol": "OBEROIRLTY",
+      "scrip_name": "Oberoi Realty Limited",
+      "on_watchlist": false,
+      "deal_count": 2,
+      "known_investors_involved": [],
+      "net_qty": 0,
+      "net_value_cr": 0.0,
+      "buy_value_cr": 19.808,
+      "sell_value_cr": 19.808,
+      "distinct_clients": 2,
+      "repeat_buyers": [],
+      "short_qty_total": 0,
+      "short_days": 0
+    },
+    {
+      "symbol": "THELEELA",
+      "scrip_name": "Schloss Bangalore Limited",
+      "on_watchlist": false,
+      "deal_count": 2,
+      "known_investors_involved": [],
+      "net_qty": 0,
+      "net_value_cr": 0.0,
+      "buy_value_cr": 16.379,
+      "sell_value_cr": 16.379,
       "distinct_clients": 2,
       "repeat_buyers": [],
       "short_qty_total": 0,
@@ -994,8 +1269,8 @@
       "repeat_buyers": [
         "GOLDMAN SACHS BANK EUROPE SE - ODI"
       ],
-      "short_qty_total": 0,
-      "short_days": 0
+      "short_qty_total": 35,
+      "short_days": 1
     },
     {
       "symbol": "LLOYDSENGG",
@@ -1046,26 +1321,74 @@
     }
   ],
   "investor_type_breakdown": {
-    "FII/FPI": 59,
-    "Individual/HNI": 60,
-    "Corporate/LLP": 101,
-    "HUF/Trust": 8,
+    "FII/FPI": 82,
+    "Individual/HNI": 101,
+    "HUF/Trust": 9,
+    "Corporate/LLP": 152,
     "Mutual Fund": 21,
     "Insurance": 12,
     "Pension/PF": 1
   },
   "short_sell_summary": [
     {
+      "symbol": "INDIGO",
+      "scrip_name": "INTERGLOBE AVIATION LTD  ",
+      "total_qty": 49951,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "SKYGOLD",
+      "scrip_name": "SKY GOLD AND DIAMONDS LTD",
+      "total_qty": 38928,
+      "days_shorted": 1
+    },
+    {
       "symbol": "DRREDDY",
       "scrip_name": "DR. REDDY'S LABORATORIES",
-      "total_qty": 32500,
-      "days_shorted": 1
+      "total_qty": 32510,
+      "days_shorted": 2
+    },
+    {
+      "symbol": "HDFCAMC",
+      "scrip_name": "HDFC AMC LIMITED",
+      "total_qty": 19650,
+      "days_shorted": 2
     },
     {
       "symbol": "BSE",
       "scrip_name": "BSE LIMITED",
-      "total_qty": 15051,
+      "total_qty": 15053,
+      "days_shorted": 2
+    },
+    {
+      "symbol": "MAHLOG",
+      "scrip_name": "MAHLOG",
+      "total_qty": 11595,
+      "days_shorted": 2
+    },
+    {
+      "symbol": "PSB",
+      "scrip_name": "PUNJAB & SIND BANK",
+      "total_qty": 5974,
       "days_shorted": 1
+    },
+    {
+      "symbol": "TVSMOTOR",
+      "scrip_name": "TVS MOTOR COMPANY  LTD",
+      "total_qty": 4900,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "FSL",
+      "scrip_name": "FIRSTSOURCE SOLU. LTD.",
+      "total_qty": 4500,
+      "days_shorted": 2
+    },
+    {
+      "symbol": "GODFRYPHLP",
+      "scrip_name": "GODFREY PHILLIPS INDIA LT",
+      "total_qty": 4472,
+      "days_shorted": 2
     },
     {
       "symbol": "HDFCBANK",
@@ -1074,27 +1397,39 @@
       "days_shorted": 1
     },
     {
-      "symbol": "MAHLOG",
-      "scrip_name": "MAHLOG",
-      "total_qty": 3645,
+      "symbol": "PARADEEP",
+      "scrip_name": "PARADEEP PHOSPHATES LTD",
+      "total_qty": 4000,
       "days_shorted": 1
     },
     {
-      "symbol": "HDFCAMC",
-      "scrip_name": "HDFC AMC LIMITED",
-      "total_qty": 2400,
-      "days_shorted": 1
-    },
-    {
-      "symbol": "FSL",
-      "scrip_name": "FIRSTSOURCE SOLU. LTD.",
-      "total_qty": 2250,
-      "days_shorted": 1
+      "symbol": "MAFANG",
+      "scrip_name": "MIRAEAMC - MAFANG",
+      "total_qty": 3027,
+      "days_shorted": 2
     },
     {
       "symbol": "BELRISE",
       "scrip_name": "BELRISE INDUSTRIES LTD",
       "total_qty": 2000,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "NEWGEN",
+      "scrip_name": "NEWGEN",
+      "total_qty": 1682,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "TRANSRAILL",
+      "scrip_name": "TRANSRAIL LIGHTING LTD",
+      "total_qty": 1618,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "WAAREEENER",
+      "scrip_name": "WAAREE ENERGIES LIMITED",
+      "total_qty": 1420,
       "days_shorted": 1
     },
     {
@@ -1110,6 +1445,18 @@
       "days_shorted": 1
     },
     {
+      "symbol": "BLACKBUCK",
+      "scrip_name": "ZINKA LOGISTICS SOL LTD",
+      "total_qty": 950,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "CENTUM",
+      "scrip_name": "CENTUM ELECTRONICS LTD",
+      "total_qty": 897,
+      "days_shorted": 1
+    },
+    {
       "symbol": "NETWEB",
       "scrip_name": "NETWEB TECH INDIA LTD",
       "total_qty": 800,
@@ -1122,15 +1469,33 @@
       "days_shorted": 1
     },
     {
+      "symbol": "NCC",
+      "scrip_name": "NCC LIMITED",
+      "total_qty": 500,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "UNIONBANK",
+      "scrip_name": "UNION BANK OF INDIA",
+      "total_qty": 500,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "NATIONALUM",
+      "scrip_name": "NATIONAL ALUMINIUM CO LTD",
+      "total_qty": 351,
+      "days_shorted": 2
+    },
+    {
       "symbol": "COSMOFIRST",
       "scrip_name": "COSMO FIRST LIMITED",
       "total_qty": 328,
       "days_shorted": 1
     },
     {
-      "symbol": "NATIONALUM",
-      "scrip_name": "NATIONAL ALUMINIUM CO LTD",
-      "total_qty": 301,
+      "symbol": "CESC",
+      "scrip_name": "CESC LTD",
+      "total_qty": 300,
       "days_shorted": 1
     },
     {
@@ -1138,6 +1503,18 @@
       "scrip_name": "JSW ENERGY LIMITED",
       "total_qty": 300,
       "days_shorted": 1
+    },
+    {
+      "symbol": "JIOFIN",
+      "scrip_name": "JIO FIN SERVICES LTD",
+      "total_qty": 278,
+      "days_shorted": 2
+    },
+    {
+      "symbol": "ADANIPORTS",
+      "scrip_name": "ADANI PORT & SEZ LTD",
+      "total_qty": 220,
+      "days_shorted": 2
     },
     {
       "symbol": "BAJFINANCE",
@@ -1152,33 +1529,27 @@
       "days_shorted": 1
     },
     {
-      "symbol": "ADANIPORTS",
-      "scrip_name": "ADANI PORT & SEZ LTD",
+      "symbol": "TITAGARH",
+      "scrip_name": "TITAGARH RAIL SYSTEMS",
       "total_qty": 200,
       "days_shorted": 1
     },
     {
-      "symbol": "JIOFIN",
-      "scrip_name": "JIO FIN SERVICES LTD",
-      "total_qty": 174,
+      "symbol": "BAJAJHLDNG",
+      "scrip_name": "BAJAJ HOLDINGS & INVS LTD",
+      "total_qty": 175,
       "days_shorted": 1
     },
     {
       "symbol": "HEROMOTOCO",
       "scrip_name": "HERO MOTOCORP LTD",
-      "total_qty": 151,
-      "days_shorted": 1
+      "total_qty": 161,
+      "days_shorted": 2
     },
     {
       "symbol": "LICHSGFIN",
       "scrip_name": "LIC HOUSING FINANCE LTD",
       "total_qty": 150,
-      "days_shorted": 1
-    },
-    {
-      "symbol": "GODFRYPHLP",
-      "scrip_name": "GODFREY PHILLIPS INDIA LT",
-      "total_qty": 140,
       "days_shorted": 1
     },
     {
@@ -1188,15 +1559,15 @@
       "days_shorted": 1
     },
     {
+      "symbol": "BHEL",
+      "scrip_name": "BHEL",
+      "total_qty": 122,
+      "days_shorted": 2
+    },
+    {
       "symbol": "INFY",
       "scrip_name": "INFOSYS TECHNOLOGIES LTD",
       "total_qty": 114,
-      "days_shorted": 1
-    },
-    {
-      "symbol": "MAFANG",
-      "scrip_name": "MIRAEAMC - MAFANG",
-      "total_qty": 110,
       "days_shorted": 1
     },
     {
@@ -1218,8 +1589,14 @@
       "days_shorted": 1
     },
     {
-      "symbol": "BHEL",
-      "scrip_name": "BHEL",
+      "symbol": "ETERNAL",
+      "scrip_name": "ETERNAL LIMITED",
+      "total_qty": 100,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "INDHOTEL",
+      "scrip_name": "THE INDIAN HOTELS CO. LTD",
       "total_qty": 100,
       "days_shorted": 1
     },
@@ -1230,10 +1607,40 @@
       "days_shorted": 1
     },
     {
+      "symbol": "AVALON",
+      "scrip_name": "AVALON TECHNOLOGIES LTD",
+      "total_qty": 99,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "VEDL",
+      "scrip_name": "VEDANTA LIMITED",
+      "total_qty": 94,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "GPIL",
+      "scrip_name": "GPIL",
+      "total_qty": 92,
+      "days_shorted": 1
+    },
+    {
       "symbol": "CDSL",
       "scrip_name": "CENTRAL DEPOSITORY SERVICES (INDIA) LIMITED",
       "total_qty": 69,
       "days_shorted": 1
+    },
+    {
+      "symbol": "BLUESTARCO",
+      "scrip_name": "BLUE STAR LIMITED",
+      "total_qty": 58,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "CANBK",
+      "scrip_name": "CANARA BANK",
+      "total_qty": 53,
+      "days_shorted": 2
     },
     {
       "symbol": "GENUSPOWER",
@@ -1242,21 +1649,27 @@
       "days_shorted": 1
     },
     {
+      "symbol": "ICICIBANK",
+      "scrip_name": "ICICI BANK LTD.",
+      "total_qty": 48,
+      "days_shorted": 2
+    },
+    {
       "symbol": "LIQUIDBETF",
       "scrip_name": "BFAM - LIQUIDBETF",
       "total_qty": 48,
       "days_shorted": 1
     },
     {
+      "symbol": "LT",
+      "scrip_name": "LARSEN & TOUBRO LTD.",
+      "total_qty": 45,
+      "days_shorted": 2
+    },
+    {
       "symbol": "MARUTI",
       "scrip_name": "MARUTI SUZUKI INDIA LTD.",
       "total_qty": 43,
-      "days_shorted": 1
-    },
-    {
-      "symbol": "ICICIBANK",
-      "scrip_name": "ICICI BANK LTD.",
-      "total_qty": 41,
       "days_shorted": 1
     },
     {
@@ -1272,20 +1685,26 @@
       "days_shorted": 1
     },
     {
+      "symbol": "CIGNITITEC",
+      "scrip_name": "CIGNITI TECHNOLOGIES LTD",
+      "total_qty": 35,
+      "days_shorted": 1
+    },
+    {
       "symbol": "MAZDOCK",
       "scrip_name": "MAZAGON DOCK SHIPBUIL LTD",
       "total_qty": 34,
       "days_shorted": 1
     },
     {
-      "symbol": "LT",
-      "scrip_name": "LARSEN & TOUBRO LTD.",
-      "total_qty": 31,
-      "days_shorted": 1
-    },
-    {
       "symbol": "HAL",
       "scrip_name": "HINDUSTAN AERONAUTICS LTD",
+      "total_qty": 32,
+      "days_shorted": 2
+    },
+    {
+      "symbol": "SBILIFE",
+      "scrip_name": "SBI LIFE INSURANCE COMPANY LIMITED",
       "total_qty": 30,
       "days_shorted": 1
     },
@@ -1308,8 +1727,38 @@
       "days_shorted": 1
     },
     {
+      "symbol": "INDIANB",
+      "scrip_name": "INDIAN BANK",
+      "total_qty": 20,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "JCHAC",
+      "scrip_name": "Johnson Controls \ufffd\ufffd Hitachi Air Conditioning India Limited",
+      "total_qty": 20,
+      "days_shorted": 1
+    },
+    {
       "symbol": "JWL",
       "scrip_name": "JUPITER WAGONS LIMITED",
+      "total_qty": 20,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "KAYNES",
+      "scrip_name": "KAYNES TECHNOLOGY IND LTD",
+      "total_qty": 20,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "SRF",
+      "scrip_name": "SRF LTD",
+      "total_qty": 20,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "STAR",
+      "scrip_name": "STRIDES ARCOLAB LIMITED",
       "total_qty": 20,
       "days_shorted": 1
     },
@@ -1320,8 +1769,26 @@
       "days_shorted": 1
     },
     {
+      "symbol": "BBETF0432",
+      "scrip_name": "EDELAMC - BBETF0432",
+      "total_qty": 18,
+      "days_shorted": 2
+    },
+    {
       "symbol": "HINDUNILVR",
       "scrip_name": "HINDUSTAN UNILEVER LTD.",
+      "total_qty": 15,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "IOC",
+      "scrip_name": "INDIAN OIL CORP LTD",
+      "total_qty": 15,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "PNBHOUSING",
+      "scrip_name": "PNB HOUSING FIN LTD.   ",
       "total_qty": 15,
       "days_shorted": 1
     },
@@ -1332,8 +1799,20 @@
       "days_shorted": 1
     },
     {
+      "symbol": "BEL",
+      "scrip_name": "BHARAT ELECTRONICS LTD",
+      "total_qty": 11,
+      "days_shorted": 2
+    },
+    {
       "symbol": "AURIONPRO",
       "scrip_name": "AURIONPRO SOLN LTD",
+      "total_qty": 10,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "CIPLA",
+      "scrip_name": "CIPLA LTD",
       "total_qty": 10,
       "days_shorted": 1
     },
@@ -1350,16 +1829,22 @@
       "days_shorted": 1
     },
     {
+      "symbol": "AMBER",
+      "scrip_name": "AMBER ENTERPRISES (I) LTD",
+      "total_qty": 9,
+      "days_shorted": 2
+    },
+    {
       "symbol": "BANKINDIA",
       "scrip_name": "BANK OF INDIA",
       "total_qty": 9,
       "days_shorted": 1
     },
     {
-      "symbol": "AMBER",
-      "scrip_name": "AMBER ENTERPRISES (I) LTD",
-      "total_qty": 8,
-      "days_shorted": 1
+      "symbol": "MCX",
+      "scrip_name": "MULTI COMMODITY EXCHANGE OF INDIA LIMITED",
+      "total_qty": 9,
+      "days_shorted": 2
     },
     {
       "symbol": "ASHOKLEY",
@@ -1368,27 +1853,39 @@
       "days_shorted": 1
     },
     {
-      "symbol": "BBETF0432",
-      "scrip_name": "EDELAMC - BBETF0432",
-      "total_qty": 5,
+      "symbol": "ZENTEC",
+      "scrip_name": "ZEN TECHNOLOGIES LIMITED",
+      "total_qty": 8,
       "days_shorted": 1
     },
     {
       "symbol": "ITCHOTELS",
       "scrip_name": "ITC HOTELS LIMITED",
+      "total_qty": 6,
+      "days_shorted": 2
+    },
+    {
+      "symbol": "ASIANPAINT",
+      "scrip_name": "ASIAN PAINTS LIMITED",
       "total_qty": 5,
       "days_shorted": 1
+    },
+    {
+      "symbol": "SHRIRAMFIN",
+      "scrip_name": "SHRIRAM FINANCE LIMITED",
+      "total_qty": 5,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "BANKBARODA",
+      "scrip_name": "BANK OF BARODA",
+      "total_qty": 4,
+      "days_shorted": 2
     },
     {
       "symbol": "CHENNPETRO",
       "scrip_name": "CHENNAI PETROLEUM CORP LT",
       "total_qty": 4,
-      "days_shorted": 1
-    },
-    {
-      "symbol": "CANBK",
-      "scrip_name": "CANARA BANK",
-      "total_qty": 3,
       "days_shorted": 1
     },
     {
@@ -1398,15 +1895,39 @@
       "days_shorted": 1
     },
     {
-      "symbol": "BANKBARODA",
-      "scrip_name": "BANK OF BARODA",
+      "symbol": "CAMPUS",
+      "scrip_name": "CAMPUS ACTIVEWEAR LIMITED",
       "total_qty": 2,
       "days_shorted": 1
+    },
+    {
+      "symbol": "FORCEMOT",
+      "scrip_name": "FORCE MOTORS LIMITED",
+      "total_qty": 2,
+      "days_shorted": 2
     },
     {
       "symbol": "GABRIEL",
       "scrip_name": "GABRIEL INDIA LTD",
       "total_qty": 2,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "TATAMOTORS",
+      "scrip_name": "TATA MOTORS LIMITED",
+      "total_qty": 2,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "UNOMINDA",
+      "scrip_name": "UNO MINDA LIMITED",
+      "total_qty": 2,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "ADANIENSOL",
+      "scrip_name": "ADANI ENERGY SOLUTION LTD",
+      "total_qty": 1,
       "days_shorted": 1
     },
     {
@@ -1416,20 +1937,14 @@
       "days_shorted": 1
     },
     {
-      "symbol": "BEL",
-      "scrip_name": "BHARAT ELECTRONICS LTD",
+      "symbol": "APOLLOTYRE",
+      "scrip_name": "APOLLO TYRES LTD",
       "total_qty": 1,
       "days_shorted": 1
     },
     {
       "symbol": "FACT",
       "scrip_name": "FACT LTD",
-      "total_qty": 1,
-      "days_shorted": 1
-    },
-    {
-      "symbol": "FORCEMOT",
-      "scrip_name": "FORCE MOTORS LIMITED",
       "total_qty": 1,
       "days_shorted": 1
     },
@@ -1458,8 +1973,14 @@
       "days_shorted": 1
     },
     {
-      "symbol": "MCX",
-      "scrip_name": "MULTI COMMODITY EXCHANGE OF INDIA LIMITED",
+      "symbol": "ITC",
+      "scrip_name": "ITC LTD",
+      "total_qty": 1,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "M&M",
+      "scrip_name": "MAHINDRA & MAHINDRA LTD",
       "total_qty": 1,
       "days_shorted": 1
     },
@@ -1474,12 +1995,152 @@
       "scrip_name": "THE NEW INDIA ASSU CO LTD",
       "total_qty": 1,
       "days_shorted": 1
+    },
+    {
+      "symbol": "PSPPROJECT",
+      "scrip_name": "PSP PROJECTS LIMITED",
+      "total_qty": 1,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "RBLBANK",
+      "scrip_name": "RBL BANK LIMITED    ",
+      "total_qty": 1,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "REDINGTON",
+      "scrip_name": "REDINGTON (INDIA) LTD.",
+      "total_qty": 1,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "SBIN",
+      "scrip_name": "STATE BANK OF INDIA",
+      "total_qty": 1,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "SHAKTIPUMP",
+      "scrip_name": "SHAKTI PUMPS (I) LTD",
+      "total_qty": 1,
+      "days_shorted": 1
+    },
+    {
+      "symbol": "SOLARINDS",
+      "scrip_name": "SOLAR INDUSTRIES (I) LTD",
+      "total_qty": 1,
+      "days_shorted": 1
     }
   ],
   "insider_trading": {
     "note": "Best-effort keyword match against NSE's general announcements feed - not a guaranteed-complete list.",
-    "announcements_scanned": 18104,
+    "announcements_scanned": 18321,
     "filings": [
+      {
+        "date": "06-Aug-2026 18:29:25",
+        "symbol": "SUNDROP",
+        "company": "Sundrop Brands Limited",
+        "description": "General Updates",
+        "summary": "Sundrop Brands Limited has informed the Exchange about amendments to the Code of Conduct to regulate, monitor and report trading by Insiders & Code of practices and procedures for fair disclosure of unpublished price sensitive information as per the Securities and Exchange Board of India (Prohibition of Insider Trading) Regulations, 2015 read with amendments therein.",
+        "filing_url": "https://nsearchives.nseindia.com/corporate/Kavita_Sundrop_06082026182912_IntimationforoutcomeofBMAugust062026.pdf"
+      },
+      {
+        "date": "06-Aug-2026 18:18:28",
+        "symbol": "NECCLTD",
+        "company": "North Eastern Carrying Corporation Limited",
+        "description": "Trading Window",
+        "summary": "North Eastern Carrying Corporation Limited has informed the Exchange regarding the Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015",
+        "filing_url": "https://nsearchives.nseindia.com/corporate/NECCLTD_06082026181816_ClosureofTradingWindow06082026.pdf"
+      },
+      {
+        "date": "06-Aug-2026 18:10:10",
+        "symbol": "TRAVELFOOD",
+        "company": "Travel Food Services Limited",
+        "description": "Trading Window",
+        "summary": "Travel Food Services Limited has informed the Exchange regarding the Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015",
+        "filing_url": "https://nsearchives.nseindia.com/corporate/TRAVELFOOD_06082026180852_TFSLBMandWindowclosureIntimation06082026.pdf"
+      },
+      {
+        "date": "06-Aug-2026 17:25:25",
+        "symbol": "MVELECTRO",
+        "company": "MV Electrosystems Limited",
+        "description": "Trading Window",
+        "summary": "MV Electrosystems Limited has informed the Exchange regarding the Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015",
+        "filing_url": "https://nsearchives.nseindia.com/corporate/MVELECTROSYSTEMS_06082026172357_Intimation_of_closure_of_trading_window.pdf"
+      },
+      {
+        "date": "06-Aug-2026 17:16:32",
+        "symbol": "MVELECTRO",
+        "company": "MV Electrosystems Limited",
+        "description": "Updates",
+        "summary": "MV Electrosystems Limited has informed the Exchange regarding 'In&#1048991;ma&#1048991;on under Regula&#1048991;on 8(2) of the Securi&#1048991;es and Exchange Board of India (Prohibi&#1048991;on ofInsider Trading) Regula&#1048991;ons, 2015'.",
+        "filing_url": "https://nsearchives.nseindia.com/corporate/MVELECTROSYSTEMS_06082026171607_Reg_8_2__PIT.pdf"
+      },
+      {
+        "date": "06-Aug-2026 17:03:16",
+        "symbol": "PODDARMENT",
+        "company": "Poddar Pigments Limited",
+        "description": "Trading Window",
+        "summary": "Poddar Pigments Limited has informed the Exchange regarding the Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015",
+        "filing_url": "https://nsearchives.nseindia.com/corporate/PODDARMENT_06082026170211_Intimation_of_BM_to_Stock_Exchanges.pdf"
+      },
+      {
+        "date": "06-Aug-2026 11:59:24",
+        "symbol": "JNPR",
+        "company": "Juniper Green Energy Limited",
+        "description": "Updates",
+        "summary": "Juniper Green Energy Limited has informed the Exchange regarding Intimation under Regulation 8(2) of the Securities and Exchange Board of India (Prohibition of Insider Trading) Regulations, 2015 (\"SEBI PIT Regulations\") for submission of Code of Practices and Procedures for Fair Disclosure of Unpublished Price Sensitive Information  framed under Regulation 8(1) of SEBI PIT Regulations",
+        "filing_url": "https://nsearchives.nseindia.com/corporate/JGEL2025_06082026115706_Code_of_Fair_DisclosureIntimation.pdf"
+      },
+      {
+        "date": "06-Aug-2026 11:52:44",
+        "symbol": "JNPR",
+        "company": "Juniper Green Energy Limited",
+        "description": "Trading Window",
+        "summary": "Juniper Green Energy Limited has informed the Exchange regarding the Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015",
+        "filing_url": "https://nsearchives.nseindia.com/corporate/JGEL2025_06082026115223_IntimationClosureofTradingWindow.pdf"
+      },
+      {
+        "date": "06-Aug-2026 11:48:03",
+        "symbol": "DSFCL",
+        "company": "DCM Shriram Fine Chemicals Limited",
+        "description": "Disclosure under SEBI Takeover Regulations",
+        "summary": "Suman Bansi Dhar has submitted to the Exchange a copy of Disclosures under Regulation 10(6)-Report to stock Exchange in respect of any acquisition made in reliance upon exemption provided for in regulation 10 of SEBI (SAST) Regulations, 2011.",
+        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_06082026114520_DSFCL.pdf"
+      },
+      {
+        "date": "06-Aug-2026 11:46:53",
+        "symbol": "DCMSRIND",
+        "company": "DCM Shriram Industries Limited",
+        "description": "Disclosure under SEBI Takeover Regulations",
+        "summary": "Suman Bansi Dhar has submitted to the Exchange a copy of Disclosures under Regulation 10(6)-Report to stock Exchange in respect of any acquisition made in reliance upon exemption provided for in regulation 10 of SEBI (SAST) Regulations, 2011.",
+        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_06082026114438_10_DCMSRIND.pdf"
+      },
+      {
+        "date": "06-Aug-2026 11:45:31",
+        "symbol": "DCMSIL",
+        "company": "DCM Shriram International Limited",
+        "description": "Disclosure under SEBI Takeover Regulations",
+        "summary": "Suman Bansi Dhar has submitted to the Exchange a copy of Disclosures under Regulation 10(6)-Report to stock Exchange in respect of any acquisition made in reliance upon exemption provided for in regulation 10 of SEBI (SAST) Regulations, 2011.",
+        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_06082026114349_DCMSIL.pdf"
+      },
+      {
+        "date": "06-Aug-2026 11:17:11",
+        "symbol": "DCMSRIND",
+        "company": "DCM Shriram Industries Limited",
+        "description": "Disclosure under SEBI Takeover Regulations",
+        "summary": "Madhav Bansidhar Shriram has submitted to the Exchange a copy of Disclosures under Regulation 10(6)-Report to stock Exchange in respect of any acquisition made in reliance upon exemption provided for in regulation 10 of SEBI (SAST) Regulations, 2011.",
+        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_06082026111446_10MBS.pdf"
+      },
+      {
+        "date": "06-Aug-2026 11:16:06",
+        "symbol": "DCMSIL",
+        "company": "DCM Shriram International Limited",
+        "description": "Disclosure under SEBI Takeover Regulations",
+        "summary": "Alok Bansidhar Shriram has submitted to the Exchange a copy of Disclosures under Regulation 10(6)-Report to stock Exchange in respect of any acquisition made in reliance upon exemption provided for in regulation 10 of SEBI (SAST) Regulations, 2011.",
+        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_06082026111316_DCMSIL_Alok.pdf"
+      },
       {
         "date": "05-Aug-2026 19:37:08",
         "symbol": "BRIGADE",
@@ -4175,646 +4836,6 @@
         "description": "Structural Digital Database",
         "summary": "Please find enclosed herewith SDD Compliance Certificate issued by Practising Company Secretary for the quarter ended June 30, 2026 for compliance with provisions of the SEBI (Prohibition of Insider Trading) Regulations, 2015.",
         "filing_url": "https://nsearchives.nseindia.com/corporate/MUKANDLTD_07072026095711_ML-SDDCompCert-Jun26SD.pdf"
-      },
-      {
-        "date": "06-Jul-2026 20:28:00",
-        "symbol": "CHOLAFIN",
-        "company": "Cholamandalam Investment and Finance Company Limited",
-        "description": "Trading Window",
-        "summary": "Cholamandalam Investment and Finance Company Limited has informed the Exchange regarding the Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/lakshmits_06072026202744_BoardMeetingIntimation_July2026.pdf"
-      },
-      {
-        "date": "06-Jul-2026 17:00:59",
-        "symbol": "GRADIENTE",
-        "company": "Gradiente Infotainment Limited",
-        "description": "Updates",
-        "summary": "Gradiente Infotainment Limited has informed the Exchange regarding 'Disclosure regarding Creation of Pledge against Shares held by Promoters and Promoter Group under Regulation 31(1) of the SEBI (Substantial Acquisition of Shares & Takeovers) Regulations, 2011'.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/GRADIENTE_06072026170045_Intimation_of_Pledge_of_Shares_Vimal_Raj_Mathur.pdf"
-      },
-      {
-        "date": "06-Jul-2026 16:59:12",
-        "symbol": "INDOTECH",
-        "company": "Indo Tech Transformers Limited",
-        "description": "Trading Window",
-        "summary": "Indo Tech Transformers Limited has informed the Exchange regarding the Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/INDOTECH_06072026165825_Upload.pdf"
-      },
-      {
-        "date": "06-Jul-2026 15:59:30",
-        "symbol": "JAYSREETEA",
-        "company": "Jayshree Tea & Industries Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Jayshree Tea & Industries Limited\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_01072026164615_JAYSREETEA.pdf"
-      },
-      {
-        "date": "06-Jul-2026 15:54:02",
-        "symbol": "RTNPOWER",
-        "company": "RattanIndia Power Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Rajiv Rattan Family Trust has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_01072026125037_42.pdf"
-      },
-      {
-        "date": "06-Jul-2026 15:53:26",
-        "symbol": "RTNPOWER",
-        "company": "RattanIndia Power Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Anjali Nashier Family Trust has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_01072026124744_43.pdf"
-      },
-      {
-        "date": "06-Jul-2026 15:48:35",
-        "symbol": "RTNPOWER",
-        "company": "RattanIndia Power Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Anjali Nashier Family Trust 2 has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_01072026124412_44.pdf"
-      },
-      {
-        "date": "06-Jul-2026 15:47:11",
-        "symbol": "RTNPOWER",
-        "company": "RattanIndia Power Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Rajiv Rattan Family Trust 2 has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_01072026123610_45.pdf"
-      },
-      {
-        "date": "06-Jul-2026 15:45:51",
-        "symbol": "RTNPOWER",
-        "company": "RattanIndia Power Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Rajiv Rattan has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_01072026123410_46.pdf"
-      },
-      {
-        "date": "06-Jul-2026 15:05:58",
-        "symbol": "ORCHASP",
-        "company": "Orchasp Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Chandra Sekhar Pattapurathi has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026134459_39.pdf"
-      },
-      {
-        "date": "06-Jul-2026 15:04:32",
-        "symbol": "AARTIDRUGS",
-        "company": "Aarti Drugs Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Harshit M. Savla has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026134334_40.pdf"
-      },
-      {
-        "date": "06-Jul-2026 15:03:16",
-        "symbol": "RTNINDIA",
-        "company": "RattanIndia Enterprises Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Rajiv Rattan Family Trust 2 has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026134235_41.pdf"
-      },
-      {
-        "date": "06-Jul-2026 15:02:25",
-        "symbol": "RTNINDIA",
-        "company": "RattanIndia Enterprises Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Rajiv Rattan Family Trust has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026134111_42.pdf"
-      },
-      {
-        "date": "06-Jul-2026 15:00:33",
-        "symbol": "RTNINDIA",
-        "company": "RattanIndia Enterprises Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Anjali Nashier Family Trust has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026133059_44.pdf"
-      },
-      {
-        "date": "06-Jul-2026 14:59:16",
-        "symbol": "EMBDL",
-        "company": "Embassy Developments Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Jitendra Virwani, Aditya Virwani, JV Holding Pvt Ltd, Embassy PropertyDevelopments Pvt Ltd, Karan Virwani, Neel Virwani, OMR Investments LLP, Bellanza Developers Private Limited has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026122059_disc1.pdf"
-      },
-      {
-        "date": "06-Jul-2026 14:55:26",
-        "symbol": "RELIABLE",
-        "company": "Reliable Data Services Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Reliable Data Services Limited has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026114939_encumbrance.pdf"
-      },
-      {
-        "date": "06-Jul-2026 14:54:22",
-        "symbol": "INDOUS",
-        "company": "Indo Us Biotech Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Jagdishkumar Devjibhai Ajudiya has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026114733_49.pdf"
-      },
-      {
-        "date": "06-Jul-2026 14:53:12",
-        "symbol": "GCSL",
-        "company": "Gretex Corporate Services Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Gretex Corporate Services Limited has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026114631_GCSL_Disclosure.pdf"
-      },
-      {
-        "date": "06-Jul-2026 14:51:15",
-        "symbol": "APTECHT",
-        "company": "Aptech Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Aptech Investments acting through its partner M/s. RARE Equity Pvt. Ltd. has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_12052026121003_41.pdf"
-      },
-      {
-        "date": "06-Jul-2026 14:51:03",
-        "symbol": "KKCL",
-        "company": "Kewal Kiran Clothing Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Kewal Kiran Clothing Limited has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_12052026120801_43.PDF"
-      },
-      {
-        "date": "06-Jul-2026 14:50:36",
-        "symbol": "VINDHYATEL",
-        "company": "Vindhya Telelinks Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "The Punjab Produce & Trading Co. Pvt. Ltd. has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_12052026120512_VTL.pdf"
-      },
-      {
-        "date": "06-Jul-2026 14:50:04",
-        "symbol": "PGIL",
-        "company": "Pearl Global Industries Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Pulkit Seth has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_12052026120411_Annual.pdf"
-      },
-      {
-        "date": "06-Jul-2026 14:49:48",
-        "symbol": "LOKESHMACH",
-        "company": "Lokesh Machines Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Mullapudi Lokeswara Rao has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_12052026120145_44.pdf"
-      },
-      {
-        "date": "06-Jul-2026 14:49:44",
-        "symbol": "ASTRON",
-        "company": "Astron Paper & Board Mill Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Kirit Patel, Karshanbhai Hirabhai Patel, Ramakant Kantibhai Patel, Shreerangam Packaging Pvt. Ltd., Haresh Ambalal Patel, has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026114342_Regulation.pdf"
-      },
-      {
-        "date": "06-Jul-2026 14:49:33",
-        "symbol": "VISACHROME",
-        "company": "VISA Chrome Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "VISASTEEL : VISA Infrastructure Limited has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_12052026120033_45.pdf"
-      },
-      {
-        "date": "06-Jul-2026 14:49:20",
-        "symbol": "HEXT",
-        "company": "Hexaware Technologies Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "CA Magnum Holdings has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_12052026115921_46.pdf"
-      },
-      {
-        "date": "06-Jul-2026 14:49:03",
-        "symbol": "AEGISLOG",
-        "company": "Aegis Logistics Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "HURON HOLDINGS LIMITED has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) and 31 (5) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_12052026115802_47.pdf"
-      },
-      {
-        "date": "06-Jul-2026 14:45:59",
-        "symbol": "SIGMAADV",
-        "company": "SIGMA ADVANCED SYSTEMS LIMITED",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "SIGMA ADVANCED SYSTEMS LIMITED has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026113618_SIGMAADV.zip"
-      },
-      {
-        "date": "06-Jul-2026 13:24:46",
-        "symbol": "UGARSUGAR",
-        "company": "The Ugar Sugar Works Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "The Ugar Sugar Works Limited has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026113444_SAST.pdf"
-      },
-      {
-        "date": "06-Jul-2026 13:22:57",
-        "symbol": "JINDALSTEL",
-        "company": "JINDAL STEEL LIMITED",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Opelina Sustainable Services Private Limited has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026113321_Opelina.pdf"
-      },
-      {
-        "date": "06-Jul-2026 13:21:38",
-        "symbol": "USHAMART",
-        "company": "Usha Martin Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Usha Martin Ventures Limited has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026113210_UMVL.pdf"
-      },
-      {
-        "date": "06-Jul-2026 12:36:11",
-        "symbol": "KAVDEFENCE",
-        "company": "Kavveri Defence & Wireless Technologies Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Ruma Reddy Chenna Reddy has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026113056_Ruma.pdf"
-      },
-      {
-        "date": "06-Jul-2026 12:30:52",
-        "symbol": "ICDSLTD",
-        "company": "ICDS Limited",
-        "description": "Structural Digital Database",
-        "summary": "Pursuant to provisions of Regulation 3(5) and Regulation 3(6) of SEBI PIT Regulations, we are herewith submitting the SDD compliance certificate for the quarter ended June 30, 2026",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/ICDSLTD_06072026122936_SDD_Compliance_Certificate_June_2026.pdf"
-      },
-      {
-        "date": "06-Jul-2026 12:19:29",
-        "symbol": "NIMBSPROJ",
-        "company": "Nimbus Projects Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Yamini Agarwal has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026112821_Disclosure.pdf"
-      },
-      {
-        "date": "06-Jul-2026 12:16:21",
-        "symbol": "VIYASH",
-        "company": "Viyash Scientific Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "CA Harbor Investments and CA Hull Investments has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026111033_VIYASH.zip"
-      },
-      {
-        "date": "06-Jul-2026 12:14:15",
-        "symbol": "KAVDEFENCE",
-        "company": "Kavveri Defence & Wireless Technologies Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Chennareddy Rohit Reddy has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026110841_50.pdf"
-      },
-      {
-        "date": "06-Jul-2026 12:03:25",
-        "symbol": "NAZARA",
-        "company": "Nazara Technologies Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Nitish Mittersain has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026115250_Regulation1.pdf"
-      },
-      {
-        "date": "06-Jul-2026 12:01:55",
-        "symbol": "HLVLTD",
-        "company": "HLV LIMITED",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "HLV LIMITED has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026115634_Disclosure2.pdf"
-      },
-      {
-        "date": "06-Jul-2026 12:01:31",
-        "symbol": "RTNINDIA",
-        "company": "RattanIndia Enterprises Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Rajiv Rattan has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026115759_Disclosure3.pdf"
-      },
-      {
-        "date": "06-Jul-2026 12:00:52",
-        "symbol": "RTNINDIA",
-        "company": "RattanIndia Enterprises Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Ram Kumar has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026115950_Disclosure4.pdf"
-      },
-      {
-        "date": "06-Jul-2026 12:00:24",
-        "symbol": "M&M",
-        "company": "Mahindra & Mahindra Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Anand Mahindra has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026120214_Decalaration.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:59:07",
-        "symbol": "RTNINDIA",
-        "company": "RattanIndia Enterprises Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Santosh has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026120401_Disclosure6.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:58:49",
-        "symbol": "RTNINDIA",
-        "company": "RattanIndia Enterprises Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Yantra Energetics Private Limited has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026120519_Disclosure7.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:58:16",
-        "symbol": "AAREYDRUGS",
-        "company": "Aarey Drugs & Pharmaceuticals Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Nimit Rajesh Ghatalia has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026120705_REG.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:57:41",
-        "symbol": "KALPATARU",
-        "company": "Kalpataru Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Mofatraj P. Munot has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026120909_KL_Disclosure.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:57:22",
-        "symbol": "JASH",
-        "company": "Jash Engineering Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Suresh Patel has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026121021_JASHPROMOTER.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:57:01",
-        "symbol": "RTNINDIA",
-        "company": "RattanIndia Enterprises Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Laurel Energetics Private Limited has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026122004_Disclosure8.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:56:22",
-        "symbol": "RTNINDIA",
-        "company": "RattanIndia Enterprises Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Arbutus Consultancy LLP has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026122300_48.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:55:40",
-        "symbol": "RTNINDIA",
-        "company": "RattanIndia Enterprises Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Nettle Constructions Private Limited has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026122356_47.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:55:28",
-        "symbol": "PROZONER",
-        "company": "Prozone Realty Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Ajayendra Pratap Jain has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026122458_46.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:55:05",
-        "symbol": "PVRINOX",
-        "company": "PVR INOX Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Pavan Kumar Jain, Siddharth Jain, Nayantara Jain, GFL Limited, INOX Infrastructure Limited has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026122632_45.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:54:22",
-        "symbol": "MARATHON",
-        "company": "Marathon Nextgen Realty Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Chetan Shah has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026133215_MNRL.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:54:06",
-        "symbol": "RTNINDIA",
-        "company": "RattanIndia Enterprises Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Anjali Nashier Family Trust 2 has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_30062026133822_43.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:46:04",
-        "symbol": "TEXINFRA",
-        "company": "Texmaco Infrastructure & Holdings Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Anisha Berlia\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_24042026163516_TEXINFRA5.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:45:36",
-        "symbol": "KIRLOSIND",
-        "company": "Kirloskar Industries Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Rahul Kirloskar has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_20042026131009_35.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:33:49",
-        "symbol": "ARSSBL",
-        "company": "Anand Rathi Share and Stock Brokers Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "\u00a0Pradeep Navratan Gupta\u00a0\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026152940_ARSSBL.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:33:19",
-        "symbol": "RAIN",
-        "company": "Rain Industries Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "\u00a0N. Sujith Kumar Reddy\u00a0\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026153152_RAIN.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:31:34",
-        "symbol": "AVONMORE",
-        "company": "Avonmore Capital & Management Services Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "\u00a0Navjeet Singh Sobti (HUF)\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026153618_AVONMORE.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:30:56",
-        "symbol": "JINDALPOLY",
-        "company": "Jindal Poly Films Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "\u00a0Concatenate Flexi Films Advest Private Limited\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026154541_JINDALPOLY1.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:29:14",
-        "symbol": "AVONMORE",
-        "company": "Avonmore Capital & Management Services Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Navjeet Singh Sobti (HUF)\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026154115_AVONMORE1.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:28:43",
-        "symbol": "ARROWGREEN",
-        "company": "Arrow Greentech Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Arrow Greentech Limited\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026154323_ARROWGREEN.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:27:40",
-        "symbol": "POCL",
-        "company": "Pondy Oxides & Chemicals Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Pondy Oxides & Chemicals Limited\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026155123_POCL.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:21:29",
-        "symbol": "CORALFINAC",
-        "company": "Coral India Finance & Housing Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Sachin Doshi\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026155659_CORALFINAC1.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:21:14",
-        "symbol": "SALSTEEL",
-        "company": "S.A.L. Steel Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "S.A.L. Steel Limited\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026160045_SALSTEEL.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:20:58",
-        "symbol": "CHAMBLFERT",
-        "company": "Chambal Fertilizers & Chemicals Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "\u00a0Earthstone Holding (Two) Private Limited\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026160247_CHAMBLFERT.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:20:40",
-        "symbol": "FUSION",
-        "company": "Fusion Finance Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "\u00a0Devesh Sachdev\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026160514_FUSION.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:20:19",
-        "symbol": "RNBDENIMS",
-        "company": "R&B Denims Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Amit Dalmia\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026160825_RNBDENIMS.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:14:55",
-        "symbol": "DIVISLAB",
-        "company": "Divi's Laboratories Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "\u00a0Divi's Laboratories Limited\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026161059_DIVISLAB.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:13:57",
-        "symbol": "RAMASTEEL",
-        "company": "Rama Steel Tubes Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "\u00a0Naresh Kumar Bansal\u00a0\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026161658_RAMASTEEL.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:13:37",
-        "symbol": "PUNJABCHEM",
-        "company": "Punjab Chemicals & Crop Protection Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "\u00a0Shalil S Shroff\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026161917_PUNJABCHEM.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:13:19",
-        "symbol": "CORALFINAC",
-        "company": "Coral India Finance & Housing Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Meeta Samir Sheth\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026162143_CORALFINAC22.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:12:58",
-        "symbol": "MIRZAINT",
-        "company": "Mirza International Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Mirza International Limited\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026162504_MIRZAINT.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:11:48",
-        "symbol": "ASHAPURMIN",
-        "company": "Ashapura Minechem Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "CHETAN NAVNITLAL SHAH\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026163809_ASHAPURMIN.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:11:01",
-        "symbol": "PRECWIRE",
-        "company": "Precision Wires India Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "\u00a0Milan Mahendra Mehta\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026172428_PRECWIRE.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:10:39",
-        "symbol": "NITIRAJ",
-        "company": "Nitiraj Engineers Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Nitiraj Engineers Limited\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026174308_NITIRAJ.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:10:14",
-        "symbol": "GULPOLY",
-        "company": "Gulshan Polyols Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "\u00a0Dr. Chandra Kumar Jain\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026174841_GULPOLY1.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:09:25",
-        "symbol": "PYRAMID",
-        "company": "Pyramid Technoplast Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Pyramid Technoplast Limited\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026180516_PYRAMID.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:08:40",
-        "symbol": "ACEINTEG",
-        "company": "Ace Integrated Solutions Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "\u00a0CHANDRA SHEKHAR VERMA\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026181802_ACEINTEG.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:08:04",
-        "symbol": "ETHOSLTD",
-        "company": "Ethos Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "Ethos Limited\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) and 31 (5) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026181953_ETHOSLTD.pdf"
-      },
-      {
-        "date": "06-Jul-2026 11:07:44",
-        "symbol": "CONSOFINVT",
-        "company": "Consolidated Finvest & Holdings Limited",
-        "description": "Disclosure under SEBI Takeover Regulations",
-        "summary": "\u00a0Concatenate Advest Advisory Private Limited\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 31(4) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_28042026182246_CONSOFINVT1.pdf"
       }
     ]
   }
