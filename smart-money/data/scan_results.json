@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-06T14:01:04.916048+00:00",
+  "generated_at_utc": "2026-08-06T14:40:57.268355+00:00",
   "cache_span_days": 366,
   "recent_display_days": 60,
   "watchlist_size": 8,
@@ -2344,7 +2344,7 @@
   ],
   "insider_trading": {
     "note": "Best-effort keyword match against NSE's general announcements feed - not a guaranteed-complete list.",
-    "announcements_scanned": 18496,
+    "announcements_scanned": 18558,
     "filings": [
       {
         "date": "06-Aug-2026 18:49:33",
