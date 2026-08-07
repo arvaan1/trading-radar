@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-07T07:49:47.222564+00:00",
+  "generated_at_utc": "2026-08-07T12:30:54.649728+00:00",
   "vix": {
     "latest": 12.16,
     "avg_5d": 30.43,
@@ -161,12 +161,12 @@
   ],
   "breadth": {
     "nifty50": {
-      "advances": 20,
-      "declines": 28
+      "advances": 24,
+      "declines": 26
     },
     "nifty500": {
       "advances": 232,
-      "declines": 265
+      "declines": 263
     }
   },
   "fii_dii_cash": {
@@ -403,6 +403,10 @@
         "change_vs_prior_day": 125421.0
       }
     ]
+  },
+  "signal_breadth": {
+    "available": false,
+    "note": "Neither DMA Radar nor Delivery Radar has a signal log yet - this fills in once both tools have run at least once."
   },
   "history_days_cached": 43
 }
