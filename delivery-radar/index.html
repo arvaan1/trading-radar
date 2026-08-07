@@ -143,6 +143,15 @@
 
   <div id="tableWrap"></div>
 
+  <section style="margin-top:32px;background:var(--bg-panel);border:1px solid var(--line);border-radius:8px;padding:20px 22px;">
+    <h2 style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600;margin:0 0 4px;">Track Record</h2>
+    <div style="font-size:12px;color:var(--ink-dim);font-family:'IBM Plex Mono',monospace;margin-bottom:14px;">
+      How this tool's own past signals have actually performed, from a running log of every signal it's fired - not a backtest
+      against history before this tool existed, only against what it's genuinely called since. Grows more meaningful over time.
+    </div>
+    <div id="trackRecordWrap"></div>
+  </section>
+
   <footer>
     Data: NSE delivery/price-volume data via nselib. Delivery % confirms shares actually settled -
     it does not by itself prove who was buying vs selling; price context (shown per row) is a hint, not proof.
@@ -171,6 +180,7 @@ async function load(){
     state.rows = data.results || [];
     renderMeta(data);
     renderStats(data);
+    renderTrackRecord(data);
     render();
   }catch(err){
     document.getElementById('meta').textContent = 'No scan data yet';
@@ -202,6 +212,37 @@ function renderStats(data){
   document.getElementById('statStrip').innerHTML = stats.map(s =>
     `<div class="stat ${s.cls}"><div class="n">${s.n}</div><div class="l">${s.l}</div></div>`
   ).join('');
+}
+
+const DELIVERY_TRACK_LABEL = {
+  quiet_accumulation: 'Quiet build-up', confirmed_accumulation: 'Confirmed accumulation',
+  possible_distribution: 'Possible distribution', speculative_churn: 'Speculative churn',
+};
+
+function renderTrackRecord(data){
+  const tr = data.track_record || {};
+  const keys = Object.keys(tr);
+  if(keys.length === 0){
+    document.getElementById('trackRecordWrap').innerHTML =
+      `<div class="empty">No signals have aged enough yet to backtest (needs 10+ trading days since first logged). Signal log so far: ${data.signal_log_size || 0} instance(s). Fills in on its own as the log accumulates.</div>`;
+    return;
+  }
+  let html = '<table><thead><tr><th>Signal</th><th>N (10d)</th><th>Avg Return (10d)</th><th>Hit Rate (10d)</th><th>N (20d)</th><th>Avg Return (20d)</th><th>Hit Rate (20d)</th></tr></thead><tbody>';
+  keys.forEach(sig => {
+    const t = tr[sig];
+    const fmtRet = (v) => v == null ? '—' : `<span style="color:${v>=0?'var(--teal)':'var(--rose)'}">${v>0?'+':''}${v.toFixed(2)}%</span>`;
+    html += `<tr>
+      <td class="sym">${DELIVERY_TRACK_LABEL[sig] || sig}</td>
+      <td class="num">${t.n_10d ?? '—'}</td>
+      <td class="num">${fmtRet(t.avg_return_10d)}</td>
+      <td class="num">${t.hit_rate_10d != null ? t.hit_rate_10d.toFixed(1)+'%' : '—'}</td>
+      <td class="num">${t.n_20d ?? '—'}</td>
+      <td class="num">${fmtRet(t.avg_return_20d)}</td>
+      <td class="num">${t.hit_rate_20d != null ? t.hit_rate_20d.toFixed(1)+'%' : '—'}</td>
+    </tr>`;
+  });
+  html += '</tbody></table>';
+  document.getElementById('trackRecordWrap').innerHTML = html;
 }
 
 function sparkHTML(series){
@@ -240,7 +281,7 @@ function render(){
     ['symbol','Symbol'], ['last_close','Close'], ['price_change_pct','Chg %'],
     ['delivery_pct','Deliv %'], ['delivery_zscore_20d','Z (20d)'], ['delivery_zscore_60d','Z (60d)'],
     ['vol_ratio_20d','Vol vs 20d'], ['delivered_value_cr','Value (Cr)'],
-    ['signal','Signal'], ['_spark','Last 20d'], ['score','Score']
+    ['signal','Signal'], ['_corrob','Smart Money'], ['_spark','Last 20d'], ['score','Score']
   ];
 
   let html = '<table><thead><tr>';
@@ -266,6 +307,7 @@ function render(){
     html += `<td class="num">${r.vol_ratio_20d != null ? r.vol_ratio_20d.toFixed(2)+'×' : '—'}</td>`;
     html += `<td class="num">${r.delivered_value_cr != null ? r.delivered_value_cr.toFixed(2) : '—'}</td>`;
     html += `<td><span class="badge ${r.signal}">${SIGNAL_LABEL[r.signal]}</span></td>`;
+    html += `<td>${r.smart_money_corroborated ? '<span style="color:var(--teal);font-weight:600;">✓ corroborated</span>' : (r.smart_money_deal_count ? `<span style="color:var(--ink-dim);">${r.smart_money_deal_count} deal(s)</span>` : '<span style="color:var(--ink-dim);">—</span>')}</td>`;
     html += `<td>${sparkHTML(r.delivery_sparkline_20d)}</td>`;
     html += `<td class="num">${scoreBar(r.score)}</td>`;
     html += '</tr>';

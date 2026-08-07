@@ -23,13 +23,10 @@ Mechanics:
       history of (date, symbol, close, prev_close, avg_price, traded_qty,
       deliverable_qty, delivery_pct) for every symbol in your watchlist.
     - Each run, only downloads whatever trading days are missing since the
-      last run (usually just 1). First run backfills ~115 calendar days
+      last run (usually just 1). First run backfills ~130 calendar days
       to get enough history for the 60-day baseline.
     - Weekends/holidays are skipped automatically (NSE simply doesn't
       publish a file that day - a 404 there is expected, not an error).
-    - If the watchlist has grown since the cache was last built, a full
-      re-backfill is forced so newly-added symbols get real history too,
-      instead of silently being stuck at near-zero sessions forever.
     - Signal math (z-scores, categories, scoring) is IDENTICAL to v1.
 
 Usage:
@@ -127,18 +124,52 @@ def download_bhavcopy_live(date: datetime) -> pd.DataFrame | None:
         return None
 
 
+_DEMO_PRICE_WALKS: dict[str, pd.Series] = {}
+
+
+def _get_demo_price_walk(symbol: str) -> pd.Series:
+    """A real, continuous random walk per symbol (seeded deterministically
+    from the symbol name so results are reproducible), covering enough
+    history that any date the backfill asks for has a real answer. Built
+    once per symbol and cached, since download_bhavcopy_demo() is called
+    once per DAY (covering all symbols) - without this, each day's price
+    was being generated independently from a hash of the symbol name only,
+    which produced a perfectly flat price series (confirmed while testing
+    the new backtest feature: std dev of 0.0 across 90+ days). That was
+    invisible before because no prior feature depended on price actually
+    changing day to day - only delivery % varying, which was seeded
+    separately by date and did vary correctly."""
+    if symbol in _DEMO_PRICE_WALKS:
+        return _DEMO_PRICE_WALKS[symbol]
+    rng = np.random.default_rng(abs(hash(symbol)) % (2**32))
+    n = 420
+    dates = pd.bdate_range(end=pd.Timestamp.today(), periods=n)
+    base_price = 80 + 400 * ((abs(hash((symbol, "px"))) % 100) / 100)
+    drift = rng.normal(0.0003, 0.017, n)
+    walk = base_price * np.exp(np.cumsum(drift))
+    series = pd.Series(walk, index=dates)
+    _DEMO_PRICE_WALKS[symbol] = series
+    return series
+
+
 def download_bhavcopy_demo(date: datetime, symbols: list[str], seed_offset: int) -> pd.DataFrame:
     """Synthetic single-day bhavcopy covering the whole watchlist, used by
-    --demo. Values are deterministic per (date, symbol) so a full backfill
-    produces a coherent time series, and seeded to inject the same four
-    signal scenarios as v1's demo mode, on the most recent day only."""
+    --demo. Delivery % is deterministic per (date, symbol) so a full
+    backfill produces a coherent time series, and seeded to inject the
+    same four signal scenarios as v1's demo mode, on the most recent day
+    only. Price now comes from a real per-symbol random walk (see
+    _get_demo_price_walk) instead of a date-independent constant."""
     rng = np.random.default_rng(abs(hash((date.date(), seed_offset))) % (2**32))
     rows = []
     for i, sym in enumerate(symbols):
         base_delivery = 30 + 25 * ((abs(hash(sym)) % 100) / 100)
         delivery_pct = float(np.clip(rng.normal(base_delivery, 6), 5, 95))
-        close = 100 + 50 * ((abs(hash((sym, "px"))) % 100) / 100)
-        prev_close = close * (1 + rng.normal(0, 0.01))
+
+        walk = _get_demo_price_walk(sym)
+        nearest_idx = walk.index.get_indexer([pd.Timestamp(date.date())], method="nearest")[0]
+        close = float(walk.iloc[nearest_idx])
+        prev_close = float(walk.iloc[max(nearest_idx - 1, 0)])
+
         traded_qty = rng.integers(80_000, 900_000)
         rows.append({
             "SYMBOL": sym, "SERIES": "EQ", "DATE1": date.strftime("%d-%b-%Y"),
@@ -353,6 +384,11 @@ def score_row(row: dict) -> float:
         score = max(score, min(row["vol_ratio_20d"] or 0, 10) * 2)
     if row["low_liquidity"]:
         score *= 0.4
+    # Corroboration bonus: a second, independently-sourced NSE dataset
+    # (disclosed bulk/block deals) agreeing with the delivery-based read
+    # is meaningfully stronger evidence than the delivery math alone.
+    if row.get("smart_money_corroborated"):
+        score += 12
     return round(max(score, 0), 2)
 
 
@@ -371,6 +407,100 @@ def load_watchlist(path: Path) -> list[str]:
     ]
 
 
+# ---------------------------------------------------------------------------
+# Cross-tool context: Smart Money Feed corroboration (sibling file read,
+# zero extra network calls). A "quiet accumulation" read is more convincing
+# if there was ALSO a disclosed bulk/block deal in that stock recently -
+# two independently-sourced NSE datasets agreeing, not just one tool's math.
+# ---------------------------------------------------------------------------
+
+def load_smart_money_corroboration() -> dict[str, dict]:
+    path = ROOT.parent / "smart-money" / "data" / "scan_results.json"
+    if not path.exists():
+        log.info("No smart-money output found at %s - corroboration flags will be blank this run.", path)
+        return {}
+    try:
+        data = json.loads(path.read_text())
+        return {
+            r["symbol"]: {
+                "net_value_cr": r.get("net_value_cr", 0),
+                "known_investors_involved": r.get("known_investors_involved", []),
+                "deal_count": r.get("deal_count", 0),
+            }
+            for r in data.get("symbol_summary", [])
+        }
+    except Exception as exc:  # noqa: BLE001
+        log.warning("Could not read smart-money output: %s", exc)
+        return {}
+
+
+# ---------------------------------------------------------------------------
+# Signal history log + self-backtest. Uses bhavcopy_cache, which ALREADY
+# holds historical close prices for every symbol - no new network calls
+# needed to validate this tool's own past calls.
+# ---------------------------------------------------------------------------
+
+SIGNAL_LOG_PATH = ROOT / "data" / "signal_log.csv"
+SIGNAL_LOG_COLUMNS = ["date", "symbol", "signal"]
+BACKTEST_HORIZONS = (10, 20)
+LOG_RETENTION_DAYS = 400
+
+
+def load_signal_log() -> pd.DataFrame:
+    if SIGNAL_LOG_PATH.exists():
+        return pd.read_csv(SIGNAL_LOG_PATH, parse_dates=["date"])
+    return pd.DataFrame(columns=SIGNAL_LOG_COLUMNS)
+
+
+def append_to_signal_log(rows: list[dict]) -> pd.DataFrame:
+    log_df = load_signal_log()
+    today = pd.Timestamp(datetime.now(timezone.utc).date())
+    log_df = log_df[log_df["date"] != today]
+    if rows:
+        new_df = pd.DataFrame(rows)
+        new_df["date"] = today
+        log_df = pd.concat([log_df, new_df], ignore_index=True)
+    cutoff = pd.Timestamp(datetime.now(timezone.utc).date() - pd.Timedelta(days=LOG_RETENTION_DAYS))
+    log_df = log_df[log_df["date"] >= cutoff]
+    SIGNAL_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    log_df.sort_values(["date", "symbol"]).to_csv(SIGNAL_LOG_PATH, index=False)
+    return log_df
+
+
+def backtest_signal_log(signal_log: pd.DataFrame, cache: pd.DataFrame) -> dict:
+    if signal_log.empty or cache.empty:
+        return {}
+
+    by_signal: dict[str, dict[int, list[float]]] = {}
+    for _, row in signal_log.iterrows():
+        symbol, sig, log_date = row["symbol"], row["signal"], row["date"]
+        if sig in ("no_signal",):
+            continue
+        prices = cache[cache["symbol"] == symbol].sort_values("date")
+        prices_after = prices[prices["date"] >= log_date]
+        if prices_after.empty:
+            continue
+        baseline_price = float(prices_after["close"].iloc[0])
+
+        for horizon in BACKTEST_HORIZONS:
+            future = prices_after.iloc[1:]
+            if len(future) < horizon:
+                continue
+            fwd_price = float(future["close"].iloc[horizon - 1])
+            ret = (fwd_price - baseline_price) / baseline_price * 100
+            by_signal.setdefault(sig, {}).setdefault(horizon, []).append(ret)
+
+    summary = {}
+    for sig, horizons in by_signal.items():
+        summary[sig] = {}
+        for horizon, rets in horizons.items():
+            wins = sum(1 for r in rets if r > 0)
+            summary[sig][f"avg_return_{horizon}d"] = round(sum(rets) / len(rets), 2)
+            summary[sig][f"hit_rate_{horizon}d"] = round(wins / len(rets) * 100, 1)
+            summary[sig][f"n_{horizon}d"] = len(rets)
+    return summary
+
+
 def main():
     parser = argparse.ArgumentParser(description="Delivery % / Volume Anomaly Radar (bhavcopy edition)")
     parser.add_argument("--watchlist", type=Path, default=DEFAULT_WATCHLIST)
@@ -387,6 +517,7 @@ def main():
     log.info("Loaded %d symbols from %s (demo=%s)", len(symbols), args.watchlist, args.demo)
 
     cache, fetched_days, _ = update_cache(symbols, demo=args.demo, sleep_s=args.sleep)
+    corroboration = load_smart_money_corroboration()
 
     results, errors = [], []
     for symbol in symbols:
@@ -399,13 +530,29 @@ def main():
         if sig is None:
             errors.append({"symbol": symbol, "reason": f"only {len(sub)} cached session(s), need {MIN_ROWS_FOR_20D}+"})
             continue
+
         row = {"symbol": symbol, **sig}
+        smart_money = corroboration.get(symbol)
+        row["smart_money_corroborated"] = bool(
+            smart_money and row["signal"] in ("quiet_accumulation", "confirmed_accumulation")
+            and (smart_money["net_value_cr"] > 0 or smart_money["known_investors_involved"])
+        )
+        row["smart_money_deal_count"] = smart_money["deal_count"] if smart_money else 0
         row["score"] = score_row(row)
         results.append(row)
-        log.info("%-12s  signal=%-22s  z20=%5.2f  sessions=%d  score=%.1f",
-                  symbol, row["signal"], row["delivery_zscore_20d"], row["sessions_available"], row["score"])
+        log.info("%-12s  signal=%-22s  z20=%5.2f  corroborated=%s  score=%.1f",
+                  symbol, row["signal"], row["delivery_zscore_20d"], row["smart_money_corroborated"], row["score"])
 
     results.sort(key=lambda r: r["score"], reverse=True)
+
+    todays_signal_rows = [
+        {"symbol": r["symbol"], "signal": r["signal"]}
+        for r in results if r["signal"] != "no_signal"
+    ]
+    signal_log = append_to_signal_log(todays_signal_rows)
+    track_record = backtest_signal_log(signal_log, cache)
+    log.info("Signal log: %d logged instance(s), track record covers %d signal type(s)",
+              len(signal_log), len(track_record))
 
     output = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
@@ -415,6 +562,8 @@ def main():
         "errors": errors,
         "cache_days_fetched_this_run": fetched_days,
         "cache_total_days": int(cache["date"].nunique()) if not cache.empty else 0,
+        "track_record": track_record,
+        "signal_log_size": len(signal_log),
         "params": {
             "z_threshold": args.z_threshold,
             "price_move_threshold_pct": args.price_move_threshold,
