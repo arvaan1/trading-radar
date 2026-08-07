@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-08-07T10:50:42.080126+00:00",
-  "generated_at_ist": "2026-08-07 16:20:38",
+  "generated_at_utc": "2026-08-07T11:00:59.209079+00:00",
+  "generated_at_ist": "2026-08-07 16:30:53",
   "results": {
     "nifty": {
       "expiry": "11-Aug-2026",
@@ -644,6 +644,12 @@
         "pcr": 0.73,
         "maxpain": 24600,
         "underlying": 24570.65
+      },
+      {
+        "time": "16:30",
+        "pcr": 0.73,
+        "maxpain": 24600,
+        "underlying": 24570.65
       }
     ],
     "banknifty": [
@@ -757,6 +763,12 @@
       },
       {
         "time": "16:20",
+        "pcr": 0.88,
+        "maxpain": 58000,
+        "underlying": 57746.45
+      },
+      {
+        "time": "16:30",
         "pcr": 0.88,
         "maxpain": 58000,
         "underlying": 57746.45
