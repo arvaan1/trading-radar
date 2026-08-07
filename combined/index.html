@@ -161,7 +161,12 @@ function deliveryRead(sig){
 function smartMoneyRead(row){
   if(!row) return 'missing';
   if(row.net_value_cr > 5 || row.known_investors_involved.length > 0) return 'bull';
-  if(row.net_value_cr < -5) return 'bear';
+  // Previously this only ever checked net_value_cr, completely ignoring
+  // short_qty_total/short_days - which Smart Money Feed has published
+  // since the day short-selling tracking was added. Sustained short
+  // interest (not just a one-off day) without offsetting net buying is
+  // real bearish evidence this page was silently throwing away.
+  if(row.net_value_cr < -5 || (row.short_days >= 3 && row.net_value_cr <= 5)) return 'bear';
   return 'neutral';
 }
 
@@ -313,3 +318,4 @@ load();
 </script>
 </body>
 </html>
+
