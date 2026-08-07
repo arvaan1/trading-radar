@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-07T13:01:03.070880+00:00",
+  "generated_at_utc": "2026-08-07T13:43:56.824975+00:00",
   "cache_span_days": 367,
   "recent_display_days": 60,
   "watchlist_size": 8,
@@ -2857,8 +2857,32 @@
   ],
   "insider_trading": {
     "note": "Best-effort keyword match against NSE's general announcements feed - not a guaranteed-complete list.",
-    "announcements_scanned": 18803,
+    "announcements_scanned": 18912,
     "filings": [
+      {
+        "date": "07-Aug-2026 18:55:00",
+        "symbol": "SIYSIL",
+        "company": "Siyaram Silk Mills Limited",
+        "description": "Disclosure under SEBI Takeover Regulations",
+        "summary": "\u00a0Pawankumar D Poddar\u00a0has Submitted to the Exchange a copy of Disclosure under Regulation 10 (5) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.\u00a0 \u00a0 \u00a0 \u00a0 \u00a0 \u00a0",
+        "filing_url": "https://nsearchives.nseindia.com/corporate/team_bbodade_07082026185326_SIYSIL10.pdf"
+      },
+      {
+        "date": "07-Aug-2026 18:41:20",
+        "symbol": "RELTD",
+        "company": "Ravindra Energy Limited",
+        "description": "Updates",
+        "summary": "Ravindra Energy Limited has informed the Exchange regarding 'Disclosures under SEBI (Prohibition of Insider Trading) Regulations, 2015 received from Khandepar Investments Private Limited, Promoter of the Company'.",
+        "filing_url": "https://nsearchives.nseindia.com/corporate/RAVINDRA_07082026184108_REL_PIT_Disc_KIPL_05-07-2026.pdf"
+      },
+      {
+        "date": "07-Aug-2026 18:35:23",
+        "symbol": "RELTD",
+        "company": "Ravindra Energy Limited",
+        "description": "Updates",
+        "summary": "Ravindra Energy Limited has informed the Exchange regarding 'Disclosures under SEBI (Prohibition of Insider Trading) Regulations, 2015 received from Mr. Narendra Murkumbi, Promoter and Director of the Company'.",
+        "filing_url": "https://nsearchives.nseindia.com/corporate/RAVINDRA_07082026183511_REL_PIT_Disc_NM_Pledge_05-08-2026.pdf"
+      },
       {
         "date": "07-Aug-2026 18:25:57",
         "symbol": "WHEELS",
