@@ -1,0 +1,408 @@
+{
+  "generated_at_utc": "2026-08-06T10:57:49.689650+00:00",
+  "vix": {
+    "latest": 35.0,
+    "avg_5d": 34.91,
+    "avg_20d": 30.69
+  },
+  "vix_history_40d": [
+    {
+      "date": "2026-06-16",
+      "close": 13.69
+    },
+    {
+      "date": "2026-06-17",
+      "close": 14.37
+    },
+    {
+      "date": "2026-06-18",
+      "close": 14.99
+    },
+    {
+      "date": "2026-06-19",
+      "close": 15.65
+    },
+    {
+      "date": "2026-06-22",
+      "close": 16.39
+    },
+    {
+      "date": "2026-06-23",
+      "close": 17.12
+    },
+    {
+      "date": "2026-06-24",
+      "close": 17.82
+    },
+    {
+      "date": "2026-06-25",
+      "close": 18.43
+    },
+    {
+      "date": "2026-06-26",
+      "close": 19.0
+    },
+    {
+      "date": "2026-06-29",
+      "close": 19.57
+    },
+    {
+      "date": "2026-06-30",
+      "close": 20.18
+    },
+    {
+      "date": "2026-07-01",
+      "close": 20.83
+    },
+    {
+      "date": "2026-07-02",
+      "close": 21.38
+    },
+    {
+      "date": "2026-07-03",
+      "close": 21.92
+    },
+    {
+      "date": "2026-07-06",
+      "close": 22.6
+    },
+    {
+      "date": "2026-07-07",
+      "close": 23.06
+    },
+    {
+      "date": "2026-07-08",
+      "close": 23.7
+    },
+    {
+      "date": "2026-07-09",
+      "close": 24.39
+    },
+    {
+      "date": "2026-07-10",
+      "close": 24.94
+    },
+    {
+      "date": "2026-07-13",
+      "close": 25.48
+    },
+    {
+      "date": "2026-07-14",
+      "close": 26.05
+    },
+    {
+      "date": "2026-07-15",
+      "close": 26.77
+    },
+    {
+      "date": "2026-07-16",
+      "close": 27.41
+    },
+    {
+      "date": "2026-07-17",
+      "close": 27.87
+    },
+    {
+      "date": "2026-07-20",
+      "close": 28.48
+    },
+    {
+      "date": "2026-07-21",
+      "close": 29.23
+    },
+    {
+      "date": "2026-07-22",
+      "close": 29.98
+    },
+    {
+      "date": "2026-07-23",
+      "close": 30.69
+    },
+    {
+      "date": "2026-07-24",
+      "close": 31.31
+    },
+    {
+      "date": "2026-07-27",
+      "close": 31.78
+    },
+    {
+      "date": "2026-07-28",
+      "close": 32.45
+    },
+    {
+      "date": "2026-07-29",
+      "close": 33.08
+    },
+    {
+      "date": "2026-07-30",
+      "close": 33.74
+    },
+    {
+      "date": "2026-07-31",
+      "close": 34.54
+    },
+    {
+      "date": "2026-08-03",
+      "close": 35.0
+    },
+    {
+      "date": "2026-08-04",
+      "close": 35.0
+    },
+    {
+      "date": "2026-08-05",
+      "close": 35.0
+    },
+    {
+      "date": "2026-08-06",
+      "close": 35.0
+    }
+  ],
+  "breadth": {
+    "nifty50": {
+      "advances": 37,
+      "declines": 13
+    },
+    "nifty500": {
+      "advances": 22,
+      "declines": 434
+    }
+  },
+  "fii_dii_cash": {
+    "fii_latest": -2296.43,
+    "dii_latest": -1044.81,
+    "fii_avg_5d": -465.48,
+    "fii_avg_20d": -465.48,
+    "dii_avg_5d": -498.27,
+    "dii_avg_20d": -498.27,
+    "history": [
+      {
+        "date": "2026-06-16",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-06-17",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-06-18",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-06-19",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-06-22",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-06-23",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-06-24",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-06-25",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-06-26",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-06-29",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-06-30",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-07-01",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-07-02",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-07-03",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-07-06",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-07-07",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-07-08",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-07-09",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-07-10",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-07-13",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-07-14",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-07-15",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-07-16",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-07-17",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-07-20",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-07-21",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-07-22",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-07-23",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-07-24",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-07-27",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-07-28",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-07-29",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-07-30",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-07-31",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-08-01",
+        "fii": 500.0,
+        "dii": -250.0
+      },
+      {
+        "date": "2026-08-02",
+        "fii": 400.0,
+        "dii": -200.0
+      },
+      {
+        "date": "2026-08-03",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-08-04",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-08-05",
+        "fii": null,
+        "dii": null
+      },
+      {
+        "date": "2026-08-06",
+        "fii": -2296.43,
+        "dii": -1044.81
+      }
+    ]
+  },
+  "participant_oi": {
+    "as_of": "2026-08-05",
+    "index_futures_positioning": [
+      {
+        "participant": "FII",
+        "index_fut_net": 2802.0,
+        "change_vs_prior_day": 2953.0
+      },
+      {
+        "participant": "DII",
+        "index_fut_net": -6383.0,
+        "change_vs_prior_day": -8785.0
+      },
+      {
+        "participant": "PRO",
+        "index_fut_net": 4438.0,
+        "change_vs_prior_day": 3920.0
+      },
+      {
+        "participant": "CLIENT",
+        "index_fut_net": -1554.0,
+        "change_vs_prior_day": -2517.0
+      }
+    ]
+  },
+  "history_days_cached": 42
+}

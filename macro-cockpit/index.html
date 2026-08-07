@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Macro Cockpit — Broad Market Weather Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-void:#0A0E12; --bg-panel:#12181F; --bg-panel-raised:#161D25;
+    --ink:#E4E1D8; --ink-dim:#8A93A0;
+    --amber:#E8A33D; --teal:#3FA88C; --rose:#C25450;
+    --line:#232B34;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--bg-void);color:var(--ink);
+    font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased;}
+  .console{max-width:1200px;margin:0 auto;padding:32px 24px 80px;}
+  header.masthead{display:flex;justify-content:space-between;align-items:flex-end;
+    border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:24px;flex-wrap:wrap;gap:16px;}
+  h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:28px;letter-spacing:-0.01em;margin:0;}
+  h1 .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--amber);
+    margin-right:10px;box-shadow:0 0 0 4px rgba(232,163,61,0.15);animation:pulse 2.4s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.35;}}
+  .subtitle{color:var(--ink-dim);font-size:13px;margin-top:6px;font-family:'IBM Plex Mono',monospace;}
+  .meta{text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-dim);line-height:1.6;}
+  .meta b{color:var(--ink);}
+
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+    border:1px solid var(--line);margin-bottom:28px;border-radius:6px;overflow:hidden;}
+  .stat{background:var(--bg-panel);padding:16px 18px;}
+  .stat .n{font-family:'Space Grotesk',sans-serif;font-size:24px;font-weight:600;}
+  .stat .l{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-dim);margin-top:4px;}
+  .stat .sub{font-size:11px;color:var(--ink-dim);margin-top:2px;font-family:'IBM Plex Mono',monospace;}
+
+  section{margin-bottom:32px;background:var(--bg-panel);border:1px solid var(--line);border-radius:8px;padding:20px 22px;}
+  h2{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600;margin:0 0 4px;}
+  .section-note{font-size:12px;color:var(--ink-dim);font-family:'IBM Plex Mono',monospace;margin-bottom:16px;}
+
+  .breadth-row{display:flex;align-items:center;gap:16px;margin-bottom:14px;}
+  .breadth-label{width:110px;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-dim);}
+  .breadth-bar{flex:1;height:20px;border-radius:4px;overflow:hidden;display:flex;background:var(--bg-panel-raised);}
+  .breadth-bar .adv{background:var(--teal);}
+  .breadth-bar .dec{background:var(--rose);}
+  .breadth-nums{width:110px;text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;}
+
+  .spark{display:flex;align-items:flex-end;gap:2px;height:70px;margin-top:10px;}
+  .spark i{flex:1;background:var(--line);border-radius:1px 1px 0 0;min-height:2px;}
+  .spark i.pos{background:var(--teal);}
+  .spark i.neg{background:var(--rose);}
+  .spark i.today{opacity:1;box-shadow:0 0 0 1px var(--amber);}
+
+  table{width:100%;border-collapse:collapse;font-size:13px;}
+  thead th{text-align:left;padding:9px 10px;font-family:'IBM Plex Mono',monospace;
+    font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--ink-dim);
+    border-bottom:1px solid var(--line);}
+  tbody td{padding:10px;font-family:'IBM Plex Mono',monospace;border-bottom:1px solid var(--line);}
+  td.sym{font-family:'Space Grotesk',sans-serif;font-weight:600;}
+  td.num{text-align:right;font-variant-numeric:tabular-nums;}
+
+  .confidence-note{background:rgba(232,163,61,0.08);border:1px solid rgba(232,163,61,0.25);
+    border-radius:6px;padding:10px 14px;font-size:11.5px;color:var(--ink-dim);font-family:'IBM Plex Mono',monospace;
+    margin-top:12px;}
+  .confidence-note b{color:var(--amber);}
+
+  .empty{padding:30px 10px;text-align:center;color:var(--ink-dim);font-family:'IBM Plex Mono',monospace;font-size:12.5px;}
+
+  footer{margin-top:20px;padding-top:18px;border-top:1px solid var(--line);
+    font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-dim);line-height:1.7;}
+
+  @media (max-width:760px){ .grid4{grid-template-columns:repeat(2,1fr);} .meta{text-align:left;} header.masthead{flex-direction:column;align-items:flex-start;} }
+</style>
+</head>
+<body>
+<div class="console">
+
+  <header class="masthead">
+    <div>
+      <h1><span class="dot"></span>Macro Cockpit</h1>
+      <div class="subtitle">VIX · breadth · participant OI · FII/DII cash — checked before you look at a single stock</div>
+    </div>
+    <div class="meta" id="meta">Loading…</div>
+  </header>
+
+  <div class="grid4" id="statStrip"></div>
+
+  <section>
+    <h2>India VIX</h2>
+    <div class="section-note">The fear gauge. Low = calm, favors trend-following. High = expect whipsaws, size down.</div>
+    <div id="vixSpark"></div>
+  </section>
+
+  <section>
+    <h2>Market Breadth</h2>
+    <div class="section-note">Advance-Decline — a rising index with weak breadth is a shakier rally than the headline number suggests.</div>
+    <div id="breadthWrap"></div>
+  </section>
+
+  <section>
+    <h2>FII / DII Cash Flow</h2>
+    <div class="section-note">Net buying/selling in the cash market, in ₹ crore. The multi-day trend matters more than any single day.</div>
+    <div id="fiiDiiWrap"></div>
+  </section>
+
+  <section>
+    <h2>Participant-wise Index Futures Positioning</h2>
+    <div class="section-note">Who's net long vs net short in index futures, and how that shifted from the prior session.</div>
+    <div id="participantWrap"></div>
+  </section>
+
+  <footer>
+    Data: NSE, via the <code>nse</code> Python package + NSE's public participant-OI file. Nothing here is investment advice —
+    this is a weather report, not a forecast. Regenerate with <code>python scripts/scan.py</code> or let the scheduled GitHub Action refresh it.
+  </footer>
+
+</div>
+
+<script>
+let DATA = null;
+
+async function load(){
+  try{
+    const res = await fetch('data/scan_results.json?_=' + Date.now());
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+    DATA = await res.json();
+    renderMeta(); renderStats(); renderVix(); renderBreadth(); renderFiiDii(); renderParticipant();
+  }catch(err){
+    document.getElementById('meta').textContent = 'No scan data yet';
+    document.querySelector('.console').insertAdjacentHTML('beforeend',
+      `<div class="empty"><b>data/scan_results.json not found yet.</b><br/>Run <code>python scripts/scan.py --demo</code> to generate sample data.</div>`);
+  }
+}
+
+function renderMeta(){
+  const d = new Date(DATA.generated_at_utc);
+  document.getElementById('meta').innerHTML = `Last scan: <b>${d.toLocaleString()}</b><br/>History: <b>${DATA.history_days_cached}</b> day(s) cached`;
+}
+
+function renderStats(){
+  const v = DATA.vix;
+  const b50 = DATA.breadth.nifty50;
+  const ratio50 = (b50.advances != null && b50.declines != null && b50.declines > 0) ? (b50.advances / b50.declines).toFixed(2) : '—';
+  const fd = DATA.fii_dii_cash;
+  const stats = [
+    { l: 'VIX', n: v.latest != null ? v.latest.toFixed(2) : '—', sub: v.avg_5d != null ? `5d avg ${v.avg_5d}` : '' },
+    { l: 'Nifty 50 A/D Ratio', n: ratio50, sub: b50.advances != null ? `${b50.advances} up / ${b50.declines} down` : '' },
+    { l: 'FII Cash (today)', n: fd.fii_latest != null ? `₹${fd.fii_latest.toFixed(0)}Cr` : '—', sub: fd.fii_avg_5d != null ? `5d avg ₹${fd.fii_avg_5d.toFixed(0)}Cr` : 'building history…' },
+    { l: 'DII Cash (today)', n: fd.dii_latest != null ? `₹${fd.dii_latest.toFixed(0)}Cr` : '—', sub: fd.dii_avg_5d != null ? `5d avg ₹${fd.dii_avg_5d.toFixed(0)}Cr` : 'building history…' },
+  ];
+  document.getElementById('statStrip').innerHTML = stats.map(s =>
+    `<div class="stat"><div class="n">${s.n}</div><div class="l">${s.l}</div><div class="sub">${s.sub}</div></div>`
+  ).join('');
+}
+
+function sparkHTML(values, todayIdx){
+  if(!values.length) return '<div class="empty">Not enough history yet.</div>';
+  const max = Math.max(...values), min = Math.min(...values, 0);
+  const range = (max - min) || 1;
+  return '<div class="spark">' + values.map((v,i) => {
+    const h = Math.max(2, Math.round((v - min) / range * 66));
+    const cls = i === todayIdx ? 'today' : '';
+    return `<i class="${cls}" style="height:${h}px" title="${v.toFixed(2)}"></i>`;
+  }).join('') + '</div>';
+}
+
+function renderVix(){
+  const hist = DATA.vix_history_40d || [];
+  document.getElementById('vixSpark').innerHTML = sparkHTML(hist.map(h => h.close), hist.length - 1);
+}
+
+function renderBreadth(){
+  const rows = [['NIFTY 50', DATA.breadth.nifty50], ['NIFTY 500', DATA.breadth.nifty500]];
+  let html = '';
+  rows.forEach(([label, b]) => {
+    if(b.advances == null){ html += `<div class="breadth-row"><div class="breadth-label">${label}</div><div class="empty">No data</div></div>`; return; }
+    const total = b.advances + b.declines;
+    const advPct = total ? (b.advances / total * 100) : 0;
+    html += `<div class="breadth-row">
+      <div class="breadth-label">${label}</div>
+      <div class="breadth-bar"><div class="adv" style="width:${advPct}%"></div><div class="dec" style="width:${100-advPct}%"></div></div>
+      <div class="breadth-nums">${b.advances} / ${b.declines}</div>
+    </div>`;
+  });
+  document.getElementById('breadthWrap').innerHTML = html;
+}
+
+function renderFiiDii(){
+  const hist = DATA.fii_dii_cash.history || [];
+  const fiiVals = hist.map(h => h.fii).filter(v => v != null);
+  if(fiiVals.length < 2){
+    document.getElementById('fiiDiiWrap').innerHTML = `<div class="empty">Building history — check back over the next few days for a trend view. Today's figures are already shown above.</div>
+      <div class="confidence-note"><b>Note:</b> FII/DII cash parsing is the least-verified data source in this tool. If both numbers show "—" for more than a couple of days, that's worth flagging.</div>`;
+    return;
+  }
+  document.getElementById('fiiDiiWrap').innerHTML = sparkHTML(fiiVals, fiiVals.length - 1);
+}
+
+function renderParticipant(){
+  const rows = DATA.participant_oi.index_futures_positioning || [];
+  if(rows.length === 0){
+    document.getElementById('participantWrap').innerHTML = `<div class="empty">No participant OI data yet.</div>`;
+    return;
+  }
+  let html = `<table><thead><tr><th>Participant</th><th>Net Index Futures</th><th>Change vs Prior Day</th></tr></thead><tbody>`;
+  rows.forEach(r => {
+    const netColor = r.index_fut_net >= 0 ? 'var(--teal)' : 'var(--rose)';
+    const chgColor = (r.change_vs_prior_day ?? 0) >= 0 ? 'var(--teal)' : 'var(--rose)';
+    html += `<tr>
+      <td class="sym">${r.participant}</td>
+      <td class="num" style="color:${netColor}">${r.index_fut_net.toLocaleString('en-IN')}</td>
+      <td class="num" style="color:${chgColor}">${r.change_vs_prior_day != null ? (r.change_vs_prior_day >= 0 ? '+' : '') + r.change_vs_prior_day.toLocaleString('en-IN') : '—'}</td>
+    </tr>`;
+  });
+  html += '</tbody></table>';
+  if(DATA.participant_oi.as_of) html += `<div class="section-note" style="margin-top:10px;margin-bottom:0;">As of ${DATA.participant_oi.as_of}</div>`;
+  document.getElementById('participantWrap').innerHTML = html;
+}
+
+load();
+</script>
+</body>
+</html>
