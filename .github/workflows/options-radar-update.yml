@@ -1,0 +1,46 @@
+name: Update Options Radar scan
+
+on:
+  # Deliberately NO schedule: trigger here. This tool needs to run every
+  # few minutes during market hours - GitHub's own scheduler has neither
+  # that granularity nor, as the rest of this repo's history shows, the
+  # reliability for a cadence this tight. This workflow is meant to be
+  # triggered externally (cron-job.org calling the workflow_dispatch API
+  # every 10 minutes, 9:15 AM-3:30 PM IST, Mon-Fri) - see this project's
+  # README for the exact setup.
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+defaults:
+  run:
+    working-directory: options-radar
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+          cache-dependency-path: options-radar/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run scan
+        run: python scripts/scan.py
+
+      - name: Commit updated data
+        run: |
+          git config user.name "options-radar-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/scan_results.json data/intraday_history.csv
+          git diff --staged --quiet && echo "No changes to commit" || git commit -m "Options radar snapshot: $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
