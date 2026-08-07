@@ -70,7 +70,7 @@
   .agree-count.strong{color:var(--teal);}
   .agree-count.weak-neg{color:var(--rose);}
 
-  .market-context{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line);
+  .market-context{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);
     border:1px solid var(--line);margin-bottom:24px;border-radius:6px;overflow:hidden;}
   .mc-stat{background:var(--bg-panel);padding:14px 16px;}
   .mc-stat .n{font-family:'Space Grotesk',sans-serif;font-size:19px;font-weight:600;}
@@ -171,16 +171,15 @@ function smartMoneyRead(row){
 }
 
 async function load(){
-  const [dma, delivery, smart, macro, options] = await Promise.all([
+  const [dma, delivery, smart, macro] = await Promise.all([
     safeFetch('../dma-radar/data/scan_results.json'),
     safeFetch('../delivery-radar/data/scan_results.json'),
     safeFetch('../smart-money/data/scan_results.json'),
     safeFetch('../macro-cockpit/data/scan_results.json'),
-    safeFetch('../options-radar/data/scan_results.json'),
   ]);
 
-  renderMeta(dma, delivery, smart, macro, options);
-  renderMarketContext(macro, options);
+  renderMeta(dma, delivery, smart, macro);
+  renderMarketContext(macro);
 
   const dmaBySymbol = {}, deliveryBySymbol = {}, smartBySymbol = {};
   (dma?.results || []).forEach(r => dmaBySymbol[r.symbol] = r);
@@ -210,17 +209,17 @@ async function load(){
   render();
 }
 
-function renderMeta(dma, delivery, smart, macro, options){
+function renderMeta(dma, delivery, smart, macro){
   const src = (label, ok) => `<span class="${ok ? 'src-ok' : 'src-missing'}">${label}: ${ok ? 'loaded' : 'not found'}</span>`;
   document.getElementById('meta').innerHTML =
-    `${src('DMA', !!dma)} · ${src('Delivery', !!delivery)} · ${src('Smart Money', !!smart)} · ${src('Macro', !!macro)} · ${src('Options', !!options)}`;
+    `${src('DMA', !!dma)} · ${src('Delivery', !!delivery)} · ${src('Smart Money', !!smart)} · ${src('Macro', !!macro)}`;
 }
 
 function mcStat(n, l, link){
   return `<div class="mc-stat"><div class="n">${n}</div><div class="l">${l}</div>${link ? `<a class="mc-link" href="${link}">open →</a>` : ''}</div>`;
 }
 
-function renderMarketContext(macro, options){
+function renderMarketContext(macro){
   const cells = [];
 
   if(macro){
@@ -231,14 +230,6 @@ function renderMarketContext(macro, options){
     cells.push(mcStat(fd.fii_latest != null ? `₹${fd.fii_latest.toFixed(0)}Cr` : '—', 'FII Cash Today', '../macro-cockpit/'));
   } else {
     cells.push(mcStat('—', 'Macro Cockpit', '../macro-cockpit/'));
-  }
-
-  if(options && options.results && options.results.nifty){
-    const n = options.results.nifty;
-    cells.push(mcStat(n.pcr != null ? n.pcr : '—', 'Nifty PCR', '../options-radar/'));
-    cells.push(mcStat(n.maxpain != null ? n.maxpain.toLocaleString('en-IN') : '—', 'Nifty Max Pain', '../options-radar/'));
-  } else {
-    cells.push(mcStat('—', 'Options Radar', '../options-radar/'));
   }
 
   document.getElementById('marketContext').innerHTML = `<div class="market-context">${cells.join('')}</div>`;
@@ -318,4 +309,3 @@ load();
 </script>
 </body>
 </html>
-
