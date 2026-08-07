@@ -86,6 +86,12 @@
 
   .short-tag{color:var(--rose);font-size:11px;font-family:'IBM Plex Mono',monospace;}
 
+  .tech-tag{display:inline-block;padding:2px 7px;border-radius:4px;font-size:9.5px;margin:1px 3px 1px 0;
+    font-family:'IBM Plex Mono',monospace;white-space:nowrap;}
+  .tech-tag.bull{background:rgba(63,168,140,0.16);color:var(--teal);}
+  .tech-tag.bear{background:rgba(194,84,80,0.16);color:var(--rose);}
+  .tech-tag.neutral{background:rgba(138,147,160,0.14);color:var(--ink-dim);}
+
   .empty{padding:50px 20px;text-align:center;color:var(--ink-dim);font-family:'IBM Plex Mono',monospace;}
   .empty b{color:var(--ink);}
 
@@ -275,6 +281,25 @@ function renderTrackRecord(){
   document.getElementById('trackRecordWrap').innerHTML = html;
 }
 
+const DMA_BULLISH = new Set(['confirmed_golden_cross', 'approaching_golden_cross']);
+const DMA_BEARISH = new Set(['confirmed_death_cross', 'approaching_death_cross']);
+const DELIVERY_BULLISH = new Set(['quiet_accumulation', 'confirmed_accumulation']);
+const DELIVERY_BEARISH = new Set(['possible_distribution']);
+
+function technicalAlignmentHTML(r){
+  const parts = [];
+  if(r.dma_signal){
+    const cls = DMA_BULLISH.has(r.dma_signal) ? 'bull' : (DMA_BEARISH.has(r.dma_signal) ? 'bear' : 'neutral');
+    parts.push(`<span class="tech-tag ${cls}">DMA: ${r.dma_signal.includes('golden') ? '↑ golden' : '↓ death'}</span>`);
+  }
+  if(r.delivery_signal){
+    const cls = DELIVERY_BULLISH.has(r.delivery_signal) ? 'bull' : (DELIVERY_BEARISH.has(r.delivery_signal) ? 'bear' : 'neutral');
+    const label = r.delivery_signal === 'confirmed_accumulation' ? 'accum.' : r.delivery_signal === 'quiet_accumulation' ? 'quiet build' : 'distribution?';
+    parts.push(`<span class="tech-tag ${cls}">Deliv: ${label}</span>`);
+  }
+  return parts.length ? parts.join(' ') : '<span style="color:var(--ink-dim)">—</span>';
+}
+
 function repeatTags(names){
   if(!names.length) return '—';
   return names.map(n => `<span class="repeat-tag">${n}</span>`).join('');
@@ -295,7 +320,7 @@ function renderSummary(){
   const cols = [
     ['symbol','Symbol'], ['net_value_cr','Net Value (Cr)'], ['buy_value_cr','Buy (Cr)'],
     ['sell_value_cr','Sell (Cr)'], ['deal_count','Deals'], ['distinct_clients','Clients'],
-    ['short_qty_total','Short Sold'], ['_known','Known Investors'], ['_repeat','Repeat Buyers']
+    ['short_qty_total','Short Sold'], ['_technical','DMA / Delivery'], ['_known','Known Investors'], ['_repeat','Repeat Buyers']
   ];
   let html = '<table><thead><tr>';
   cols.forEach(([key,label]) => {
@@ -314,6 +339,7 @@ function renderSummary(){
     html += `<td class="num">${r.deal_count}</td>`;
     html += `<td class="num">${r.distinct_clients}</td>`;
     html += `<td class="num">${r.short_qty_total > 0 ? `<span class="short-tag">${r.short_qty_total.toLocaleString('en-IN')} (${r.short_days}d)</span>` : '—'}</td>`;
+    html += `<td>${technicalAlignmentHTML(r)}</td>`;
     html += `<td>${r.known_investors_involved.length ? r.known_investors_involved.map(n=>`<span class="known-tag">★ ${n}</span>`).join('') : '—'}</td>`;
     html += `<td>${repeatTags(r.repeat_buyers)}</td>`;
     html += '</tr>';

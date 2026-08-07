@@ -536,6 +536,33 @@ def summarize_followthrough_by_investor(known_investor_deals: list[dict]) -> lis
 # Main
 # ---------------------------------------------------------------------------
 
+def load_technical_context() -> dict[str, dict]:
+    """Reads DMA Radar's and Delivery Radar's own latest output (sibling
+    file reads, zero extra network calls) - completes the loop. DMA and
+    Delivery already read Smart Money's data; without this, the
+    interconnection would only run one direction. A known-investor deal
+    on a stock that's ALSO showing a technical golden cross or quiet
+    accumulation is a materially different situation than one sitting in
+    isolation, and there was previously no way to see that from this
+    dashboard alone."""
+    context = {}
+    dma_path = ROOT.parent / "dma-radar" / "data" / "scan_results.json"
+    if dma_path.exists():
+        try:
+            for r in json.loads(dma_path.read_text()).get("results", []):
+                context.setdefault(r["symbol"], {})["dma_signal"] = r.get("signal")
+        except Exception as exc:  # noqa: BLE001
+            log.warning("Could not read dma-radar output: %s", exc)
+    delivery_path = ROOT.parent / "delivery-radar" / "data" / "scan_results.json"
+    if delivery_path.exists():
+        try:
+            for r in json.loads(delivery_path.read_text()).get("results", []):
+                context.setdefault(r["symbol"], {})["delivery_signal"] = r.get("signal")
+        except Exception as exc:  # noqa: BLE001
+            log.warning("Could not read delivery-radar output: %s", exc)
+    return context
+
+
 def main():
     parser = argparse.ArgumentParser(description="Smart Money Feed v3: bulk/block/short deals + insider trading, cached + follow-through")
     parser.add_argument("--watchlist", type=Path, default=DEFAULT_WATCHLIST)
@@ -557,6 +584,20 @@ def main():
     symbol_summary = build_symbol_summary(all_deals)
     short_sell_summary = build_short_sell_summary(short_cache)
     attach_short_sell_context(symbol_summary, short_sell_summary)
+
+    technical_context = load_technical_context()
+    NO_SIG = ("no_signal", None)
+    for row in symbol_summary:
+        ctx = technical_context.get(row["symbol"], {})
+        row["dma_signal"] = ctx.get("dma_signal") if ctx.get("dma_signal") not in NO_SIG else None
+        row["delivery_signal"] = ctx.get("delivery_signal") if ctx.get("delivery_signal") not in NO_SIG else None
+        row["technical_alignment_count"] = sum(1 for x in (row["dma_signal"], row["delivery_signal"]) if x)
+    # Re-sort now that technical alignment is known: known-investor presence
+    # still wins first, but among ties, a stock corroborated by DMA and/or
+    # Delivery Radar too now ranks above one with no technical confirmation.
+    symbol_summary.sort(
+        key=lambda r: (len(r["known_investors_involved"]) > 0, r["technical_alignment_count"], abs(r["net_value_cr"])),
+        reverse=True)
 
     recent_cutoff = (datetime.now(timezone.utc) - timedelta(days=RECENT_DEALS_DISPLAY_DAYS)).strftime("%Y-%m-%d")
     recent_deals = [d for d in all_deals if d["date"] >= recent_cutoff]
