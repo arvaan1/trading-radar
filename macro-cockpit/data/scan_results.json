@@ -1,15 +1,11 @@
 {
-  "generated_at_utc": "2026-08-06T10:57:49.689650+00:00",
+  "generated_at_utc": "2026-08-07T07:49:47.222564+00:00",
   "vix": {
-    "latest": 35.0,
-    "avg_5d": 34.91,
-    "avg_20d": 30.69
+    "latest": 12.16,
+    "avg_5d": 30.43,
+    "avg_20d": 30.05
   },
   "vix_history_40d": [
-    {
-      "date": "2026-06-16",
-      "close": 13.69
-    },
     {
       "date": "2026-06-17",
       "close": 14.37
@@ -157,31 +153,30 @@
     {
       "date": "2026-08-06",
       "close": 35.0
+    },
+    {
+      "date": "2026-08-07",
+      "close": 12.16
     }
   ],
   "breadth": {
     "nifty50": {
-      "advances": 37,
-      "declines": 13
+      "advances": 20,
+      "declines": 28
     },
     "nifty500": {
-      "advances": 22,
-      "declines": 434
+      "advances": 232,
+      "declines": 265
     }
   },
   "fii_dii_cash": {
-    "fii_latest": -2296.43,
-    "dii_latest": -1044.81,
-    "fii_avg_5d": -465.48,
-    "fii_avg_20d": -465.48,
-    "dii_avg_5d": -498.27,
-    "dii_avg_20d": -498.27,
+    "fii_latest": -17.86,
+    "dii_latest": 4013.6,
+    "fii_avg_5d": -353.57,
+    "fii_avg_20d": -353.57,
+    "dii_avg_5d": 629.7,
+    "dii_avg_20d": 629.7,
     "history": [
-      {
-        "date": "2026-06-16",
-        "fii": null,
-        "dii": null
-      },
       {
         "date": "2026-06-17",
         "fii": null,
@@ -376,33 +371,38 @@
         "date": "2026-08-06",
         "fii": -2296.43,
         "dii": -1044.81
+      },
+      {
+        "date": "2026-08-07",
+        "fii": -17.86,
+        "dii": 4013.6
       }
     ]
   },
   "participant_oi": {
-    "as_of": "2026-08-05",
+    "as_of": "2026-08-06",
     "index_futures_positioning": [
       {
         "participant": "FII",
-        "index_fut_net": 2802.0,
-        "change_vs_prior_day": 2953.0
+        "index_fut_net": -145118.0,
+        "change_vs_prior_day": -147920.0
       },
       {
         "participant": "DII",
-        "index_fut_net": -6383.0,
-        "change_vs_prior_day": -8785.0
+        "index_fut_net": 34476.0,
+        "change_vs_prior_day": 40859.0
       },
       {
         "participant": "PRO",
-        "index_fut_net": 4438.0,
-        "change_vs_prior_day": 3920.0
+        "index_fut_net": -13225.0,
+        "change_vs_prior_day": -17663.0
       },
       {
         "participant": "CLIENT",
-        "index_fut_net": -1554.0,
-        "change_vs_prior_day": -2517.0
+        "index_fut_net": 123867.0,
+        "change_vs_prior_day": 125421.0
       }
     ]
   },
-  "history_days_cached": 42
+  "history_days_cached": 43
 }
