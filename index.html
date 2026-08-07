@@ -21,7 +21,8 @@
   h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(32px,5vw,44px);font-weight:700;
     letter-spacing:-0.02em;margin:0 0 12px;}
   p.lede{color:var(--ink-dim);font-size:15px;line-height:1.6;max-width:520px;margin:0 0 44px;}
-  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  @media (max-width:900px){.grid{grid-template-columns:1fr 1fr;}}
   @media (max-width:640px){.grid{grid-template-columns:1fr;}}
   a.card{display:block;background:var(--bg-panel);border:1px solid var(--line);border-radius:10px;
     padding:26px;text-decoration:none;color:var(--ink);transition:border-color .15s ease;}
@@ -60,7 +61,19 @@
     <a class="card" href="./combined/">
       <div><span class="dot" style="background:var(--amber)"></span>Combined View</div>
       <h2>Cross-Tool Alignment</h2>
-      <p>Reads all three tools' data directly and shows where they agree or disagree on a symbol — no separate scan needed.</p>
+      <p>Reads all tools' data directly and shows where they agree or disagree — plus a market-context strip up top.</p>
+      <div class="go">Open dashboard →</div>
+    </a>
+    <a class="card" href="./macro-cockpit/">
+      <div><span class="dot" style="background:#E8A33D"></span>Macro Cockpit</div>
+      <h2>Broad Market Weather</h2>
+      <p>VIX, breadth, FII/DII cash flow, and participant OI — checked before you look at a single stock.</p>
+      <div class="go">Open dashboard →</div>
+    </a>
+    <a class="card" href="./options-radar/">
+      <div><span class="dot" style="background:#C25450"></span>Options Radar</div>
+      <h2>PCR / Max Pain / Heatmap</h2>
+      <p>Intraday Nifty &amp; Bank Nifty options positioning, refreshed every few minutes during market hours.</p>
       <div class="go">Open dashboard →</div>
     </a>
   </div>
