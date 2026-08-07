@@ -141,6 +141,15 @@
 
   <div id="tableWrap"></div>
 
+  <section style="margin-top:32px;background:var(--bg-panel);border:1px solid var(--line);border-radius:8px;padding:20px 22px;">
+    <h2 style="font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:600;margin:0 0 4px;">Track Record</h2>
+    <div style="font-size:12px;color:var(--ink-dim);font-family:'IBM Plex Mono',monospace;margin-bottom:14px;">
+      How this tool's own past signals have actually performed, computed from a running log of every signal it's fired -
+      not a backtest against history before this tool existed, only against what it's genuinely called since. Grows more meaningful over time.
+    </div>
+    <div id="trackRecordWrap"></div>
+  </section>
+
   <footer>
     Data: NSE via yfinance + nselib · Indicators computed locally, nothing here is investment advice.
     Regenerate with <code>python scripts/scan.py</code> or let the scheduled GitHub Action refresh it.
@@ -167,6 +176,7 @@ async function load(){
     state.rows = data.results || [];
     renderMeta(data);
     renderStats(data);
+    renderTrackRecord(data);
     render();
   }catch(err){
     document.getElementById('meta').textContent = 'No scan data yet';
@@ -208,6 +218,37 @@ function meterHTML(gap){
   return `<div class="meter"><div class="mid"></div><div class="fill ${cls}" style="${style}"></div></div>`;
 }
 
+const TRACK_LABEL = {
+  confirmed_golden_cross: 'Golden cross ✓', confirmed_death_cross: 'Death cross ✓',
+  approaching_golden_cross: 'Approaching ↑', approaching_death_cross: 'Approaching ↓',
+};
+
+function renderTrackRecord(data){
+  const tr = data.track_record || {};
+  const keys = Object.keys(tr);
+  if(keys.length === 0){
+    document.getElementById('trackRecordWrap').innerHTML =
+      `<div class="empty">No signals have aged enough yet to backtest (needs 10+ trading days since first logged). Signal log so far: ${data.signal_log_size || 0} instance(s). This fills in on its own as the log accumulates.</div>`;
+    return;
+  }
+  let html = '<table><thead><tr><th>Signal</th><th>N (10d)</th><th>Avg Return (10d)</th><th>Hit Rate (10d)</th><th>N (20d)</th><th>Avg Return (20d)</th><th>Hit Rate (20d)</th></tr></thead><tbody>';
+  keys.forEach(sig => {
+    const t = tr[sig];
+    const fmtRet = (v) => v == null ? '—' : `<span style="color:${v>=0?'var(--teal)':'var(--rose)'}">${v>0?'+':''}${v.toFixed(2)}%</span>`;
+    html += `<tr>
+      <td class="sym">${TRACK_LABEL[sig] || sig}</td>
+      <td class="num">${t.n_10d ?? '—'}</td>
+      <td class="num">${fmtRet(t.avg_return_10d)}</td>
+      <td class="num">${t.hit_rate_10d != null ? t.hit_rate_10d.toFixed(1)+'%' : '—'}</td>
+      <td class="num">${t.n_20d ?? '—'}</td>
+      <td class="num">${fmtRet(t.avg_return_20d)}</td>
+      <td class="num">${t.hit_rate_20d != null ? t.hit_rate_20d.toFixed(1)+'%' : '—'}</td>
+    </tr>`;
+  });
+  html += '</tbody></table>';
+  document.getElementById('trackRecordWrap').innerHTML = html;
+}
+
 function scoreBar(score, signal){
   const pct = Math.min(100, score);
   const cls = signal.includes('golden') ? 'bull' : signal.includes('death') ? 'bear' : 'neutral';
@@ -232,7 +273,8 @@ function render(){
   const cols = [
     ['symbol','Symbol'], ['last_close','Close'], ['gap_pct','DMA Gap'], ['signal','Signal'],
     ['rsi14','RSI 14'], ['adx14','ADX 14'], ['supertrend','Supertrend'],
-    ['vol_ratio_20d','Vol vs 20d'], ['delivery_pct','Delivery %'], ['score','Score']
+    ['vol_ratio_20d','Vol vs 20d'], ['rs_20d','RS 20d'], ['delivery_pct','Delivery %'],
+    ['short_days','Short Days'], ['score','Score']
   ];
 
   let html = '<table><thead><tr>';
@@ -256,7 +298,9 @@ function render(){
     html += `<td class="num">${r.adx14}</td>`;
     html += `<td class="num" style="color:${r.supertrend==='up'?'var(--teal)':'var(--rose)'}">${r.supertrend}</td>`;
     html += `<td class="num">${r.vol_ratio_20d != null ? r.vol_ratio_20d.toFixed(2)+'×' : '—'}</td>`;
+    html += `<td class="num" style="color:${r.rs_20d != null ? (r.rs_20d>=0?'var(--teal)':'var(--rose)') : 'var(--ink-dim)'}">${r.rs_20d != null ? (r.rs_20d>0?'+':'')+r.rs_20d.toFixed(1)+'%' : '—'}</td>`;
     html += `<td class="num">${r.delivery_pct != null ? r.delivery_pct.toFixed(1)+'%' : '—'}</td>`;
+    html += `<td class="num" style="color:${r.short_days ? 'var(--rose)' : 'var(--ink-dim)'}">${r.short_days ? r.short_days+'d' : '—'}</td>`;
     html += `<td class="num">${scoreBar(r.score, r.signal)}</td>`;
     html += '</tr>';
   });

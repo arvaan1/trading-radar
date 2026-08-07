@@ -157,42 +157,15 @@ def fetch_price_history_live(symbol: str) -> pd.DataFrame | None:
 
 
 def fetch_delivery_pct_live(symbol: str) -> dict:
-    """Returns latest delivery % and a 20-day z-score. Best-effort: NSE's
-    endpoints are undocumented and occasionally rate-limit, so failures here
-    should never crash the whole scan."""
-    try:
-        from nselib import capital_market
-
-        df = capital_market.price_volume_and_deliverable_position_data(symbol=symbol, period="2M")
-        if df is None or len(df) == 0:
-            return {"delivery_pct": None, "delivery_zscore": None}
-
-        # Column names from NSE's raw feed are inconsistent about spacing/case
-        # across nselib versions, so match loosely.
-        def find_col(candidates):
-            norm = {c: "".join(c.lower().split()).replace("%", "").replace(".", "") for c in df.columns}
-            for cand in candidates:
-                cand_n = "".join(cand.lower().split()).replace("%", "").replace(".", "")
-                for orig, n in norm.items():
-                    if cand_n in n:
-                        return orig
-            return None
-
-        col = find_col(["DlyQttoTradedQty", "DlyQtytoTradedQty", "PercentDeliverable"])
-        if col is None:
-            return {"delivery_pct": None, "delivery_zscore": None}
-
-        series = pd.to_numeric(df[col], errors="coerce").dropna()
-        if len(series) < 5:
-            return {"delivery_pct": None, "delivery_zscore": None}
-
-        latest = series.iloc[-1]
-        mean, std = series.mean(), series.std()
-        z = (latest - mean) / std if std and std > 0 else 0.0
-        return {"delivery_pct": round(float(latest), 2), "delivery_zscore": round(float(z), 2)}
-    except Exception as exc:  # noqa: BLE001
-        log.debug("delivery fetch failed for %s: %s", symbol, exc)
-        return {"delivery_pct": None, "delivery_zscore": None}
+    """Delivery % now comes from Delivery Radar's own cache directly (a
+    sibling file read, no network call) instead of a separate, fragile
+    fetch of the same data. This used to call NSE's per-symbol API via
+    nselib - the same unreliable pattern Delivery Radar itself abandoned
+    for the bhavcopy approach - which is exactly why this column has been
+    mostly blank. Reusing Delivery Radar's already-computed, already-
+    validated numbers fixes that and removes a redundant data source
+    entirely. See merge_delivery_context() for the actual lookup."""
+    return {"delivery_pct": None, "delivery_zscore": None}
 
 
 def fetch_price_history_demo(symbol: str, seed: int) -> pd.DataFrame:
@@ -222,10 +195,178 @@ def fetch_delivery_pct_demo(seed: int) -> dict:
 
 
 # ---------------------------------------------------------------------------
+# Cross-tool context (sibling-folder file reads, zero extra network calls -
+# this is the actual "interconnected web" mechanism: each tool's already-
+# computed output becomes an input to the others, for free)
+# ---------------------------------------------------------------------------
+
+def load_delivery_context() -> dict[str, dict]:
+    """Reads Delivery Radar's own latest output directly - replaces this
+    tool's old broken standalone delivery fetch. Returns {} gracefully if
+    Delivery Radar hasn't run yet or isn't present (e.g. during isolated
+    testing), never raises."""
+    path = ROOT.parent / "delivery-radar" / "data" / "scan_results.json"
+    if not path.exists():
+        log.info("No delivery-radar output found at %s - Delivery % will be blank this run.", path)
+        return {}
+    try:
+        data = json.loads(path.read_text())
+        return {
+            r["symbol"]: {"delivery_pct": r.get("delivery_pct"), "delivery_zscore": r.get("delivery_zscore_20d")}
+            for r in data.get("results", [])
+        }
+    except Exception as exc:  # noqa: BLE001
+        log.warning("Could not read delivery-radar output: %s", exc)
+        return {}
+
+
+def load_short_interest_context() -> dict[str, dict]:
+    """Reads Smart Money Feed's short-selling data - lets a death-cross
+    candidate show whether it's also being actively shorted, which is
+    corroborating evidence a pure technical scanner has no way to know
+    about on its own."""
+    path = ROOT.parent / "smart-money" / "data" / "scan_results.json"
+    if not path.exists():
+        log.info("No smart-money output found at %s - short-interest context will be blank this run.", path)
+        return {}
+    try:
+        data = json.loads(path.read_text())
+        return {
+            r["symbol"]: {"short_qty_total": r.get("short_qty_total", 0), "short_days": r.get("short_days", 0)}
+            for r in data.get("symbol_summary", [])
+        }
+    except Exception as exc:  # noqa: BLE001
+        log.warning("Could not read smart-money output: %s", exc)
+        return {}
+
+
+# ---------------------------------------------------------------------------
+# Nifty 500 index history, for Relative Strength
+# ---------------------------------------------------------------------------
+
+def fetch_index_history_live() -> pd.Series | None:
+    """Nifty 500 (^CRSLDX) daily close, for computing each stock's
+    Relative Strength against the broad market - a stock's own return
+    means little without knowing what the market it lives in did over the
+    same stretch."""
+    import yfinance as yf
+
+    try:
+        df = yf.Ticker("^CRSLDX").history(period="15mo", interval="1d", auto_adjust=True)
+        if df is None or df.empty or len(df) < 70:
+            return None
+        return df["Close"]
+    except Exception as exc:  # noqa: BLE001
+        log.warning("Nifty 500 index fetch failed: %s", exc)
+        return None
+
+
+def fetch_index_history_demo(seed: int = 999) -> pd.Series:
+    rng = np.random.default_rng(seed)
+    n = 300
+    dates = pd.bdate_range(end=pd.Timestamp.today(), periods=n)
+    drift = rng.normal(0.0002, 0.009, n)  # a calmer walk than individual stocks - an index is diversified
+    close = 100 * np.exp(np.cumsum(drift))
+    return pd.Series(close, index=dates)
+
+
+def compute_relative_strength(stock_close: pd.Series, index_close: pd.Series) -> dict:
+    """Stock's own return over N days minus the index's return over the
+    identical N days. Positive = the stock outperformed the broad market,
+    not just 'went up' - and 'went up while the market went down' is a
+    genuinely different, stronger statement than 'went up.'"""
+    out = {"rs_20d": None, "rs_60d": None}
+    if index_close is None or len(stock_close) < 61 or len(index_close) < 61:
+        return out
+
+    aligned_index = index_close.reindex(stock_close.index, method="ffill")
+    for label, window in (("rs_20d", 20), ("rs_60d", 60)):
+        if len(stock_close) <= window or pd.isna(aligned_index.iloc[-window - 1]):
+            continue
+        stock_ret = (stock_close.iloc[-1] / stock_close.iloc[-window - 1] - 1) * 100
+        index_ret = (aligned_index.iloc[-1] / aligned_index.iloc[-window - 1] - 1) * 100
+        out[label] = round(float(stock_ret - index_ret), 2)
+    return out
+
+
+# ---------------------------------------------------------------------------
+# Signal history log + self-backtest (uses price data this run ALREADY
+# fetched - no additional network calls needed to validate past calls)
+# ---------------------------------------------------------------------------
+
+SIGNAL_LOG_PATH = ROOT / "data" / "signal_log.csv"
+SIGNAL_LOG_COLUMNS = ["date", "symbol", "signal", "gap_pct"]
+BACKTEST_HORIZONS = (10, 20)  # trading days forward to check
+LOG_RETENTION_DAYS = 400
+
+
+def load_signal_log() -> pd.DataFrame:
+    if SIGNAL_LOG_PATH.exists():
+        return pd.read_csv(SIGNAL_LOG_PATH, parse_dates=["date"])
+    return pd.DataFrame(columns=SIGNAL_LOG_COLUMNS)
+
+
+def append_to_signal_log(rows: list[dict]) -> pd.DataFrame:
+    log_df = load_signal_log()
+    today = pd.Timestamp(datetime.now(timezone.utc).date())
+    log_df = log_df[log_df["date"] != today]  # today's entries get replaced, not duplicated, on a rerun
+    if rows:
+        new_df = pd.DataFrame(rows)
+        new_df["date"] = today
+        log_df = pd.concat([log_df, new_df], ignore_index=True)
+    cutoff = pd.Timestamp(datetime.now(timezone.utc).date() - pd.Timedelta(days=LOG_RETENTION_DAYS))
+    log_df = log_df[log_df["date"] >= cutoff]
+    SIGNAL_LOG_PATH.parent.mkdir(parents=True, exist_ok=True)
+    log_df.sort_values(["date", "symbol"]).to_csv(SIGNAL_LOG_PATH, index=False)
+    return log_df
+
+
+def backtest_signal_log(signal_log: pd.DataFrame, price_histories: dict[str, pd.Series]) -> dict:
+    """For each logged signal old enough to have forward data, computes
+    the stock's return N trading days later using the price history this
+    SAME run already fetched for that symbol (that history covers ~15
+    months back, so it naturally covers past logged dates - zero extra
+    fetches). Aggregates into a track record per signal type."""
+    if signal_log.empty:
+        return {}
+
+    by_signal: dict[str, dict[int, list[float]]] = {}
+    today = pd.Timestamp(datetime.now(timezone.utc).date())
+
+    for _, row in signal_log.iterrows():
+        symbol, sig, log_date = row["symbol"], row["signal"], row["date"]
+        if sig == "no_signal" or symbol not in price_histories:
+            continue
+        prices = price_histories[symbol]
+        prices_after = prices[prices.index >= log_date]
+        if prices_after.empty:
+            continue
+        baseline_price = float(prices_after.iloc[0])
+
+        for horizon in BACKTEST_HORIZONS:
+            future = prices_after.iloc[1:]
+            if len(future) < horizon:
+                continue  # not enough time has passed yet for this specific logged signal
+            fwd_price = float(future.iloc[horizon - 1])
+            ret = (fwd_price - baseline_price) / baseline_price * 100
+            by_signal.setdefault(sig, {}).setdefault(horizon, []).append(ret)
+
+    summary = {}
+    for sig, horizons in by_signal.items():
+        summary[sig] = {}
+        for horizon, rets in horizons.items():
+            wins = sum(1 for r in rets if r > 0)
+            summary[sig][f"avg_return_{horizon}d"] = round(sum(rets) / len(rets), 2)
+            summary[sig][f"hit_rate_{horizon}d"] = round(wins / len(rets) * 100, 1)
+            summary[sig][f"n_{horizon}d"] = len(rets)
+    return summary
+
+
+# ---------------------------------------------------------------------------
 # Signal computation
 # ---------------------------------------------------------------------------
 
-def compute_signal(df: pd.DataFrame) -> dict:
+def compute_signal(df: pd.DataFrame, index_close: pd.Series | None) -> dict:
     close = df["Close"]
     sma50 = close.rolling(50).mean()
     sma200 = close.rolling(200).mean()
@@ -260,6 +401,8 @@ def compute_signal(df: pd.DataFrame) -> dict:
     vol_sma20 = vol.rolling(20).mean()
     vol_ratio = float(vol.iloc[-1] / vol_sma20.iloc[-1]) if vol_sma20.iloc[-1] else None
 
+    rs = compute_relative_strength(close, index_close)
+
     return {
         "last_close": round(float(close.iloc[-1]), 2),
         "sma50": round(float(sma50.iloc[-1]), 2),
@@ -273,13 +416,16 @@ def compute_signal(df: pd.DataFrame) -> dict:
         "bb_bandwidth": round(bb_bandwidth, 4) if bb_bandwidth is not None else None,
         "supertrend": supertrend_dir,
         "vol_ratio_20d": round(vol_ratio, 2) if vol_ratio is not None else None,
+        "rs_20d": rs["rs_20d"],
+        "rs_60d": rs["rs_60d"],
     }
 
 
 def score_row(row: dict) -> float:
     """Higher = more actionable. Rewards proximity to a cross, narrowing
-    momentum, trend-strength confirmation (ADX), volume confirmation, and
-    delivery-% confirmation when available."""
+    momentum, trend-strength confirmation (ADX), volume confirmation,
+    delivery-% confirmation, relative-strength confirmation, and - for
+    bearish setups specifically - corroborating short-interest activity."""
     score = 0.0
     signal = row["signal"]
 
@@ -312,6 +458,24 @@ def score_row(row: dict) -> float:
         if bullish and row["delivery_zscore"] > 0.5:
             score += min(row["delivery_zscore"] * 4, 10)
 
+    # Relative strength: a golden cross on a stock already beating the
+    # market is stronger; a death cross on a stock already lagging the
+    # market is a stronger short candidate. Same bonus shape for both
+    # directions, on purpose - this tool is built for someone who trades
+    # both sides, not just longs.
+    if signal != "no_signal" and row.get("rs_20d") is not None:
+        if bullish and row["rs_20d"] > 0:
+            score += min(row["rs_20d"] / 2, 10)
+        if (not bullish) and row["rs_20d"] < 0:
+            score += min(abs(row["rs_20d"]) / 2, 10)
+
+    # Short-interest corroboration, bearish setups only: active short
+    # selling alongside a death-cross-family signal is a second, entirely
+    # independent data source (Smart Money Feed's disclosed short-sell
+    # data) agreeing with the technical read.
+    if (not bullish) and signal != "no_signal" and row.get("short_days"):
+        score += min(row["short_days"] * 2, 10)
+
     return round(score, 2)
 
 
@@ -332,9 +496,16 @@ def load_watchlist(path: Path) -> list[str]:
     return symbols
 
 
-def run(symbols: list[str], demo: bool, sleep_s: float, skip_delivery: bool) -> dict:
+def run(symbols: list[str], demo: bool, sleep_s: float, skip_delivery: bool) -> tuple[dict, dict[str, pd.Series]]:
     results = []
     errors = []
+    price_histories: dict[str, pd.Series] = {}
+
+    delivery_context = load_delivery_context()
+    short_context = load_short_interest_context()
+    index_close = fetch_index_history_demo() if demo else fetch_index_history_live()
+    if index_close is None:
+        log.warning("No Nifty 500 index history available - Relative Strength will be blank this run.")
 
     for i, symbol in enumerate(symbols):
         try:
@@ -347,23 +518,26 @@ def run(symbols: list[str], demo: bool, sleep_s: float, skip_delivery: bool) -> 
                 errors.append({"symbol": symbol, "reason": "insufficient price history"})
                 continue
 
-            sig = compute_signal(df)
+            sig = compute_signal(df, index_close)
             if sig is None:
                 errors.append({"symbol": symbol, "reason": "could not compute 50/200 DMA"})
                 continue
 
+            price_histories[symbol] = df["Close"]
+
             if skip_delivery:
                 delivery = {"delivery_pct": None, "delivery_zscore": None}
-            elif demo:
-                delivery = fetch_delivery_pct_demo(seed=i)
             else:
-                delivery = fetch_delivery_pct_live(symbol)
+                delivery = delivery_context.get(symbol, {"delivery_pct": None, "delivery_zscore": None})
 
-            row = {"symbol": symbol, **sig, **delivery}
+            short_info = short_context.get(symbol, {"short_qty_total": 0, "short_days": 0})
+
+            row = {"symbol": symbol, **sig, **delivery, **short_info}
             row["score"] = score_row(row)
             results.append(row)
 
-            log.info("%-12s  signal=%-24s  gap=%6.2f%%  score=%.1f", symbol, row["signal"], row["gap_pct"], row["score"])
+            log.info("%-12s  signal=%-24s  gap=%6.2f%%  rs20=%s  score=%.1f",
+                      symbol, row["signal"], row["gap_pct"], row.get("rs_20d"), row["score"])
 
         except Exception as exc:  # noqa: BLE001
             log.warning("Failed on %s: %s", symbol, exc)
@@ -374,7 +548,7 @@ def run(symbols: list[str], demo: bool, sleep_s: float, skip_delivery: bool) -> 
 
     results.sort(key=lambda r: r["score"], reverse=True)
 
-    return {
+    output = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "universe_size": len(symbols),
         "success_count": len(results),
@@ -382,6 +556,7 @@ def run(symbols: list[str], demo: bool, sleep_s: float, skip_delivery: bool) -> 
         "errors": errors,
         "results": results,
     }
+    return output, price_histories
 
 
 def main():
@@ -396,7 +571,20 @@ def main():
     symbols = load_watchlist(args.watchlist)
     log.info("Loaded %d symbols from %s (demo=%s)", len(symbols), args.watchlist, args.demo)
 
-    output = run(symbols, demo=args.demo, sleep_s=args.sleep, skip_delivery=args.skip_delivery)
+    output, price_histories = run(symbols, demo=args.demo, sleep_s=args.sleep, skip_delivery=args.skip_delivery)
+
+    # Log today's signals, then backtest the log using price data this run
+    # already has in memory - no extra network calls to validate history.
+    todays_signal_rows = [
+        {"symbol": r["symbol"], "signal": r["signal"], "gap_pct": r["gap_pct"]}
+        for r in output["results"] if r["signal"] != "no_signal"
+    ]
+    signal_log = append_to_signal_log(todays_signal_rows)
+    track_record = backtest_signal_log(signal_log, price_histories)
+    output["track_record"] = track_record
+    output["signal_log_size"] = len(signal_log)
+    log.info("Signal log: %d logged instance(s) total, track record covers %d signal type(s)",
+              len(signal_log), len(track_record))
 
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(output, indent=2))
