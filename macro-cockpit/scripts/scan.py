@@ -320,6 +320,95 @@ def compute_trend(series: pd.Series, window: int) -> float | None:
     return round(float(valid.tail(window).mean()), 2)
 
 
+# ---------------------------------------------------------------------------
+# Signal Breadth: a genuinely new macro indicator, built entirely from data
+# DMA Radar and Delivery Radar already produce (their signal_log.csv files,
+# sibling reads, zero extra NSE calls). Nothing here talks to NSE at all -
+# it's the ecosystem's own daily output, aggregated into a market-wide
+# breadth read no single per-stock tool could show on its own. This is
+# the clearest example of "interconnected web" in this whole system: two
+# tools built for per-stock analysis become, in aggregate, a market gauge.
+# ---------------------------------------------------------------------------
+
+DMA_BULLISH_SIGNALS = {"confirmed_golden_cross", "approaching_golden_cross"}
+DMA_BEARISH_SIGNALS = {"confirmed_death_cross", "approaching_death_cross"}
+DELIVERY_BULLISH_SIGNALS = {"quiet_accumulation", "confirmed_accumulation"}
+DELIVERY_BEARISH_SIGNALS = {"possible_distribution"}
+
+
+def _load_sibling_signal_log(tool_folder: str) -> pd.DataFrame | None:
+    path = ROOT.parent / tool_folder / "data" / "signal_log.csv"
+    if not path.exists():
+        log.info("No signal_log.csv found for %s at %s - Signal Breadth will exclude it this run.", tool_folder, path)
+        return None
+    try:
+        return pd.read_csv(path, parse_dates=["date"])
+    except Exception as exc:  # noqa: BLE001
+        log.warning("Could not read %s signal log: %s", tool_folder, exc)
+        return None
+
+
+def compute_signal_breadth() -> dict:
+    dma_log = _load_sibling_signal_log("dma-radar")
+    delivery_log = _load_sibling_signal_log("delivery-radar")
+
+    daily_rows = []
+    for df, bullish_set, bearish_set, label in (
+        (dma_log, DMA_BULLISH_SIGNALS, DMA_BEARISH_SIGNALS, "dma"),
+        (delivery_log, DELIVERY_BULLISH_SIGNALS, DELIVERY_BEARISH_SIGNALS, "delivery"),
+    ):
+        if df is None or df.empty:
+            continue
+        grouped = df.groupby("date")["signal"].agg(
+            bullish=lambda s: s.isin(bullish_set).sum(),
+            bearish=lambda s: s.isin(bearish_set).sum(),
+        ).reset_index()
+        grouped["source"] = label
+        daily_rows.append(grouped)
+
+    if not daily_rows:
+        return {"available": False, "note": "Neither DMA Radar nor Delivery Radar has a signal log yet - "
+                                              "this fills in once both tools have run at least once."}
+
+    combined = pd.concat(daily_rows, ignore_index=True)
+    by_date = combined.groupby("date")[["bullish", "bearish"]].sum().reset_index()
+    by_date["net"] = by_date["bullish"] - by_date["bearish"]
+    by_date = by_date.sort_values("date")
+
+    today_row = by_date.iloc[-1] if not by_date.empty else None
+    history_20d = by_date.tail(21).iloc[:-1] if len(by_date) > 1 else by_date.iloc[0:0]  # exclude today from its own baseline
+
+    return {
+        "available": True,
+        "today_bullish": int(today_row["bullish"]) if today_row is not None else None,
+        "today_bearish": int(today_row["bearish"]) if today_row is not None else None,
+        "today_net": int(today_row["net"]) if today_row is not None else None,
+        "avg_net_20d": round(float(history_20d["net"].mean()), 1) if len(history_20d) >= 3 else None,
+        "days_of_history": len(by_date),
+        "history": [
+            {"date": r["date"].strftime("%Y-%m-%d"), "bullish": int(r["bullish"]), "bearish": int(r["bearish"]), "net": int(r["net"])}
+            for _, r in by_date.tail(30).iterrows()
+        ],
+    }
+
+
+def demo_signal_breadth() -> dict:
+    rng = np.random.default_rng(42)
+    dates = pd.bdate_range(end=pd.Timestamp.today(), periods=25)
+    history = []
+    for d in dates:
+        bullish = int(rng.integers(3, 18))
+        bearish = int(rng.integers(2, 15))
+        history.append({"date": d.strftime("%Y-%m-%d"), "bullish": bullish, "bearish": bearish, "net": bullish - bearish})
+    today = history[-1]
+    avg_net_20d = round(sum(h["net"] for h in history[-21:-1]) / 20, 1)
+    return {
+        "available": True, "today_bullish": today["bullish"], "today_bearish": today["bearish"],
+        "today_net": today["net"], "avg_net_20d": avg_net_20d, "days_of_history": len(history),
+        "history": history,
+    }
+
+
 def main():
     parser = argparse.ArgumentParser(description="FII/DII + Participant OI Macro Cockpit")
     parser.add_argument("--demo", action="store_true")
@@ -437,6 +526,12 @@ def main():
                 "change_vs_prior_day": change,
             })
 
+    signal_breadth = demo_signal_breadth() if args.demo else compute_signal_breadth()
+    if signal_breadth.get("available"):
+        log.info("Signal breadth: today net=%s (bullish=%s, bearish=%s), 20d avg=%s, %d day(s) of history",
+                  signal_breadth["today_net"], signal_breadth["today_bullish"], signal_breadth["today_bearish"],
+                  signal_breadth["avg_net_20d"], signal_breadth["days_of_history"])
+
     output = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "vix": vix_trend,
@@ -447,6 +542,7 @@ def main():
             "as_of": participant_latest_date.strftime("%Y-%m-%d") if participant_latest_date is not None else None,
             "index_futures_positioning": participant_summary,
         },
+        "signal_breadth": signal_breadth,
         "history_days_cached": len(history),
     }
 

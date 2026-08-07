@@ -110,6 +110,12 @@
     <div id="participantWrap"></div>
   </section>
 
+  <section>
+    <h2>Signal Breadth <span style="font-size:10px;color:var(--amber);text-transform:uppercase;letter-spacing:0.06em;font-family:'IBM Plex Mono',monospace;">built from your other tools, not NSE</span></h2>
+    <div class="section-note">Today's combined bullish vs. bearish signal count across DMA Radar and Delivery Radar, against its own recent average. No NSE call of its own - this is your ecosystem's own daily output, aggregated into a market-wide read neither tool shows on its own.</div>
+    <div id="breadthSignalWrap"></div>
+  </section>
+
   <footer>
     Data: NSE, via the <code>nse</code> Python package + NSE's public participant-OI file. Nothing here is investment advice —
     this is a weather report, not a forecast. Regenerate with <code>python scripts/scan.py</code> or let the scheduled GitHub Action refresh it.
@@ -125,7 +131,7 @@ async function load(){
     const res = await fetch('data/scan_results.json?_=' + Date.now());
     if(!res.ok) throw new Error('HTTP ' + res.status);
     DATA = await res.json();
-    renderMeta(); renderStats(); renderVix(); renderBreadth(); renderFiiDii(); renderParticipant();
+    renderMeta(); renderStats(); renderVix(); renderBreadth(); renderFiiDii(); renderParticipant(); renderSignalBreadth();
   }catch(err){
     document.getElementById('meta').textContent = 'No scan data yet';
     document.querySelector('.console').insertAdjacentHTML('beforeend',
@@ -195,6 +201,39 @@ function renderFiiDii(){
     return;
   }
   document.getElementById('fiiDiiWrap').innerHTML = sparkHTML(fiiVals, fiiVals.length - 1);
+}
+
+function renderSignalBreadth(){
+  const sb = DATA.signal_breadth;
+  if(!sb || !sb.available){
+    document.getElementById('breadthSignalWrap').innerHTML = `<div class="empty">${sb && sb.note ? sb.note : 'Not available yet - needs DMA Radar and/or Delivery Radar to have run at least once.'}</div>`;
+    return;
+  }
+  const netColor = sb.today_net >= 0 ? 'var(--teal)' : 'var(--rose)';
+  const avgText = sb.avg_net_20d != null
+    ? `vs. 20-day average of <b>${sb.avg_net_20d > 0 ? '+' : ''}${sb.avg_net_20d}</b>`
+    : `20-day average still building (${sb.days_of_history} day(s) logged so far)`;
+
+  let html = `<div class="type-breakdown" style="margin-bottom:14px;">
+    <div class="type-chip"><b>${sb.today_bullish}</b> bullish signals today</div>
+    <div class="type-chip"><b>${sb.today_bearish}</b> bearish signals today</div>
+    <div class="type-chip">Net: <b style="color:${netColor}">${sb.today_net > 0 ? '+' : ''}${sb.today_net}</b></div>
+  </div>
+  <div class="section-note" style="margin-bottom:12px;">Today's net reading is ${avgText}. A net reading well above its own recent average means unusually broad bullish participation across the universe today; well below means the opposite.</div>`;
+
+  if(sb.history && sb.history.length >= 2){
+    const vals = sb.history.map(h => h.net);
+    const max = Math.max(...vals, 1), min = Math.min(...vals, -1);
+    const range = (max - min) || 1;
+    html += '<div class="spark">' + sb.history.map((h,i) => {
+      const h_px = Math.max(2, Math.round(Math.abs(h.net - Math.max(min,0)) / range * 66)) ;
+      const barHeight = Math.max(3, Math.round((Math.abs(h.net) / Math.max(Math.abs(max), Math.abs(min), 1)) * 60));
+      const cls = h.net >= 0 ? 'pos' : 'neg';
+      const isLast = i === sb.history.length - 1;
+      return `<i class="${cls}${isLast ? ' today' : ''}" style="height:${barHeight}px" title="${h.date}: net ${h.net>0?'+':''}${h.net}"></i>`;
+    }).join('') + '</div>';
+  }
+  document.getElementById('breadthSignalWrap').innerHTML = html;
 }
 
 function renderParticipant(){
