@@ -1,13 +1,15 @@
 name: Update Delivery Radar scan
 
 on:
-  schedule:
-    # 15:15 UTC = 8:45 PM IST. Pushed later than before: the bhavcopy file
-    # this version relies on is typically published closer to 8 PM IST,
-    # not immediately after the 3:30 PM close. If it's not ready yet on a
-    # given day, the scan just picks it up automatically on the next run -
-    # nothing breaks, but a later schedule means fresher same-day data.
-    - cron: "6 15 * * 1-5"
+  # No native schedule trigger on this workflow anymore. It used to have
+  # one, running alongside an external cron-job.org trigger as "extra
+  # insurance" - but the two were never coordinated, and on DMA Radar
+  # specifically they landed only ~4 minutes apart while a run takes
+  # 11-13 minutes, causing near-certain overlap and the exact git-push
+  # conflict debugged earlier. The external trigger has since proven
+  # itself reliable on its own, so this is removed rather than kept as
+  # redundant, overlap-prone dead weight. Triggered exclusively via
+  # cron-job.org calling workflow_dispatch below (or manually).
   workflow_dispatch: {}
 
 permissions:
@@ -41,6 +43,14 @@ jobs:
         run: |
           git config user.name "delivery-radar-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/scan_results.json data/bhavcopy_cache.csv
+          git add data/scan_results.json data/bhavcopy_cache.csv data/cache_universe_marker.txt
           git diff --staged --quiet && echo "No changes to commit" || git commit -m "Delivery radar scan update: $(date -u +'%Y-%m-%d %H:%M UTC')"
+          # Syncs with the latest remote state right before pushing, not
+          # just at the start of the run. Without this, a long-running scan
+          # (10+ minutes for a full watchlist) can finish with a save point
+          # that is no longer the latest one, if anything else was committed
+          # to the repo while it was running - git then rejects the push
+          # outright rather than risk overwriting that other work. Rebasing
+          # onto the latest remote commit first closes that gap.
+          git pull --rebase --autostash origin main
           git push
