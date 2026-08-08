@@ -211,8 +211,20 @@ async function load(){
 
 function renderMeta(dma, delivery, smart, macro){
   const src = (label, ok) => `<span class="${ok ? 'src-ok' : 'src-missing'}">${label}: ${ok ? 'loaded' : 'not found'}</span>`;
+  let freshnessLine = '';
+  const dates = [];
+  if(dma && dma.data_as_of) dates.push({label: 'DMA', date: dma.data_as_of});
+  if(delivery && delivery.data_as_of) dates.push({label: 'Delivery', date: delivery.data_as_of});
+  if(macro && macro.vix_as_of) dates.push({label: 'Macro (VIX)', date: macro.vix_as_of});
+  if(dates.length > 0){
+    const uniqueDates = [...new Set(dates.map(d => d.date))];
+    const agree = uniqueDates.length === 1;
+    const summary = dates.map(d => `${d.label}: ${d.date}`).join(' · ');
+    freshnessLine = `<br/><span style="color:${agree ? 'var(--teal)' : 'var(--rose)'}">` +
+      `${agree ? 'All sources agree, data as of ' + uniqueDates[0] : 'Sources disagree on date — ' + summary}</span>`;
+  }
   document.getElementById('meta').innerHTML =
-    `${src('DMA', !!dma)} · ${src('Delivery', !!delivery)} · ${src('Smart Money', !!smart)} · ${src('Macro', !!macro)}`;
+    `${src('DMA', !!dma)} · ${src('Delivery', !!delivery)} · ${src('Smart Money', !!smart)} · ${src('Macro', !!macro)}${freshnessLine}`;
 }
 
 function mcStat(n, l, link){
