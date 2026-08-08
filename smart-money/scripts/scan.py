@@ -194,30 +194,42 @@ def fetch_announcements_live(from_date: datetime, to_date: datetime) -> list[dic
             return []
 
 
-def fetch_price_followthrough_live(symbol: str, deal_date: datetime) -> dict | None:
-    import yfinance as yf
-
+def fetch_price_followthrough_live(symbol: str, deal_date: datetime, nse) -> dict | None:
+    """Same NSE historical-data endpoint as DMA Radar, replacing Yahoo
+    Finance here too - see dma-radar/scripts/scan.py's fetch_price_history_live
+    for the full reasoning and the same honest caveat about unadjusted
+    prices. Takes an already-open shared session rather than opening its
+    own per call."""
     try:
-        start = deal_date - timedelta(days=5)
-        end = min(deal_date + timedelta(days=35), datetime.now(timezone.utc)) + timedelta(days=1)
-        df = yf.Ticker(f"{symbol}.NS").history(start=start, end=end, interval="1d", auto_adjust=True)
-        if df is None or df.empty:
+        from_date = (deal_date - timedelta(days=5)).date()
+        to_date = min(deal_date + timedelta(days=35), datetime.now(timezone.utc)).date()
+        raw = nse.fetch_equity_historical_data(symbol, from_date=from_date, to_date=to_date)
+        if not raw:
             return None
-        df.index = df.index.tz_localize(None)
-        df = df.sort_index()
+
+        rows = []
+        for r in raw:
+            try:
+                rows.append({"date": pd.to_datetime(r["CH_TIMESTAMP"]), "close": float(r["CH_CLOSING_PRICE"])})
+            except (KeyError, ValueError, TypeError):
+                continue
+        if not rows:
+            return None
+
+        df = pd.DataFrame(rows).drop_duplicates(subset="date").sort_values("date").set_index("date")
 
         deal_ts = pd.Timestamp(deal_date.date())
         on_or_after = df[df.index >= deal_ts]
         if on_or_after.empty:
             return None
-        baseline_price = float(on_or_after.iloc[0]["Close"])
+        baseline_price = float(on_or_after.iloc[0]["close"])
         baseline_date = on_or_after.index[0]
 
         result = {"baseline_price": round(baseline_price, 2), "baseline_date": baseline_date.strftime("%Y-%m-%d")}
         future = df[df.index > baseline_date]
         for label, n in (("return_5d", 5), ("return_10d", 10), ("return_20d", 20)):
             if len(future) >= n:
-                fut_price = float(future.iloc[n - 1]["Close"])
+                fut_price = float(future.iloc[n - 1]["close"])
                 result[label] = round((fut_price - baseline_price) / baseline_price * 100, 2)
             else:
                 result[label] = None  # not enough trading days have elapsed yet
@@ -487,25 +499,37 @@ def add_price_followthrough(known_investor_deals: list[dict], demo: bool) -> lis
     """Attaches follow-through price data to known-investor deals, deduped
     by (symbol, date) since multiple investors sometimes trade the same
     name the same day. Capped at MAX_FOLLOWTHROUGH_LOOKUPS to keep runtime
-    bounded regardless of how large the cache grows over time."""
+    bounded regardless of how large the cache grows over time. Opens one
+    shared NSE session for all lookups in this run, live mode only."""
+    from contextlib import nullcontext
+
     seen: dict[tuple, dict] = {}
     lookups_done = 0
-    for d in known_investor_deals:
-        key = (d["symbol"], d["date"])
-        if key in seen:
-            d["followthrough"] = seen[key]
-            continue
-        if lookups_done >= MAX_FOLLOWTHROUGH_LOOKUPS:
-            d["followthrough"] = None
-            continue
-        if demo:
-            ft = demo_followthrough(f"{d['symbol']}{d['date']}")
-        else:
-            deal_dt = datetime.strptime(d["date"], "%Y-%m-%d").replace(tzinfo=timezone.utc)
-            ft = fetch_price_followthrough_live(d["symbol"], deal_dt)
-        seen[key] = ft
-        d["followthrough"] = ft
-        lookups_done += 1
+
+    if demo:
+        session_ctx = nullcontext(None)
+    else:
+        from nse import NSE
+        NSE_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+        session_ctx = NSE(str(NSE_CACHE_DIR), server=True)
+
+    with session_ctx as nse:
+        for d in known_investor_deals:
+            key = (d["symbol"], d["date"])
+            if key in seen:
+                d["followthrough"] = seen[key]
+                continue
+            if lookups_done >= MAX_FOLLOWTHROUGH_LOOKUPS:
+                d["followthrough"] = None
+                continue
+            if demo:
+                ft = demo_followthrough(f"{d['symbol']}{d['date']}")
+            else:
+                deal_dt = datetime.strptime(d["date"], "%Y-%m-%d").replace(tzinfo=timezone.utc)
+                ft = fetch_price_followthrough_live(d["symbol"], deal_dt, nse)
+            seen[key] = ft
+            d["followthrough"] = ft
+            lookups_done += 1
     return known_investor_deals
 
 
