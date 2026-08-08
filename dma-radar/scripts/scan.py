@@ -7,7 +7,7 @@ Scans a watchlist of NSE symbols, computes a stack of technical indicators
 and NSE delivery %), and writes a ranked JSON file the dashboard reads.
 
 Usage:
-    python scan.py                  # live run (yfinance + nselib)
+    python scan.py                  # live run (NSE only, via the nse package)
     python scan.py --demo           # offline run with synthetic data,
                                      # useful for testing the pipeline
                                      # and the dashboard without network
@@ -16,8 +16,19 @@ Usage:
     python scan.py --watchlist path/to/file.txt
 
 Data sources (all free, no API key required):
-    - Price/volume history: Yahoo Finance via yfinance (SYMBOL.NS)
-    - Delivery %: NSE's public data via the nselib package
+    - Price/volume history: NSE's own historical-data endpoint, via the
+      nse package (nse.fetch_equity_historical_data). Previously Yahoo
+      Finance - switched entirely to NSE after Yahoo caused two separate
+      real bugs in this tool (a timezone crash, and very plausibly a
+      stale-data incident too). Worth knowing: NSE's data here is raw,
+      unadjusted for stock splits/bonuses - Yahoo's was adjusted. A split
+      during the lookback window could in principle cause a false crossover
+      signal around that date; there's no clean way to fully rule this out
+      from NSE data alone.
+    - Nifty 500 index history: same NSE endpoint family, via
+      nse.fetch_historical_index_data - used for Relative Strength.
+    - Delivery %: read directly from Delivery Radar's own output (a
+      sibling-folder file read, not a separate fetch of the same data).
 
 This script is designed to be run on a schedule (see
 .github/workflows/update.yml) where it commits data/scan_results.json
@@ -31,7 +42,7 @@ import sys
 import time
 import random
 import logging
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
 
 import numpy as np
@@ -43,6 +54,7 @@ log = logging.getLogger("dma-radar")
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_WATCHLIST = ROOT / "watchlist.txt"
 OUTPUT_PATH = ROOT / "data" / "scan_results.json"
+NSE_CACHE_DIR = ROOT / ".nse_cache"  # session/cookie cache for the nse library, same pattern as every other tool
 
 # ---------------------------------------------------------------------------
 # Indicator math (implemented directly on pandas - no extra TA dependency)
@@ -145,24 +157,54 @@ def supertrend(df: pd.DataFrame, period: int = 10, mult: float = 3.0) -> pd.Seri
 # Data fetching
 # ---------------------------------------------------------------------------
 
-def fetch_price_history_live(symbol: str) -> pd.DataFrame | None:
-    import yfinance as yf
+def fetch_price_history_live(symbol: str, nse) -> pd.DataFrame | None:
+    """Full daily OHLCV directly from NSE's own historical-data endpoint,
+    via an already-open shared session (passed in, not opened per symbol -
+    opening a fresh session per symbol for ~750 symbols would mean ~750
+    redundant cookie handshakes; NSE's data now comes exclusively from
+    NSE itself, replacing Yahoo Finance entirely, per explicit request
+    after Yahoo caused two separate real bugs this session (a timezone
+    crash, and very plausibly the stale-data incident too).
 
-    ticker = f"{symbol}.NS"
-    df = yf.Ticker(ticker).history(period="15mo", interval="1d", auto_adjust=True)
-    if df is None or df.empty or len(df) < 210:
+    HONEST CAVEAT, worth remembering: this is raw, UNADJUSTED price data.
+    Yahoo Finance's auto_adjust=True gave split/bonus-adjusted prices;
+    NSE's own historical endpoint does not adjust for corporate actions.
+    If a stock in the universe splits or issues a bonus during the
+    lookback window, its raw price series will show an overnight gap
+    that isn't a real price move - which could, in principle, trigger a
+    false DMA crossover around that date. There's no clean way to fully
+    eliminate this risk from NSE data alone."""
+    to_date = datetime.now(timezone.utc).date()
+    from_date = to_date - timedelta(days=460)  # ~15 months + buffer for weekends/holidays, same lookback as before
+
+    try:
+        raw = nse.fetch_equity_historical_data(symbol, from_date=from_date, to_date=to_date)
+    except Exception as exc:  # noqa: BLE001
+        log.debug("NSE history fetch failed for %s: %s", symbol, exc)
         return None
-    df = df[["Open", "High", "Low", "Close", "Volume"]].dropna()
-    # yfinance returns a timezone-aware index (localized to the exchange).
-    # Everything downstream that compares dates - especially the signal-log
-    # backtest, which loads dates from a plain CSV via pandas (always
-    # timezone-naive) - needs a consistent, naive index or the comparison
-    # raises a TypeError. This was invisible in --demo mode, since the
-    # synthetic data there was already naive; only live yfinance data
-    # exposes it. Stripped once, at the source, so nothing downstream has
-    # to remember to handle it.
-    df.index = df.index.tz_localize(None)
-    return df
+
+    if not raw or len(raw) < 210:
+        return None
+
+    rows = []
+    for r in raw:
+        try:
+            rows.append({
+                "date": pd.to_datetime(r["CH_TIMESTAMP"]),
+                "Open": float(r["CH_OPENING_PRICE"]),
+                "High": float(r["CH_TRADE_HIGH_PRICE"]),
+                "Low": float(r["CH_TRADE_LOW_PRICE"]),
+                "Close": float(r["CH_CLOSING_PRICE"]),
+                "Volume": float(r["CH_TOT_TRADED_QTY"]),
+            })
+        except (KeyError, ValueError, TypeError):
+            continue
+
+    if len(rows) < 210:
+        return None
+
+    df = pd.DataFrame(rows).drop_duplicates(subset="date").sort_values("date").set_index("date")
+    return df[["Open", "High", "Low", "Close", "Volume"]]
 
 
 def fetch_delivery_pct_live(symbol: str) -> dict:
@@ -261,23 +303,36 @@ def load_short_interest_context() -> dict[str, dict]:
 # Nifty 500 index history, for Relative Strength
 # ---------------------------------------------------------------------------
 
-def fetch_index_history_live() -> pd.Series | None:
-    """Nifty 500 (^CRSLDX) daily close, for computing each stock's
-    Relative Strength against the broad market - a stock's own return
-    means little without knowing what the market it lives in did over the
-    same stretch."""
-    import yfinance as yf
+def fetch_index_history_live(nse) -> pd.Series | None:
+    """Nifty 500 daily close, straight from NSE's own historical index
+    endpoint - same reasoning and same shared-session pattern as
+    fetch_price_history_live above."""
+    to_date = datetime.now(timezone.utc).date()
+    from_date = to_date - timedelta(days=460)
 
     try:
-        df = yf.Ticker("^CRSLDX").history(period="15mo", interval="1d", auto_adjust=True)
-        if df is None or df.empty or len(df) < 70:
-            return None
-        close = df["Close"]
-        close.index = close.index.tz_localize(None)  # same fix as fetch_price_history_live - keep both sides naive
-        return close
+        raw = nse.fetch_historical_index_data("NIFTY 500", from_date=from_date, to_date=to_date)
     except Exception as exc:  # noqa: BLE001
-        log.warning("Nifty 500 index fetch failed: %s", exc)
+        log.warning("NSE Nifty 500 index fetch failed: %s", exc)
         return None
+
+    if not raw or len(raw) < 70:
+        return None
+
+    rows = []
+    for r in raw:
+        try:
+            d = pd.to_datetime(r["EOD_TIMESTAMP"], format="%d-%b-%Y", errors="coerce")
+            if pd.notna(d):
+                rows.append({"date": d, "close": float(r["EOD_CLOSE_INDEX_VAL"])})
+        except (KeyError, ValueError, TypeError):
+            continue
+
+    if len(rows) < 70:
+        return None
+
+    df = pd.DataFrame(rows).drop_duplicates(subset="date").sort_values("date").set_index("date")
+    return df["close"]
 
 
 def fetch_index_history_demo(seed: int = 999) -> pd.Series:
@@ -516,54 +571,69 @@ def load_watchlist(path: Path) -> list[str]:
 
 
 def run(symbols: list[str], demo: bool, sleep_s: float, skip_delivery: bool) -> tuple[dict, dict[str, pd.Series]]:
+    from contextlib import nullcontext
+
     results = []
     errors = []
     price_histories: dict[str, pd.Series] = {}
 
     delivery_context = load_delivery_context()
     short_context = load_short_interest_context()
-    index_close = fetch_index_history_demo() if demo else fetch_index_history_live()
-    if index_close is None:
-        log.warning("No Nifty 500 index history available - Relative Strength will be blank this run.")
 
-    for i, symbol in enumerate(symbols):
-        try:
-            if demo:
-                df = fetch_price_history_demo(symbol, seed=i)
-            else:
-                df = fetch_price_history_live(symbol)
+    # One shared NSE session for the whole run, not one per symbol - with
+    # ~750 symbols, opening a fresh session per symbol would mean ~750
+    # redundant cookie handshakes. nullcontext keeps --demo mode simple
+    # (no real session needed at all, nse=None, unused by the demo path).
+    if demo:
+        session_ctx = nullcontext(None)
+    else:
+        from nse import NSE
+        NSE_CACHE_DIR.mkdir(parents=True, exist_ok=True)
+        session_ctx = NSE(str(NSE_CACHE_DIR), server=True)
 
-            if df is None:
-                errors.append({"symbol": symbol, "reason": "insufficient price history"})
-                continue
+    with session_ctx as nse:
+        index_close = fetch_index_history_demo() if demo else fetch_index_history_live(nse)
+        if index_close is None:
+            log.warning("No Nifty 500 index history available - Relative Strength will be blank this run.")
 
-            sig = compute_signal(df, index_close)
-            if sig is None:
-                errors.append({"symbol": symbol, "reason": "could not compute 50/200 DMA"})
-                continue
+        for i, symbol in enumerate(symbols):
+            try:
+                if demo:
+                    df = fetch_price_history_demo(symbol, seed=i)
+                else:
+                    df = fetch_price_history_live(symbol, nse)
 
-            price_histories[symbol] = df["Close"]
+                if df is None:
+                    errors.append({"symbol": symbol, "reason": "insufficient price history"})
+                    continue
 
-            if skip_delivery:
-                delivery = {"delivery_pct": None, "delivery_zscore": None}
-            else:
-                delivery = delivery_context.get(symbol, {"delivery_pct": None, "delivery_zscore": None})
+                sig = compute_signal(df, index_close)
+                if sig is None:
+                    errors.append({"symbol": symbol, "reason": "could not compute 50/200 DMA"})
+                    continue
 
-            short_info = short_context.get(symbol, {"short_qty_total": 0, "short_days": 0})
+                price_histories[symbol] = df["Close"]
 
-            row = {"symbol": symbol, **sig, **delivery, **short_info}
-            row["score"] = score_row(row)
-            results.append(row)
+                if skip_delivery:
+                    delivery = {"delivery_pct": None, "delivery_zscore": None}
+                else:
+                    delivery = delivery_context.get(symbol, {"delivery_pct": None, "delivery_zscore": None})
 
-            log.info("%-12s  signal=%-24s  gap=%6.2f%%  rs20=%s  score=%.1f",
-                      symbol, row["signal"], row["gap_pct"], row.get("rs_20d"), row["score"])
+                short_info = short_context.get(symbol, {"short_qty_total": 0, "short_days": 0})
 
-        except Exception as exc:  # noqa: BLE001
-            log.warning("Failed on %s: %s", symbol, exc)
-            errors.append({"symbol": symbol, "reason": str(exc)})
+                row = {"symbol": symbol, **sig, **delivery, **short_info}
+                row["score"] = score_row(row)
+                results.append(row)
 
-        if not demo and sleep_s > 0 and i < len(symbols) - 1:
-            time.sleep(sleep_s + random.uniform(0, 0.3))  # polite jitter, avoid hammering endpoints
+                log.info("%-12s  signal=%-24s  gap=%6.2f%%  rs20=%s  score=%.1f",
+                          symbol, row["signal"], row["gap_pct"], row.get("rs_20d"), row["score"])
+
+            except Exception as exc:  # noqa: BLE001
+                log.warning("Failed on %s: %s", symbol, exc)
+                errors.append({"symbol": symbol, "reason": str(exc)})
+
+            if not demo and sleep_s > 0 and i < len(symbols) - 1:
+                time.sleep(sleep_s + random.uniform(0, 0.3))  # polite jitter, avoid hammering endpoints
 
     results.sort(key=lambda r: r["score"], reverse=True)
 
