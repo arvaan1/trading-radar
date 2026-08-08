@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Re-Rating Radar — Pre-Re-Rating Detector</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-void:#0A0E12; --bg-panel:#12181F; --bg-panel-raised:#161D25;
+    --ink:#E4E1D8; --ink-dim:#8A93A0;
+    --amber:#E8A33D; --teal:#3FA88C; --rose:#C25450; --violet:#8B7EC8;
+    --line:#232B34;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--bg-void);color:var(--ink);
+    font-family:'Inter',sans-serif; -webkit-font-smoothing:antialiased;}
+  .console{max-width:1320px;margin:0 auto;padding:32px 24px 80px;}
+  header.masthead{display:flex;justify-content:space-between;align-items:flex-end;
+    border-bottom:1px solid var(--line);padding-bottom:20px;margin-bottom:20px;flex-wrap:wrap;gap:16px;}
+  h1{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:28px;letter-spacing:-0.01em;margin:0;}
+  h1 .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--violet);
+    margin-right:10px;box-shadow:0 0 0 4px rgba(139,126,200,0.15);animation:pulse 2.4s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;}50%{opacity:0.35;}}
+  .subtitle{color:var(--ink-dim);font-size:13px;margin-top:6px;font-family:'IBM Plex Mono',monospace;}
+  .meta{text-align:right;font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--ink-dim);line-height:1.6;}
+  .meta b{color:var(--ink);}
+
+  .honesty-banner{background:rgba(232,163,61,0.08);border:1px solid rgba(232,163,61,0.3);border-radius:8px;
+    padding:16px 20px;margin-bottom:24px;font-size:13px;line-height:1.6;}
+  .honesty-banner b{color:var(--amber);}
+
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+    border:1px solid var(--line);margin-bottom:24px;border-radius:6px;overflow:hidden;}
+  .stat{background:var(--bg-panel);padding:16px 18px;}
+  .stat .n{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:600;}
+  .stat .l{font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--ink-dim);margin-top:4px;}
+
+  .legend{font-size:12px;color:var(--ink-dim);font-family:'IBM Plex Mono',monospace;
+    background:var(--bg-panel);border:1px solid var(--line);border-radius:6px;padding:12px 16px;margin-bottom:16px;}
+
+  table{width:100%;border-collapse:collapse;font-size:13px;}
+  thead th{text-align:left;padding:10px 12px;font-family:'IBM Plex Mono',monospace;
+    font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--ink-dim);
+    border-bottom:1px solid var(--line);cursor:pointer;white-space:nowrap;}
+  thead th:hover{color:var(--ink);}
+  thead th.sorted{color:var(--violet);}
+  tbody tr{border-bottom:1px solid var(--line);}
+  tbody tr:hover{background:var(--bg-panel);}
+  tbody td{padding:11px 12px;font-family:'IBM Plex Mono',monospace;white-space:nowrap;}
+  td.sym{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:14px;}
+  td.num{text-align:right;font-variant-numeric:tabular-nums;}
+  td.stage{white-space:normal;max-width:220px;font-size:11.5px;color:var(--ink-dim);}
+
+  .badge{display:inline-block;padding:3px 9px;border-radius:20px;font-size:10.5px;font-weight:600;}
+  .badge.compressed{background:rgba(139,126,200,0.18);color:var(--violet);}
+  .badge.not-compressed{background:rgba(138,147,160,0.12);color:var(--ink-dim);}
+  .known-star{color:var(--teal);}
+
+  .scorebar-wrap{display:flex;align-items:center;gap:8px;min-width:110px;}
+  .scorebar-track{flex:1;height:7px;background:var(--bg-panel-raised);border-radius:4px;overflow:hidden;}
+  .scorebar-fill{height:100%;background:var(--violet);border-radius:4px;}
+  .scorebar-num{font-family:'Space Grotesk',sans-serif;font-weight:600;font-size:13px;width:34px;text-align:right;}
+
+  .empty{padding:60px 20px;text-align:center;color:var(--ink-dim);font-family:'IBM Plex Mono',monospace;}
+  footer{margin-top:28px;padding-top:18px;border-top:1px solid var(--line);
+    font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-dim);line-height:1.7;}
+  @media (max-width:760px){ .grid4{grid-template-columns:repeat(2,1fr);} .meta{text-align:left;} header.masthead{flex-direction:column;align-items:flex-start;} }
+</style>
+</head>
+<body>
+<div class="console">
+
+  <header class="masthead">
+    <div>
+      <h1><span class="dot"></span>Re-Rating Radar</h1>
+      <div class="subtitle">pre-re-rating detector — built from documented case-study research, not a broad backtest</div>
+    </div>
+    <div class="meta" id="meta">Loading…</div>
+  </header>
+
+  <div class="honesty-banner">
+    <b>Read this before trusting the ranking below.</b> This tool is built from one deeply-researched, real case study
+    (Paras Defence's documented 2021-2026 trajectory: multi-year revenue compounding, a ~110-day low-volume "coiling"
+    consolidation, then a volume-confirmed breakout) — not a statistically backtested model across the wider NSE
+    universe. The score is a transparent, reasoned combination of signals this system already tracks reliably
+    (compression, relative strength, delivery accumulation, known-investor participation) — not a fitted or
+    validated weighting. Treat this as a research lens, not a proven edge, until it's had real time to prove itself.
+  </div>
+
+  <div class="grid4" id="statStrip"></div>
+
+  <div class="legend">
+    <b>Compressed</b> = this stock's own volatility is currently in the tightest quarter of its recent range (needs 10+ days
+    of history to compute — builds up over the coming weeks). <b>Score</b> rewards being early: an already-broken-out,
+    broadly-recognized stock scores lower here even if it scores well elsewhere, on purpose.
+  </div>
+
+  <div class="controls" style="margin-bottom:12px;">
+    <input id="search" type="text" placeholder="Filter symbol…" style="background:var(--bg-panel);border:1px solid var(--line);color:var(--ink);padding:9px 12px;border-radius:6px;font-family:'IBM Plex Mono',monospace;font-size:13px;width:200px;" />
+  </div>
+
+  <div id="tableWrap"></div>
+
+  <footer>
+    Reads DMA Radar, Delivery Radar, and Smart Money Feed's already-published output directly — no NSE calls of its
+    own except for its own compression-history tracking, which reuses DMA Radar's already-computed Bollinger
+    bandwidth. Nothing here is investment advice. See README.md for the full case-study reasoning behind this tool's design.
+  </footer>
+
+</div>
+
+<script>
+let DATA = null;
+let state = { sortKey: 'score', sortDir: -1, search: '' };
+
+async function load(){
+  try{
+    const res = await fetch('data/scan_results.json?_=' + Date.now());
+    if(!res.ok) throw new Error('HTTP ' + res.status);
+    DATA = await res.json();
+    renderMeta(); renderStats(); render();
+  }catch(err){
+    document.getElementById('meta').textContent = 'No scan data yet';
+    document.getElementById('tableWrap').innerHTML = `<div class="empty"><b>data/scan_results.json not found yet.</b><br/>Run <code>python scripts/scan.py --demo</code> to generate sample data.</div>`;
+  }
+}
+
+function fmtDate(d){
+  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  const day = String(d.getDate()).padStart(2,"0");
+  return `${day} ${months[d.getMonth()]} ${d.getFullYear()}, ${d.getHours()%12||12}:${String(d.getMinutes()).padStart(2,"0")} ${d.getHours()>=12?"PM":"AM"}`;
+}
+
+function renderMeta(){
+  const d = new Date(DATA.generated_at_utc);
+  document.getElementById('meta').innerHTML = `Last scan: <b>${fmtDate(d)}</b><br/>Compression history: <b>${DATA.compression_log_days_total}</b> day(s) built up`;
+}
+
+function renderStats(){
+  const stats = [
+    { l: 'Universe Scanned', n: DATA.universe_size },
+    { l: 'With Meaningful Compression Data', n: DATA.symbols_with_compression_history },
+    { l: 'Candidates Scored', n: DATA.success_count },
+    { l: 'Top Score', n: DATA.results.length ? DATA.results[0].score : '—' },
+  ];
+  document.getElementById('statStrip').innerHTML = stats.map(s =>
+    `<div class="stat"><div class="n">${s.n}</div><div class="l">${s.l}</div></div>`).join('');
+}
+
+function render(){
+  let rows = DATA.results.filter(r => !state.search || r.symbol.toLowerCase().includes(state.search.toLowerCase()));
+  rows.sort((a,b) => {
+    const va = a[state.sortKey], vb = b[state.sortKey];
+    if(typeof va === 'string') return (va||'').localeCompare(vb||'') * state.sortDir;
+    return ((va ?? -Infinity) - (vb ?? -Infinity)) * state.sortDir;
+  });
+
+  const cols = [
+    ['symbol','Symbol'], ['last_close','Close'], ['_compressed','Compressed'],
+    ['rs_20d','RS 20d'], ['delivery_zscore_20d','Deliv Z'], ['_known','Known Inv.'],
+    ['vol_ratio_20d','Vol vs 20d'], ['stage','Stage'], ['score','Score']
+  ];
+  let html = '<table><thead><tr>';
+  cols.forEach(([key,label]) => {
+    const sortable = !key.startsWith('_');
+    html += `<th class="${state.sortKey===key?'sorted':''}" ${sortable?`data-key="${key}"`:''}>${label}${state.sortKey===key?(state.sortDir===1?' ↑':' ↓'):''}</th>`;
+  });
+  html += '</tr></thead><tbody>';
+
+  if(rows.length === 0) html += `<tr><td colspan="${cols.length}"><div class="empty">No matches.</div></td></tr>`;
+
+  rows.forEach(r => {
+    html += `<tr>
+      <td class="sym">${r.symbol}</td>
+      <td class="num">₹${r.last_close != null ? r.last_close.toFixed(2) : '—'}</td>
+      <td>${r.is_compressed ? '<span class="badge compressed">compressed</span>' : `<span class="badge not-compressed">${r.compression_days_of_history < 10 ? 'building history' : 'normal range'}</span>`}</td>
+      <td class="num" style="color:${r.rs_20d!=null ? (r.rs_20d>=0?'var(--teal)':'var(--rose)') : 'var(--ink-dim)'}">${r.rs_20d != null ? (r.rs_20d>0?'+':'')+r.rs_20d.toFixed(1)+'%' : '—'}</td>
+      <td class="num">${r.delivery_zscore_20d != null ? r.delivery_zscore_20d.toFixed(2) : '—'}</td>
+      <td>${r.known_investors_involved && r.known_investors_involved.length ? '<span class="known-star">★</span>' + r.known_investors_involved.join(', ') : '—'}</td>
+      <td class="num">${r.vol_ratio_20d != null ? r.vol_ratio_20d.toFixed(2)+'×' : '—'}</td>
+      <td class="stage">${r.stage}</td>
+      <td><div class="scorebar-wrap"><div class="scorebar-track"><div class="scorebar-fill" style="width:${r.score}%"></div></div><div class="scorebar-num">${r.score}</div></div></td>
+    </tr>`;
+  });
+  html += '</tbody></table>';
+  document.getElementById('tableWrap').innerHTML = html;
+
+  document.querySelectorAll('thead th[data-key]').forEach(th => {
+    th.addEventListener('click', () => {
+      const key = th.dataset.key;
+      if(state.sortKey === key) state.sortDir *= -1; else { state.sortKey = key; state.sortDir = -1; }
+      render();
+    });
+  });
+}
+
+document.getElementById('search').addEventListener('input', e => { state.search = e.target.value; render(); });
+load();
+</script>
+</body>
+</html>
