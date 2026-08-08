@@ -181,7 +181,15 @@ def fetch_price_history_demo(symbol: str, seed: int) -> pd.DataFrame:
     """Synthetic random-walk OHLCV for offline testing of the pipeline."""
     rng = np.random.default_rng(seed)
     n = 300
-    dates = pd.bdate_range(end=pd.Timestamp.today(), periods=n)
+    # Requests a small buffer beyond n and slices to exactly n, rather than
+    # trusting periods=n directly - pd.bdate_range(end=..., periods=n)
+    # silently returns n-1 dates whenever the end anchor itself falls on a
+    # weekend (confirmed: this returns 299 for periods=300 on a Saturday or
+    # Sunday end date, 300 on a weekday). That's exactly why this never
+    # surfaced in any earlier testing this week - every previous test run
+    # happened to fall on a weekday. Slicing the tail sidesteps the anchor
+    # question entirely instead of reasoning about pandas' exact behavior.
+    dates = pd.bdate_range(end=pd.Timestamp.today(), periods=n + 5)[-n:]
     drift = rng.normal(0.0003, 0.018, n)
     close = 100 * np.exp(np.cumsum(drift))
     high = close * (1 + rng.uniform(0, 0.015, n))
@@ -275,7 +283,7 @@ def fetch_index_history_live() -> pd.Series | None:
 def fetch_index_history_demo(seed: int = 999) -> pd.Series:
     rng = np.random.default_rng(seed)
     n = 300
-    dates = pd.bdate_range(end=pd.Timestamp.today(), periods=n)
+    dates = pd.bdate_range(end=pd.Timestamp.today(), periods=n + 5)[-n:]  # see fetch_price_history_demo for why the buffer+slice
     drift = rng.normal(0.0002, 0.009, n)  # a calmer walk than individual stocks - an index is diversified
     close = 100 * np.exp(np.cumsum(drift))
     return pd.Series(close, index=dates)
@@ -559,8 +567,24 @@ def run(symbols: list[str], demo: bool, sleep_s: float, skip_delivery: bool) -> 
 
     results.sort(key=lambda r: r["score"], reverse=True)
 
+    # Surfaces the actual trading day the price data reflects, separate
+    # from when the script happened to run. These are NOT the same fact,
+    # and only ever showing "last scan time" was exactly what let a stale
+    # fetch look indistinguishable from a fresh one. Yahoo Finance doesn't
+    # always have a trading day's official close finalized within an hour
+    # or two of market close - if it hadn't yet, this run would silently
+    # capture the prior day's bar with no visible sign anything was off.
+    latest_bar_dates = [str(s.index[-1].date()) for s in price_histories.values() if len(s) > 0]
+    if latest_bar_dates:
+        data_as_of = max(set(latest_bar_dates), key=latest_bar_dates.count)  # mode - the date most symbols agree on
+        agreement_pct = round(latest_bar_dates.count(data_as_of) / len(latest_bar_dates) * 100, 1)
+    else:
+        data_as_of, agreement_pct = None, None
+
     output = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+        "data_as_of": data_as_of,
+        "data_as_of_agreement_pct": agreement_pct,
         "universe_size": len(symbols),
         "success_count": len(results),
         "error_count": len(errors),
@@ -583,6 +607,21 @@ def main():
     log.info("Loaded %d symbols from %s (demo=%s)", len(symbols), args.watchlist, args.demo)
 
     output, price_histories = run(symbols, demo=args.demo, sleep_s=args.sleep, skip_delivery=args.skip_delivery)
+
+    if output.get("data_as_of"):
+        data_date = datetime.strptime(output["data_as_of"], "%Y-%m-%d").date()
+        run_date = datetime.now(timezone.utc).date()
+        days_behind = (run_date - data_date).days
+        # More than 1 calendar day behind is worth a loud warning even
+        # accounting for weekends, since this run log is the fastest place
+        # to catch a stale-data-source problem before it reaches the
+        # dashboard silently.
+        if days_behind > 3:
+            log.warning("DATA FRESHNESS: latest price data is from %s (%d days before this run) - "
+                        "Yahoo Finance may not have published the latest close yet, or something else is stale.",
+                        output["data_as_of"], days_behind)
+        else:
+            log.info("Data as of: %s (%s%% of symbols agree)", output["data_as_of"], output["data_as_of_agreement_pct"])
 
     # Log today's signals, then backtest the log using price data this run
     # already has in memory - no extra network calls to validate history.
