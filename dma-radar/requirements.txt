@@ -1,4 +1,4 @@
-yfinance>=0.2.40
+nse>=3.2.1
+httpx[http2]>=0.27
 pandas>=2.0
 numpy>=1.24
-nselib>=1.1
