@@ -158,6 +158,24 @@
 </div>
 
 <script>
+// Explicit, locale-proof date formatting - the previous version used
+// toLocaleString() with no arguments, which renders '7/8/2026' and lets
+// the reader's own assumptions decide whether that means July 8th or
+// August 7th. That ambiguity genuinely cost real trust: it read as
+// July to a day-first reader expecting month-first, making correct,
+// fresh data look a month stale. This can never be misread either way.
+function fmtDate(d){
+  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  const day = String(d.getDate()).padStart(2,"0");
+  const month = months[d.getMonth()];
+  const year = d.getFullYear();
+  let hours = d.getHours();
+  const mins = String(d.getMinutes()).padStart(2,"0");
+  const ampm = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12 || 12;
+  return `${day} ${month} ${year}, ${hours}:${mins} ${ampm}`;
+}
+
 const SIGNAL_LABEL = {
   confirmed_golden_cross: 'Golden cross ✓',
   confirmed_death_cross: 'Death cross ✓',
@@ -191,8 +209,20 @@ async function load(){
 
 function renderMeta(data){
   const d = new Date(data.generated_at_utc);
+  let dataAsOfLine = '';
+  if(data.data_as_of){
+    const asOf = new Date(data.data_as_of + 'T00:00:00');
+    const scanDate = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    const asOfDate = new Date(asOf.getFullYear(), asOf.getMonth(), asOf.getDate());
+    const daysBehind = Math.round((scanDate - asOfDate) / 86400000);
+    const stale = daysBehind > 3;
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    const label = `${String(asOf.getDate()).padStart(2,'0')} ${months[asOf.getMonth()]} ${asOf.getFullYear()}`;
+    dataAsOfLine = `<br/>Price data as of: <b style="color:${stale ? 'var(--rose)' : 'var(--teal)'}">${label}</b>` +
+      (stale ? ` <span style="color:var(--rose)">— older than expected, worth double-checking</span>` : ` (${data.data_as_of_agreement_pct}% of symbols agree)`);
+  }
   document.getElementById('meta').innerHTML =
-    `Last scan: <b>${d.toLocaleString()}</b><br/>
+    `Last scan: <b>${fmtDate(d)}</b>${dataAsOfLine}<br/>
      Universe: <b>${data.universe_size}</b> symbols · ${data.error_count} skipped`;
 }
 
