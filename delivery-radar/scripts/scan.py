@@ -143,7 +143,7 @@ def _get_demo_price_walk(symbol: str) -> pd.Series:
         return _DEMO_PRICE_WALKS[symbol]
     rng = np.random.default_rng(abs(hash(symbol)) % (2**32))
     n = 420
-    dates = pd.bdate_range(end=pd.Timestamp.today(), periods=n)
+    dates = pd.bdate_range(end=pd.Timestamp.today(), periods=n + 5)[-n:]  # buffer+slice - see dma-radar/scripts/scan.py for why periods=n alone can silently return n-1 on a weekend
     base_price = 80 + 400 * ((abs(hash((symbol, "px"))) % 100) / 100)
     drift = rng.normal(0.0003, 0.017, n)
     walk = base_price * np.exp(np.cumsum(drift))
@@ -367,6 +367,7 @@ def compute_signal(df: pd.DataFrame, z_threshold: float, price_move_threshold: f
         "signal": signal,
         "delivery_sparkline_20d": sparkline,
         "sessions_available": len(df),
+        "as_of_date": str(df["date"].iloc[-1].date()),  # which specific bhavcopy date this row's numbers reflect - see main() for why this matters
     }
 
 
@@ -545,6 +546,20 @@ def main():
 
     results.sort(key=lambda r: r["score"], reverse=True)
 
+    # Same "what date does this data actually reflect" tracking added to
+    # DMA Radar - here mostly for visibility, since Delivery Radar's
+    # per-specific-date file fetches are architecturally safer than DMA
+    # Radar's "whatever's latest" approach (a file that isn't published
+    # yet just fails to fetch, rather than silently substituting a wrong
+    # day). Still worth surfacing explicitly rather than assuming.
+    as_of_dates = [r["as_of_date"] for r in results if r.get("as_of_date")]
+    if as_of_dates:
+        data_as_of = max(set(as_of_dates), key=as_of_dates.count)
+        agreement_pct = round(as_of_dates.count(data_as_of) / len(as_of_dates) * 100, 1)
+        log.info("Data as of: %s (%s%% of symbols agree)", data_as_of, agreement_pct)
+    else:
+        data_as_of, agreement_pct = None, None
+
     todays_signal_rows = [
         {"symbol": r["symbol"], "signal": r["signal"]}
         for r in results if r["signal"] != "no_signal"
@@ -556,6 +571,8 @@ def main():
 
     output = {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+        "data_as_of": data_as_of,
+        "data_as_of_agreement_pct": agreement_pct,
         "universe_size": len(symbols),
         "success_count": len(results),
         "error_count": len(errors),
