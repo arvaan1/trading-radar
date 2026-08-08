@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-08T13:00:52.141638+00:00",
+  "generated_at_utc": "2026-08-08T14:00:56.356322+00:00",
   "cache_span_days": 368,
   "recent_display_days": 60,
   "watchlist_size": 8,
@@ -1921,23 +1921,10 @@
       "value_cr": 64.308,
       "deal_type": "block",
       "on_watchlist": false,
-      "followthrough": {
-        "baseline_price": 106.51,
-        "baseline_date": "2025-08-26",
-        "return_5d": 6.12,
-        "return_10d": 6.59,
-        "return_20d": 13.36
-      }
+      "followthrough": null
     }
   ],
-  "followthrough_by_investor": [
-    {
-      "investor": "ABAKKUS",
-      "trades_with_data": 1,
-      "avg_return_20d": 13.36,
-      "hit_rate_20d": 100.0
-    }
-  ],
+  "followthrough_by_investor": [],
   "investor_type_breakdown": {
     "FII/FPI": 84,
     "Individual/HNI": 119,
@@ -3091,7 +3078,7 @@
   ],
   "insider_trading": {
     "note": "Best-effort keyword match against NSE's general announcements feed - not a guaranteed-complete list.",
-    "announcements_scanned": 18953,
+    "announcements_scanned": 18978,
     "filings": [
       {
         "date": "08-Aug-2026 17:36:30",
