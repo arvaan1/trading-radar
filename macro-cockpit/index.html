@@ -124,6 +124,24 @@
 </div>
 
 <script>
+// Explicit, locale-proof date formatting - the previous version used
+// toLocaleString() with no arguments, which renders '7/8/2026' and lets
+// the reader's own assumptions decide whether that means July 8th or
+// August 7th. That ambiguity genuinely cost real trust: it read as
+// July to a day-first reader expecting month-first, making correct,
+// fresh data look a month stale. This can never be misread either way.
+function fmtDate(d){
+  const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+  const day = String(d.getDate()).padStart(2,"0");
+  const month = months[d.getMonth()];
+  const year = d.getFullYear();
+  let hours = d.getHours();
+  const mins = String(d.getMinutes()).padStart(2,"0");
+  const ampm = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12 || 12;
+  return `${day} ${month} ${year}, ${hours}:${mins} ${ampm}`;
+}
+
 let DATA = null;
 
 async function load(){
@@ -141,7 +159,23 @@ async function load(){
 
 function renderMeta(){
   const d = new Date(DATA.generated_at_utc);
-  document.getElementById('meta').innerHTML = `Last scan: <b>${d.toLocaleString()}</b><br/>History: <b>${DATA.history_days_cached}</b> day(s) cached`;
+  let vixLine = '';
+  if(DATA.vix_as_of){
+    const asOf = new Date(DATA.vix_as_of + 'T00:00:00');
+    const scanDate = new Date(d.getFullYear(), d.getMonth(), d.getDate());
+    const asOfDate = new Date(asOf.getFullYear(), asOf.getMonth(), asOf.getDate());
+    const daysBehind = Math.round((scanDate - asOfDate) / 86400000);
+    const stale = daysBehind > 3;
+    const months = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    const label = `${String(asOf.getDate()).padStart(2,'0')} ${months[asOf.getMonth()]} ${asOf.getFullYear()}`;
+    vixLine = `<br/>VIX / Participant OI data as of: <b style="color:${stale ? 'var(--rose)' : 'var(--teal)'}">${label}</b>` +
+      (stale ? ` <span style="color:var(--rose)">— older than expected</span>` : ' (verified against real dates on both sources)');
+  }
+  document.getElementById('meta').innerHTML =
+    `Last scan: <b>${fmtDate(d)}</b>${vixLine}<br/>` +
+    `<span style="color:var(--ink-dim);font-size:11px;">Breadth &amp; FII/DII cash come from undated snapshot endpoints - ` +
+    `can't be independently date-verified the same way. Cross-check against the VIX date above if something looks off.</span><br/>` +
+    `History: <b>${DATA.history_days_cached}</b> day(s) cached`;
 }
 
 function renderStats(){
