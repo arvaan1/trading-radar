@@ -136,7 +136,7 @@ def fetch_vix_live(days: int) -> pd.DataFrame:
 
 def demo_vix(days: int) -> pd.DataFrame:
     rng = np.random.default_rng(10)
-    dates = pd.bdate_range(end=pd.Timestamp.today(), periods=days)
+    dates = pd.bdate_range(end=pd.Timestamp.today(), periods=days + 5)[-days:]  # buffer+slice, see dma-radar/scripts/scan.py for why
     vix = np.clip(rng.normal(13, 2, len(dates)).cumsum() * 0.05 + 12, 8, 35)
     return pd.DataFrame({"date": dates, "vix_close": vix})
 
@@ -394,7 +394,7 @@ def compute_signal_breadth() -> dict:
 
 def demo_signal_breadth() -> dict:
     rng = np.random.default_rng(42)
-    dates = pd.bdate_range(end=pd.Timestamp.today(), periods=25)
+    dates = pd.bdate_range(end=pd.Timestamp.today(), periods=30)[-25:]  # buffer+slice, see dma-radar/scripts/scan.py for why
     history = []
     for d in dates:
         bullish = int(rng.integers(3, 18))
@@ -536,10 +536,15 @@ def main():
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "vix": vix_trend,
         "vix_history_40d": vix_history_out,
+        "vix_as_of": str(vix_df["date"].max().date()) if not vix_df.empty else None,  # VIX has real per-day dates - genuinely verifiable
         "breadth": breadth,
+        "breadth_date_confidence": "unverified - NSE's advance-decline endpoint returns a live snapshot with no date field attached, "
+                                    "so there's no way to independently confirm this reflects today's session rather than a stale cached "
+                                    "value. Cross-check against vix_as_of below - if that's not today, treat this the same way.",
         "fii_dii_cash": fii_dii_trend,
+        "fii_dii_date_confidence": "same caveat as breadth_date_confidence - this endpoint has no date field either",
         "participant_oi": {
-            "as_of": participant_latest_date.strftime("%Y-%m-%d") if participant_latest_date is not None else None,
+            "as_of": participant_latest_date.strftime("%Y-%m-%d") if participant_latest_date is not None else None,  # real dated file - genuinely verifiable
             "index_futures_positioning": participant_summary,
         },
         "signal_breadth": signal_breadth,
