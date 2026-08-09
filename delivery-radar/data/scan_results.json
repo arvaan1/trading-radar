@@ -1,14 +1,14 @@
 {
-  "generated_at_utc": "2026-08-08T17:15:35.590203+00:00",
+  "generated_at_utc": "2026-08-09T14:30:41.980844+00:00",
   "data_as_of": "2026-08-07",
   "data_as_of_agreement_pct": 99.6,
   "universe_size": 755,
-  "success_count": 747,
-  "error_count": 8,
+  "success_count": 746,
+  "error_count": 9,
   "errors": [
     {
       "symbol": "DBREALTY",
-      "reason": "only 12 cached session(s), need 25+"
+      "reason": "only 11 cached session(s), need 25+"
     },
     {
       "symbol": "DUMMYINXGN",
@@ -20,15 +20,19 @@
     },
     {
       "symbol": "JAIBALAJI",
-      "reason": "only 12 cached session(s), need 25+"
+      "reason": "only 11 cached session(s), need 25+"
     },
     {
       "symbol": "KRN",
-      "reason": "only 12 cached session(s), need 25+"
+      "reason": "only 11 cached session(s), need 25+"
+    },
+    {
+      "symbol": "PFOCUS",
+      "reason": "only 24 cached session(s), need 25+"
     },
     {
       "symbol": "QPOWER",
-      "reason": "only 12 cached session(s), need 25+"
+      "reason": "only 11 cached session(s), need 25+"
     },
     {
       "symbol": "SIGMAADV",
@@ -36,11 +40,11 @@
     },
     {
       "symbol": "STLTECH",
-      "reason": "only 9 cached session(s), need 25+"
+      "reason": "only 8 cached session(s), need 25+"
     }
   ],
   "cache_days_fetched_this_run": 0,
-  "cache_total_days": 69,
+  "cache_total_days": 68,
   "track_record": {},
   "signal_log_size": 136,
   "params": {
@@ -84,7 +88,7 @@
         53.2,
         79.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -124,7 +128,7 @@
         54.1,
         75.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -164,7 +168,7 @@
         52.9,
         76.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -204,7 +208,7 @@
         49.9,
         74.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -244,7 +248,7 @@
         31.5,
         38.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": true,
       "smart_money_deal_count": 12,
@@ -284,7 +288,7 @@
         61.1,
         86.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -295,7 +299,7 @@
       "last_close": 1339.0,
       "price_change_pct": -1.25,
       "delivery_pct": 70.33,
-      "delivery_avg_20d": 41.96,
+      "delivery_avg_20d": 41.97,
       "delivery_zscore_20d": 3.72,
       "delivery_zscore_60d": 3.54,
       "vol_ratio_20d": 0.38,
@@ -324,7 +328,7 @@
         49.0,
         70.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -364,7 +368,7 @@
         70.4,
         75.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -404,7 +408,7 @@
         58.0,
         74.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": true,
       "smart_money_deal_count": 22,
@@ -444,7 +448,7 @@
         55.5,
         84.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 4,
@@ -484,7 +488,7 @@
         46.4,
         62.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -524,7 +528,7 @@
         27.8,
         40.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -564,7 +568,7 @@
         22.6,
         75.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -604,7 +608,7 @@
         61.0,
         70.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -644,7 +648,7 @@
         39.7,
         78.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -684,7 +688,7 @@
         40.5,
         53.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -724,7 +728,7 @@
         29.8,
         55.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -764,7 +768,7 @@
         37.0,
         61.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -804,7 +808,7 @@
         55.1,
         71.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -844,7 +848,7 @@
         42.9,
         50.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -855,7 +859,7 @@
       "last_close": 1844.3,
       "price_change_pct": 0.78,
       "delivery_pct": 67.92,
-      "delivery_avg_20d": 47.85,
+      "delivery_avg_20d": 47.86,
       "delivery_zscore_20d": 2.37,
       "delivery_zscore_60d": 1.93,
       "vol_ratio_20d": 0.7,
@@ -884,7 +888,7 @@
         65.7,
         67.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -924,7 +928,7 @@
         51.5,
         59.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -964,7 +968,7 @@
         54.8,
         63.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -1004,7 +1008,7 @@
         48.2,
         58.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -1044,7 +1048,7 @@
         38.2,
         58.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -1084,7 +1088,7 @@
         47.3,
         57.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -1124,7 +1128,7 @@
         46.8,
         59.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -1164,7 +1168,7 @@
         27.1,
         50.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -1204,7 +1208,7 @@
         50.4,
         65.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -1244,51 +1248,11 @@
         37.6,
         56.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
       "score": 32.24
-    },
-    {
-      "symbol": "DIACABS",
-      "last_close": 322.85,
-      "price_change_pct": -0.35,
-      "delivery_pct": 55.18,
-      "delivery_avg_20d": 38.2,
-      "delivery_zscore_20d": 1.98,
-      "delivery_zscore_60d": 2.4,
-      "vol_ratio_20d": 0.3,
-      "delivered_value_cr": 56.0,
-      "low_liquidity": false,
-      "signal": "quiet_accumulation",
-      "delivery_sparkline_20d": [
-        25.3,
-        32.0,
-        33.9,
-        37.6,
-        39.8,
-        36.7,
-        36.1,
-        39.0,
-        43.8,
-        48.1,
-        32.0,
-        27.9,
-        29.9,
-        28.5,
-        36.2,
-        38.4,
-        46.2,
-        54.3,
-        58.2,
-        55.2
-      ],
-      "sessions_available": 65,
-      "as_of_date": "2026-08-03",
-      "smart_money_corroborated": false,
-      "smart_money_deal_count": 0,
-      "score": 31.76
     },
     {
       "symbol": "SUPREMEIND",
@@ -1324,7 +1288,7 @@
         46.7,
         66.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -1364,7 +1328,7 @@
         38.4,
         46.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -1404,7 +1368,7 @@
         53.6,
         67.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -1444,7 +1408,7 @@
         64.6,
         68.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -1484,7 +1448,7 @@
         40.9,
         53.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -1524,7 +1488,7 @@
         46.1,
         70.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -1564,7 +1528,7 @@
         62.9,
         70.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -1604,7 +1568,7 @@
         31.2,
         48.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -1644,7 +1608,7 @@
         46.4,
         47.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -1684,7 +1648,7 @@
         32.9,
         46.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -1724,7 +1688,7 @@
         38.5,
         42.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -1764,7 +1728,7 @@
         59.5,
         65.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 4,
@@ -1804,7 +1768,7 @@
         47.9,
         55.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -1844,7 +1808,7 @@
         50.0,
         53.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -1884,7 +1848,7 @@
         54.6,
         62.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -1924,7 +1888,7 @@
         29.0,
         42.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -1964,7 +1928,7 @@
         36.1,
         37.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2004,7 +1968,7 @@
         49.7,
         63.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2044,7 +2008,7 @@
         55.6,
         63.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2084,7 +2048,7 @@
         59.1,
         61.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2124,7 +2088,7 @@
         33.4,
         37.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2164,7 +2128,7 @@
         67.3,
         64.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2204,7 +2168,7 @@
         54.0,
         56.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2244,7 +2208,7 @@
         50.3,
         58.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2284,7 +2248,7 @@
         66.8,
         69.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2324,7 +2288,7 @@
         69.0,
         56.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2364,7 +2328,7 @@
         46.6,
         57.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2404,7 +2368,7 @@
         61.5,
         62.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2444,7 +2408,7 @@
         38.1,
         48.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2484,7 +2448,7 @@
         51.1,
         54.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2524,7 +2488,7 @@
         54.7,
         61.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2564,7 +2528,7 @@
         50.0,
         50.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2604,7 +2568,7 @@
         41.4,
         52.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2644,7 +2608,7 @@
         47.4,
         51.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2684,7 +2648,7 @@
         48.4,
         72.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2724,7 +2688,7 @@
         61.7,
         54.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2764,7 +2728,7 @@
         47.9,
         57.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2804,7 +2768,7 @@
         60.5,
         65.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2844,7 +2808,7 @@
         46.3,
         54.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2884,7 +2848,7 @@
         59.3,
         62.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2924,7 +2888,7 @@
         48.0,
         62.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -2964,7 +2928,7 @@
         52.2,
         60.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3004,7 +2968,7 @@
         54.4,
         54.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3044,7 +3008,7 @@
         69.2,
         73.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3084,7 +3048,7 @@
         35.6,
         46.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3124,7 +3088,7 @@
         50.2,
         54.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3164,7 +3128,7 @@
         58.1,
         55.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3204,7 +3168,7 @@
         62.4,
         64.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3244,7 +3208,7 @@
         36.1,
         54.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3284,7 +3248,7 @@
         53.3,
         44.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3324,7 +3288,7 @@
         50.8,
         51.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3364,7 +3328,7 @@
         64.9,
         63.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3404,7 +3368,7 @@
         49.0,
         57.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3444,7 +3408,7 @@
         32.1,
         35.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3484,7 +3448,7 @@
         49.0,
         52.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3524,7 +3488,7 @@
         70.7,
         63.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3564,11 +3528,51 @@
         56.1,
         58.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
       "score": 23.84
+    },
+    {
+      "symbol": "DIACABS",
+      "last_close": 322.85,
+      "price_change_pct": -0.35,
+      "delivery_pct": 55.18,
+      "delivery_avg_20d": 38.2,
+      "delivery_zscore_20d": 1.98,
+      "delivery_zscore_60d": null,
+      "vol_ratio_20d": 0.3,
+      "delivered_value_cr": 56.0,
+      "low_liquidity": false,
+      "signal": "quiet_accumulation",
+      "delivery_sparkline_20d": [
+        25.3,
+        32.0,
+        33.9,
+        37.6,
+        39.8,
+        36.7,
+        36.1,
+        39.0,
+        43.8,
+        48.1,
+        32.0,
+        27.9,
+        29.9,
+        28.5,
+        36.2,
+        38.4,
+        46.2,
+        54.3,
+        58.2,
+        55.2
+      ],
+      "sessions_available": 64,
+      "as_of_date": "2026-08-03",
+      "smart_money_corroborated": false,
+      "smart_money_deal_count": 0,
+      "score": 23.76
     },
     {
       "symbol": "JWL",
@@ -3604,7 +3608,7 @@
         37.1,
         47.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3644,7 +3648,7 @@
         41.0,
         48.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3684,7 +3688,7 @@
         34.6,
         35.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3724,7 +3728,7 @@
         46.4,
         55.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3764,7 +3768,7 @@
         54.7,
         63.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3804,7 +3808,7 @@
         53.2,
         50.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3844,7 +3848,7 @@
         54.7,
         62.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3884,7 +3888,7 @@
         54.2,
         57.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3924,7 +3928,7 @@
         48.0,
         54.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -3964,7 +3968,7 @@
         55.5,
         56.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -4004,7 +4008,7 @@
         60.2,
         63.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -4044,7 +4048,7 @@
         48.1,
         59.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -4084,7 +4088,7 @@
         60.5,
         68.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -4124,7 +4128,7 @@
         48.9,
         49.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -4164,7 +4168,7 @@
         45.0,
         48.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -4204,7 +4208,7 @@
         63.9,
         64.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -4244,7 +4248,7 @@
         58.2,
         53.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -4284,7 +4288,7 @@
         63.0,
         62.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -4324,7 +4328,7 @@
         35.7,
         41.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -4364,7 +4368,7 @@
         18.8,
         26.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 4,
@@ -4404,7 +4408,7 @@
         48.7,
         63.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -4484,7 +4488,7 @@
         40.4,
         52.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -4524,7 +4528,7 @@
         76.9,
         69.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -4564,7 +4568,7 @@
         39.8,
         47.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -4604,7 +4608,7 @@
         39.9,
         46.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -4644,7 +4648,7 @@
         52.3,
         53.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -4684,7 +4688,7 @@
         44.9,
         50.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -4724,7 +4728,7 @@
         53.2,
         65.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -4764,7 +4768,7 @@
         60.4,
         54.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -4804,7 +4808,7 @@
         48.9,
         45.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 1,
@@ -4844,7 +4848,7 @@
         54.6,
         57.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -4884,7 +4888,7 @@
         24.8,
         24.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -4924,7 +4928,7 @@
         46.0,
         13.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -4964,7 +4968,7 @@
         24.5,
         10.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5004,7 +5008,7 @@
         51.1,
         8.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5044,7 +5048,7 @@
         65.9,
         41.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5084,7 +5088,7 @@
         54.3,
         15.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5124,7 +5128,7 @@
         22.7,
         20.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5164,7 +5168,7 @@
         76.0,
         67.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5204,7 +5208,7 @@
         47.6,
         24.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5244,7 +5248,7 @@
         34.0,
         5.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5284,7 +5288,7 @@
         58.4,
         48.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5324,7 +5328,7 @@
         45.7,
         19.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5364,7 +5368,7 @@
         40.7,
         34.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5404,7 +5408,7 @@
         39.9,
         52.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5444,7 +5448,7 @@
         37.1,
         42.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5484,7 +5488,7 @@
         46.8,
         63.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5524,7 +5528,7 @@
         49.3,
         47.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5564,7 +5568,7 @@
         64.8,
         63.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5604,7 +5608,7 @@
         30.5,
         57.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5644,7 +5648,7 @@
         61.8,
         57.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5684,7 +5688,7 @@
         41.4,
         45.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5724,7 +5728,7 @@
         50.3,
         58.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5764,7 +5768,7 @@
         56.7,
         56.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5804,7 +5808,7 @@
         58.5,
         70.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5844,7 +5848,7 @@
         48.0,
         60.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5884,7 +5888,7 @@
         48.7,
         30.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5924,7 +5928,7 @@
         36.2,
         38.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -5964,7 +5968,7 @@
         73.5,
         21.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -6004,7 +6008,7 @@
         47.6,
         56.9
       ],
-      "sessions_available": 63,
+      "sessions_available": 62,
       "as_of_date": "2026-07-30",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -6044,7 +6048,7 @@
         57.7,
         65.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -6084,7 +6088,7 @@
         54.2,
         61.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -6124,7 +6128,7 @@
         46.5,
         54.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -6164,7 +6168,7 @@
         42.5,
         50.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -6204,7 +6208,7 @@
         62.4,
         65.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -6244,7 +6248,7 @@
         45.2,
         51.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -6284,7 +6288,7 @@
         43.2,
         43.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -6324,7 +6328,7 @@
         54.1,
         48.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -6364,7 +6368,7 @@
         59.4,
         61.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -6404,7 +6408,7 @@
         52.1,
         60.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -6444,7 +6448,7 @@
         48.1,
         67.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -6484,7 +6488,7 @@
         26.5,
         29.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -6524,7 +6528,7 @@
         57.2,
         57.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 4,
@@ -6564,7 +6568,7 @@
         45.8,
         42.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -6604,7 +6608,7 @@
         55.5,
         53.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -6644,7 +6648,7 @@
         53.2,
         56.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -6684,7 +6688,7 @@
         49.6,
         37.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -6724,7 +6728,7 @@
         57.1,
         57.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -6764,7 +6768,7 @@
         65.9,
         70.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 4,
@@ -6804,7 +6808,7 @@
         58.2,
         57.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -6844,7 +6848,7 @@
         44.0,
         44.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -6884,7 +6888,7 @@
         46.1,
         46.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -6924,7 +6928,7 @@
         62.6,
         58.4
       ],
-      "sessions_available": 59,
+      "sessions_available": 58,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -6964,7 +6968,7 @@
         55.8,
         28.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7004,7 +7008,7 @@
         34.4,
         28.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7044,7 +7048,7 @@
         40.9,
         50.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7084,7 +7088,7 @@
         52.0,
         48.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7124,7 +7128,7 @@
         59.9,
         56.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7164,7 +7168,7 @@
         59.3,
         28.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7204,7 +7208,7 @@
         49.5,
         47.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7244,7 +7248,7 @@
         51.9,
         61.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7284,7 +7288,7 @@
         40.0,
         46.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7324,7 +7328,7 @@
         35.7,
         19.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7364,7 +7368,7 @@
         58.0,
         56.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7404,7 +7408,7 @@
         34.3,
         26.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7444,7 +7448,7 @@
         46.8,
         47.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7484,7 +7488,7 @@
         36.9,
         16.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7524,7 +7528,7 @@
         52.6,
         56.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7564,7 +7568,7 @@
         53.3,
         46.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7604,7 +7608,7 @@
         45.9,
         58.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7644,7 +7648,7 @@
         44.8,
         46.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7684,7 +7688,7 @@
         42.1,
         47.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7724,7 +7728,7 @@
         60.2,
         56.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7764,7 +7768,7 @@
         31.3,
         54.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7804,7 +7808,7 @@
         48.8,
         57.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7844,7 +7848,7 @@
         51.6,
         47.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7884,7 +7888,7 @@
         42.3,
         41.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7924,7 +7928,7 @@
         60.5,
         57.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7964,7 +7968,7 @@
         53.5,
         57.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -7975,7 +7979,7 @@
       "last_close": 304.75,
       "price_change_pct": -1.25,
       "delivery_pct": 28.52,
-      "delivery_avg_20d": 35.09,
+      "delivery_avg_20d": 35.1,
       "delivery_zscore_20d": -0.95,
       "delivery_zscore_60d": -0.56,
       "vol_ratio_20d": 5.83,
@@ -8004,7 +8008,7 @@
         45.3,
         28.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -8044,7 +8048,7 @@
         54.7,
         23.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -8084,7 +8088,7 @@
         48.1,
         53.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -8124,7 +8128,7 @@
         52.0,
         55.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -8164,7 +8168,7 @@
         46.2,
         52.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -8204,7 +8208,7 @@
         40.8,
         46.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -8244,7 +8248,7 @@
         57.3,
         61.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -8284,7 +8288,7 @@
         28.7,
         47.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -8324,7 +8328,7 @@
         35.0,
         45.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -8364,7 +8368,7 @@
         59.0,
         69.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -8375,7 +8379,7 @@
       "last_close": 1514.0,
       "price_change_pct": -3.63,
       "delivery_pct": 33.24,
-      "delivery_avg_20d": 43.53,
+      "delivery_avg_20d": 43.54,
       "delivery_zscore_20d": -1.4,
       "delivery_zscore_60d": -1.1,
       "vol_ratio_20d": 5.56,
@@ -8404,7 +8408,7 @@
         43.0,
         33.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -8444,7 +8448,7 @@
         60.2,
         52.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -8484,7 +8488,7 @@
         55.7,
         43.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 6,
@@ -8524,7 +8528,7 @@
         34.4,
         23.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 2,
@@ -8564,7 +8568,7 @@
         37.4,
         22.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -8604,7 +8608,7 @@
         45.5,
         55.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -8644,7 +8648,7 @@
         65.7,
         67.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 38,
@@ -8684,7 +8688,7 @@
         52.6,
         55.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -8724,7 +8728,7 @@
         55.8,
         58.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -8764,7 +8768,7 @@
         53.3,
         35.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -8804,7 +8808,7 @@
         49.9,
         50.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -8844,7 +8848,7 @@
         33.6,
         18.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 2,
@@ -8884,7 +8888,7 @@
         42.7,
         53.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -8924,7 +8928,7 @@
         61.5,
         55.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -8964,7 +8968,7 @@
         49.3,
         28.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9004,7 +9008,7 @@
         43.7,
         63.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9044,7 +9048,7 @@
         66.5,
         58.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9084,7 +9088,7 @@
         69.2,
         62.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9124,7 +9128,7 @@
         38.4,
         40.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9164,7 +9168,7 @@
         43.6,
         56.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9204,7 +9208,7 @@
         26.7,
         21.7
       ],
-      "sessions_available": 38,
+      "sessions_available": 37,
       "as_of_date": "2026-06-24",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9244,7 +9248,7 @@
         47.0,
         25.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9284,7 +9288,7 @@
         54.5,
         61.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9324,7 +9328,7 @@
         52.7,
         55.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9364,7 +9368,7 @@
         72.7,
         62.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9404,7 +9408,7 @@
         62.2,
         55.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9444,7 +9448,7 @@
         61.1,
         62.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9484,7 +9488,7 @@
         50.4,
         52.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9524,7 +9528,7 @@
         64.2,
         38.3
       ],
-      "sessions_available": 64,
+      "sessions_available": 63,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9564,7 +9568,7 @@
         44.4,
         47.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9604,7 +9608,7 @@
         57.3,
         60.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9644,7 +9648,7 @@
         42.6,
         44.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9684,7 +9688,7 @@
         51.2,
         60.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9724,7 +9728,7 @@
         56.5,
         61.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9764,7 +9768,7 @@
         40.8,
         55.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9804,7 +9808,7 @@
         53.2,
         52.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9844,7 +9848,7 @@
         57.5,
         62.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9884,7 +9888,7 @@
         57.9,
         56.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9924,7 +9928,7 @@
         51.3,
         48.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -9964,7 +9968,7 @@
         54.3,
         35.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10004,7 +10008,7 @@
         47.9,
         46.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10044,7 +10048,7 @@
         55.1,
         66.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10084,7 +10088,7 @@
         34.4,
         41.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10124,7 +10128,7 @@
         39.5,
         51.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10164,7 +10168,7 @@
         53.2,
         57.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10204,7 +10208,7 @@
         63.3,
         55.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10244,7 +10248,7 @@
         37.3,
         38.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10284,7 +10288,7 @@
         42.8,
         60.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10324,7 +10328,7 @@
         57.1,
         52.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10364,7 +10368,7 @@
         56.9,
         53.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10404,7 +10408,7 @@
         57.8,
         61.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 4,
@@ -10444,7 +10448,7 @@
         49.3,
         47.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10484,7 +10488,7 @@
         51.9,
         54.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10524,7 +10528,7 @@
         43.2,
         34.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10564,7 +10568,7 @@
         54.4,
         59.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10604,7 +10608,7 @@
         48.3,
         52.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10644,7 +10648,7 @@
         56.6,
         54.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10684,7 +10688,7 @@
         29.0,
         41.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10724,7 +10728,7 @@
         43.3,
         50.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10764,7 +10768,7 @@
         66.5,
         61.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10804,7 +10808,7 @@
         51.1,
         55.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10844,7 +10848,7 @@
         36.5,
         46.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10884,7 +10888,7 @@
         64.5,
         28.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10924,7 +10928,7 @@
         52.5,
         53.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -10964,7 +10968,7 @@
         34.1,
         52.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 2,
@@ -11004,7 +11008,7 @@
         19.4,
         22.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -11044,7 +11048,7 @@
         38.1,
         30.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -11084,7 +11088,7 @@
         67.9,
         61.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -11124,7 +11128,7 @@
         46.1,
         50.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -11164,7 +11168,7 @@
         65.9,
         68.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -11204,7 +11208,7 @@
         63.0,
         59.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -11244,7 +11248,7 @@
         60.5,
         65.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -11284,7 +11288,7 @@
         55.1,
         44.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -11324,7 +11328,7 @@
         43.6,
         39.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -11364,7 +11368,7 @@
         35.6,
         19.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -11404,7 +11408,7 @@
         62.2,
         60.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -11444,7 +11448,7 @@
         57.5,
         29.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 2,
@@ -11484,7 +11488,7 @@
         37.5,
         44.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -11524,7 +11528,7 @@
         59.6,
         62.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -11564,7 +11568,7 @@
         61.6,
         62.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -11604,7 +11608,7 @@
         51.8,
         52.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -11644,7 +11648,7 @@
         68.8,
         64.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -11684,7 +11688,7 @@
         36.6,
         47.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -11724,7 +11728,7 @@
         45.0,
         30.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -11764,7 +11768,7 @@
         52.5,
         50.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -11804,7 +11808,7 @@
         49.5,
         56.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -11844,7 +11848,7 @@
         56.1,
         49.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 2,
@@ -11884,7 +11888,7 @@
         46.4,
         57.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -11924,7 +11928,7 @@
         62.5,
         44.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -11964,7 +11968,7 @@
         52.0,
         47.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -12004,7 +12008,7 @@
         42.1,
         37.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -12044,7 +12048,7 @@
         46.3,
         49.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -12084,7 +12088,7 @@
         57.6,
         57.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -12124,7 +12128,7 @@
         70.3,
         54.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -12164,7 +12168,7 @@
         52.7,
         55.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -12204,7 +12208,7 @@
         56.1,
         59.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -12244,7 +12248,7 @@
         63.5,
         64.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -12284,7 +12288,7 @@
         48.3,
         48.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -12324,7 +12328,7 @@
         22.7,
         37.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -12364,7 +12368,7 @@
         36.8,
         49.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -12404,7 +12408,7 @@
         59.6,
         56.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -12444,7 +12448,7 @@
         60.6,
         56.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -12484,7 +12488,7 @@
         46.5,
         42.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -12524,7 +12528,7 @@
         43.9,
         45.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -12564,7 +12568,7 @@
         44.5,
         48.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 8,
@@ -12604,7 +12608,7 @@
         37.3,
         46.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -12644,7 +12648,7 @@
         40.0,
         39.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -12684,7 +12688,7 @@
         48.4,
         53.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -12724,7 +12728,7 @@
         38.7,
         20.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -12764,7 +12768,7 @@
         34.8,
         46.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 6,
@@ -12804,7 +12808,7 @@
         34.1,
         29.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -12844,7 +12848,7 @@
         53.3,
         27.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -12884,7 +12888,7 @@
         50.5,
         51.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -12924,7 +12928,7 @@
         23.9,
         32.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -12964,7 +12968,7 @@
         48.1,
         60.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -13004,7 +13008,7 @@
         60.8,
         64.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -13084,7 +13088,7 @@
         56.8,
         40.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -13124,7 +13128,7 @@
         81.4,
         68.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -13164,7 +13168,7 @@
         14.0,
         46.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -13204,7 +13208,7 @@
         51.0,
         49.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -13244,7 +13248,7 @@
         49.3,
         50.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -13284,7 +13288,7 @@
         26.5,
         39.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -13324,7 +13328,7 @@
         62.2,
         56.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -13364,7 +13368,7 @@
         46.7,
         36.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -13404,7 +13408,7 @@
         60.0,
         52.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -13444,7 +13448,7 @@
         35.9,
         56.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -13484,7 +13488,7 @@
         43.1,
         38.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -13524,7 +13528,7 @@
         62.5,
         59.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -13564,7 +13568,7 @@
         24.9,
         29.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -13604,7 +13608,7 @@
         42.2,
         33.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -13644,7 +13648,7 @@
         53.9,
         20.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -13684,7 +13688,7 @@
         58.5,
         57.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -13724,7 +13728,7 @@
         55.9,
         62.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -13764,7 +13768,7 @@
         55.3,
         59.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 2,
@@ -13804,7 +13808,7 @@
         56.1,
         45.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -13844,7 +13848,7 @@
         10.0,
         21.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -13884,7 +13888,7 @@
         61.8,
         63.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -13924,7 +13928,7 @@
         57.6,
         61.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -13964,7 +13968,7 @@
         48.4,
         50.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14004,7 +14008,7 @@
         50.1,
         45.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14044,7 +14048,7 @@
         57.7,
         59.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14084,7 +14088,7 @@
         60.1,
         51.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14124,7 +14128,7 @@
         47.5,
         49.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14164,7 +14168,7 @@
         34.4,
         42.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14204,7 +14208,7 @@
         49.6,
         30.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14244,7 +14248,7 @@
         28.0,
         18.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14284,7 +14288,7 @@
         54.2,
         57.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14324,7 +14328,7 @@
         46.3,
         35.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14364,7 +14368,7 @@
         14.8,
         34.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14404,7 +14408,7 @@
         55.7,
         59.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14444,7 +14448,7 @@
         12.0,
         12.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14484,7 +14488,7 @@
         51.7,
         34.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14524,7 +14528,7 @@
         54.4,
         51.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14564,7 +14568,7 @@
         27.8,
         34.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14604,7 +14608,7 @@
         54.6,
         24.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14644,7 +14648,7 @@
         46.2,
         47.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14684,7 +14688,7 @@
         53.1,
         49.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14724,7 +14728,7 @@
         40.5,
         40.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14764,7 +14768,7 @@
         48.6,
         51.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14804,7 +14808,7 @@
         29.4,
         49.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 3,
@@ -14844,7 +14848,7 @@
         29.4,
         35.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14884,7 +14888,7 @@
         53.8,
         49.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14924,7 +14928,7 @@
         50.2,
         58.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -14964,7 +14968,7 @@
         31.5,
         48.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15004,7 +15008,7 @@
         46.5,
         51.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15044,7 +15048,7 @@
         27.6,
         46.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15084,7 +15088,7 @@
         53.1,
         55.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15124,7 +15128,7 @@
         51.0,
         50.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15164,7 +15168,7 @@
         58.3,
         48.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15204,7 +15208,7 @@
         38.0,
         42.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15244,7 +15248,7 @@
         65.4,
         62.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15284,7 +15288,7 @@
         54.1,
         42.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15324,7 +15328,7 @@
         31.6,
         38.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15364,7 +15368,7 @@
         21.9,
         41.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15404,7 +15408,7 @@
         36.1,
         46.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15444,7 +15448,7 @@
         62.9,
         59.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 3,
@@ -15484,7 +15488,7 @@
         48.5,
         49.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15524,7 +15528,7 @@
         19.0,
         38.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15564,7 +15568,7 @@
         57.8,
         52.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15604,7 +15608,7 @@
         44.8,
         17.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15644,7 +15648,7 @@
         44.6,
         39.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15684,7 +15688,7 @@
         65.4,
         62.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15724,7 +15728,7 @@
         61.2,
         53.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15764,7 +15768,7 @@
         62.1,
         49.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15804,7 +15808,7 @@
         42.6,
         44.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15844,7 +15848,7 @@
         19.4,
         23.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15884,7 +15888,7 @@
         43.8,
         40.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15924,7 +15928,7 @@
         63.2,
         42.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -15964,7 +15968,7 @@
         63.4,
         57.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16004,7 +16008,7 @@
         53.6,
         54.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16044,7 +16048,7 @@
         52.0,
         45.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16084,7 +16088,7 @@
         22.1,
         15.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16124,7 +16128,7 @@
         34.9,
         17.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16164,7 +16168,7 @@
         56.0,
         46.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16204,7 +16208,7 @@
         13.8,
         24.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16244,7 +16248,7 @@
         52.8,
         53.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16284,7 +16288,7 @@
         58.3,
         60.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16324,7 +16328,7 @@
         31.4,
         40.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16364,7 +16368,7 @@
         36.0,
         36.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16404,7 +16408,7 @@
         52.0,
         52.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16444,7 +16448,7 @@
         37.0,
         39.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16484,7 +16488,7 @@
         46.0,
         43.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16524,7 +16528,7 @@
         38.3,
         52.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16564,7 +16568,7 @@
         39.3,
         46.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16604,7 +16608,7 @@
         70.8,
         58.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16644,7 +16648,7 @@
         28.4,
         40.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16684,7 +16688,7 @@
         56.4,
         50.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16724,7 +16728,7 @@
         43.4,
         43.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16764,7 +16768,7 @@
         50.0,
         47.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16804,7 +16808,7 @@
         56.3,
         50.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16844,7 +16848,7 @@
         38.1,
         49.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16884,7 +16888,7 @@
         28.8,
         43.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 2,
@@ -16924,7 +16928,7 @@
         21.9,
         41.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -16964,7 +16968,7 @@
         52.2,
         55.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17004,7 +17008,7 @@
         34.8,
         39.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17044,7 +17048,7 @@
         46.3,
         57.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17084,7 +17088,7 @@
         33.7,
         35.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17124,7 +17128,7 @@
         46.5,
         47.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 2,
@@ -17164,7 +17168,7 @@
         67.8,
         49.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17204,7 +17208,7 @@
         48.2,
         67.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17244,7 +17248,7 @@
         27.9,
         54.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17284,7 +17288,7 @@
         63.5,
         55.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17324,7 +17328,7 @@
         59.7,
         49.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17364,7 +17368,7 @@
         58.3,
         41.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17404,7 +17408,7 @@
         60.2,
         64.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17444,7 +17448,7 @@
         56.6,
         60.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17484,7 +17488,7 @@
         37.4,
         46.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17524,7 +17528,7 @@
         34.6,
         47.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17564,7 +17568,7 @@
         50.5,
         54.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17604,7 +17608,7 @@
         79.9,
         59.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17644,7 +17648,7 @@
         50.8,
         46.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17684,7 +17688,7 @@
         45.4,
         39.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17724,7 +17728,7 @@
         36.1,
         39.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17764,7 +17768,7 @@
         48.8,
         38.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17804,7 +17808,7 @@
         43.8,
         43.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17844,7 +17848,7 @@
         65.2,
         62.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17884,7 +17888,7 @@
         57.3,
         53.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17924,7 +17928,7 @@
         49.5,
         45.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -17964,7 +17968,7 @@
         19.6,
         23.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18004,7 +18008,7 @@
         55.3,
         49.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18015,7 +18019,7 @@
       "last_close": 1444.0,
       "price_change_pct": 0.14,
       "delivery_pct": 46.31,
-      "delivery_avg_20d": 44.16,
+      "delivery_avg_20d": 44.15,
       "delivery_zscore_20d": 0.24,
       "delivery_zscore_60d": 0.11,
       "vol_ratio_20d": 0.22,
@@ -18044,7 +18048,7 @@
         42.2,
         46.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18084,7 +18088,7 @@
         65.1,
         50.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18124,7 +18128,7 @@
         47.0,
         43.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18164,7 +18168,7 @@
         54.1,
         66.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18204,7 +18208,7 @@
         37.2,
         46.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18244,7 +18248,7 @@
         57.7,
         54.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18284,7 +18288,7 @@
         51.6,
         56.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18324,7 +18328,7 @@
         54.4,
         52.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18364,7 +18368,7 @@
         65.8,
         55.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18404,7 +18408,7 @@
         57.0,
         46.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18444,7 +18448,7 @@
         57.2,
         53.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18484,7 +18488,7 @@
         33.3,
         37.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18524,7 +18528,7 @@
         41.1,
         36.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18564,7 +18568,7 @@
         67.1,
         59.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18604,7 +18608,7 @@
         65.0,
         54.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18644,7 +18648,7 @@
         43.7,
         35.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18684,7 +18688,7 @@
         17.5,
         51.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18724,7 +18728,7 @@
         35.4,
         21.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 4,
@@ -18764,7 +18768,7 @@
         46.9,
         40.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18804,7 +18808,7 @@
         59.5,
         42.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18844,7 +18848,7 @@
         50.3,
         41.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18884,7 +18888,7 @@
         47.4,
         51.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18924,7 +18928,7 @@
         57.5,
         57.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -18964,7 +18968,7 @@
         38.9,
         44.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19004,7 +19008,7 @@
         63.6,
         54.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19044,7 +19048,7 @@
         21.6,
         35.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19084,7 +19088,7 @@
         50.1,
         46.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19124,7 +19128,7 @@
         53.0,
         56.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19164,7 +19168,7 @@
         48.4,
         48.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19204,7 +19208,7 @@
         60.0,
         64.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19244,7 +19248,7 @@
         49.4,
         63.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19284,7 +19288,7 @@
         59.5,
         55.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19324,7 +19328,7 @@
         38.6,
         45.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 2,
@@ -19364,7 +19368,7 @@
         44.8,
         53.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19404,7 +19408,7 @@
         57.2,
         54.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19444,7 +19448,7 @@
         52.3,
         46.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19484,7 +19488,7 @@
         40.0,
         45.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19524,7 +19528,7 @@
         53.2,
         37.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19564,7 +19568,7 @@
         45.1,
         51.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19604,7 +19608,7 @@
         47.2,
         48.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19644,7 +19648,7 @@
         61.0,
         55.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19684,7 +19688,7 @@
         37.1,
         33.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19724,7 +19728,7 @@
         33.4,
         36.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19764,7 +19768,7 @@
         46.3,
         53.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19804,7 +19808,7 @@
         29.4,
         41.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19844,7 +19848,7 @@
         57.9,
         56.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19884,7 +19888,7 @@
         42.6,
         55.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19924,7 +19928,7 @@
         51.5,
         50.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -19964,7 +19968,7 @@
         54.1,
         49.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20004,7 +20008,7 @@
         33.9,
         35.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20044,7 +20048,7 @@
         44.2,
         40.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20084,7 +20088,7 @@
         68.6,
         61.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20124,7 +20128,7 @@
         53.7,
         55.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20164,7 +20168,7 @@
         25.9,
         21.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20204,7 +20208,7 @@
         39.6,
         36.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 2,
@@ -20244,7 +20248,7 @@
         51.4,
         45.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20284,7 +20288,7 @@
         52.2,
         44.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20324,7 +20328,7 @@
         43.9,
         49.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20364,7 +20368,7 @@
         42.2,
         39.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20404,7 +20408,7 @@
         42.4,
         47.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20444,7 +20448,7 @@
         49.4,
         54.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20484,7 +20488,7 @@
         53.2,
         56.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20524,7 +20528,7 @@
         31.9,
         40.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20564,7 +20568,7 @@
         25.9,
         35.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20604,7 +20608,7 @@
         43.8,
         46.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20644,7 +20648,7 @@
         45.7,
         46.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20684,7 +20688,7 @@
         59.0,
         53.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20724,7 +20728,7 @@
         54.4,
         51.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20764,7 +20768,7 @@
         53.7,
         51.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20804,7 +20808,7 @@
         44.6,
         49.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20844,7 +20848,7 @@
         68.1,
         59.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20855,7 +20859,7 @@
       "last_close": 262.13,
       "price_change_pct": -0.18,
       "delivery_pct": 26.04,
-      "delivery_avg_20d": 25.94,
+      "delivery_avg_20d": 25.93,
       "delivery_zscore_20d": 0.02,
       "delivery_zscore_60d": -0.59,
       "vol_ratio_20d": 1.2,
@@ -20884,7 +20888,7 @@
         27.1,
         26.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20924,7 +20928,7 @@
         64.8,
         54.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -20964,7 +20968,7 @@
         40.8,
         45.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -21004,7 +21008,7 @@
         61.9,
         63.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -21044,7 +21048,7 @@
         30.2,
         43.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -21084,7 +21088,7 @@
         37.1,
         35.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -21124,7 +21128,7 @@
         65.2,
         57.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -21164,7 +21168,7 @@
         45.1,
         46.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -21204,7 +21208,7 @@
         46.6,
         56.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -21244,7 +21248,7 @@
         17.1,
         21.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -21284,7 +21288,7 @@
         43.8,
         42.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -21324,7 +21328,7 @@
         35.7,
         42.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -21364,7 +21368,7 @@
         32.8,
         51.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 4,
@@ -21404,7 +21408,7 @@
         59.3,
         50.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -21444,7 +21448,7 @@
         46.4,
         54.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -21484,7 +21488,7 @@
         62.4,
         31.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -21524,7 +21528,7 @@
         37.7,
         26.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -21564,7 +21568,7 @@
         67.4,
         59.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -21604,7 +21608,7 @@
         35.3,
         46.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -21644,7 +21648,7 @@
         50.1,
         45.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -21684,7 +21688,7 @@
         49.2,
         46.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -21724,7 +21728,7 @@
         60.7,
         53.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -21764,7 +21768,7 @@
         56.7,
         42.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -21804,7 +21808,7 @@
         7.5,
         24.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -21844,7 +21848,7 @@
         43.9,
         41.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -21884,7 +21888,7 @@
         27.2,
         21.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -21964,7 +21968,7 @@
         47.7,
         47.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22004,7 +22008,7 @@
         47.5,
         38.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22044,7 +22048,7 @@
         52.3,
         55.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22084,7 +22088,7 @@
         58.5,
         55.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22124,7 +22128,7 @@
         40.4,
         39.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22164,7 +22168,7 @@
         47.9,
         47.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22204,7 +22208,7 @@
         52.2,
         48.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22244,7 +22248,7 @@
         28.3,
         29.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22284,7 +22288,7 @@
         43.8,
         26.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22324,7 +22328,7 @@
         41.4,
         33.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22364,7 +22368,7 @@
         64.1,
         43.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22404,7 +22408,7 @@
         25.9,
         47.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22444,7 +22448,7 @@
         57.3,
         51.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22484,7 +22488,7 @@
         36.7,
         45.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22524,7 +22528,7 @@
         10.7,
         9.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22564,7 +22568,7 @@
         36.2,
         41.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22604,7 +22608,7 @@
         48.8,
         44.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22644,7 +22648,7 @@
         37.6,
         32.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22684,7 +22688,7 @@
         50.7,
         42.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22724,7 +22728,7 @@
         58.9,
         45.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22764,7 +22768,7 @@
         29.1,
         33.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22804,7 +22808,7 @@
         18.3,
         34.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22844,7 +22848,7 @@
         41.6,
         49.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22884,7 +22888,7 @@
         57.5,
         52.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22924,7 +22928,7 @@
         27.3,
         26.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -22964,7 +22968,7 @@
         57.7,
         62.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -23004,7 +23008,7 @@
         61.6,
         45.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -23044,7 +23048,7 @@
         47.8,
         47.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -23084,7 +23088,7 @@
         55.4,
         50.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 1,
@@ -23124,7 +23128,7 @@
         44.4,
         35.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -23164,7 +23168,7 @@
         50.5,
         45.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -23204,7 +23208,7 @@
         50.4,
         48.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -23244,7 +23248,7 @@
         45.6,
         42.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -23284,7 +23288,7 @@
         65.1,
         46.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -23324,7 +23328,7 @@
         21.9,
         22.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -23364,7 +23368,7 @@
         33.0,
         31.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -23404,7 +23408,7 @@
         50.7,
         40.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -23444,7 +23448,7 @@
         48.4,
         52.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -23484,7 +23488,7 @@
         58.6,
         52.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -23524,7 +23528,7 @@
         29.2,
         51.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -23564,7 +23568,7 @@
         52.4,
         57.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -23604,7 +23608,7 @@
         45.7,
         51.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -23644,7 +23648,7 @@
         42.9,
         44.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 6,
@@ -23684,7 +23688,7 @@
         53.8,
         50.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -23724,7 +23728,7 @@
         52.5,
         40.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -23764,7 +23768,7 @@
         60.6,
         55.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -23804,7 +23808,7 @@
         48.9,
         45.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -23844,7 +23848,7 @@
         51.2,
         43.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -23884,7 +23888,7 @@
         47.1,
         38.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -23924,7 +23928,7 @@
         35.5,
         31.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -23964,7 +23968,7 @@
         58.7,
         45.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24004,7 +24008,7 @@
         58.7,
         46.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24044,7 +24048,7 @@
         42.4,
         44.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24084,7 +24088,7 @@
         21.8,
         37.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24124,7 +24128,7 @@
         46.7,
         42.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24164,7 +24168,7 @@
         55.6,
         58.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24204,7 +24208,7 @@
         40.9,
         41.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24244,7 +24248,7 @@
         63.0,
         55.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24284,7 +24288,7 @@
         54.3,
         41.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24324,7 +24328,7 @@
         27.6,
         46.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24364,7 +24368,7 @@
         27.2,
         30.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24404,7 +24408,7 @@
         35.6,
         35.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24444,7 +24448,7 @@
         48.7,
         38.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24484,7 +24488,7 @@
         54.2,
         45.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24524,7 +24528,7 @@
         67.1,
         57.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24564,7 +24568,7 @@
         52.7,
         38.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24604,7 +24608,7 @@
         51.6,
         39.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24644,7 +24648,7 @@
         23.4,
         32.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24684,7 +24688,7 @@
         45.9,
         41.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24724,7 +24728,7 @@
         67.2,
         40.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24764,7 +24768,7 @@
         43.1,
         37.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24804,7 +24808,7 @@
         56.7,
         56.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24844,7 +24848,7 @@
         45.0,
         40.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24884,7 +24888,7 @@
         32.9,
         28.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24924,7 +24928,7 @@
         72.2,
         50.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -24964,7 +24968,7 @@
         66.6,
         54.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -25004,7 +25008,7 @@
         41.5,
         42.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -25044,7 +25048,7 @@
         38.1,
         21.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -25084,7 +25088,7 @@
         44.1,
         36.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -25124,7 +25128,7 @@
         61.2,
         41.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 2,
@@ -25164,7 +25168,7 @@
         38.5,
         35.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -25204,7 +25208,7 @@
         55.1,
         46.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -25244,7 +25248,7 @@
         51.4,
         47.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -25284,7 +25288,7 @@
         37.0,
         34.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -25324,7 +25328,7 @@
         47.9,
         44.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -25364,7 +25368,7 @@
         63.8,
         38.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -25404,7 +25408,7 @@
         42.9,
         40.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 2,
@@ -25444,7 +25448,7 @@
         48.2,
         32.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -25484,7 +25488,7 @@
         27.3,
         31.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -25524,7 +25528,7 @@
         47.9,
         40.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -25564,7 +25568,7 @@
         56.3,
         45.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -25604,7 +25608,7 @@
         51.1,
         45.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -25644,7 +25648,7 @@
         18.5,
         13.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -25684,7 +25688,7 @@
         24.1,
         21.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -25724,7 +25728,7 @@
         52.1,
         37.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -25764,7 +25768,7 @@
         58.1,
         45.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -25804,7 +25808,7 @@
         79.4,
         44.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -25844,7 +25848,7 @@
         47.6,
         43.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -25884,7 +25888,7 @@
         39.5,
         36.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -25924,7 +25928,7 @@
         56.0,
         53.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -25964,7 +25968,7 @@
         65.8,
         49.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26004,7 +26008,7 @@
         47.1,
         35.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26044,7 +26048,7 @@
         36.0,
         27.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26084,7 +26088,7 @@
         48.0,
         39.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26124,7 +26128,7 @@
         50.2,
         44.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26164,7 +26168,7 @@
         45.8,
         41.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26204,7 +26208,7 @@
         20.2,
         19.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26244,7 +26248,7 @@
         38.8,
         31.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26255,7 +26259,7 @@
       "last_close": 2638.0,
       "price_change_pct": -0.08,
       "delivery_pct": 39.74,
-      "delivery_avg_20d": 46.47,
+      "delivery_avg_20d": 46.46,
       "delivery_zscore_20d": -1.19,
       "delivery_zscore_60d": -0.79,
       "vol_ratio_20d": 0.8,
@@ -26284,7 +26288,7 @@
         48.4,
         39.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26324,7 +26328,7 @@
         54.5,
         52.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26364,7 +26368,7 @@
         36.8,
         36.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26404,7 +26408,7 @@
         38.5,
         39.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26444,7 +26448,7 @@
         53.1,
         49.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26484,7 +26488,7 @@
         52.8,
         42.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26524,7 +26528,7 @@
         61.3,
         50.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26564,7 +26568,7 @@
         61.6,
         46.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26604,7 +26608,7 @@
         66.2,
         58.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26644,7 +26648,7 @@
         23.2,
         20.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26684,7 +26688,7 @@
         86.0,
         53.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26724,7 +26728,7 @@
         36.3,
         44.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26764,7 +26768,7 @@
         23.2,
         29.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26804,7 +26808,7 @@
         58.0,
         52.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26844,7 +26848,7 @@
         46.7,
         51.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26884,7 +26888,7 @@
         57.2,
         52.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26924,7 +26928,7 @@
         59.6,
         46.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -26964,7 +26968,7 @@
         57.7,
         50.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -27004,7 +27008,7 @@
         45.8,
         34.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -27044,7 +27048,7 @@
         55.7,
         48.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -27084,7 +27088,7 @@
         29.8,
         15.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -27124,7 +27128,7 @@
         67.2,
         55.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -27164,7 +27168,7 @@
         56.0,
         56.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -27204,47 +27208,7 @@
         61.4,
         45.3
       ],
-      "sessions_available": 69,
-      "as_of_date": "2026-08-07",
-      "smart_money_corroborated": false,
-      "smart_money_deal_count": 0,
-      "score": 0.0
-    },
-    {
-      "symbol": "PFOCUS",
-      "last_close": 287.6,
-      "price_change_pct": -1.47,
-      "delivery_pct": 41.67,
-      "delivery_avg_20d": 48.62,
-      "delivery_zscore_20d": -0.69,
-      "delivery_zscore_60d": null,
-      "vol_ratio_20d": 1.01,
-      "delivered_value_cr": 13.51,
-      "low_liquidity": false,
-      "signal": "no_signal",
-      "delivery_sparkline_20d": [
-        69.3,
-        39.4,
-        36.8,
-        48.3,
-        65.6,
-        63.5,
-        47.1,
-        48.7,
-        35.4,
-        36.7,
-        52.7,
-        55.8,
-        41.0,
-        48.0,
-        43.8,
-        45.7,
-        52.3,
-        47.1,
-        58.8,
-        41.7
-      ],
-      "sessions_available": 25,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -27284,7 +27248,7 @@
         56.9,
         58.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -27324,7 +27288,7 @@
         60.3,
         42.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -27364,7 +27328,7 @@
         23.8,
         37.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -27404,7 +27368,7 @@
         54.9,
         43.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -27444,7 +27408,7 @@
         41.0,
         43.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -27484,7 +27448,7 @@
         48.6,
         47.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -27524,7 +27488,7 @@
         51.5,
         38.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -27564,7 +27528,7 @@
         51.1,
         49.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -27604,7 +27568,7 @@
         51.5,
         46.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 4,
@@ -27644,7 +27608,7 @@
         33.5,
         36.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -27684,7 +27648,7 @@
         51.9,
         52.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -27724,7 +27688,7 @@
         34.4,
         36.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -27764,7 +27728,7 @@
         44.7,
         45.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -27804,7 +27768,7 @@
         42.6,
         29.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -27844,7 +27808,7 @@
         32.9,
         26.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -27884,7 +27848,7 @@
         73.1,
         49.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -27924,7 +27888,7 @@
         50.4,
         48.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -27964,7 +27928,7 @@
         46.6,
         50.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -28004,7 +27968,7 @@
         61.4,
         54.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -28044,7 +28008,7 @@
         62.0,
         57.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -28124,7 +28088,7 @@
         52.6,
         44.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -28164,7 +28128,7 @@
         64.1,
         54.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 4,
@@ -28204,7 +28168,7 @@
         39.5,
         34.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -28244,7 +28208,7 @@
         9.3,
         10.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -28284,7 +28248,7 @@
         55.7,
         56.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -28324,7 +28288,7 @@
         29.7,
         40.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -28364,7 +28328,7 @@
         44.7,
         41.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -28404,7 +28368,7 @@
         30.4,
         27.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -28444,7 +28408,7 @@
         48.3,
         43.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -28484,7 +28448,7 @@
         49.2,
         51.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -28524,7 +28488,7 @@
         61.3,
         47.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -28564,7 +28528,7 @@
         29.2,
         45.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -28604,7 +28568,7 @@
         62.2,
         57.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -28644,7 +28608,7 @@
         63.0,
         62.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -28684,7 +28648,7 @@
         56.4,
         52.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -28724,7 +28688,7 @@
         60.7,
         51.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -28764,7 +28728,7 @@
         37.7,
         32.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -28804,7 +28768,7 @@
         50.7,
         42.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -28844,7 +28808,7 @@
         41.8,
         47.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -28884,7 +28848,7 @@
         41.4,
         29.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -28924,7 +28888,7 @@
         44.8,
         49.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 2,
@@ -28964,7 +28928,7 @@
         50.9,
         44.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -29004,7 +28968,7 @@
         43.1,
         43.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -29044,7 +29008,7 @@
         53.8,
         40.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -29084,7 +29048,7 @@
         58.7,
         54.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -29124,7 +29088,7 @@
         38.1,
         41.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -29164,7 +29128,7 @@
         61.8,
         57.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -29204,7 +29168,7 @@
         52.5,
         41.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -29244,7 +29208,7 @@
         56.3,
         39.4
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -29284,7 +29248,7 @@
         61.6,
         52.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 2,
@@ -29324,7 +29288,7 @@
         37.1,
         41.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -29364,7 +29328,7 @@
         53.1,
         46.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -29404,7 +29368,7 @@
         51.8,
         45.8
       ],
-      "sessions_available": 62,
+      "sessions_available": 61,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -29444,7 +29408,7 @@
         47.9,
         36.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -29484,7 +29448,7 @@
         49.0,
         52.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 4,
@@ -29524,7 +29488,7 @@
         61.5,
         54.1
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -29564,7 +29528,7 @@
         49.9,
         46.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -29604,7 +29568,7 @@
         28.6,
         24.5
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -29644,7 +29608,7 @@
         55.0,
         52.7
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -29684,7 +29648,7 @@
         46.9,
         49.9
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -29724,7 +29688,7 @@
         44.1,
         34.6
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -29764,7 +29728,7 @@
         31.7,
         28.2
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -29804,7 +29768,7 @@
         52.9,
         43.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -29844,7 +29808,7 @@
         57.4,
         48.0
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -29884,7 +29848,7 @@
         58.6,
         47.3
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
@@ -29924,7 +29888,7 @@
         34.5,
         25.8
       ],
-      "sessions_available": 69,
+      "sessions_available": 68,
       "as_of_date": "2026-08-07",
       "smart_money_corroborated": false,
       "smart_money_deal_count": 0,
