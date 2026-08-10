@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-08-09T14:00:50.187308+00:00",
-  "cache_span_days": 369,
+  "generated_at_utc": "2026-08-10T13:00:53.763254+00:00",
+  "cache_span_days": 370,
   "recent_display_days": 60,
   "watchlist_size": 8,
   "known_investors_tracked": 10,
@@ -3276,8 +3276,32 @@
   ],
   "insider_trading": {
     "note": "Best-effort keyword match against NSE's general announcements feed - not a guaranteed-complete list.",
-    "announcements_scanned": 18367,
+    "announcements_scanned": 18321,
     "filings": [
+      {
+        "date": "10-Aug-2026 12:48:11",
+        "symbol": "VEEDOL",
+        "company": "Veedol Corporation Limited",
+        "description": "Disclosure under SEBI Takeover Regulations",
+        "summary": "Standard Greases and Specialities Private Limited has Submitted to the Exchange a copy of Disclosure under Regulation 10 (5) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011.",
+        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_10082026123619_SGSPL.pdf"
+      },
+      {
+        "date": "10-Aug-2026 11:42:47",
+        "symbol": "AVROIND",
+        "company": "AVRO INDIA LIMITED",
+        "description": "Trading Window",
+        "summary": "AVRO INDIA LIMITED has informed the Exchange regarding the Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015",
+        "filing_url": "https://nsearchives.nseindia.com/corporate/AVONMPL_10082026114237_TradingwindowclosureJune2026.pdf"
+      },
+      {
+        "date": "10-Aug-2026 10:53:59",
+        "symbol": "HMAAGRO",
+        "company": "HMA Agro Industries Limited",
+        "description": "Disclosure under SEBI Takeover Regulations",
+        "summary": "Hma Agro Industries Limited has submitted to the Exchange a copy of Disclosures under Regulation 10(6)-Report to stock Exchange in respect of any acquisition made in reliance upon exemption provided for in regulation 10 of SEBI (SAST) Regulations, 2011.",
+        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_10082026105102_Intimation.pdf"
+      },
       {
         "date": "08-Aug-2026 17:36:30",
         "symbol": "TEXMOPIPES",
@@ -5453,46 +5477,6 @@
         "description": "Updates",
         "summary": "LTM Limited has informed the Exchange that pursuant to Regulation 31A(8)(b) of SEBI (LODR), Board has approved re-classification of Nabha Power Limited from the  Promoter Group  category to the  Public  category.",
         "filing_url": "https://nsearchives.nseindia.com/corporate/LTI_11072026191202_Stockexchangeoutcome.pdf"
-      },
-      {
-        "date": "10-Jul-2026 20:02:51",
-        "symbol": "ADVAIT",
-        "company": "Advait Energy Transitions Limited",
-        "description": "Updates",
-        "summary": "Advait Energy Transitions Limited has informed the Exchange regarding 'Intimation - Report under Regulation 10(7) of SEBI (Substantial Acquisition ofShares and Takeovers) Regulations, 2011 ( SEBI SAST Regulations ) - Acquisition ofequity shares pursuant to interse Promoter Transfer as Gift'.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/ADVAITENERGY_10072026200240_SEintimation10_7__s.pdf"
-      },
-      {
-        "date": "10-Jul-2026 19:05:32",
-        "symbol": "SHOPERSTOP",
-        "company": "Shoppers Stop Limited",
-        "description": "Updates",
-        "summary": "Shoppers Stop Limited has informed the Exchange regarding 'Intimation of submission of application for Re-classification from  Promoter and Promoter Group  Category to  Public  category pursuant to Regulation 31A of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015'.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/SHOPERSTOP_10072026190401_SEIntimationonsubmissionofapplication.pdf"
-      },
-      {
-        "date": "10-Jul-2026 14:11:22",
-        "symbol": "COCHINSHIP",
-        "company": "Cochin Shipyard Limited",
-        "description": "Updates",
-        "summary": "Cochin Shipyard Limited has informed the Exchange regarding 'Disclosure pursuant to Regulation 7(2)(b) of the SEBI (Prohibition of Insider Trading) Regulations, 2015 ( PIT Regulations )'.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/Aswi4739_10072026141105_SE_Intimation_OFS_PIT_sd.pdf"
-      },
-      {
-        "date": "10-Jul-2026 12:52:13",
-        "symbol": "RBA",
-        "company": "Restaurant Brands Asia Limited",
-        "description": "Updates",
-        "summary": "Restaurant Brands Asia Limited has informed the Exchange regarding 'Disclosure under Regulation 7(2)(b) of the Securities and Exchange Board of India (Prohibition of Insider Trading) Regulations, 2015'.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/RBA_10072026125143_FinaluploadAcquirers.pdf"
-      },
-      {
-        "date": "10-Jul-2026 12:47:05",
-        "symbol": "PREMEXPLN",
-        "company": "Premier Explosives Limited",
-        "description": "Public Announcement-Open Offer",
-        "summary": "Cumulative Capital Private Limited (Manager to the Offer) has submitted to the Exchange a copy of Public Announcement under Regulations 3(1) and 4 read with Regulations 13, 14 and 15(1) of the Securities and Exchange Board of India (Substantial Acquisition of Shares and Takeovers) Regulations, 2011, and subsequent amendments thereto for the attention of the Public Shareholders of Premier Explosives Limited (Target Company).",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/team_sandeshc_10072026113324_PREMEXPLN.zip"
       }
     ]
   }
