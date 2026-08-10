@@ -55,6 +55,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_WATCHLIST = ROOT / "watchlist.txt"
 OUTPUT_PATH = ROOT / "data" / "scan_results.json"
 NSE_CACHE_DIR = ROOT / ".nse_cache"  # session/cookie cache for the nse library, same pattern as every other tool
+_STRUCTURE_DUMPED = False  # module-level flag - dump the real raw record structure once per run, not once per symbol
 
 # ---------------------------------------------------------------------------
 # Indicator math (implemented directly on pandas - no extra TA dependency)
@@ -203,6 +204,27 @@ def fetch_price_history_live(symbol: str, nse) -> pd.DataFrame | None:
             })
         except (KeyError, ValueError, TypeError):
             continue
+
+    if not rows and raw:
+        # Every single row failed to parse, but NSE clearly sent real data
+        # (raw is non-empty) - this points at a field-name mismatch between
+        # what this code expects and what the live API actually returns,
+        # not a data-availability problem. Dumped once per run (a module
+        # flag, not per-symbol) - the ACTUAL keys and a real sample record
+        # are the only way to fix this correctly instead of guessing again.
+        global _STRUCTURE_DUMPED
+        if not _STRUCTURE_DUMPED:
+            log.error(
+                "=" * 70 + "\n"
+                "PARSING MISMATCH: NSE returned real data for %s but every field\n"
+                "lookup failed. This means the actual response structure doesn't\n"
+                "match what this code expects. Here is the REAL first record,\n"
+                "exactly as NSE sent it:\n%s\n"
+                "Actual keys present: %s\n"
+                + "=" * 70,
+                symbol, json.dumps(raw[0], indent=2, default=str), list(raw[0].keys()),
+            )
+            _STRUCTURE_DUMPED = True
 
     if len(rows) < 210:
         # Parse dates FIRST so a short-history warning can show the actual
