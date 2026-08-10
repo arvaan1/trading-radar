@@ -180,10 +180,17 @@ def fetch_price_history_live(symbol: str, nse) -> pd.DataFrame | None:
     try:
         raw = nse.fetch_equity_historical_data(symbol, from_date=from_date, to_date=to_date)
     except Exception as exc:  # noqa: BLE001
-        log.debug("NSE history fetch failed for %s: %s", symbol, exc)
+        # Was log.debug (invisible in a normal Action run log) - raised to
+        # warning after a run came back with 755/755 symbols skipped and
+        # gave no visible reason why. That silence was itself a real bug.
+        log.warning("NSE history fetch THREW for %s: %s: %s", symbol, type(exc).__name__, exc)
         return None
 
-    if not raw or len(raw) < 210:
+    if not raw:
+        log.warning("NSE history fetch for %s returned EMPTY (no exception, just nothing back)", symbol)
+        return None
+    if len(raw) < 210:
+        log.warning("NSE history fetch for %s returned only %d row(s), need 210+", symbol, len(raw))
         return None
 
     rows = []
@@ -596,6 +603,8 @@ def run(symbols: list[str], demo: bool, sleep_s: float, skip_delivery: bool) -> 
         if index_close is None:
             log.warning("No Nifty 500 index history available - Relative Strength will be blank this run.")
 
+        CANARY_CHECK_AT = 15  # after this many symbols, if literally all of them failed, say so loudly
+
         for i, symbol in enumerate(symbols):
             try:
                 if demo:
@@ -605,6 +614,17 @@ def run(symbols: list[str], demo: bool, sleep_s: float, skip_delivery: bool) -> 
 
                 if df is None:
                     errors.append({"symbol": symbol, "reason": "insufficient price history"})
+                    if i == CANARY_CHECK_AT - 1 and len(errors) == CANARY_CHECK_AT:
+                        log.error(
+                            "=" * 70 + "\n"
+                            "CANARY CHECK FAILED: all %d of the first %d symbols failed to fetch.\n"
+                            "This strongly suggests a systemic problem (NSE session/auth, endpoint\n"
+                            "change, or rate-limiting) rather than a few unlucky symbols. The\n"
+                            "individual warning lines above this one show the actual reason NSE\n"
+                            "gave for each attempt - that's the real diagnostic to look at.\n"
+                            + "=" * 70,
+                            CANARY_CHECK_AT, CANARY_CHECK_AT,
+                        )
                     continue
 
                 sig = compute_signal(df, index_close)
