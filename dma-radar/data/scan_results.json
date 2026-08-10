@@ -1,10 +1,10 @@
 {
-  "generated_at_utc": "2026-08-10T07:46:59.137147+00:00",
+  "generated_at_utc": "2026-08-10T08:54:13.703923+00:00",
   "data_as_of": null,
   "data_as_of_agreement_pct": null,
-  "universe_size": 755,
+  "universe_size": 753,
   "success_count": 0,
-  "error_count": 755,
+  "error_count": 753,
   "errors": [
     {
       "symbol": "360ONE",
@@ -804,14 +804,6 @@
     },
     {
       "symbol": "DRREDDY",
-      "reason": "insufficient price history"
-    },
-    {
-      "symbol": "DUMMYINXGN",
-      "reason": "insufficient price history"
-    },
-    {
-      "symbol": "DUMMYTRVN",
       "reason": "insufficient price history"
     },
     {
