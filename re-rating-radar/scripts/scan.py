@@ -150,14 +150,23 @@ def update_compression_log(dma_context: dict[str, dict]) -> pd.DataFrame:
 
 def compute_compression_state(symbol: str, today_bandwidth: float | None, compression_log: pd.DataFrame) -> dict:
     """Where does TODAY's bandwidth sit relative to this symbol's own
-    recent history? Low percentile = currently tight/coiling relative to
+    RECENT history? Low percentile = currently tight/coiling relative to
     its own normal range - not an absolute threshold, since a naturally
     low-volatility stock and a naturally choppy one have very different
-    baselines."""
+    baselines.
+
+    Deliberately limited to the last COMPRESSION_LOOKBACK_FOR_PERCENTILE
+    rows, not everything the cache has stored - the cache itself keeps up
+    to 250 calendar days for the retention window, but comparing today
+    against volatility from 8-9 months ago answers a different, less
+    useful question than "is this tight relative to its recent character."
+    (This constant existed but was never actually applied here until this
+    fix - worth being upfront about, not quietly patching.)"""
     if today_bandwidth is None:
         return {"percentile": None, "days_of_history": 0, "is_compressed": False}
 
     hist = compression_log[compression_log["symbol"] == symbol]["bb_bandwidth"].dropna()
+    hist = hist.tail(COMPRESSION_LOOKBACK_FOR_PERCENTILE)  # most recent ~60 trading days only, not the full cache
     if len(hist) < 10:
         return {"percentile": None, "days_of_history": len(hist), "is_compressed": False}
 
