@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-10T13:00:53.763254+00:00",
+  "generated_at_utc": "2026-08-10T14:00:54.317718+00:00",
   "cache_span_days": 370,
   "recent_display_days": 60,
   "watchlist_size": 8,
@@ -3276,8 +3276,16 @@
   ],
   "insider_trading": {
     "note": "Best-effort keyword match against NSE's general announcements feed - not a guaranteed-complete list.",
-    "announcements_scanned": 18321,
+    "announcements_scanned": 18492,
     "filings": [
+      {
+        "date": "10-Aug-2026 18:54:27",
+        "symbol": "TRUALT",
+        "company": "TruAlt Bioenergy Limited",
+        "description": "Structural Digital Database",
+        "summary": "Disclosure under Regulation 7(2) of the Securities and Exchange Board of India (Prohibition of Insider Trading) Regulations, 2015",
+        "filing_url": "https://nsearchives.nseindia.com/corporate/TRUALTNSE123_10082026185422_Intimation_PIT_T3_Sd.pdf"
+      },
       {
         "date": "10-Aug-2026 12:48:11",
         "symbol": "VEEDOL",
