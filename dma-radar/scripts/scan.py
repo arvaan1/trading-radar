@@ -189,9 +189,6 @@ def fetch_price_history_live(symbol: str, nse) -> pd.DataFrame | None:
     if not raw:
         log.warning("NSE history fetch for %s returned EMPTY (no exception, just nothing back)", symbol)
         return None
-    if len(raw) < 210:
-        log.warning("NSE history fetch for %s returned only %d row(s), need 210+", symbol, len(raw))
-        return None
 
     rows = []
     for r in raw:
@@ -208,6 +205,32 @@ def fetch_price_history_live(symbol: str, nse) -> pd.DataFrame | None:
             continue
 
     if len(rows) < 210:
+        # Parse dates FIRST so a short-history warning can show the actual
+        # span, not just a count - this is the diagnostic that tells apart
+        # "a real gap in the middle" (points to the nse library's automatic
+        # date-chunking not combining every chunk correctly) from "short
+        # but contiguous, ending recently" (a genuinely recently-listed
+        # stock, nothing wrong). Found via evidence: several different real
+        # symbols were all landing around ~50-60% of the expected row count
+        # for the requested window, which is a suspicious CLUSTER, not the
+        # scattered pattern you'd expect from "some stocks just listed
+        # recently."
+        if rows:
+            dates_found = sorted(r["date"] for r in rows)
+            span_days = (dates_found[-1] - dates_found[0]).days
+            expected_trading_days_in_span = int(span_days * 5 / 7 * 0.95)  # rough weekday estimate, minus ~5% for holidays
+            gap_ratio = len(rows) / max(expected_trading_days_in_span, 1)
+            log.warning(
+                "NSE history fetch for %s returned only %d row(s), need 210+. "
+                "Actual span: %s to %s (%d calendar days). Rows found cover ~%.0f%% of "
+                "that span's expected trading days - %s",
+                symbol, len(rows), dates_found[0].date(), dates_found[-1].date(), span_days,
+                gap_ratio * 100,
+                "well below 100% suggests a GAP (missing chunk), not just a short recent listing"
+                if gap_ratio < 0.85 else "close to 100% - looks like a genuinely short, contiguous history",
+            )
+        else:
+            log.warning("NSE history fetch for %s returned %d raw record(s) but 0 parsed successfully", symbol, len(raw))
         return None
 
     df = pd.DataFrame(rows).drop_duplicates(subset="date").sort_values("date").set_index("date")
