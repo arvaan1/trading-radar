@@ -1,15 +1,11 @@
 {
-  "generated_at_utc": "2026-08-09T14:00:54.767190+00:00",
+  "generated_at_utc": "2026-08-10T12:31:08.764864+00:00",
   "vix": {
-    "latest": 12.16,
-    "avg_5d": 21.3,
-    "avg_20d": 28.69
+    "latest": 12.25,
+    "avg_5d": 16.75,
+    "avg_20d": 27.96
   },
   "vix_history_40d": [
-    {
-      "date": "2026-06-19",
-      "close": 15.65
-    },
     {
       "date": "2026-06-22",
       "close": 16.39
@@ -157,33 +153,32 @@
     {
       "date": "2026-08-09",
       "close": 12.16
+    },
+    {
+      "date": "2026-08-10",
+      "close": 12.25
     }
   ],
-  "vix_as_of": "2026-08-07",
+  "vix_as_of": "2026-08-10",
   "breadth": {
     "nifty50": {
-      "advances": 24,
-      "declines": 26
+      "advances": 25,
+      "declines": 23
     },
     "nifty500": {
-      "advances": 232,
-      "declines": 263
+      "advances": 238,
+      "declines": 255
     }
   },
   "breadth_date_confidence": "unverified - NSE's advance-decline endpoint returns a live snapshot with no date field attached, so there's no way to independently confirm this reflects today's session rather than a stale cached value. Cross-check against vix_as_of below - if that's not today, treat this the same way.",
   "fii_dii_cash": {
-    "fii_latest": 480.24,
-    "dii_latest": 235.56,
-    "fii_avg_5d": -91.14,
-    "fii_avg_20d": 7.38,
-    "dii_avg_5d": -107.63,
-    "dii_avg_20d": -131.36,
+    "fii_latest": 1974.76,
+    "dii_latest": -1290.29,
+    "fii_avg_5d": 223.81,
+    "fii_avg_20d": 288.44,
+    "dii_avg_5d": -325.68,
+    "dii_avg_20d": -296.92,
     "history": [
-      {
-        "date": "2026-06-19",
-        "fii": null,
-        "dii": null
-      },
       {
         "date": "2026-06-22",
         "fii": null,
@@ -378,6 +373,11 @@
         "date": "2026-08-09",
         "fii": 480.24,
         "dii": 235.56
+      },
+      {
+        "date": "2026-08-10",
+        "fii": 1974.76,
+        "dii": -1290.29
       }
     ]
   },
@@ -411,5 +411,5 @@
     "available": false,
     "note": "Neither DMA Radar nor Delivery Radar has a signal log yet - this fills in once both tools have run at least once."
   },
-  "history_days_cached": 45
+  "history_days_cached": 46
 }
