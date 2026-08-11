@@ -7,7 +7,7 @@ Scans a watchlist of NSE symbols, computes a stack of technical indicators
 and NSE delivery %), and writes a ranked JSON file the dashboard reads.
 
 Usage:
-    python scan.py                  # live run (NSE only, via the nse package)
+    python scan.py                  # live run (Yahoo Finance for price history)
     python scan.py --demo           # offline run with synthetic data,
                                      # useful for testing the pipeline
                                      # and the dashboard without network
@@ -16,17 +16,22 @@ Usage:
     python scan.py --watchlist path/to/file.txt
 
 Data sources (all free, no API key required):
-    - Price/volume history: NSE's own historical-data endpoint, via the
-      nse package (nse.fetch_equity_historical_data). Previously Yahoo
-      Finance - switched entirely to NSE after Yahoo caused two separate
-      real bugs in this tool (a timezone crash, and very plausibly a
-      stale-data incident too). Worth knowing: NSE's data here is raw,
-      unadjusted for stock splits/bonuses - Yahoo's was adjusted. A split
-      during the lookback window could in principle cause a false crossover
-      signal around that date; there's no clean way to fully rule this out
-      from NSE data alone.
-    - Nifty 500 index history: same NSE endpoint family, via
-      nse.fetch_historical_index_data - used for Relative Strength.
+    - Price/volume history: Yahoo Finance via yfinance (SYMBOL.NS).
+      This tool briefly moved to NSE's own historical-data endpoint
+      directly, but reverted after that migration surfaced three
+      separate, structural problems specific to this tool's job (long
+      lookback x ~750 symbols): NSE auto-chunks a long date range into
+      ~5 sequential requests per symbol, roughly quadrupling runtime;
+      a real data-gap pattern in some responses; and a field-name
+      mismatch between documented sample data and what the live API
+      actually returns. Each fix surfaced a new problem underneath it -
+      that pattern was the signal to revert, not chase further. This
+      was scoped to DMA Radar specifically - Delivery Radar, Macro
+      Cockpit, and Smart Money Feed all stayed on NSE and never showed
+      any of these problems, since their usage is a handful of calls
+      per run, not 750.
+    - Nifty 500 index history: same source, via yfinance (^CRSLDX) -
+      used for Relative Strength.
     - Delivery %: read directly from Delivery Radar's own output (a
       sibling-folder file read, not a separate fetch of the same data).
 
@@ -54,8 +59,6 @@ log = logging.getLogger("dma-radar")
 ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_WATCHLIST = ROOT / "watchlist.txt"
 OUTPUT_PATH = ROOT / "data" / "scan_results.json"
-NSE_CACHE_DIR = ROOT / ".nse_cache"  # session/cookie cache for the nse library, same pattern as every other tool
-_STRUCTURE_DUMPED = False  # module-level flag - dump the real raw record structure once per run, not once per symbol
 
 # ---------------------------------------------------------------------------
 # Indicator math (implemented directly on pandas - no extra TA dependency)
@@ -158,105 +161,48 @@ def supertrend(df: pd.DataFrame, period: int = 10, mult: float = 3.0) -> pd.Seri
 # Data fetching
 # ---------------------------------------------------------------------------
 
-def fetch_price_history_live(symbol: str, nse) -> pd.DataFrame | None:
-    """Full daily OHLCV directly from NSE's own historical-data endpoint,
-    via an already-open shared session (passed in, not opened per symbol -
-    opening a fresh session per symbol for ~750 symbols would mean ~750
-    redundant cookie handshakes; NSE's data now comes exclusively from
-    NSE itself, replacing Yahoo Finance entirely, per explicit request
-    after Yahoo caused two separate real bugs this session (a timezone
-    crash, and very plausibly the stale-data incident too).
+def fetch_price_history_live(symbol: str) -> pd.DataFrame | None:
+    """Back on Yahoo Finance, after a genuine attempt at NSE-only that
+    surfaced three separate, structural problems for this specific job:
+    NSE's endpoint auto-chunks a long date range into ~5 sequential
+    requests per symbol (quadrupling runtime, ~3,700 total requests
+    instead of 750 - inherent to the endpoint, not fixable), a real
+    data-gap pattern in some responses, and a field-name mismatch between
+    the documented sample data and what the live API actually returns.
+    Each fix surfaced a new problem underneath it - that pattern was
+    itself the signal to stop and revert, not another bug to chase.
 
-    HONEST CAVEAT, worth remembering: this is raw, UNADJUSTED price data.
-    Yahoo Finance's auto_adjust=True gave split/bonus-adjusted prices;
-    NSE's own historical endpoint does not adjust for corporate actions.
-    If a stock in the universe splits or issues a bonus during the
-    lookback window, its raw price series will show an overnight gap
-    that isn't a real price move - which could, in principle, trigger a
-    false DMA crossover around that date. There's no clean way to fully
-    eliminate this risk from NSE data alone."""
-    to_date = datetime.now(timezone.utc).date()
-    from_date = to_date - timedelta(days=460)  # ~15 months + buffer for weekends/holidays, same lookback as before
+    This is scoped to DMA Radar specifically, not a system-wide reversal.
+    Delivery Radar, Macro Cockpit, and Smart Money Feed all stayed on NSE
+    and never showed any of these problems - their usage is a handful of
+    calls per run, not 750. The mismatch was DMA Radar's specific job
+    (long lookback x many symbols) against an endpoint never built for
+    that volume, not a blanket NSE reliability issue.
+
+    HONEST CAVEAT, still worth remembering: yfinance's auto_adjust=True
+    gives split/bonus-adjusted prices, which is actually a genuine
+    accuracy advantage over NSE's raw data for this specific tool - a
+    corporate action during the lookback window won't show up as a fake
+    overnight price gap here the way it would on unadjusted data."""
+    import yfinance as yf
 
     try:
-        raw = nse.fetch_equity_historical_data(symbol, from_date=from_date, to_date=to_date)
+        ticker = f"{symbol}.NS"
+        df = yf.Ticker(ticker).history(period="15mo", interval="1d", auto_adjust=True)
+        if df is None or df.empty or len(df) < 210:
+            return None
+        df = df[["Open", "High", "Low", "Close", "Volume"]].dropna()
+        # yfinance returns a timezone-aware index (localized to the
+        # exchange) - stripped here, at the source, so nothing downstream
+        # (especially the signal-log backtest, which compares against
+        # timezone-naive dates loaded from a plain CSV) has to remember to
+        # handle it. This is the exact fix for the original timezone crash
+        # from before the NSE migration - carried forward, not lost.
+        df.index = df.index.tz_localize(None)
+        return df
     except Exception as exc:  # noqa: BLE001
-        # Was log.debug (invisible in a normal Action run log) - raised to
-        # warning after a run came back with 755/755 symbols skipped and
-        # gave no visible reason why. That silence was itself a real bug.
-        log.warning("NSE history fetch THREW for %s: %s: %s", symbol, type(exc).__name__, exc)
+        log.warning("Yahoo Finance history fetch failed for %s: %s: %s", symbol, type(exc).__name__, exc)
         return None
-
-    if not raw:
-        log.warning("NSE history fetch for %s returned EMPTY (no exception, just nothing back)", symbol)
-        return None
-
-    rows = []
-    for r in raw:
-        try:
-            rows.append({
-                "date": pd.to_datetime(r["CH_TIMESTAMP"]),
-                "Open": float(r["CH_OPENING_PRICE"]),
-                "High": float(r["CH_TRADE_HIGH_PRICE"]),
-                "Low": float(r["CH_TRADE_LOW_PRICE"]),
-                "Close": float(r["CH_CLOSING_PRICE"]),
-                "Volume": float(r["CH_TOT_TRADED_QTY"]),
-            })
-        except (KeyError, ValueError, TypeError):
-            continue
-
-    if not rows and raw:
-        # Every single row failed to parse, but NSE clearly sent real data
-        # (raw is non-empty) - this points at a field-name mismatch between
-        # what this code expects and what the live API actually returns,
-        # not a data-availability problem. Dumped once per run (a module
-        # flag, not per-symbol) - the ACTUAL keys and a real sample record
-        # are the only way to fix this correctly instead of guessing again.
-        global _STRUCTURE_DUMPED
-        if not _STRUCTURE_DUMPED:
-            log.error(
-                "=" * 70 + "\n"
-                "PARSING MISMATCH: NSE returned real data for %s but every field\n"
-                "lookup failed. This means the actual response structure doesn't\n"
-                "match what this code expects. Here is the REAL first record,\n"
-                "exactly as NSE sent it:\n%s\n"
-                "Actual keys present: %s\n"
-                + "=" * 70,
-                symbol, json.dumps(raw[0], indent=2, default=str), list(raw[0].keys()),
-            )
-            _STRUCTURE_DUMPED = True
-
-    if len(rows) < 210:
-        # Parse dates FIRST so a short-history warning can show the actual
-        # span, not just a count - this is the diagnostic that tells apart
-        # "a real gap in the middle" (points to the nse library's automatic
-        # date-chunking not combining every chunk correctly) from "short
-        # but contiguous, ending recently" (a genuinely recently-listed
-        # stock, nothing wrong). Found via evidence: several different real
-        # symbols were all landing around ~50-60% of the expected row count
-        # for the requested window, which is a suspicious CLUSTER, not the
-        # scattered pattern you'd expect from "some stocks just listed
-        # recently."
-        if rows:
-            dates_found = sorted(r["date"] for r in rows)
-            span_days = (dates_found[-1] - dates_found[0]).days
-            expected_trading_days_in_span = int(span_days * 5 / 7 * 0.95)  # rough weekday estimate, minus ~5% for holidays
-            gap_ratio = len(rows) / max(expected_trading_days_in_span, 1)
-            log.warning(
-                "NSE history fetch for %s returned only %d row(s), need 210+. "
-                "Actual span: %s to %s (%d calendar days). Rows found cover ~%.0f%% of "
-                "that span's expected trading days - %s",
-                symbol, len(rows), dates_found[0].date(), dates_found[-1].date(), span_days,
-                gap_ratio * 100,
-                "well below 100% suggests a GAP (missing chunk), not just a short recent listing"
-                if gap_ratio < 0.85 else "close to 100% - looks like a genuinely short, contiguous history",
-            )
-        else:
-            log.warning("NSE history fetch for %s returned %d raw record(s) but 0 parsed successfully", symbol, len(raw))
-        return None
-
-    df = pd.DataFrame(rows).drop_duplicates(subset="date").sort_values("date").set_index("date")
-    return df[["Open", "High", "Low", "Close", "Volume"]]
 
 
 def fetch_delivery_pct_live(symbol: str) -> dict:
@@ -355,36 +301,21 @@ def load_short_interest_context() -> dict[str, dict]:
 # Nifty 500 index history, for Relative Strength
 # ---------------------------------------------------------------------------
 
-def fetch_index_history_live(nse) -> pd.Series | None:
-    """Nifty 500 daily close, straight from NSE's own historical index
-    endpoint - same reasoning and same shared-session pattern as
-    fetch_price_history_live above."""
-    to_date = datetime.now(timezone.utc).date()
-    from_date = to_date - timedelta(days=460)
+def fetch_index_history_live() -> pd.Series | None:
+    """Nifty 500 (^CRSLDX) daily close, back on Yahoo Finance alongside
+    fetch_price_history_live above - same reasoning, same revert."""
+    import yfinance as yf
 
     try:
-        raw = nse.fetch_historical_index_data("NIFTY 500", from_date=from_date, to_date=to_date)
+        df = yf.Ticker("^CRSLDX").history(period="15mo", interval="1d", auto_adjust=True)
+        if df is None or df.empty or len(df) < 70:
+            return None
+        close = df["Close"]
+        close.index = close.index.tz_localize(None)  # same fix as fetch_price_history_live - keep both sides naive
+        return close
     except Exception as exc:  # noqa: BLE001
-        log.warning("NSE Nifty 500 index fetch failed: %s", exc)
+        log.warning("Nifty 500 index fetch failed: %s", exc)
         return None
-
-    if not raw or len(raw) < 70:
-        return None
-
-    rows = []
-    for r in raw:
-        try:
-            d = pd.to_datetime(r["EOD_TIMESTAMP"], format="%d-%b-%Y", errors="coerce")
-            if pd.notna(d):
-                rows.append({"date": d, "close": float(r["EOD_CLOSE_INDEX_VAL"])})
-        except (KeyError, ValueError, TypeError):
-            continue
-
-    if len(rows) < 70:
-        return None
-
-    df = pd.DataFrame(rows).drop_duplicates(subset="date").sort_values("date").set_index("date")
-    return df["close"]
 
 
 def fetch_index_history_demo(seed: int = 999) -> pd.Series:
@@ -623,8 +554,6 @@ def load_watchlist(path: Path) -> list[str]:
 
 
 def run(symbols: list[str], demo: bool, sleep_s: float, skip_delivery: bool) -> tuple[dict, dict[str, pd.Series]]:
-    from contextlib import nullcontext
-
     results = []
     errors = []
     price_histories: dict[str, pd.Series] = {}
@@ -632,73 +561,64 @@ def run(symbols: list[str], demo: bool, sleep_s: float, skip_delivery: bool) -> 
     delivery_context = load_delivery_context()
     short_context = load_short_interest_context()
 
-    # One shared NSE session for the whole run, not one per symbol - with
-    # ~750 symbols, opening a fresh session per symbol would mean ~750
-    # redundant cookie handshakes. nullcontext keeps --demo mode simple
-    # (no real session needed at all, nse=None, unused by the demo path).
-    if demo:
-        session_ctx = nullcontext(None)
-    else:
-        from nse import NSE
-        NSE_CACHE_DIR.mkdir(parents=True, exist_ok=True)
-        session_ctx = NSE(str(NSE_CACHE_DIR), server=True)
+    # No shared session needed anymore - back on Yahoo Finance for price
+    # history (see fetch_price_history_live's docstring for why), which
+    # doesn't need the persistent NSE session the previous version required.
+    index_close = fetch_index_history_demo() if demo else fetch_index_history_live()
+    if index_close is None:
+        log.warning("No Nifty 500 index history available - Relative Strength will be blank this run.")
 
-    with session_ctx as nse:
-        index_close = fetch_index_history_demo() if demo else fetch_index_history_live(nse)
-        if index_close is None:
-            log.warning("No Nifty 500 index history available - Relative Strength will be blank this run.")
+    CANARY_CHECK_AT = 15  # after this many symbols, if literally all of them failed, say so loudly
 
-        CANARY_CHECK_AT = 15  # after this many symbols, if literally all of them failed, say so loudly
+    for i, symbol in enumerate(symbols):
+        try:
+            if demo:
+                df = fetch_price_history_demo(symbol, seed=i)
+            else:
+                df = fetch_price_history_live(symbol)
 
-        for i, symbol in enumerate(symbols):
-            try:
-                if demo:
-                    df = fetch_price_history_demo(symbol, seed=i)
-                else:
-                    df = fetch_price_history_live(symbol, nse)
+            if df is None:
+                errors.append({"symbol": symbol, "reason": "insufficient price history"})
+                if i == CANARY_CHECK_AT - 1 and len(errors) == CANARY_CHECK_AT:
+                    log.error(
+                        "=" * 70 + "\n"
+                        "CANARY CHECK FAILED: all %d of the first %d symbols failed to fetch.\n"
+                        "This strongly suggests a systemic problem (a broad Yahoo Finance\n"
+                        "outage or rate-limiting) rather than a few unlucky symbols. The\n"
+                        "individual warning lines above this one show the actual reason each\n"
+                        "attempt failed - that's the real diagnostic to look at.\n"
+                        + "=" * 70,
+                        CANARY_CHECK_AT, CANARY_CHECK_AT,
+                    )
+                continue
 
-                if df is None:
-                    errors.append({"symbol": symbol, "reason": "insufficient price history"})
-                    if i == CANARY_CHECK_AT - 1 and len(errors) == CANARY_CHECK_AT:
-                        log.error(
-                            "=" * 70 + "\n"
-                            "CANARY CHECK FAILED: all %d of the first %d symbols failed to fetch.\n"
-                            "This strongly suggests a systemic problem (NSE session/auth, endpoint\n"
-                            "change, or rate-limiting) rather than a few unlucky symbols. The\n"
-                            "individual warning lines above this one show the actual reason NSE\n"
-                            "gave for each attempt - that's the real diagnostic to look at.\n"
-                            + "=" * 70,
-                            CANARY_CHECK_AT, CANARY_CHECK_AT,
-                        )
-                    continue
+            sig = compute_signal(df, index_close)
+            if sig is None:
+                errors.append({"symbol": symbol, "reason": "could not compute 50/200 DMA"})
+                continue
 
-                sig = compute_signal(df, index_close)
-                if sig is None:
-                    errors.append({"symbol": symbol, "reason": "could not compute 50/200 DMA"})
-                    continue
+            price_histories[symbol] = df["Close"]
 
-                price_histories[symbol] = df["Close"]
+            if skip_delivery:
+                delivery = {"delivery_pct": None, "delivery_zscore": None}
+            else:
+                delivery = delivery_context.get(symbol, {"delivery_pct": None, "delivery_zscore": None})
 
-                if skip_delivery:
-                    delivery = {"delivery_pct": None, "delivery_zscore": None}
-                else:
-                    delivery = delivery_context.get(symbol, {"delivery_pct": None, "delivery_zscore": None})
+            short_info = short_context.get(symbol, {"short_qty_total": 0, "short_days": 0})
 
-                short_info = short_context.get(symbol, {"short_qty_total": 0, "short_days": 0})
+            row = {"symbol": symbol, **sig, **delivery, **short_info}
+            row["score"] = score_row(row)
+            results.append(row)
 
-                row = {"symbol": symbol, **sig, **delivery, **short_info}
-                row["score"] = score_row(row)
-                results.append(row)
+            log.info("%-12s  signal=%-24s  gap=%6.2f%%  rs20=%s  score=%.1f",
+                      symbol, row["signal"], row["gap_pct"], row.get("rs_20d"), row["score"])
 
-                log.info("%-12s  signal=%-24s  gap=%6.2f%%  rs20=%s  score=%.1f",
-                          symbol, row["signal"], row["gap_pct"], row.get("rs_20d"), row["score"])
+        except Exception as exc:  # noqa: BLE001
+            log.warning("Failed on %s: %s", symbol, exc)
+            errors.append({"symbol": symbol, "reason": str(exc)})
 
-            except Exception as exc:  # noqa: BLE001
-                log.warning("Failed on %s: %s", symbol, exc)
-                errors.append({"symbol": symbol, "reason": str(exc)})
-
-            if not demo and sleep_s > 0 and i < len(symbols) - 1:
-                time.sleep(sleep_s + random.uniform(0, 0.3))  # polite jitter, avoid hammering endpoints
+        if not demo and sleep_s > 0 and i < len(symbols) - 1:
+            time.sleep(sleep_s + random.uniform(0, 0.3))  # polite jitter, avoid hammering endpoints
 
     results.sort(key=lambda r: r["score"], reverse=True)
 
