@@ -1,6 +1,6 @@
 {
-  "generated_at_utc": "2026-08-10T14:00:54.317718+00:00",
-  "cache_span_days": 370,
+  "generated_at_utc": "2026-08-11T05:30:43.331868+00:00",
+  "cache_span_days": 371,
   "recent_display_days": 60,
   "watchlist_size": 8,
   "known_investors_tracked": 10,
@@ -29,6 +29,24 @@
       "technical_alignment_count": 0
     },
     {
+      "symbol": "ADANIENSOL",
+      "scrip_name": "Adani Energy Solution Ltd",
+      "on_watchlist": false,
+      "deal_count": 1,
+      "known_investors_involved": [],
+      "net_qty": -11000000,
+      "net_value_cr": -869.0,
+      "buy_value_cr": 0.0,
+      "sell_value_cr": 869.0,
+      "distinct_clients": 1,
+      "repeat_buyers": [],
+      "short_qty_total": 2,
+      "short_days": 2,
+      "dma_signal": null,
+      "delivery_signal": "quiet_accumulation",
+      "technical_alignment_count": 1
+    },
+    {
       "symbol": "APOLLO",
       "scrip_name": "Apollo Micro Systems Ltd",
       "on_watchlist": false,
@@ -46,7 +64,7 @@
       "short_qty_total": 0,
       "short_days": 0,
       "dma_signal": null,
-      "delivery_signal": "quiet_accumulation",
+      "delivery_signal": "possible_distribution",
       "technical_alignment_count": 1
     },
     {
@@ -63,38 +81,100 @@
       "repeat_buyers": [],
       "short_qty_total": 93,
       "short_days": 2,
-      "dma_signal": null,
-      "delivery_signal": "speculative_churn",
+      "dma_signal": "confirmed_golden_cross",
+      "delivery_signal": null,
       "technical_alignment_count": 1
     },
     {
-      "symbol": "HOMEFIRST",
-      "scrip_name": "Home First Fin Co Ind Ltd",
+      "symbol": "APOLLOHOSP",
+      "scrip_name": "Apollo Hospitals Ltd",
       "on_watchlist": false,
-      "deal_count": 22,
+      "deal_count": 38,
       "known_investors_involved": [],
       "net_qty": 0,
-      "net_value_cr": 0.002,
-      "buy_value_cr": 1307.175,
-      "sell_value_cr": 1307.173,
-      "distinct_clients": 22,
-      "repeat_buyers": [],
-      "short_qty_total": 0,
-      "short_days": 0,
+      "net_value_cr": -0.001,
+      "buy_value_cr": 1489.332,
+      "sell_value_cr": 1489.333,
+      "distinct_clients": 27,
+      "repeat_buyers": [
+        "INVESCO MUTUAL FUND",
+        "KOTAK MAHINDRA LIFE INSURANCE COMPANY LIMITED",
+        "MORGAN STANLEY ASIA SINGAPORE PTE"
+      ],
+      "short_qty_total": 5,
+      "short_days": 1,
       "dma_signal": null,
       "delivery_signal": "quiet_accumulation",
       "technical_alignment_count": 1
     },
     {
-      "symbol": "KIMS",
-      "scrip_name": "Krishna Inst of Med Sci L",
+      "symbol": "AGARWALEYE",
+      "scrip_name": "Dr Agarwals Health Care L",
       "on_watchlist": false,
       "deal_count": 4,
       "known_investors_involved": [],
       "net_qty": 0,
       "net_value_cr": 0.0,
-      "buy_value_cr": 55.034,
-      "sell_value_cr": 55.034,
+      "buy_value_cr": 90.494,
+      "sell_value_cr": 90.494,
+      "distinct_clients": 3,
+      "repeat_buyers": [],
+      "short_qty_total": 0,
+      "short_days": 0,
+      "dma_signal": "confirmed_golden_cross",
+      "delivery_signal": null,
+      "technical_alignment_count": 1
+    },
+    {
+      "symbol": "CHOLAFIN",
+      "scrip_name": "Cholamandalam In & Fin Co",
+      "on_watchlist": false,
+      "deal_count": 4,
+      "known_investors_involved": [],
+      "net_qty": 0,
+      "net_value_cr": 0.0,
+      "buy_value_cr": 132.508,
+      "sell_value_cr": 132.508,
+      "distinct_clients": 2,
+      "repeat_buyers": [
+        "GOLDMAN SACHS BANK EUROPE SE - ODI"
+      ],
+      "short_qty_total": 0,
+      "short_days": 0,
+      "dma_signal": null,
+      "delivery_signal": "confirmed_accumulation",
+      "technical_alignment_count": 1
+    },
+    {
+      "symbol": "ETERNAL",
+      "scrip_name": "ETERNAL LIMITED",
+      "on_watchlist": false,
+      "deal_count": 6,
+      "known_investors_involved": [],
+      "net_qty": 0,
+      "net_value_cr": 0.0,
+      "buy_value_cr": 714.762,
+      "sell_value_cr": 714.762,
+      "distinct_clients": 2,
+      "repeat_buyers": [
+        "GOLDMAN SACHS BANK EUROPE SE - ODI"
+      ],
+      "short_qty_total": 316,
+      "short_days": 3,
+      "dma_signal": "confirmed_golden_cross",
+      "delivery_signal": null,
+      "technical_alignment_count": 1
+    },
+    {
+      "symbol": "FIVESTAR",
+      "scrip_name": "Five-Star Bus Fin Ltd",
+      "on_watchlist": false,
+      "deal_count": 4,
+      "known_investors_involved": [],
+      "net_qty": 0,
+      "net_value_cr": 0.0,
+      "buy_value_cr": 51.288,
+      "sell_value_cr": 51.288,
       "distinct_clients": 2,
       "repeat_buyers": [
         "GOLDMAN SACHS BANK EUROPE SE - ODI"
@@ -122,7 +202,7 @@
       "short_qty_total": 0,
       "short_days": 0,
       "dma_signal": null,
-      "delivery_signal": "quiet_accumulation",
+      "delivery_signal": "speculative_churn",
       "technical_alignment_count": 1
     },
     {
@@ -144,21 +224,21 @@
       "technical_alignment_count": 1
     },
     {
-      "symbol": "LLOYDSENGG",
-      "scrip_name": "LLOYDS ENGG WORK LIMITED",
+      "symbol": "VGUARD",
+      "scrip_name": "V-Guard Industries Limite",
       "on_watchlist": false,
       "deal_count": 2,
       "known_investors_involved": [],
       "net_qty": 0,
       "net_value_cr": 0.0,
-      "buy_value_cr": 10.011,
-      "sell_value_cr": 10.011,
+      "buy_value_cr": 153.6,
+      "sell_value_cr": 153.6,
       "distinct_clients": 2,
       "repeat_buyers": [],
-      "short_qty_total": 20,
-      "short_days": 2,
+      "short_qty_total": 0,
+      "short_days": 0,
       "dma_signal": null,
-      "delivery_signal": "speculative_churn",
+      "delivery_signal": "quiet_accumulation",
       "technical_alignment_count": 1
     },
     {
@@ -175,24 +255,6 @@
       "repeat_buyers": [],
       "short_qty_total": 49951,
       "short_days": 1,
-      "dma_signal": null,
-      "delivery_signal": null,
-      "technical_alignment_count": 0
-    },
-    {
-      "symbol": "ADANIENSOL",
-      "scrip_name": "Adani Energy Solution Ltd",
-      "on_watchlist": false,
-      "deal_count": 1,
-      "known_investors_involved": [],
-      "net_qty": -11000000,
-      "net_value_cr": -869.0,
-      "buy_value_cr": 0.0,
-      "sell_value_cr": 869.0,
-      "distinct_clients": 1,
-      "repeat_buyers": [],
-      "short_qty_total": 2,
-      "short_days": 2,
       "dma_signal": null,
       "delivery_signal": null,
       "technical_alignment_count": 0
@@ -1428,23 +1490,19 @@
       "technical_alignment_count": 0
     },
     {
-      "symbol": "APOLLOHOSP",
-      "scrip_name": "Apollo Hospitals Ltd",
+      "symbol": "HOMEFIRST",
+      "scrip_name": "Home First Fin Co Ind Ltd",
       "on_watchlist": false,
-      "deal_count": 38,
+      "deal_count": 22,
       "known_investors_involved": [],
       "net_qty": 0,
-      "net_value_cr": -0.001,
-      "buy_value_cr": 1489.332,
-      "sell_value_cr": 1489.333,
-      "distinct_clients": 27,
-      "repeat_buyers": [
-        "INVESCO MUTUAL FUND",
-        "KOTAK MAHINDRA LIFE INSURANCE COMPANY LIMITED",
-        "MORGAN STANLEY ASIA SINGAPORE PTE"
-      ],
-      "short_qty_total": 5,
-      "short_days": 1,
+      "net_value_cr": 0.002,
+      "buy_value_cr": 1307.175,
+      "sell_value_cr": 1307.173,
+      "distinct_clients": 22,
+      "repeat_buyers": [],
+      "short_qty_total": 0,
+      "short_days": 0,
       "dma_signal": null,
       "delivery_signal": null,
       "technical_alignment_count": 0
@@ -1463,24 +1521,6 @@
       "repeat_buyers": [
         "MORGAN STANLEY ASIA SINGAPORE PTE"
       ],
-      "short_qty_total": 0,
-      "short_days": 0,
-      "dma_signal": null,
-      "delivery_signal": null,
-      "technical_alignment_count": 0
-    },
-    {
-      "symbol": "AGARWALEYE",
-      "scrip_name": "Dr Agarwals Health Care L",
-      "on_watchlist": false,
-      "deal_count": 4,
-      "known_investors_involved": [],
-      "net_qty": 0,
-      "net_value_cr": 0.0,
-      "buy_value_cr": 90.494,
-      "sell_value_cr": 90.494,
-      "distinct_clients": 3,
-      "repeat_buyers": [],
       "short_qty_total": 0,
       "short_days": 0,
       "dma_signal": null,
@@ -1508,66 +1548,6 @@
       "technical_alignment_count": 0
     },
     {
-      "symbol": "CHOLAFIN",
-      "scrip_name": "Cholamandalam In & Fin Co",
-      "on_watchlist": false,
-      "deal_count": 4,
-      "known_investors_involved": [],
-      "net_qty": 0,
-      "net_value_cr": 0.0,
-      "buy_value_cr": 132.508,
-      "sell_value_cr": 132.508,
-      "distinct_clients": 2,
-      "repeat_buyers": [
-        "GOLDMAN SACHS BANK EUROPE SE - ODI"
-      ],
-      "short_qty_total": 0,
-      "short_days": 0,
-      "dma_signal": null,
-      "delivery_signal": null,
-      "technical_alignment_count": 0
-    },
-    {
-      "symbol": "ETERNAL",
-      "scrip_name": "ETERNAL LIMITED",
-      "on_watchlist": false,
-      "deal_count": 6,
-      "known_investors_involved": [],
-      "net_qty": 0,
-      "net_value_cr": 0.0,
-      "buy_value_cr": 714.762,
-      "sell_value_cr": 714.762,
-      "distinct_clients": 2,
-      "repeat_buyers": [
-        "GOLDMAN SACHS BANK EUROPE SE - ODI"
-      ],
-      "short_qty_total": 316,
-      "short_days": 3,
-      "dma_signal": null,
-      "delivery_signal": null,
-      "technical_alignment_count": 0
-    },
-    {
-      "symbol": "FIVESTAR",
-      "scrip_name": "Five-Star Bus Fin Ltd",
-      "on_watchlist": false,
-      "deal_count": 4,
-      "known_investors_involved": [],
-      "net_qty": 0,
-      "net_value_cr": 0.0,
-      "buy_value_cr": 51.288,
-      "sell_value_cr": 51.288,
-      "distinct_clients": 2,
-      "repeat_buyers": [
-        "GOLDMAN SACHS BANK EUROPE SE - ODI"
-      ],
-      "short_qty_total": 0,
-      "short_days": 0,
-      "dma_signal": null,
-      "delivery_signal": null,
-      "technical_alignment_count": 0
-    },
-    {
       "symbol": "GODREJPROP",
       "scrip_name": "Godrej Properties Ltd",
       "on_watchlist": false,
@@ -1577,6 +1557,26 @@
       "net_value_cr": 0.0,
       "buy_value_cr": 276.571,
       "sell_value_cr": 276.571,
+      "distinct_clients": 2,
+      "repeat_buyers": [
+        "GOLDMAN SACHS BANK EUROPE SE - ODI"
+      ],
+      "short_qty_total": 0,
+      "short_days": 0,
+      "dma_signal": null,
+      "delivery_signal": null,
+      "technical_alignment_count": 0
+    },
+    {
+      "symbol": "KIMS",
+      "scrip_name": "Krishna Inst of Med Sci L",
+      "on_watchlist": false,
+      "deal_count": 4,
+      "known_investors_involved": [],
+      "net_qty": 0,
+      "net_value_cr": 0.0,
+      "buy_value_cr": 55.034,
+      "sell_value_cr": 55.034,
       "distinct_clients": 2,
       "repeat_buyers": [
         "GOLDMAN SACHS BANK EUROPE SE - ODI"
@@ -1830,24 +1830,6 @@
       "technical_alignment_count": 0
     },
     {
-      "symbol": "VGUARD",
-      "scrip_name": "V-Guard Industries Limite",
-      "on_watchlist": false,
-      "deal_count": 2,
-      "known_investors_involved": [],
-      "net_qty": 0,
-      "net_value_cr": 0.0,
-      "buy_value_cr": 153.6,
-      "sell_value_cr": 153.6,
-      "distinct_clients": 2,
-      "repeat_buyers": [],
-      "short_qty_total": 0,
-      "short_days": 0,
-      "dma_signal": null,
-      "delivery_signal": null,
-      "technical_alignment_count": 0
-    },
-    {
       "symbol": "KOTHARIPET",
       "scrip_name": "Kothari Petrochem Ltd",
       "on_watchlist": false,
@@ -1901,6 +1883,24 @@
       ],
       "short_qty_total": 35,
       "short_days": 1,
+      "dma_signal": null,
+      "delivery_signal": null,
+      "technical_alignment_count": 0
+    },
+    {
+      "symbol": "LLOYDSENGG",
+      "scrip_name": "LLOYDS ENGG WORK LIMITED",
+      "on_watchlist": false,
+      "deal_count": 2,
+      "known_investors_involved": [],
+      "net_qty": 0,
+      "net_value_cr": 0.0,
+      "buy_value_cr": 10.011,
+      "sell_value_cr": 10.011,
+      "distinct_clients": 2,
+      "repeat_buyers": [],
+      "short_qty_total": 20,
+      "short_days": 2,
       "dma_signal": null,
       "delivery_signal": null,
       "technical_alignment_count": 0
@@ -3276,8 +3276,16 @@
   ],
   "insider_trading": {
     "note": "Best-effort keyword match against NSE's general announcements feed - not a guaranteed-complete list.",
-    "announcements_scanned": 18492,
+    "announcements_scanned": 18451,
     "filings": [
+      {
+        "date": "10-Aug-2026 21:19:07",
+        "symbol": "WSI",
+        "company": "W S Industries (I) Limited",
+        "description": "Updates",
+        "summary": "W S Industries (I) Limited has informed the Exchange regarding 'Disclosure under Regulation 30 of SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 Reporting of matter examined under SEBI (Prohibition of Insider Trading) Regulations, 2015.",
+        "filing_url": "https://nsearchives.nseindia.com/corporate/WSI_10082026211843_Reg_30_Intimation_10082026_SD.pdf"
+      },
       {
         "date": "10-Aug-2026 18:54:27",
         "symbol": "TRUALT",
@@ -5477,14 +5485,6 @@
         "description": "Trading Window",
         "summary": "KSS Limited has informed the Exchange regarding the Trading Window closure pursuant to SEBI (Prohibition of Insider Trading) Regulations, 2015",
         "filing_url": "https://nsearchives.nseindia.com/corporate/KSERASERA_13072026112715_Trading_Window_KSS_SIGN.pdf"
-      },
-      {
-        "date": "11-Jul-2026 19:13:53",
-        "symbol": "LTM",
-        "company": "LTM Limited",
-        "description": "Updates",
-        "summary": "LTM Limited has informed the Exchange that pursuant to Regulation 31A(8)(b) of SEBI (LODR), Board has approved re-classification of Nabha Power Limited from the  Promoter Group  category to the  Public  category.",
-        "filing_url": "https://nsearchives.nseindia.com/corporate/LTI_11072026191202_Stockexchangeoutcome.pdf"
       }
     ]
   }
