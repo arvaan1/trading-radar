@@ -1,15 +1,11 @@
 {
-  "generated_at_utc": "2026-08-10T14:01:10.061590+00:00",
+  "generated_at_utc": "2026-08-11T05:26:57.119505+00:00",
   "vix": {
     "latest": 12.25,
-    "avg_5d": 16.75,
-    "avg_20d": 27.96
+    "avg_5d": 12.2,
+    "avg_20d": 27.21
   },
   "vix_history_40d": [
-    {
-      "date": "2026-06-22",
-      "close": 16.39
-    },
     {
       "date": "2026-06-23",
       "close": 17.12
@@ -157,33 +153,32 @@
     {
       "date": "2026-08-10",
       "close": 12.25
+    },
+    {
+      "date": "2026-08-11",
+      "close": 12.25
     }
   ],
   "vix_as_of": "2026-08-10",
   "breadth": {
     "nifty50": {
-      "advances": 25,
-      "declines": 23
+      "advances": 14,
+      "declines": 36
     },
     "nifty500": {
-      "advances": 238,
-      "declines": 255
+      "advances": 223,
+      "declines": 275
     }
   },
   "breadth_date_confidence": "unverified - NSE's advance-decline endpoint returns a live snapshot with no date field attached, so there's no way to independently confirm this reflects today's session rather than a stale cached value. Cross-check against vix_as_of below - if that's not today, treat this the same way.",
   "fii_dii_cash": {
     "fii_latest": 1974.76,
     "dii_latest": -1290.29,
-    "fii_avg_5d": 223.81,
-    "fii_avg_20d": 288.44,
-    "dii_avg_5d": -325.68,
-    "dii_avg_20d": -296.92,
+    "fii_avg_5d": 1078.05,
+    "fii_avg_20d": 499.23,
+    "dii_avg_5d": -374.78,
+    "dii_avg_20d": -421.09,
     "history": [
-      {
-        "date": "2026-06-22",
-        "fii": null,
-        "dii": null
-      },
       {
         "date": "2026-06-23",
         "fii": null,
@@ -378,32 +373,37 @@
         "date": "2026-08-10",
         "fii": 1974.76,
         "dii": -1290.29
+      },
+      {
+        "date": "2026-08-11",
+        "fii": 1974.76,
+        "dii": -1290.29
       }
     ]
   },
   "fii_dii_date_confidence": "same caveat as breadth_date_confidence - this endpoint has no date field either",
   "participant_oi": {
-    "as_of": "2026-08-07",
+    "as_of": "2026-08-10",
     "index_futures_positioning": [
       {
         "participant": "FII",
-        "index_fut_net": -150058.0,
-        "change_vs_prior_day": -4940.0
+        "index_fut_net": -152163.0,
+        "change_vs_prior_day": -2105.0
       },
       {
         "participant": "DII",
-        "index_fut_net": 34333.0,
-        "change_vs_prior_day": -143.0
+        "index_fut_net": 34593.0,
+        "change_vs_prior_day": 260.0
       },
       {
         "participant": "PRO",
-        "index_fut_net": -14661.0,
-        "change_vs_prior_day": -1436.0
+        "index_fut_net": -12782.0,
+        "change_vs_prior_day": 1879.0
       },
       {
         "participant": "CLIENT",
-        "index_fut_net": 130386.0,
-        "change_vs_prior_day": 6519.0
+        "index_fut_net": 130352.0,
+        "change_vs_prior_day": -34.0
       }
     ]
   },
@@ -411,5 +411,5 @@
     "available": false,
     "note": "Neither DMA Radar nor Delivery Radar has a signal log yet - this fills in once both tools have run at least once."
   },
-  "history_days_cached": 46
+  "history_days_cached": 47
 }
