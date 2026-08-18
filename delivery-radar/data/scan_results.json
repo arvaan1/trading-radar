@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-18T00:52:29.966192+00:00",
+  "generated_at_utc": "2026-08-18T14:52:29.642839+00:00",
   "data_as_of": "2026-08-17",
   "data_as_of_agreement_pct": 99.6,
   "universe_size": 755,
@@ -39,7 +39,7 @@
       "reason": "only 3 cached session(s), need 25+"
     }
   ],
-  "cache_days_fetched_this_run": 1,
+  "cache_days_fetched_this_run": 0,
   "cache_total_days": 69,
   "track_record": {},
   "signal_log_size": 102,
