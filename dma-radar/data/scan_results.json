@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-15T23:49:09.896400+00:00",
+  "generated_at_utc": "2026-09-16T00:48:33.984604+00:00",
   "data_as_of": "2026-09-11",
   "data_as_of_agreement_pct": 100.0,
   "universe_size": 753,
@@ -2402,7 +2402,7 @@
       "signal": "no_signal",
       "rsi14": 64.6,
       "macd_hist": -6.027,
-      "adx14": 39.4,
+      "adx14": 39.1,
       "bb_bandwidth": 0.0701,
       "supertrend": "up",
       "vol_ratio_20d": 3.62,
@@ -2412,7 +2412,7 @@
       "delivery_zscore": -0.83,
       "short_qty_total": 0,
       "short_days": 0,
-      "score": 17.88
+      "score": 17.82
     },
     {
       "symbol": "PREMIERENE",
