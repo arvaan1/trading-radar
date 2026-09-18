@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-18T00:52:33.001545+00:00",
+  "generated_at_utc": "2026-09-18T14:52:31.840128+00:00",
   "data_as_of": "2026-09-17",
   "data_as_of_agreement_pct": 99.5,
   "universe_size": 755,
@@ -27,7 +27,7 @@
       "reason": "no cached bhavcopy rows for this symbol"
     }
   ],
-  "cache_days_fetched_this_run": 2,
+  "cache_days_fetched_this_run": 1,
   "cache_total_days": 70,
   "track_record": {},
   "signal_log_size": 68,
