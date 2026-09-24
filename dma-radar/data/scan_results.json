@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-23T23:47:47.296511+00:00",
+  "generated_at_utc": "2026-09-24T00:48:36.967109+00:00",
   "data_as_of": "2026-09-23",
   "data_as_of_agreement_pct": 53.4,
   "universe_size": 753,
@@ -2030,7 +2030,7 @@
       "signal": "no_signal",
       "rsi14": 68.4,
       "macd_hist": 33.651,
-      "adx14": 40.4,
+      "adx14": 40.7,
       "bb_bandwidth": 0.1053,
       "supertrend": "up",
       "vol_ratio_20d": 2.09,
@@ -2040,7 +2040,7 @@
       "delivery_zscore": 1.65,
       "short_qty_total": 0,
       "short_days": 0,
-      "score": 18.08
+      "score": 18.14
     },
     {
       "symbol": "SUZLON",
@@ -4092,7 +4092,7 @@
       "symbol": "APOLLOHOSP",
       "last_close": 9069.0,
       "sma50": 8832.96,
-      "sma200": 7990.34,
+      "sma200": 7990.35,
       "gap_pct": 10.545,
       "narrowing": true,
       "signal": "no_signal",
