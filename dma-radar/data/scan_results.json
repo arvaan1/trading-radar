@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-24T14:47:59.833014+00:00",
+  "generated_at_utc": "2026-09-24T17:48:08.235362+00:00",
   "data_as_of": "2026-09-24",
   "data_as_of_agreement_pct": 99.9,
   "universe_size": 753,
@@ -7376,7 +7376,7 @@
       "signal": "no_signal",
       "rsi14": 68.7,
       "macd_hist": 50.111,
-      "adx14": 42.0,
+      "adx14": 41.7,
       "bb_bandwidth": 0.124,
       "supertrend": "up",
       "vol_ratio_20d": 1.25,
@@ -7386,7 +7386,7 @@
       "delivery_zscore": 0.96,
       "short_qty_total": 0,
       "short_days": 0,
-      "score": 8.4
+      "score": 8.34
     },
     {
       "symbol": "TRANSRAILL",
