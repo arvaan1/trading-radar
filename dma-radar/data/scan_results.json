@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-01T19:48:07.071416+00:00",
+  "generated_at_utc": "2026-10-01T21:47:57.505124+00:00",
   "data_as_of": "2026-09-30",
   "data_as_of_agreement_pct": 100.0,
   "universe_size": 753,
@@ -2382,7 +2382,7 @@
       "signal": "no_signal",
       "rsi14": 78.7,
       "macd_hist": 120.228,
-      "adx14": 45.3,
+      "adx14": 45.1,
       "bb_bandwidth": 0.2038,
       "supertrend": "up",
       "vol_ratio_20d": 1.97,
@@ -2392,7 +2392,7 @@
       "delivery_zscore": 3.2,
       "short_qty_total": 0,
       "short_days": 0,
-      "score": 18.76
+      "score": 18.72
     },
     {
       "symbol": "MAHSEAMLES",
@@ -14454,8 +14454,8 @@
       "symbol": "NATCOPHARM",
       "last_close": 820.76,
       "sma50": 867.69,
-      "sma200": 941.07,
-      "gap_pct": -7.797,
+      "sma200": 941.08,
+      "gap_pct": -7.798,
       "narrowing": false,
       "signal": "no_signal",
       "rsi14": 42.1,
