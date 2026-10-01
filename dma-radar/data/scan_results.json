@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-01T14:48:03.195444+00:00",
+  "generated_at_utc": "2026-10-01T17:48:22.318190+00:00",
   "data_as_of": "2026-10-01",
   "data_as_of_agreement_pct": 100.0,
   "universe_size": 753,
@@ -12737,9 +12737,9 @@
     {
       "symbol": "NATCOPHARM",
       "last_close": 821.3,
-      "sma50": 865.78,
-      "sma200": 940.59,
-      "gap_pct": -7.954,
+      "sma50": 865.77,
+      "sma200": 940.58,
+      "gap_pct": -7.953,
       "narrowing": false,
       "signal": "no_signal",
       "rsi14": 42.4,
