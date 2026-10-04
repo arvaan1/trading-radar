@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-04T21:48:26.459248+00:00",
+  "generated_at_utc": "2026-10-04T23:48:06.604511+00:00",
   "data_as_of": "2026-10-01",
   "data_as_of_agreement_pct": 100.0,
   "universe_size": 753,
@@ -1870,7 +1870,7 @@
       "symbol": "PAGEIND",
       "last_close": 36660.0,
       "sma50": 37037.88,
-      "sma200": 36135.06,
+      "sma200": 36135.07,
       "gap_pct": 2.498,
       "narrowing": true,
       "signal": "no_signal",
