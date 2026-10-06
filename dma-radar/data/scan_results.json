@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-06T19:49:00.555731+00:00",
+  "generated_at_utc": "2026-10-06T21:48:54.594299+00:00",
   "data_as_of": "2026-10-05",
   "data_as_of_agreement_pct": 100.0,
   "universe_size": 753,
@@ -3086,7 +3086,7 @@
       "signal": "no_signal",
       "rsi14": 83.5,
       "macd_hist": 153.756,
-      "adx14": 48.5,
+      "adx14": 48.3,
       "bb_bandwidth": 0.2578,
       "supertrend": "up",
       "vol_ratio_20d": 1.61,
@@ -3096,7 +3096,7 @@
       "delivery_zscore": -0.05,
       "short_qty_total": 0,
       "short_days": 0,
-      "score": 15.8
+      "score": 15.76
     },
     {
       "symbol": "MANYAVAR",
