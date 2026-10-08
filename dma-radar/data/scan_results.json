@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-07T23:48:32.732850+00:00",
+  "generated_at_utc": "2026-10-08T00:48:39.293895+00:00",
   "data_as_of": "2026-10-07",
   "data_as_of_agreement_pct": 56.9,
   "universe_size": 753,
@@ -2926,7 +2926,7 @@
       "symbol": "PAGEIND",
       "last_close": 37970.0,
       "sma50": 36880.72,
-      "sma200": 36156.87,
+      "sma200": 36156.86,
       "gap_pct": 2.002,
       "narrowing": true,
       "signal": "no_signal",
@@ -7266,7 +7266,7 @@
       "signal": "no_signal",
       "rsi14": 67.9,
       "macd_hist": 108.644,
-      "adx14": 49.4,
+      "adx14": 49.3,
       "bb_bandwidth": 0.2647,
       "supertrend": "up",
       "vol_ratio_20d": 1.02,
@@ -7276,7 +7276,7 @@
       "delivery_zscore": 0.2,
       "short_qty_total": 0,
       "short_days": 0,
-      "score": 9.88
+      "score": 9.86
     },
     {
       "symbol": "WEBELSOLAR",
