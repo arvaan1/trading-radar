@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-20T19:49:46.518037+00:00",
+  "generated_at_utc": "2026-10-20T21:48:24.023907+00:00",
   "data_as_of": "2026-10-19",
   "data_as_of_agreement_pct": 100.0,
   "universe_size": 753,
@@ -1286,7 +1286,7 @@
       "symbol": "PAGEIND",
       "last_close": 35770.0,
       "sma50": 36428.4,
-      "sma200": 36157.53,
+      "sma200": 36157.52,
       "gap_pct": 0.749,
       "narrowing": true,
       "signal": "approaching_death_cross",
