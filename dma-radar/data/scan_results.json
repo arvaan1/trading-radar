@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-23T14:48:32.101093+00:00",
+  "generated_at_utc": "2026-10-23T17:48:58.168829+00:00",
   "data_as_of": "2026-10-23",
   "data_as_of_agreement_pct": 99.9,
   "universe_size": 753,
@@ -12412,7 +12412,7 @@
       "signal": "no_signal",
       "rsi14": 40.9,
       "macd_hist": -237.506,
-      "adx14": 33.2,
+      "adx14": 33.3,
       "bb_bandwidth": 0.1808,
       "supertrend": "down",
       "vol_ratio_20d": 1.0,
@@ -12422,7 +12422,7 @@
       "delivery_zscore": -0.48,
       "short_qty_total": 0,
       "short_days": 0,
-      "score": 6.64
+      "score": 6.66
     },
     {
       "symbol": "AMBUJACEM",
