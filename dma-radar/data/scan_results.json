@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-30T14:48:49.180773+00:00",
+  "generated_at_utc": "2026-10-30T17:49:26.019240+00:00",
   "data_as_of": "2026-10-30",
   "data_as_of_agreement_pct": 99.9,
   "universe_size": 753,
@@ -13094,7 +13094,7 @@
       "signal": "no_signal",
       "rsi14": 34.6,
       "macd_hist": -262.899,
-      "adx14": 28.3,
+      "adx14": 28.2,
       "bb_bandwidth": 0.2598,
       "supertrend": "down",
       "vol_ratio_20d": 0.79,
@@ -13104,7 +13104,7 @@
       "delivery_zscore": -0.04,
       "short_qty_total": 0,
       "short_days": 0,
-      "score": 5.66
+      "score": 5.64
     },
     {
       "symbol": "BIKAJI",
